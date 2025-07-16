@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   ssr: true,
+  modules: ['@nuxt/ui'],
   css: ['~/assets/css/main.css'],
   app: {
     baseURL: '/thex-score',
@@ -12,5 +13,5 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss()
     ]
-  }
+  },
 })
