@@ -9,31 +9,39 @@
 
     </UCard>
 
-    <div class="flex flex-row gap-4 my-5">
-      <template class="gap-10">
+    <div class="grid grid-cols-12 gap-4 my-5">
+      <!-- 左側（UInput + UButton） -->
+      <div class="col-span-12 md:col-span-6 flex gap-2">
         <UInput
           placeholder="プレイヤー名を入れる"
+          class="flex-1 max-w-[12rem]"
+          v-model="inputtedPlayer"
         />
         <UButton
           icon="i-lucide-search"
           size="md"
           color="primary"
           variant="solid"
+          @click="searchPlayer"
         />
-      </template>
-      <USelect
-        class="w-48"
-        v-model="selectedGameId"
-        :items="gameOptions"
-        placeholder="ゲームを選択"
-      />
+      </div>
 
-      <USelect
-        class="w-48"
-        v-model="selectedShotTypeId"
-        :items="shotTypeOptions"
-        placeholder="ショットタイプを選択"
-      />
+      <!-- 右側（USelect x2） -->
+      <div class="col-span-12 md:col-span-6 flex gap-2">
+        <USelect
+          class="w-1/2"
+          v-model="selectedGameId"
+          :items="gameOptions"
+          placeholder="ゲームを選択"
+        />
+
+        <USelect
+          class="w-1/2"
+          v-model="selectedShotTypeId"
+          :items="shotTypeOptions"
+          placeholder="機体を選択"
+        />
+      </div>
     </div>
     <USeparator class="mb-5"/>
     <UTable :data="scoreRecords" :columns="columns" class="flex-1" />
@@ -43,11 +51,16 @@
 <script setup>
   import { h, resolveComponent } from 'vue'
   import { useGames } from '~/composables/Games';
+  import { useScoreRecords } from '~/composables/ScoreRecords';
 
   // import { GamesMapFunc } from '~/composables/Games'
   const value = ref('Backlog')
+  const inputtedPlayer = ref('')
+  const selectedPlayer = ref('')
   const selectedGameId = ref('')
+  const selectedShotTypeId=ref('')
   const gamesMap = useGames()
+  const scoreRecordMap = useScoreRecords()
 
   const gameOptions = computed(() =>
     (Object.entries(gamesMap)).map(
@@ -64,39 +77,81 @@
     }
     const game = gamesMap[selectedGameId.value]
 
-    return Object.entries(game.shot_types).map(([id, st]) => ({
+    let returning = Object.entries(game.shot_types).map(([id, st]) => ({
       label: st.name,
       value: id
     }))
+    returning.unshift({label: '全機体', value: 'all'})
+    return returning
   })
 
 
-  const scoreRecords = ref([
-    {
-      rank: '1',
-      score: '100',
-      shot_type: '霊夢A',
-      status: '超大台',
-      player: 'WEF',
-      date: '2024-03-11T15:30:00',
-      replay: 'リンク',
-      detail: '-',
-    },
-    {
-      rank: '2',
-      score: '90',
-      shot_type: '霊夢B',
-      status: '超大台',
-      player: 'WEF',
-      date: '2024-03-11T15:30:00',
-      replay: 'リンク',
-      detail: '-',
-    },
-  ])
+  const scoreRecords = computed(()=>{
+    let returning=[]
 
+    // プレイヤーソートモード
+    if (selectedPlayer.value !== ''){
+      let playerRecords
+      playerRecords = scoreRecordMap[selectedPlayer.value]
+      if (!playerRecords){
+        return []
+      }
+
+      Object.entries(playerRecords).forEach(([gameId, shotTypeRecords]) =>{
+        Object.entries(shotTypeRecords).forEach(([shotTypeId, record])=>{
+          returning.push({
+            game: gameId,
+            rank: 1,
+            score: record.score,
+            shot_type: shotTypeId,
+            status: record.status,
+            player: selectedPlayer.value,
+            date: record.date,
+            replay: record.replay,
+            detail: record.detail
+          })
+        })
+      })
+      return returning
+
+    }
+
+    // ゲームソートモード
+    if (!selectedGameId.value){
+      return []
+    }
+
+    Object.entries(scoreRecordMap).forEach(([player, games]) =>{
+      const game = games[selectedGameId.value]
+      if (!game) return
+
+      Object.entries(game).forEach(([shotTypeId, record])=>{
+        if(!selectedShotTypeId.value || selectedShotTypeId.value==='all' || selectedShotTypeId.value===shotTypeId){
+          returning.push({
+            game: selectedGameId,
+            rank: 1,
+            score: record.score,
+            shot_type: shotTypeId,
+            player: player,
+            status: record.status,
+            date: record.date,
+            replay: record.replay,
+            detail: record.detail
+          })
+        }
+      })
+    })
+    return returning
+  })
+
+
+  // テーブル定義
   const UBadge = resolveComponent('UBadge')
-
   const columns = [
+    {
+      accessorKey: 'game',
+      header: 'ゲーム名'
+    },
     {
       accessorKey: 'rank',
       header: '順位'
@@ -114,8 +169,8 @@
       header: 'ステータス',
       cell: ({ row }) => {
         const color = {
-          超大台: 'success',
-          大台: 'neutral'
+          great: 'success',
+          good: 'neutral'
         }[row.getValue('status')]
 
         return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () =>
@@ -132,6 +187,7 @@
       header: '日付',
       cell: ({ row }) => {
         return new Date(row.getValue('date')).toLocaleString('ja', {
+          year: 'numeric',
           day: 'numeric',
           month: 'short',
           hour: '2-digit',
@@ -150,5 +206,18 @@
     },
 
   ]
+
+
+  watch(selectedGameId, () => {
+    if (selectedGameId.value!==''){
+      inputtedPlayer.value = ''
+      selectedPlayer.value = ''
+    }
+  })
+
+  const searchPlayer = ()=>{
+    selectedGameId.value = ''
+    selectedPlayer.value = inputtedPlayer.value
+  }
 
 </script>

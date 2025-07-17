@@ -29,7 +29,7 @@
 
       <USlideover
         title="裏スコボみたいなメモ書きEX"
-        v-model="isOpen"
+        v-model:open="isOpen"
         side="left"
         class="md:hidden"
         overlay
@@ -39,7 +39,6 @@
           variant="ghost"
           class="md:hidden"
           aria-label="メニューを開く"
-          @click="isOpen = true"
         />
         <template #body>
           <div class="p-4">
