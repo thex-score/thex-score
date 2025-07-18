@@ -1,7 +1,11 @@
 export function useGames(){
-  const gamesMap: Record<string, {name: string, shot_types: Record<string, {name: string}>}> = {
+  const gamesMap: Record<string, {name: string, color: {bg: string, txt: string}, shot_types: Record<string, {name: string}>}> = {
     'th06': {
       'name': '東方紅魔郷',
+      'color': {
+        'bg': '#993333',
+        'txt': '#FFFFFF'
+      },
       'shot_types': {
         'ReimuA': {'name': '霊夢A'},
         'ReimuB': {'name': '霊夢B'},
@@ -11,6 +15,10 @@ export function useGames(){
     },
     'th07': {
       'name': '東方妖々夢',
+      'color': {
+        'bg': '#FF75DD',
+        'txt': '#FFFFFF'
+      },
       'shot_types': {
         'ReimuA': {'name': '霊夢A'},
         'ReimuB': {'name': '霊夢B'},
@@ -22,6 +30,10 @@ export function useGames(){
     },
     'th08': {
       'name': '東方永夜抄',
+      'color': {
+        'bg': '#333399',
+        'txt': '#FFFFFF',
+      },
       'shot_types': {
         'Boarder': {'name': '結界組'},
         'Magic': {'name': '詠唱組'},
@@ -39,6 +51,10 @@ export function useGames(){
     },
       'th10': {
       'name': '東方風神録',
+      'color': {
+        'bg': '#96B300',
+        'txt': '#FFFFFF'
+      },
       'shot_types': {
         'Boarder': {'name': '結界組'},
         'Magic': {'name': '詠唱組'},
@@ -56,6 +72,10 @@ export function useGames(){
     },
     'th11': {
       'name': '東方地霊殿',
+      'color': {
+        'bg': '#591400',
+        'txt': '#FFFFFF'
+      },
       'shot_types': {
         'ReimuA': {'name': '霊夢A'},
         'ReimuB': {'name': '霊夢B'},
@@ -67,6 +87,10 @@ export function useGames(){
     },
     'th12': {
       'name': '東方星蓮船',
+      'color': {
+        'bg': '#4169E1',
+        'txt': '#FFFFFF'
+      },
       'shot_types': {
         'ReimuA': {'name': '霊夢A'},
         'ReimuB': {'name': '霊夢B'},
@@ -78,12 +102,20 @@ export function useGames(){
     },
     'th128': {
       'name': '妖精大戦争',
+      'color': {
+        'bg': '#009898',
+        'txt': '#FFFFFF',
+      },
       'shot_types': {
         'Cirno': {'name': 'チルノ'},
       }
     },
     'th13': {
       'name': '東方神霊廟',
+      'color': {
+        'bg': '#4A808C',
+        'txt': '#FFFFFF',
+      },
       'shot_types': {
         'Reimu': {'name': '霊夢'},
         'Marisa': {'name': '魔理沙'},
@@ -93,6 +125,10 @@ export function useGames(){
     },
     'th14': {
       'name': '東方輝針城',
+      'color': {
+        'bg': '#AA7777',
+        'txt': '#FFFFFF'
+      },
       'shot_types': {
         'ReimuA': {'name': '霊夢A'},
         'ReimuB': {'name': '霊夢B'},
@@ -104,6 +140,10 @@ export function useGames(){
     },
     'th15': {
       'name': '東方紺珠伝',
+      'color': {
+        'bg': '#6A47BE',
+        'txt': '#FFFFFF',
+      },
       'shot_types': {
         'Reimu': {'name': '霊夢'},
         'Marisa': {'name': '魔理沙'},
@@ -113,6 +153,10 @@ export function useGames(){
     },
     'th16': {
       'name': '東方天空璋',
+      'color': {
+        'bg': '#176E0E',
+        'txt': '#FFFFFF',
+      },
       'shot_types': {
         'Reimu': {'name': '霊夢(土用)'},
         'Cirno': {'name': 'チルノ(土用)'},
@@ -122,6 +166,10 @@ export function useGames(){
     },
     'th17': {
       'name': '東方鬼形獣',
+      'color': {
+        'bg':'#190E0E',
+        'txt': '#FFFFFF',
+      },
       'shot_types': {
         'ReimuW': {'name': '霊夢オオカミ'},
         'ReimuO': {'name': '霊夢カワウソ'},
@@ -136,6 +184,10 @@ export function useGames(){
     },
     'th18': {
       'name': '東方虹龍洞',
+      'color': {
+        'bg': '#1DD294',
+        'txt': '#FFFFFF',
+      },
       'shot_types': {
         'Reimu': {'name': '霊夢'},
         'Marisa': {'name': '魔理沙'},

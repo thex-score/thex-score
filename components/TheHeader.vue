@@ -33,6 +33,10 @@
         side="left"
         class="md:hidden"
         overlay
+        :close="{
+          variant: 'outline',
+          class: 'rounded-full'
+        }"
       >
         <UButton
           icon="i-heroicons-bars-3"

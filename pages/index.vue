@@ -101,7 +101,7 @@
         Object.entries(shotTypeRecords).forEach(([shotTypeId, record])=>{
           returning.push({
             game: gameId,
-            rank: 1,
+            rank: "-",
             score: record.score,
             shot_type: shotTypeId,
             status: record.status,
@@ -128,8 +128,7 @@
       Object.entries(game).forEach(([shotTypeId, record])=>{
         if(!selectedShotTypeId.value || selectedShotTypeId.value==='all' || selectedShotTypeId.value===shotTypeId){
           returning.push({
-            game: selectedGameId,
-            rank: 1,
+            game: selectedGameId.value,
             score: record.score,
             shot_type: shotTypeId,
             player: player,
@@ -141,28 +140,71 @@
         }
       })
     })
+    // スコアで降順にソート
+    returning.sort((a, b) => b.score - a.score)
+
+    // rankを付与（同スコアの順位は飛ばさずに単純順位）
+    returning.forEach((item, index) => {
+      item.rank = index + 1
+    })
     return returning
   })
 
 
   // テーブル定義
   const UBadge = resolveComponent('UBadge')
+  const UButton = resolveComponent('UButton')
   const columns = [
     {
       accessorKey: 'game',
-      header: 'ゲーム名'
+      header: 'ゲーム名',
+      cell: ({ row }) => {
+        return h(
+          UBadge,
+          {
+            // 形状は Tailwind、色は動的に style で上書き
+            class: 'capitalize inline-block px-2 py-0.5 rounded font-semibold',
+            style: {
+              color: gamesMap[row.getValue('game')].color.txt,
+              backgroundColor: gamesMap[row.getValue('game')].color.bg,
+            }
+          },
+          () => gamesMap[row.getValue('game')].name
+        )
+      }
     },
     {
       accessorKey: 'rank',
-      header: '順位'
+      header: '順位',
     },
     {
       accessorKey: 'score',
-      header: 'スコア'
+      header: ({ column }) => {
+        const isSorted = column.getIsSorted()
+
+        return h(UButton, {
+          color: 'neutral',
+          variant: 'ghost',
+          label: 'スコア',
+          icon: isSorted
+            ? isSorted === 'asc'
+              ? 'i-lucide-arrow-up-narrow-wide'
+              : 'i-lucide-arrow-down-wide-narrow'
+            : 'i-lucide-arrow-up-down',
+          class: '-mx-2.5',
+          onClick: () => column.toggleSorting(column.getIsSorted() === 'asc')
+        })
+      },
+      cell: ({ row }) => {
+        return new Number(row.getValue('score')).toLocaleString('ja')
+      }
     },
     {
       accessorKey: 'shot_type',
-      header: '機体'
+      header: '機体',
+      cell: ({row}) =>{
+        return gamesMap[row.getValue('game')].shot_types[row.getValue('shot_type')].name
+      }
     },
     {
       accessorKey: 'status',
@@ -172,9 +214,14 @@
           great: 'success',
           good: 'neutral'
         }[row.getValue('status')]
+        
+        const txt = {
+          great: '超大台',
+          good: '大台'
+        }[row.getValue('status')]
 
         return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () =>
-          row.getValue('status')
+          txt
         )
       }
     },
@@ -184,7 +231,22 @@
     },
     {
       accessorKey: 'date',
-      header: '日付',
+      header: ({ column }) => {
+        const isSorted = column.getIsSorted()
+
+        return h(UButton, {
+          color: 'neutral',
+          variant: 'ghost',
+          label: '日付',
+          icon: isSorted
+            ? isSorted === 'asc'
+              ? 'i-lucide-arrow-up-narrow-wide'
+              : 'i-lucide-arrow-down-wide-narrow'
+            : 'i-lucide-arrow-up-down',
+          class: '-mx-2.5',
+          onClick: () => column.toggleSorting(column.getIsSorted() === 'asc')
+        })
+      },
       cell: ({ row }) => {
         return new Date(row.getValue('date')).toLocaleString('ja', {
           year: 'numeric',
@@ -198,11 +260,27 @@
     },
     {
       accessorKey: 'replay',
-      header: 'リプレイ'
+      header: 'リプレイ',
+      cell: ({ row }) => {
+        if (row.getValue('replay') === null){
+          return 'N/A'
+        }
+        return h(
+          'a',
+          {
+            href: `https://thex-score.github.io/thex-score/replays/${row.getValue('game')}/${row.getValue('replay')}`,
+            download: true,
+            target: '_blank',
+            rel: 'noopener',
+            class: 'text-primary underline hover:text-primary-600'
+          },
+          row.getValue('replay')
+        )
+      }
     },
     {
       accessorKey: 'detail',
-      header: '備考'
+      header: '備考',
     },
 
   ]
