@@ -2,10 +2,27 @@
   <UContainer>
     <UCard class="my-5">
       <template #header>
-        <p>ようこそ</p>
+        <h1 class="text-xl font-bold">ようこそ</h1>
       </template>
 
       <p>このページはほげふがなページです！</p>
+      <template #footer>
+        <p class="text-sm mb-1 font-medium">
+          最新アップデート
+          <span class="text-primary-600 dark:text-primary-400 font-semibold">
+            v{{ latest.version }}
+          </span>
+          <span class="text-xs text-gray-500 ml-1">
+            {{ formatDate(latest.date) }}
+          </span>
+        </p>
+
+        <ul class="list-disc pl-5 space-y-0.5 text-sm">
+          <li v-for="(change, idx) in latest.changes" :key="idx">
+            {{ change }}
+          </li>
+        </ul>
+      </template>
 
     </UCard>
 
@@ -52,6 +69,7 @@
   import { h, resolveComponent } from 'vue'
   import { useGames } from '~/composables/Games';
   import { useScoreRecords } from '~/composables/ScoreRecords';
+  import { UseReleases } from '~/composables/ReleaseNotes';
 
   // import { GamesMapFunc } from '~/composables/Games'
   const value = ref('Backlog')
@@ -61,6 +79,7 @@
   const selectedShotTypeId=ref('')
   const gamesMap = useGames()
   const scoreRecordMap = useScoreRecords()
+  const latest = UseReleases()[0]
 
   const gameOptions = computed(() =>
     (Object.entries(gamesMap)).map(
@@ -285,6 +304,13 @@
 
   ]
 
+  function formatDate(isoDateStr) {
+    return new Date(isoDateStr).toLocaleDateString('ja-JP', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    })
+  }
 
   watch(selectedGameId, () => {
     if (selectedGameId.value!==''){
