@@ -288,7 +288,7 @@
           'a',
           {
             href: `https://thex-score.github.io/thex-score/replays/${row.getValue('game')}/${row.getValue('replay')}`,
-            download: true,
+            download: row.getValue('replay'),
             target: '_blank',
             rel: 'noopener',
             class: 'text-primary underline hover:text-primary-600'

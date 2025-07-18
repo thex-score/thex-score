@@ -6,8 +6,15 @@ export default defineNuxtConfig({
   ssr: true,
   modules: ['@nuxt/ui'],
   css: ['~/assets/css/main.css'],
+    icon: {
+    provider: 'iconify',
+    serverBundle: false,
+    clientBundle: { scan: true }
+  },
   app: {
-    baseURL: '/thex-score',
+    baseURL: process.env.NUXT_PUBLIC_DEPLOY_ENV === 'github_pages'
+      ? '/thex-score/'
+      : '/'
   },
   vite: {
     plugins: [
