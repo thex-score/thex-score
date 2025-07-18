@@ -7,17 +7,11 @@ export function UseReleases(){
   // 3桁目: 新しい記録を追加したら上げる
   const releases=[
     {
-      version: "0.9.1",
-      date: "2025-07-19",
-      changes: [
-        "大枠の完成aa"
-      ]
-    },
-    {
       version: "0.9.0",
       date: "2025-07-19",
       changes: [
-        "大枠の完成"
+        "大枠の完成",
+        "運用方針の策定"
       ]
     },
   ]
