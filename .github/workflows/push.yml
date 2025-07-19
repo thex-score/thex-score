@@ -15,7 +15,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npx ts-node ci/existsReplay.ts
+      - run: npx tsx ci/existsReplay.ts
 
   check-releases:
     runs-on: ubuntu-latest
@@ -30,5 +30,6 @@ jobs:
         run: |
           # 差分がないと git diff --exit-code は 0 を返す
           if git diff --exit-code origin/${{ github.base_ref }} -- composables/ReleaseNotes.ts >/dev/null ; then
-            echo "::warning file=composables/ReleaseNotes.ts::ReleaseNotes.ts is not changed.\nIs this intended action?"
+            echo "::error file=composables/ReleaseNotes.ts::ReleaseNotes.ts is not changed.\nIs this intended action?"
+            exit 1
           fi
