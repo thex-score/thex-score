@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     clientBundle: { scan: true }
   },
   site: {
-    url: 'https://thex-score.github.io/thex-score',
+    url: 'https://thex-score.github.io',
     name: '裏スコボEX',
     defaultLocale: 'ja',
     trailingSlash: false,
