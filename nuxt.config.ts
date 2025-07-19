@@ -18,6 +18,13 @@ export default defineNuxtConfig({
     trailingSlash: false,
     indexable: true
   },
+  robots: {
+    // ドメイン無しのgithub pagesではリポジトリのpath直下にページ置かれる
+    // しかしクローラはpath無しの直下のrobots.txtしか読まない
+    // よってpathを含むrobots.txtは存在する意味がないため生成を禁止する必要がある
+    robotsTxt: false,
+    metaTag: true
+  },
   image: {                                         // nuxt/image
     dir: 'public',
     presets: {
