@@ -1,0 +1,34 @@
+name: Deploy to GitHub Pages
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  check-replays:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@4
+
+      - uses: actions/setup-node@4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - run: npx ts-node ci/existsReplay.ts
+
+  check-releases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@4
+        with:
+          fetch-depth: 0
+
+      - run: git fetch origin ${{ github.base_ref }} --depth=1
+
+      - name: Warn if ReleaseNotes.ts is unchanged
+        run: |
+          # 差分がないと git diff --exit-code は 0 を返す
+          if git diff --exit-code origin/${{ github.base_ref }} -- composables/ReleaseNotes.ts >/dev/null ; then
+            echo "::warning file=composables/ReleaseNotes.ts::ReleaseNotes.ts is not changed.\nIs this intended action?"
+          fi
