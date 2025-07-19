@@ -140,7 +140,7 @@ export function useScoreRecords(){
           'score': 13000000,
           'status': 'good',
           'date': '2024-03-11T15:30:00',
-          'replay': 'th7_ud0002.rpy',
+          'replay': 'th7_ud00002.rpy',
           'detail': '-',
         },
         'MarisaB': {
