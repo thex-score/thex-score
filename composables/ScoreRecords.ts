@@ -23,7 +23,7 @@ export function useScoreRecords(){
           'score': 1200000,
           'status': 'great',
           'date': '2024-03-11T15:30:00',
-          'replay': 'th7_ud0001.rpy',
+          'replay': 'th7_ud00101.rpy',
           'detail': '-',
         }
       }
