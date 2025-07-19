@@ -74,11 +74,11 @@
     },
     {
       label: 'ページ概要',
-      link: '/About'
+      link: '/about'
     },
     {
       label: '更新履歴',
-      link: '/Updates'
+      link: '/updates'
     },
   ]
 

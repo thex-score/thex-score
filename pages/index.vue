@@ -324,4 +324,11 @@
     selectedPlayer.value = inputtedPlayer.value
   }
 
+  useSeoMeta({
+    title: '裏スコボEX – 東方スコアタリプレイ掲載',
+    description: '東方Project の基準値以上のスコアのリプレイを記載',
+    ogImage: '/ogp/twittercard.png',
+    twitterCard: 'summary_large_image'
+  })
+
 </script>
