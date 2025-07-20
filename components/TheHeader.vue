@@ -77,6 +77,10 @@
       link: '/about'
     },
     {
+      label: 'リンク一覧',
+      link: '/links'
+    },
+    {
       label: '更新履歴',
       link: '/updates'
     },
