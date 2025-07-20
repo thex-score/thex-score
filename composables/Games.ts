@@ -35,7 +35,7 @@ export function useGames(){
         'txt': '#FFFFFF',
       },
       'shot_types': {
-        'Boarder': {'name': '結界組'},
+        'Border': {'name': '結界組'},
         'Magic': {'name': '詠唱組'},
         'Scarlet': {'name': '紅魔組'},
         'Netherworld': {'name': '幽冥組'},
@@ -56,18 +56,12 @@ export function useGames(){
         'txt': '#FFFFFF'
       },
       'shot_types': {
-        'Boarder': {'name': '結界組'},
-        'Magic': {'name': '詠唱組'},
-        'Scarlet': {'name': '紅魔組'},
-        'Netherworld': {'name': '幽冥組'},
-        'Reimu': {'name': '霊夢'},
-        'Yukari': {'name': '紫'},
-        'Marisa': {'name': '魔理沙'},
-        'Alice': {'name': 'アリス'},
-        'Sakuya': {'name': '咲夜'},
-        'Remilia': {'name': 'レミリア'},
-        'Youmu': {'name': '妖夢'},
-        'Yuyuko': {'name': '幽々子'},
+        'ReimuA': {'name': '霊夢A'},
+        'ReimuB': {'name': '霊夢B'},
+        'ReimuC': {'name': '霊夢C'},
+        'MarisaA': {'name': '魔理沙A'},
+        'MarisaB': {'name': '魔理沙B'},
+        'MarisaC': {'name': '魔理沙C'},
       }
     },
     'th11': {
