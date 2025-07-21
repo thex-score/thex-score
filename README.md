@@ -17,11 +17,15 @@
 最初に[nvm公式サイト](https://github.com/nvm-sh/nvm)に従って `nvm` を入れておく.
 
 ```bash
+# githubから落としてくる
 $ git clone https://github.com/thex-score/thex-score.git
 $ cd thex-score
+# nodeの管理ツールであるnpmのバージョン管理ツールであるnvmでnpmの22を使う
 $ nvm install 22
 $ nvm use 22
+# このリポジトリで指定されるパッケージのインストール
 $ npm install
+# サーバを動かしてみる
 $ npx nuxt generate
 $ npx serve dist
 # 以降 http://localhost:3000 でお試しウェブサーバが動く.
@@ -31,9 +35,8 @@ $ npx serve dist
 
 ## 新規記録追加
 
-- 全てカレントディレクトリは以下の作業が終わった直後のディレクトリとする
+- 全てカレントディレクトリはリポジトリのトップとする
 ```bash
-$ git clone https://github.com/thex-score/thex-score.git
 $ cd thex-score
 ```
 
@@ -102,9 +105,8 @@ $ cd thex-score
 
 ## 新規作品追加
 
-- 全てカレントディレクトリは以下の作業が終わった直後のディレクトリとする
+- 全てカレントディレクトリはリポジトリのトップとする
 ```bash
-$ git clone https://github.com/thex-score/thex-score.git
 $ cd thex-score
 ```
 
