@@ -6,7 +6,7 @@
     <UContainer class="flex items-center justify-between py-3">
 
       <NuxtLink to="/" class="text-lg font-bold whitespace-nowrap">
-        裏スコボみたいなメモ書きEX
+        東方EXTRAスコアボード
       </NuxtLink>
 
       <nav class="hidden md:flex gap-6">
@@ -28,7 +28,7 @@
 
 
       <USlideover
-        title="裏スコボみたいなメモ書きEX"
+        title="東方EXTRAスコアボード"
         v-model:open="isOpen"
         side="left"
         class="md:hidden"

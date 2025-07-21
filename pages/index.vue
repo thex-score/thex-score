@@ -5,7 +5,7 @@
         <h1 class="text-xl font-bold">ようこそ</h1>
       </template>
 
-      <p>このページはほげふがなページです！</p>
+      <p>このサイトでは東方原作STGのEXTRA及びFANTASMモードで基準スコア以上を出した記録を掲載しています。</p>
       <template #footer>
         <p class="text-sm mb-1 font-medium">
           最新アップデート
@@ -322,8 +322,8 @@
   }
 
   useSeoMeta({
-    title: '裏スコボEX – 東方スコアタリプレイ掲載',
-    description: '東方Project の基準値以上のスコアのリプレイを記載',
+    title: '東方EXTRAスコアボード – 東方スコアタリプレイ掲載',
+    description: '東方Project原作STGのEXTRAモードで基準値以上のスコアのリプレイを記載',
     ogImage: '/ogp/twittercard.png',
     twitterCard: 'summary_large_image'
   })
