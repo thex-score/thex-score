@@ -68,7 +68,7 @@ $ cd thex-score
 2. `composables/ScoreRecords.ts` に記録を追加/更新する
    1. `th06` といったゲームIDや `ReimuA` といった機体IDは `composables/Game.ts` を参照すること
    2. `status` は超大台を超えたものは `great` , 大台を超えたものは `good` と記載する
-   3. `date` は[RFC3339](https://tex2e.github.io/rfc-translater/html/rfc3339.html)にて定義されるタイムスタンプフォーマットを使用すること
+   3. `date` は[RFC3339](https://tex2e.github.io/rfc-translater/html/rfc3339.html)にて定義されるタイムスタンプフォーマットを使用すること。ただしこのウェブページの仕様として日付までしか表示されないので、時や分は0などの適当な値にしておくこと。
    4. `replay` は入手できずウェブアプリとしてユーザにダウンロードさせることができないものは `null` を記載すること. 入手できたものは `public/replays/{ゲームID}/{リプレイファイル名}` に保存し、 `composables/ScoreRecords.ts` 側にはリプレイファイル名を記載すること
    5. `detail` は備考であり、記載することがなければ `-` と入れる
 3. `composables/ReleaseNotes.ts` に変更履歴を記載する
