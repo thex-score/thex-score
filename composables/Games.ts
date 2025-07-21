@@ -13,23 +13,8 @@ export function useGames(){
         'MarisaB': {'name': '魔理沙B'},
       }
     },
-    'th07Ex': {
-      'name': '東方妖々夢Ex',
-      'color': {
-        'bg': '#FF75DD',
-        'txt': '#FFFFFF'
-      },
-      'shot_types': {
-        'ReimuA': {'name': '霊夢A'},
-        'ReimuB': {'name': '霊夢B'},
-        'MarisaA': {'name': '魔理沙A'},
-        'MarisaB': {'name': '魔理沙B'},
-        'SakuyaA': {'name': '咲夜A'},
-        'SakuyaB': {'name': '咲夜B'},
-      }
-    },
-    'th07Ph': {
-      'name': '東方妖々夢Ph',
+    'th07': {
+      'name': '東方妖々夢',
       'color': {
         'bg': '#FF75DD',
         'txt': '#FFFFFF'
@@ -64,7 +49,7 @@ export function useGames(){
         'Yuyuko': {'name': '幽々子'},
       }
     },
-    'th10': {
+      'th10': {
       'name': '東方風神録',
       'color': {
         'bg': '#96B300',
@@ -105,7 +90,7 @@ export function useGames(){
         'ReimuB': {'name': '霊夢B'},
         'MarisaA': {'name': '魔理沙A'},
         'MarisaB': {'name': '魔理沙B'},
-        'SanaeA': {'name': '早苗A'},
+        'SanaeA': {'name': '早苗B'},
         'SanaeB': {'name': '早苗B'},
       }
     },
