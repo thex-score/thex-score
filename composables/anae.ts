@@ -2,6 +2,31 @@ export function useScoreRecords(){
   
   const scoreRecords: Record<string, Record<string, Record<string, {score: number, status: 'great' | 'good', date: string, replay: string | null, detail: string}>>>={
     'WEF': {
+      'th06': {
+        'ReimuA': {
+          'score': 1000000,
+          'status': 'great',
+          'date': '2024-03-11T15:30:00',
+          'replay': 'th6_ud0001.rpy',
+          'detail': '-',
+        },
+        'ReimuB': {
+          'score': 1100000,
+          'status': 'good',
+          'date': '2024-03-11T15:30:00',
+          'replay': 'th6_ud0002.rpy',
+          'detail': '-',
+        },
+      },
+      'th07': {
+        'SakuyaA': {
+          'score': 1200000,
+          'status': 'great',
+          'date': '2024-03-11T15:30:00',
+          'replay': 'th7_ud0001.rpy',
+          'detail': '-',
+        },
+      },
       'th13': {
         'Youmu': {
           'score': 562172930,
@@ -242,7 +267,7 @@ export function useScoreRecords(){
         'Youmu': {
           'score': 3010565950,
           'status': 'great',
-          'date': '2007-10-31T15:30:00',
+          'date': '2009-09-15T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -321,7 +346,7 @@ export function useScoreRecords(){
       },
     },
     'APO': {
-      'th11': {
+          'th11': {
         'ReimuA': {
           'score': 1131597980,
           'status': 'great',
@@ -411,7 +436,7 @@ export function useScoreRecords(){
         'ReimuA': {
           'score': 536185430,
           'status': 'good',
-          'date': '2009-04-18T15:30:00',
+          'date': '2009-04-08T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -588,17 +613,6 @@ export function useScoreRecords(){
         },
       },
     },
-    'Aten': {
-      'th12': {
-        'ReimuA': {
-          'score': 500120660,
-          'status': 'good',
-          'date': '2010-03-06T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
     'Atu': {
       'th07Ex': {
         'ReimuB': {
@@ -612,7 +626,7 @@ export function useScoreRecords(){
     },
     'B': {
       'th10': {
-        'ReimuB': {
+        'ReimuA': {
           'score': 954436110,
           'status': 'good',
           'date': '2009-02-20T15:30:00',
@@ -818,7 +832,7 @@ export function useScoreRecords(){
         },
         'SakuyaA': {
           'score': 782233950,
-          'status': 'good',
+          'status': 'great',
           'date': '2022-01-22T15:30:00',
           'replay': null,
           'detail': '-',
@@ -945,7 +959,7 @@ export function useScoreRecords(){
         'MarisaB': {
           'score': 527254090,
           'status': 'good',
-          'date': '2008-07-31T15:30:00',
+          'date': '2008-7-31T15:30:00',
           'replay': null,
           'detail': '2008年7月1週',
         },
@@ -1047,7 +1061,7 @@ export function useScoreRecords(){
           'detail': '-',
         },
         'ReimuB': {
-          'score': 1565992430,
+          'score': 1573517240,
           'status': 'good',
           'date': '2006-08-30T15:30:00',
           'replay': null,
@@ -1620,7 +1634,7 @@ export function useScoreRecords(){
       'th10': {
         'ReimuB': {
           'score': 964121810,
-          'status': 'good',
+          'status': 'great',
           'date': '2011-03-18T15:30:00',
           'replay': null,
           'detail': '-',
@@ -1969,7 +1983,7 @@ export function useScoreRecords(){
           'detail': '-',
         },
         'SakuyaB': {
-          'score': 1328868780,
+          'score': 1389203040,
           'status': 'great',
           'date': '2012-10-04T15:30:00',
           'replay': null,
@@ -2382,7 +2396,7 @@ export function useScoreRecords(){
       'th12': {
         'ReimuA': {
           'score': 637311450,
-          'status': 'good',
+          'status': 'great',
           'date': '2023-08-28T15:30:00',
           'replay': null,
           'detail': '-',
@@ -2445,7 +2459,7 @@ export function useScoreRecords(){
         'Sanae': {
           'score': 922287660,
           'status': 'great',
-          'date': '2024-03-25T15:30:00',
+          'date': '2024-03-25 T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -2673,7 +2687,7 @@ export function useScoreRecords(){
         },
         'SakuyaA': {
           'score': 778156990,
-          'status': 'good',
+          'status': 'great',
           'date': '2020-10-01T15:30:00',
           'replay': null,
           'detail': '-',
@@ -2726,7 +2740,7 @@ export function useScoreRecords(){
     },
     'J2': {
       'th08': {
-        'Magic': {
+        'Border': {
           'score': 2434329520,
           'status': 'good',
           'date': '2004-10-27T15:30:00',
@@ -3156,7 +3170,7 @@ export function useScoreRecords(){
         'MarisaA': {
           'score': 527497000,
           'status': 'good',
-          'date': '2025-07-22T15:30:00',
+          'date': '2025-07-21T15:30:00',
           'replay': null,
           'detail': '日付不明',
         },
@@ -3445,24 +3459,6 @@ export function useScoreRecords(){
         },
       },
     },
-    'lot': {
-      'th12': {
-        'MarisaA': {
-          'score': 532609470,
-          'status': 'good',
-          'date': '2011-06-05T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-        'SanaeB': {
-          'score': 500323530,
-          'status': 'good',
-          'date': '2011-05-01T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
     'lua': {
       'th07Ex': {
         'ReimuB': {
@@ -3588,7 +3584,7 @@ export function useScoreRecords(){
     },
     'maru3': {
       'th10': {
-        'ReimuB': {
+        'ReimuA': {
           'score': 951962560,
           'status': 'good',
           'date': '2012-07-08T15:30:00',
@@ -3948,17 +3944,6 @@ export function useScoreRecords(){
         },
       },
     },
-    'mys': {
-      'th16': {
-        'Reimu': {
-          'score': 2143910400,
-          'status': 'good',
-          'date': '2017-09-22T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
     'NAG': {
       'th10': {
         'ReimuA': {
@@ -4252,7 +4237,7 @@ export function useScoreRecords(){
     },
     'OGA': {
       'th11': {
-        'ReimuB': {
+        'ReimuA': {
           'score': 1009105560,
           'status': 'good',
           'date': '2011-04-04T15:30:00',
@@ -4364,28 +4349,28 @@ export function useScoreRecords(){
         'ReimuA': {
           'score': 629609710,
           'status': 'great',
-          'date': '2014-06-20T15:30:00',
+          'date': '2024-01-16T15:30:00',
           'replay': null,
           'detail': '-',
         },
         'ReimuB': {
           'score': 654356450,
           'status': 'great',
-          'date': '2018-01-20T15:30:00',
+          'date': '2024-07-05T15:30:00',
           'replay': null,
           'detail': '-',
         },
         'MarisaA': {
           'score': 641990230,
           'status': 'great',
-          'date': '2022-06-29T15:30:00',
+          'date': '2019-12-31T15:30:00',
           'replay': null,
           'detail': '-',
         },
         'MarisaB': {
           'score': 663244220,
           'status': 'great',
-          'date': '2015-02-21T15:30:00',
+          'date': '2022-02-03T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -4553,7 +4538,7 @@ export function useScoreRecords(){
         'ReimuA': {
           'score': 956259070,
           'status': 'good',
-          'date': '2009-06-11T15:30:00',
+          'date': '2025-06-11T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -4563,7 +4548,7 @@ export function useScoreRecords(){
       'th07Ex': {
         'SakuyaB': {
           'score': 1253947840,
-          'status': 'good',
+          'status': 'great',
           'date': '2005-11-12T15:30:00',
           'replay': null,
           'detail': '-',
@@ -4632,20 +4617,9 @@ export function useScoreRecords(){
         },
       },
     },
-    'raiu': {
-      'th12': {
-        'SanaeB': {
-          'score': 506790060,
-          'status': 'good',
-          'date': '2011-11-18T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
     'raiuraiu': {
       'th10': {
-        'ReimuA': {
+        'ReimuC': {
           'score': 973019240,
           'status': 'good',
           'date': '2010-06-30T15:30:00',
@@ -4742,7 +4716,7 @@ export function useScoreRecords(){
     },
     'Riz': {
       'th12': {
-        'ReimuB': {
+        'SanaeB': {
           'score': 615909690,
           'status': 'good',
           'date': '2015-11-16T15:30:00',
@@ -4752,15 +4726,6 @@ export function useScoreRecords(){
       },
     },
     'Roby': {
-      'th12': {
-        'ReimuA': {
-          'score': 530622760,
-          'status': 'good',
-          'date': '2025-03-20T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
       'th15': {
         'Reimu': {
           'score': 909597600,
@@ -4804,17 +4769,6 @@ export function useScoreRecords(){
         },
       },
     },
-    'rose': {
-      'th12': {
-        'ReimuA': {
-          'score': 528917010,
-          'status': 'good',
-          'date': '2013-05-11T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
     'RPRB': {
       'th18': {
         'Sakuya': {
@@ -4830,7 +4784,7 @@ export function useScoreRecords(){
       'th07Ex': {
         'SakuyaA': {
           'score': 1221832860,
-          'status': 'great',
+          'status': 'good',
           'date': '2008-08-31T15:30:00',
           'replay': null,
           'detail': '2008年8月4週',
@@ -4912,7 +4866,7 @@ export function useScoreRecords(){
     },
     'Seppo Hovi': {
       'th08': {
-        'Marisa': {
+        'Youmu': {
           'score': 2393635340,
           'status': 'good',
           'date': '2013-03-29T15:30:00',
@@ -5056,7 +5010,7 @@ export function useScoreRecords(){
         'Reimu': {
           'score': 3713416670,
           'status': 'great',
-          'date': '2025-06-11T15:30:00',
+          'date': '2025-06-14T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -5320,18 +5274,7 @@ export function useScoreRecords(){
         'ReimuA': {
           'score': 950942290,
           'status': 'good',
-          'date': '2013-09-16T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
-    'tatu': {
-      'th12': {
-        'ReimuA': {
-          'score': 506458510,
-          'status': 'good',
-          'date': '2009-10-25T15:30:00',
+          'date': '2009-12-22T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -5389,17 +5332,6 @@ export function useScoreRecords(){
           'date': '2008-7-30T15:30:00',
           'replay': null,
           'detail': '2008年7月4週',
-        },
-      },
-    },
-    'TOMOAKI': {
-      'th12': {
-        'SanaeB': {
-          'score': 514293780,
-          'status': 'good',
-          'date': '2011-03-23T15:30:00',
-          'replay': null,
-          'detail': '-',
         },
       },
     },
@@ -5462,9 +5394,9 @@ export function useScoreRecords(){
           'detail': '-',
         },
         'YoumuO': {
-          'score': 1834783090,
+          'score': 1915477960,
           'status': 'good',
-          'date': '2020-03-01T15:30:00',
+          'date': '2020-03-02T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -5523,17 +5455,6 @@ export function useScoreRecords(){
         },
       },
     },
-    'URARA': {
-      'th12': {
-        'SanaeB': {
-          'score': 550552180,
-          'status': 'good',
-          'date': '2011-06-10T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
     'USK': {
       'th07Ex': {
         'ReimuB': {
@@ -5547,6 +5468,17 @@ export function useScoreRecords(){
           'score': 1112946110,
           'status': 'good',
           'date': '2007-05-24T15:30:00',
+          'replay': null,
+          'detail': '-',
+        },
+      },
+    },
+    'URARA': {
+      'th12': {
+        'SanaeB': {
+          'score': 550552180,
+          'status': 'good',
+          'date': '2011-06-10T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -5857,13 +5789,6 @@ export function useScoreRecords(){
     },
     'yahoobb': {
       'th16': {
-        'Reimu': {
-          'score': 2148870360,
-          'status': 'good',
-          'date': '2018-01-07T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
         'Cirno': {
           'score': 2098351820,
           'status': 'good',
@@ -6030,7 +5955,7 @@ export function useScoreRecords(){
         },
       },
       'th11': {
-        'ReimuB': {
+        'ReimuA': {
           'score': 1007328740,
           'status': 'good',
           'date': '2020-10-12T15:30:00',
@@ -6100,7 +6025,7 @@ export function useScoreRecords(){
       'th10': {
         'MarisaC': {
           'score': 986073850,
-          'status': 'good',
+          'status': 'great',
           'date': '2011-03-08T15:30:00',
           'replay': null,
           'detail': '-',
@@ -6190,24 +6115,6 @@ export function useScoreRecords(){
           'date': '2011-05-31T15:30:00',
           'replay': null,
           'detail': '2011年5月4週',
-        },
-      },
-    },
-    'ＫＡＳＳ': {
-      'th12': {
-        'MarisaB': {
-          'score': 513745080,
-          'status': 'good',
-          'date': '2009-09-22T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-        'SanaeA': {
-          'score': 532299220,
-          'status': 'good',
-          'date': '2009-10-15T15:30:00',
-          'replay': null,
-          'detail': '-',
         },
       },
     },
@@ -6389,14 +6296,14 @@ export function useScoreRecords(){
         'ReimuB': {
           'score': 731175210,
           'status': 'good',
-          'date': '2018-04-10T15:30:00',
+          'date': '2023-04-20T15:30:00',
           'replay': null,
           'detail': '-',
         },
         'MarisaA': {
           'score': 749377630,
           'status': 'good',
-          'date': '2023-09-30T15:30:00',
+          'date': '2023-04-20T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -6409,7 +6316,7 @@ export function useScoreRecords(){
         },
         'SakuyaA': {
           'score': 767279680,
-          'status': 'good',
+          'status': 'great',
           'date': '2022-01-26T15:30:00',
           'replay': null,
           'detail': '-',
@@ -6417,7 +6324,7 @@ export function useScoreRecords(){
         'SakuyaB': {
           'score': 816484120,
           'status': 'great',
-          'date': '2016-11-11T15:30:00',
+          'date': '2022-04-22T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -6426,7 +6333,7 @@ export function useScoreRecords(){
         'Reimu': {
           'score': 809292250,
           'status': 'good',
-          'date': '2024-05-10T15:30:00',
+          'date': '2024-05-06T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -6826,7 +6733,7 @@ export function useScoreRecords(){
     },
     'おとど': {
       'th13': {
-        'Youmu': {
+        'Marisa': {
           'score': 587938010,
           'status': 'good',
           'date': '2016-11-03T15:30:00',
@@ -6939,7 +6846,7 @@ export function useScoreRecords(){
       'th07Ex': {
         'ReimuB': {
           'score': 1238041760,
-          'status': 'good',
+          'status': 'great',
           'date': '2025-07-20T15:30:00',
           'replay': null,
           'detail': '日付不明',
@@ -7201,7 +7108,7 @@ export function useScoreRecords(){
         'Sakuya': {
           'score': 6931475560,
           'status': 'good',
-          'date': '2021-08-22T15:30:00',
+          'date': '2021-08-23T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -7315,7 +7222,7 @@ export function useScoreRecords(){
       },
       'th12': {
         'ReimuA': {
-          'score': 582691420,
+          'score': 611796360,
           'status': 'good',
           'date': '2011-09-23T15:30:00',
           'replay': null,
@@ -7685,22 +7592,11 @@ export function useScoreRecords(){
         },
       },
     },
-    'はし＠水銀党': {
-      'th12': {
-        'SanaeB': {
-          'score': 515406430,
-          'status': 'good',
-          'date': '2010-02-23T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
     'はやて': {
       'th07Ex': {
         'ReimuB': {
           'score': 1247990590,
-          'status': 'good',
+          'status': 'great',
           'date': '2008-10-03T15:30:00',
           'replay': null,
           'detail': '-',
@@ -8007,13 +7903,6 @@ export function useScoreRecords(){
           'replay': null,
           'detail': '-',
         },
-        'Sanae': {
-          'score': 538631060,
-          'status': 'good',
-          'date': '2020-01-06T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
       },
     },
     'みすみ': {
@@ -8033,17 +7922,6 @@ export function useScoreRecords(){
           'score': 102027380,
           'status': 'great',
           'date': '2020-06-20T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
-    'みみあて': {
-      'th12': {
-        'SanaeB': {
-          'score': 513745080,
-          'status': 'good',
-          'date': '2009-09-22T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -8418,21 +8296,21 @@ export function useScoreRecords(){
       'th12': {
         'MarisaA': {
           'score': 646518120,
-          'status': 'good',
+          'status': 'great',
           'date': '2011-12-19T15:30:00',
           'replay': null,
           'detail': '-',
         },
         'MarisaB': {
           'score': 615662420,
-          'status': 'good',
+          'status': 'great',
           'date': '2012-02-09T15:30:00',
           'replay': null,
           'detail': '-',
         },
         'SanaeA': {
           'score': 629913430,
-          'status': 'good',
+          'status': 'great',
           'date': '2012-09-13T15:30:00',
           'replay': null,
           'detail': '-',
@@ -8470,7 +8348,7 @@ export function useScoreRecords(){
     },
     'アラヤ': {
       'th07Ph': {
-        'SakuyaB': {
+        'ReimuB': {
           'score': 1380734280,
           'status': 'good',
           'date': '2009-03-04T15:30:00',
@@ -8546,13 +8424,6 @@ export function useScoreRecords(){
         },
       },
       'th12': {
-        'ReimuA': {
-          'score': 625701590,
-          'status': 'good',
-          'date': '2010-05-03T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
         'SanaeB': {
           'score': 625701590,
           'status': 'good',
@@ -8577,17 +8448,6 @@ export function useScoreRecords(){
           'score': 92569180,
           'status': 'good',
           'date': '2017-04-14T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
-    'ゴッダ': {
-      'th12': {
-        'MarisaA': {
-          'score': 525504230,
-          'status': 'good',
-          'date': '2010-02-21T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -8736,14 +8596,14 @@ export function useScoreRecords(){
     'ニャムニャム': {
       'th12': {
         'ReimuA': {
-          'score': 670462130,
+          'score': 630584000,
           'status': 'great',
           'date': '2017-03-09T15:30:00',
           'replay': null,
           'detail': '-',
         },
         'ReimuB': {
-          'score': 630584000,
+          'score': 517195360,
           'status': 'great',
           'date': '2016-08-22T15:30:00',
           'replay': null,
@@ -8787,24 +8647,6 @@ export function useScoreRecords(){
           'date': '2009-10-06T15:30:00',
           'replay': null,
           'detail': '-',
-        },
-      },
-    },
-    'ポンデスイカ': {
-      'th12': {
-        'ReimuA': {
-          'score': 606714600,
-          'status': 'good',
-          'date': '2010-06-23T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-        'MarisaA': {
-          'score': 557010320,
-          'status': 'good',
-          'date': '2010-06-30T15:30:00',
-          'replay': null,
-          'detail': '2010年6月4週',
         },
       },
     },
@@ -8901,10 +8743,28 @@ export function useScoreRecords(){
       'th07Ex': {
         'ReimuB': {
           'score': 1242356400,
-          'status': 'good',
+          'status': 'great',
           'date': '2011-04-27T15:30:00',
           'replay': null,
           'detail': '-',
+        },
+      },
+    },
+    'ポンデスイカ': {
+      'th12': {
+        'ReimuA': {
+          'score': 606714600,
+          'status': 'good',
+          'date': '2010-06-23T15:30:00',
+          'replay': null,
+          'detail': '-',
+        },
+        'MarisaA': {
+          'score': 557010320,
+          'status': 'good',
+          'date': '2010-06-30T15:30:00',
+          'replay': null,
+          'detail': '2010年6月4週',
         },
       },
     },
@@ -8953,17 +8813,6 @@ export function useScoreRecords(){
           'score': 536665340,
           'status': 'good',
           'date': '2008-03-19T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
-    'ヤエハ': {
-      'th12': {
-        'ReimuB': {
-          'score': 527775350,
-          'status': 'good',
-          'date': '2011-02-23T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -9321,7 +9170,7 @@ export function useScoreRecords(){
     },
     '松松打虎': {
       'th08': {
-        'Border': {
+        'Reimu': {
           'score': 2487905940,
           'status': 'good',
           'date': '2012-07-05T15:30:00',
@@ -9332,7 +9181,7 @@ export function useScoreRecords(){
     },
     '朱鷺戸': {
       'th10': {
-        'ReimuA': {
+        'ReimuC': {
           'score': 972535470,
           'status': 'good',
           'date': '2009-05-31T15:30:00',
@@ -9564,7 +9413,7 @@ export function useScoreRecords(){
     },
     '名前': {
       'th06': {
-        'MarisaB': {
+        'ReimuB': {
           'score': 509231970,
           'status': 'good',
           'date': '2013-04-29T15:30:00',
@@ -9620,23 +9469,23 @@ export function useScoreRecords(){
         },
       },
     },
-    '幽々公': {
-      'th12': {
-        'MarisaB': {
-          'score': 604055600,
-          'status': 'good',
-          'date': '2025-06-07T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
     '優さん＠': {
       'th10': {
         'MarisaA': {
           'score': 960487120,
           'status': 'good',
           'date': '2010-01-06T15:30:00',
+          'replay': null,
+          'detail': '-',
+        },
+      },
+    },
+    '幽々公': {
+      'th12': {
+        'MarisaB': {
+          'score': 604055600,
+          'status': 'good',
+          'date': '2025-06-07T15:30:00',
           'replay': null,
           'detail': '-',
         },
@@ -9659,17 +9508,6 @@ export function useScoreRecords(){
           'score': 1117659630,
           'status': 'good',
           'date': '2016-03-20T15:30:00',
-          'replay': null,
-          'detail': '-',
-        },
-      },
-    },
-    '惑惑': {
-      'th12': {
-        'ReimuA': {
-          'score': 523810510,
-          'status': 'good',
-          'date': '2009-09-26T15:30:00',
           'replay': null,
           'detail': '-',
         },
