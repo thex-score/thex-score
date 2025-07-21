@@ -269,11 +269,8 @@
       cell: ({ row }) => {
         return new Date(row.getValue('date')).toLocaleString('ja', {
           year: 'numeric',
-          day: 'numeric',
-          month: 'short',
-          hour: '2-digit',
-          minute: '2-digit',
-          hour12: false
+          day: '2-digit',
+          month: '2-digit',
         })
       }
     },
