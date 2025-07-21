@@ -1,5 +1,7 @@
 # 裏スコボみたいなメモ書き EX
 
+![本番適用状況](https://github.com/thex-score/thex-score/actions/workflows/deploy.yml/badge.svg)
+
 ## 目次
 
 - [裏スコボみたいなメモ書き EX](#裏スコボみたいなメモ書き-ex)
