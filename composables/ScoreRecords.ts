@@ -320,7 +320,7 @@ export function useScoreRecords(){
         },
       },
     },
-    'APO': {
+    'Apo': {
       'th11': {
         'ReimuA': {
           'score': 1131597980,
