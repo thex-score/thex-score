@@ -3,10 +3,10 @@ export function useScoreRecords(){
   const scoreRecords: Record<string, Record<string, Record<string, {score: number, status: 'great' | 'good', date: string, replay: string | null, detail: string}>>>={
     'WEF': {
       'th13': {
-        'Youmu': {
-          'score': 562172930,
+        'Marisa': {
+          'score': 600404860,
           'status': 'good',
-          'date': '2016-12-16T15:30:00',
+          'date': '2022-06-15T15:30:00',
           'replay': null,
           'detail': '-',
         },

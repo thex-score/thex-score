@@ -9,6 +9,20 @@ export function UseReleases(){
   // 3桁目: 新しい記録を追加したら上げる
   const releases=[
     {
+      version: "0.9.3",
+      date: "2025-07-23",
+      changes: [
+        "WEF th13記録修正"
+      ]
+    },
+    {
+      version: "0.9.2",
+      date: "2025-07-23",
+      changes: [
+        "favicon更新"
+      ]
+    },
+    {
       version: "0.9.1",
       date: "2025-07-22",
       changes: [
