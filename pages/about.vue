@@ -5,7 +5,7 @@
       <template #header>
       <p>はじめに</p>
       </template>
-      <p>このサイトでは東方原作STGのEXTRA及びFANTASMモードで基準スコア以上を出した記録を掲載しています。
+      <p>このサイトでは東方原作STGのExtra及びPhantasmモードで基準スコア以上を出した記録を掲載しています。
       
     </p>
     </UCard>
