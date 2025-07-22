@@ -73,7 +73,7 @@
       link: '/'
     },
     {
-      label: 'ページ概要',
+      label: 'サイト概要',
       link: '/about'
     },
     {

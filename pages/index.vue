@@ -5,7 +5,7 @@
         <h1 class="text-xl font-bold">ようこそ</h1>
       </template>
 
-      <p>このサイトでは東方原作STGのExtra及びPhantasmモードで基準スコア以上を出した記録を掲載しています。</p>
+      <p>このサイトでは東方原作STGのExtra及びPhantasmモードで基準スコア以上を出した記録を掲載しています。<br />ゲーム名、もしくはプレイヤー名を入力すると達成された記録が表示されます。</p>
       <template #footer>
         <p class="text-sm mb-1 font-medium">
           最新アップデート
