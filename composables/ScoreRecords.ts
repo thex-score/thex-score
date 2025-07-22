@@ -5,7 +5,7 @@ export function useScoreRecords(){
       'th13': {
         'Marisa': {
           'score': 600404860,
-          'status': 'good',
+          'status': 'great',
           'date': '2022-06-15T15:30:00',
           'replay': null,
           'detail': '-',
