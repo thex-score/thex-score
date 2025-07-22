@@ -33,6 +33,7 @@
           placeholder="プレイヤー名を入れる"
           class="flex-1 max-w-[12rem]"
           v-model="inputtedPlayer"
+          @keydown.enter="searchPlayer"
         />
         <UButton
           icon="i-lucide-search"
