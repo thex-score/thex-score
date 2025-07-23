@@ -4,6 +4,16 @@
 
     <UCard class="my-5">
       <template #header>
+        <p>リプレイアップローダ一覧</p>
+      </template>
+      <ul class="list-disc pl-5 space-y-0.5">
+        <li><a href="https://www.silentselene.net/replays/th11" target="_blank">サイレントセレナ（現東方スコアボード）</a></li>
+        <li><a href="https://www.puresign.tokyo/index.html" target="_blank">けーろだ</a></li>
+      </ul>
+    </UCard>
+
+    <UCard class="my-5">
+      <template #header>
         <p>攻略サイト・攻略記事一覧</p>
       </template>
       <ul class="list-disc pl-5 space-y-0.5">
