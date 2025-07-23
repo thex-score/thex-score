@@ -698,7 +698,7 @@ export function useScoreRecords(){
           'score': 1241990690,
           'status': 'great',
           'date': '2025-04-29T15:30:00',
-          'replay': 'th17_ud0015.rpy',
+          'replay': null,
           'detail': '-',
         },
       },
