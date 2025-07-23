@@ -7848,7 +7848,7 @@ export function useScoreRecords(){
           'score': 692455090,
           'status': 'good',
           'date': '2011-09-23T15:30:00',
-          'replay': 'th14_ud0043.rpy',
+          'replay': null,
           'detail': '-',
         },
       },
