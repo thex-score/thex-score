@@ -1281,14 +1281,14 @@ export function useScoreRecords(){
       'th10': {
         'ReimuA': {
           'score': 985720850,
-          'status': 'great',
+          'status': 'good',
           'date': '2010-07-21T15:30:00',
           'replay': 'th10_ud0033.rpy',
           'detail': '-',
         },
         'ReimuB': {
           'score': 994458150,
-          'status': 'great',
+          'status': 'good',
           'date': '2010-07-26T15:30:00',
           'replay': 'th10_ud0010.rpy',
           'detail': '-',
@@ -1878,7 +1878,7 @@ export function useScoreRecords(){
       'th12': {
         'ReimuA': {
           'score': 658198670,
-          'status': 'great',
+          'status': 'good',
           'date': '2017-07-08T15:30:00',
           'replay': 'th12_ud0030.rpy',
           'detail': '-',
@@ -2389,7 +2389,7 @@ export function useScoreRecords(){
       'th13': {
         'Reimu': {
           'score': 583256930,
-          'status': 'great',
+          'status': 'good',
           'date': '2022-11-01T15:30:00',
           'replay': 'th13_ud0011.rpy',
           'detail': '-',
@@ -2403,7 +2403,7 @@ export function useScoreRecords(){
         },
         'Sanae': {
           'score': 570844450,
-          'status': 'great',
+          'status': 'good',
           'date': '2023-10-10T15:30:00',
           'replay': 'th13_ud0018.rpy',
           'detail': '-',
@@ -2648,20 +2648,6 @@ export function useScoreRecords(){
     },
     'ISN': {
       'th14': {
-        'ReimuB': {
-          'score': 737583410,
-          'status': 'good',
-          'date': '2020-09-14T15:30:00',
-          'replay': 'th14_ud0059.rpy',
-          'detail': '-',
-        },
-        'MarisaA': {
-          'score': 733524100,
-          'status': 'good',
-          'date': '2020-09-12T15:30:00',
-          'replay': 'th14_ud0060.rpy',
-          'detail': '-',
-        },
         'SakuyaA': {
           'score': 778156990,
           'status': 'good',
@@ -2737,35 +2723,35 @@ export function useScoreRecords(){
       'th10': {
         'ReimuA': {
           'score': 986051230,
-          'status': 'great',
+          'status': 'good',
           'date': '2010-11-11T15:30:00',
           'replay': 'th10_ud0031.rpy',
           'detail': '-',
         },
         'ReimuB': {
           'score': 995337990,
-          'status': 'great',
+          'status': 'good',
           'date': '2012-01-21T15:30:00',
           'replay': 'th10_ud0009.rpy',
           'detail': '-',
         },
         'ReimuC': {
           'score': 992275980,
-          'status': 'great',
+          'status': 'good',
           'date': '2012-04-08T15:30:00',
           'replay': 'th10_ud0012.rpy',
           'detail': '-',
         },
         'MarisaA': {
           'score': 988560820,
-          'status': 'great',
+          'status': 'good',
           'date': '2010-06-12T15:30:00',
           'replay': 'th10_ud0018.rpy',
           'detail': '-',
         },
         'MarisaB': {
           'score': 986704560,
-          'status': 'great',
+          'status': 'good',
           'date': '2011-10-23T15:30:00',
           'replay': 'th10_ud0025.rpy',
           'detail': '-',
@@ -3422,7 +3408,7 @@ export function useScoreRecords(){
       'th12': {
         'ReimuB': {
           'score': 637570100,
-          'status': 'great',
+          'status': 'good',
           'date': '2025-05-02T15:30:00',
           'replay': 'th12_ud0038.rpy',
           'detail': '-',
@@ -3485,14 +3471,14 @@ export function useScoreRecords(){
       'th14': {
         'ReimuB': {
           'score': 762237990,
-          'status': 'great',
+          'status': 'good',
           'date': '2022-08-31T15:30:00',
           'replay': null,
           'detail': '-',
         },
         'MarisaA': {
           'score': 765467890,
-          'status': 'great',
+          'status': 'good',
           'date': '2022-08-21T15:30:00',
           'replay': null,
           'detail': '-',
@@ -3814,7 +3800,7 @@ export function useScoreRecords(){
       'th13': {
         'Reimu': {
           'score': 579189210,
-          'status': 'great',
+          'status': 'good',
           'date': '2021-07-21T15:30:00',
           'replay': 'th13_ud0012.rpy',
           'detail': '-',
@@ -3828,7 +3814,7 @@ export function useScoreRecords(){
         },
         'Sanae': {
           'score': 560674340,
-          'status': 'great',
+          'status': 'good',
           'date': '2021-05-12T15:30:00',
           'replay': 'th13_ud0022.rpy',
           'detail': '-',
@@ -3844,14 +3830,14 @@ export function useScoreRecords(){
       'th14': {
         'ReimuB': {
           'score': 752768230,
-          'status': 'great',
+          'status': 'good',
           'date': '2023-04-20T15:30:00',
           'replay': 'th14_ud0051.rpy',
           'detail': '-',
         },
         'MarisaA': {
           'score': 759382180,
-          'status': 'great',
+          'status': 'good',
           'date': '2023-04-20T15:30:00',
           'replay': 'th14_ud0049.rpy',
           'detail': '-',
@@ -3865,7 +3851,7 @@ export function useScoreRecords(){
         },
         'SakuyaA': {
           'score': 792750400,
-          'status': 'great',
+          'status': 'good',
           'date': '2022-01-26T15:30:00',
           'replay': 'th14_ud0042.rpy',
           'detail': '-',
@@ -4278,7 +4264,7 @@ export function useScoreRecords(){
       'th12': {
         'ReimuA': {
           'score': 651364160,
-          'status': 'great',
+          'status': 'good',
           'date': '2013-07-23T15:30:00',
           'replay': 'th12_ud0032.rpy',
           'detail': '-',
@@ -4322,7 +4308,7 @@ export function useScoreRecords(){
       'th13': {
         'Reimu': {
           'score': 558906970,
-          'status': 'great',
+          'status': 'good',
           'date': '2012-10-22T15:30:00',
           'replay': 'th13_ud0024.rpy',
           'detail': '-',
@@ -4395,7 +4381,7 @@ export function useScoreRecords(){
       'th13': {
         'Reimu': {
           'score': 551254140,
-          'status': 'great',
+          'status': 'good',
           'date': '2014-05-27T15:30:00',
           'replay': 'th13_ud0025.rpy',
           'detail': '-',
@@ -4938,35 +4924,35 @@ export function useScoreRecords(){
       'th10': {
         'ReimuA': {
           'score': 986510810,
-          'status': 'great',
+          'status': 'good',
           'date': '2017-11-25T15:30:00',
           'replay': 'th10_ud0028.rpy',
           'detail': '-',
         },
         'ReimuB': {
           'score': 995609930,
-          'status': 'great',
+          'status': 'good',
           'date': '2017-07-23T15:30:00',
           'replay': 'th10_ud0007.rpy',
           'detail': '-',
         },
         'ReimuC': {
           'score': 993681350,
-          'status': 'great',
+          'status': 'good',
           'date': '2010-08-02T15:30:00',
           'replay': 'th10_ud0011.rpy',
           'detail': '-',
         },
         'MarisaA': {
           'score': 990867060,
-          'status': 'great',
+          'status': 'good',
           'date': '2017-08-13T15:30:00',
           'replay': 'th10_ud0016.rpy',
           'detail': '-',
         },
         'MarisaB': {
           'score': 988226530,
-          'status': 'great',
+          'status': 'good',
           'date': '2018-08-12T15:30:00',
           'replay': 'th10_ud0024.rpy',
           'detail': '-',
@@ -5193,7 +5179,7 @@ export function useScoreRecords(){
       'th10': {
         'ReimuB': {
           'score': 990271160,
-          'status': 'great',
+          'status': 'good',
           'date': '2010-06-20T15:30:00',
           'replay': 'th10_ud0021.rpy',
           'detail': '-',
@@ -5222,7 +5208,7 @@ export function useScoreRecords(){
       'th13': {
         'Reimu': {
           'score': 566200720,
-          'status': 'great',
+          'status': 'good',
           'date': '2013-09-01T15:30:00',
           'replay': 'th13_ud0037.rpy',
           'detail': '-',
@@ -5688,28 +5674,28 @@ export function useScoreRecords(){
       'th10': {
         'ReimuA': {
           'score': 986075910,
-          'status': 'great',
+          'status': 'good',
           'date': '2012-03-12T15:30:00',
           'replay': 'th10_ud0029.rpy',
           'detail': '-',
         },
         'ReimuB': {
           'score': 995566970,
-          'status': 'great',
+          'status': 'good',
           'date': '2013-06-05T15:30:00',
           'replay': 'th10_ud0008.rpy',
           'detail': '-',
         },
         'ReimuC': {
           'score': 991157800,
-          'status': 'great',
+          'status': 'good',
           'date': '2011-04-15T15:30:00',
           'replay': 'th10_ud0013.rpy',
           'detail': '-',
         },
         'MarisaA': {
           'score': 990797120,
-          'status': 'great',
+          'status': 'good',
           'date': '2010-08-02T15:30:00',
           'replay': 'th10_ud0017.rpy',
           'detail': '-',
@@ -6346,7 +6332,7 @@ export function useScoreRecords(){
       'th13': {
         'Reimu': {
           'score': 567754510,
-          'status': 'great',
+          'status': 'good',
           'date': '2021-03-22T15:30:00',
           'replay': 'th13_ud0019.rpy',
           'detail': '-',
@@ -6379,20 +6365,6 @@ export function useScoreRecords(){
           'status': 'good',
           'date': '2023-04-20T15:30:00',
           'replay': 'th14_ud0044.rpy',
-          'detail': '-',
-        },
-        'ReimuB': {
-          'score': 731175210,
-          'status': 'good',
-          'date': '2018-04-10T15:30:00',
-          'replay': 'th14_ud0053.rpy',
-          'detail': '-',
-        },
-        'MarisaA': {
-          'score': 749377630,
-          'status': 'good',
-          'date': '2023-09-30T15:30:00',
-          'replay': 'th14_ud0052.rpy',
           'detail': '-',
         },
         'MarisaB': {
@@ -6954,7 +6926,7 @@ export function useScoreRecords(){
       'th13': {
         'Reimu': {
           'score': 559865500,
-          'status': 'great',
+          'status': 'good',
           'date': '2015-06-18T15:30:00',
           'replay': 'th13_ud0023.rpy',
           'detail': '-',
@@ -7435,7 +7407,7 @@ export function useScoreRecords(){
       'th10': {
         'ReimuA': {
           'score': 987343680,
-          'status': 'great',
+          'status': 'good',
           'date': '2012-05-21T15:30:00',
           'replay': 'th10_ud0027.rpy',
           'detail': '-',
@@ -7990,7 +7962,7 @@ export function useScoreRecords(){
       'th13': {
         'Reimu': {
           'score': 578830350,
-          'status': 'great',
+          'status': 'good',
           'date': '2021-05-10T15:30:00',
           'replay': 'th13_ud0013.rpy',
           'detail': '-',
@@ -8714,14 +8686,14 @@ export function useScoreRecords(){
       'th12': {
         'ReimuA': {
           'score': 670462130,
-          'status': 'great',
+          'status': 'good',
           'date': '2017-03-09T15:30:00',
           'replay': 'th12_ud0025.rpy',
           'detail': '-',
         },
         'ReimuB': {
           'score': 630584000,
-          'status': 'great',
+          'status': 'good',
           'date': '2016-08-22T15:30:00',
           'replay': 'th12_ud0026.rpy',
           'detail': '-',
@@ -8734,15 +8706,15 @@ export function useScoreRecords(){
           'detail': '-',
         },
         'MarisaB': {
-          'score': 698041780,
+          'score': 701703750,
           'status': 'great',
-          'date': '2025-05-24T15:30:00',
-          'replay': 'th12_ud0016.rpy',
+          'date': '2025-06-25T15:30:00',
+          'replay': 'th12_ud0114.rpy',
           'detail': '-',
         },
         'SanaeA': {
           'score': 653845970,
-          'status': 'great',
+          'status': 'good',
           'date': '2017-07-22T15:30:00',
           'replay': 'th12_ud0027.rpy',
           'detail': '-',
@@ -9027,14 +8999,14 @@ export function useScoreRecords(){
       'th12': {
         'ReimuA': {
           'score': 671921550,
-          'status': 'great',
+          'status': 'good',
           'date': '2022-01-25T15:30:00',
           'replay': 'th12_ud0021.rpy',
           'detail': '-',
         },
         'ReimuB': {
           'score': 632257630,
-          'status': 'great',
+          'status': 'good',
           'date': '2022-01-12T15:30:00',
           'replay': 'th12_ud0022.rpy',
           'detail': '-',
@@ -9048,14 +9020,14 @@ export function useScoreRecords(){
         },
         'MarisaB': {
           'score': 664423020,
-          'status': 'great',
+          'status': 'good',
           'date': '2021-12-18T15:30:00',
           'replay': 'th12_ud0023.rpy',
           'detail': '-',
         },
         'SanaeA': {
           'score': 654737910,
-          'status': 'great',
+          'status': 'good',
           'date': '2021-12-09T15:30:00',
           'replay': 'th12_ud0024.rpy',
           'detail': '-',
