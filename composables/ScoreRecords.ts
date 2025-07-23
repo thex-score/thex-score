@@ -7159,7 +7159,7 @@ export function useScoreRecords(){
           'score': 2466877810,
           'status': 'good',
           'date': '2006-12-14T15:30:00',
-          'replay': 'th8_ud0061.rpy',
+          'replay': 'th8_ud0062.rpy',
           'detail': '-',
         },
       },
