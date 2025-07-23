@@ -2039,7 +2039,7 @@ export function useScoreRecords(){
           'score': 1412815750,
           'status': 'great',
           'date': '2011-09-25T15:30:00',
-          'replay': 'th7_ud0009.rpy',
+          'replay': null,
           'detail': '-',
         },
         'MarisaA': {
