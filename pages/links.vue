@@ -7,8 +7,9 @@
         <p>リプレイアップローダ一覧</p>
       </template>
       <ul class="list-disc pl-5 space-y-0.5">
-        <li><a href="https://www.silentselene.net/replays/th11" target="_blank">サイレントセレナ（現東方スコアボード）</a></li>
+        <li><a href="https://www.silentselene.net/replays/th11" target="_blank">Silent Selene（現東方スコアボード）</a></li>
         <li><a href="https://www.puresign.tokyo/index.html" target="_blank">けーろだ</a></li>
+        <li><a href="https://replay.lunarcast.net/" target="_blank">LunarCast</a></li>
       </ul>
     </UCard>
 
@@ -27,8 +28,8 @@
       <template #header>
         <p>攻略動画一覧</p>
       </template>
-
       <ul class="list-disc pl-5 space-y-0.5">
+        <li><a href="https://www.youtube.com/watch?v=eGuC1P60lN8" target="_blank">東方妖々夢Extra夢符14億解説（lua氏の妖EX解説動画）</a></li>
         <li><a href="https://www.youtube.com/watch?v=TdfoB6N1sFc" target="_blank">【東方原作】東方風神録EXTRAスコアアタック9.5~9.6億解説（はらぴょん氏の風EX解説動画）</a></li>
         <li><a href="https://www.youtube.com/watch?v=YDFMb4_f8Pc" target="_blank">東方地霊殿 Extra スコアアタック入門10億 完全解説（Apo氏の地EX解説動画）</a></li>
         <li><a href="https://www.youtube.com/watch?v=ILwCH8_GlXs" target="_blank">東方地霊殿Extraスコアアタック 大台11億完全解説（Apo氏の地EX解説動画）</a></li>
