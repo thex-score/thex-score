@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   },
   site: {
     url: 'https://thex-score.github.io',
-    name: '裏スコボEX',
+    name: '東方EXスコボ',
     defaultLocale: 'ja',
     trailingSlash: false,
     indexable: true
