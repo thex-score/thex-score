@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   },
   app: {
     baseURL: process.env.NUXT_PUBLIC_DEPLOY_ENV === 'github_pages'
-      ? '/thex-score/'
+      ? '/'
       : '/'
   },
   vite: {
