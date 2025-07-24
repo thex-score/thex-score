@@ -29,10 +29,20 @@
         <p>攻略動画一覧</p>
       </template>
       <ul class="list-disc pl-5 space-y-0.5">
+        <li><a href="https://www.youtube.com/watch?v=3b4mIJk9vy0" target="_blank">ゆっくり椛の紅魔郷Exスコアアタック5億解説（マリオ課長氏の紅EX解説動画）</a></li>
+
         <li><a href="https://www.youtube.com/watch?v=eGuC1P60lN8" target="_blank">東方妖々夢Extra夢符14億解説（lua氏の妖EX解説動画）</a></li>
+        <li><a href="https://www.youtube.com/watch?v=_JOZApRRHF8" target="_blank">ゆっくり椛の妖々夢Extra13億解説（マリオ課長氏の妖EX解説動画）</a></li>
+
         <li><a href="https://www.youtube.com/watch?v=TdfoB6N1sFc" target="_blank">【東方原作】東方風神録EXTRAスコアアタック9.5~9.6億解説（はらぴょん氏の風EX解説動画）</a></li>
+        <li><a href="https://www.youtube.com/watch?v=-SYnKyqusC4" target="_blank">ゆっくり椛の風神録Exスコアアタック　9.5～6億解説（マリオ課長氏の風EX解説動画）</a></li>
+
         <li><a href="https://www.youtube.com/watch?v=YDFMb4_f8Pc" target="_blank">東方地霊殿 Extra スコアアタック入門10億 完全解説（Apo氏の地EX解説動画）</a></li>
         <li><a href="https://www.youtube.com/watch?v=ILwCH8_GlXs" target="_blank">東方地霊殿Extraスコアアタック 大台11億完全解説（Apo氏の地EX解説動画）</a></li>
+
+        <li><a href="https://www.youtube.com/watch?v=MltdODCzBjA" target="_blank">ゆっくり椛の東方星蓮船Ex5億解説動画！（マリオ課長氏の星EX解説動画）</a></li>
+        <li><a href="https://www.youtube.com/watch?v=7qBydYEyb8o" target="_blank">神霊廟EXスコアアタック解説（WEF氏の神EX解説動画）</a></li>
+        <li><a href="https://www.youtube.com/watch?v=oAiQA-c2QUk" target="_blank">東方輝針城extra魔理沙Bスコアアタック 解説（あせび氏の輝EX解説動画）</a></li>
       </ul>
     </UCard>
 
