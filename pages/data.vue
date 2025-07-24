@@ -6,85 +6,95 @@
       <template #header>
         <p>作品・部門別 達成状況</p>
       </template>
-      <table>
-        <tr>
-          <th align="center">作品</th>
-          <th align="center">超大台</th>
-          <th align="center">大台</th>
-        </tr>
-        <tr>
-          <td>th06 東方紅魔郷 EoSD</td>
-          <td align="right">29</td>
-          <td align="right">112</td>
-        </tr>
-        <tr>
-          <td>th07 東方妖々夢 PCB Ex</td>
-          <td align="right">7</td>
-          <td align="right">55</td>
-        </tr>
-        <tr>
-          <td>th07 東方妖々夢 PCB Ph</td>
-          <td align="right">4</td>
-          <td align="right">69</td>
-        </tr>
-        <tr>
-          <td>th08 東方永夜抄 IN</td>
-          <td align="right">24</td>
-          <td align="right">98</td>
-        </tr>
-        <tr>
-          <td>th10 東方風神録 MoF</td>
-          <td align="right">9</td>
-          <td align="right">155</td>
-        </tr>
-        <tr>
-          <td>th11 東方地霊殿 SA</td>
-          <td align="right">21</td>
-          <td align="right">162</td>
-        </tr>
-        <tr>
-          <td>th12 東方星蓮船 UFO</td>
-          <td align="right">16</td>
-          <td align="right">133</td>
-        </tr>
-        <tr>
-          <td>th12.8 妖精大戦争 GFW</td>
-          <td align="right">3</td>
-          <td align="right">15</td>
-        </tr>
-        <tr>
-          <td>th13 東方神霊廟 TD</td>
-          <td align="right">12</td>
-          <td align="right">46</td>
-        </tr>
-        <tr>
-          <td>th14 東方輝針城 DDC</td>
-          <td align="right">16</td>
-          <td align="right">61</td>
-        </tr>
-        <tr>
-          <td>th15 東方紺珠伝 LoLK</td>
-          <td align="right">10</td>
-          <td align="right">25</td>
-        </tr>
-        <tr>
-          <td>th16 東方天空璋 HSiFS</td>
-          <td align="right">21</td>
-          <td align="right">49</td>
-        </tr>
-        <tr>
-          <td>th17 東方鬼形獣 WBaWC</td>
-          <td align="right">9</td>
-          <td align="right">33</td>
-        </tr>
-        <tr>
-          <td>th18 東方虹龍洞 UM</td>
-          <td align="right">14</td>
-          <td align="right">26</td>
-        </tr>
-      </table>
+      <UTable :data="scoreSummary" :columns="columns" class="flex-1" />
     </UCard>
 
 
 </UContainer>
 </template>
+
+<script setup>
+  import { useGames } from '~/composables/Games'
+  import { h, resolveComponent } from 'vue'
+
+  const gamesMap = useGames()
+  const scoreRecordMap = useScoreRecords()
+
+  const scoreSummary = computed(() => {
+    // 中間テーブル: { gameId: { great: number, good: number } }
+    const tally = {}
+
+    for (const games of Object.values(scoreRecordMap)) {
+      for (const [gameId, shots] of Object.entries(games)) {
+        for (const record of Object.values(shots)) {
+          // 初期化
+          if (!tally[gameId]) tally[gameId] = { great: 0, good: 0 }
+
+          // カウント
+          if (record.status === 'great') tally[gameId].great++
+          if (record.status === 'good')  tally[gameId].good++
+        }
+      }
+    }
+
+    return Object.entries(tally).map(([gameId, { great, good }]) => ({
+      game: gameId,
+      great_count: great,
+      good_count: good
+    })).sort((a,b) => {
+      // 作品番号（th\d+ 部分）で降順
+      const baseA = a.game.match(/^th\d+/)?.[0] ?? a.game
+      const baseB = b.game.match(/^th\d+/)?.[0] ?? b.game
+      const diffBase = baseA.localeCompare(baseB, 'en') // 逆順で降順
+      if (diffBase !== 0) return diffBase
+
+      // 同じ番号ならバリアント優先度で
+      const variantA = a.game.slice(baseA.length) // '', 'Ex', 'Ph', …
+      const variantB = b.game.slice(baseB.length)
+
+      const priority = { '': 0, 'Ex': 1, 'Ph': 2 }
+      return (priority[variantA] ?? 99) - (priority[variantB] ?? 99)
+    }
+    )
+  })
+
+  const UBadge = resolveComponent('UBadge')
+  const columns=[
+    {
+      accessorKey: 'game',
+      header: 'ゲーム名',
+      cell: ({ row }) => {
+        return h(
+          UBadge,
+          {
+            // 形状は Tailwind、色は動的に style で上書き
+            class: 'capitalize inline-block px-2 py-0.5 rounded font-semibold',
+            style: {
+              color: gamesMap[row.getValue('game')].color.txt,
+              backgroundColor: gamesMap[row.getValue('game')].color.bg,
+            }
+          },
+          () => gamesMap[row.getValue('game')].name
+        )
+      }
+    },
+    {
+      accessorKey: 'great_count',
+      header: ({ column }) => {
+
+        return h(UBadge, { class: 'capitalize', variant: 'subtle', color: 'success' },
+          '超大台'
+        )
+      }
+    },
+    {
+      accessorKey: 'good_count',
+      header: ({ column }) => {
+
+        return h(UBadge, { class: 'capitalize', variant: 'subtle', color: 'neutral' },
+          '大台'
+        )
+      }
+    },
+  ]
+</script>
