@@ -77,6 +77,10 @@
       link: '/about'
     },
     {
+      label: 'データ',
+      link: '/data'
+    },
+    {
       label: 'リンク一覧',
       link: '/links'
     },
