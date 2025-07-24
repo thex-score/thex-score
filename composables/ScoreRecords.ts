@@ -2551,9 +2551,9 @@ export function useScoreRecords(){
         'MarisaB': {
           'score': 520527150,
           'status': 'good',
-          'date': '2025-07-20T15:30:00',
+          'date': '2010-03-31T15:30:00',
           'replay': null,
-          'detail': '日付不明',
+          'detail': '2010年3月2週',
         },
       },
     },
@@ -3037,9 +3037,9 @@ export function useScoreRecords(){
         'MarisaA': {
           'score': 527497000,
           'status': 'good',
-          'date': '2025-07-22T15:30:00',
+          'date': '2011-08-31T15:30:00',
           'replay': null,
-          'detail': '日付不明',
+          'detail': '2011年8月2週',
         },
         'MarisaB': {
           'score': 632809400,
@@ -3997,13 +3997,6 @@ export function useScoreRecords(){
         },
       },
       'th12': {
-        'ReimuA': {
-          'score': 608159010,
-          'status': 'good',
-          'date': '2025-07-21T15:30:00',
-          'replay': null,
-          'detail': '日付不明',
-        },
         'SanaeA': {
           'score': 607704640,
           'status': 'good',
@@ -6643,9 +6636,9 @@ export function useScoreRecords(){
         'ReimuB': {
           'score': 1238041760,
           'status': 'good',
-          'date': '2025-07-20T15:30:00',
+          'date': '2011-09-30T15:30:00',
           'replay': null,
-          'detail': '日付不明',
+          'detail': '2011年9月2週',
         },
       },
     },
@@ -7568,9 +7561,9 @@ export function useScoreRecords(){
         'ReimuB': {
           'score': 553233090,
           'status': 'good',
-          'date': '2011-12-31T15:30:00',
+          'date': '2011-01-31T15:30:00',
           'replay': null,
-          'detail': '2011年',
+          'detail': '2011年1月1～2週',
         },
         'MarisaA': {
           'score': 530657650,
