@@ -6573,17 +6573,6 @@ export function useScoreRecords(){
         },
       },
     },
-    'かも猫': {
-      'th11': {
-        'ReimuA': {
-          'score': 1024187170,
-          'status': 'good',
-          'date': '2021-08-17T15:30:00',
-          'replay': 'th11_ud0081.rpy',
-          'detail': '-',
-        },
-      },
-    },
     'きゅーめい': {
       'th06': {
         'ReimuB': {
