@@ -17,7 +17,7 @@
 
 ## 稼働ページ
 
-[here!](https://thex-score.github.io/thex-score/)
+[here!](https://thex-score.net/)
 
 ## セットアップ
 
