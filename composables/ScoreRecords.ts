@@ -4307,6 +4307,17 @@ export function useScoreRecords(){
         },
       },
     },
+    'Pearl': {
+      'th06': {
+        'MarisaB': {
+          'score': 516775830,
+          'status': 'good',
+          'date': '2025-01-06T15:30:00',
+          'replay': 'th6_ud0097.rpy',
+          'detail': '-',
+        },
+      },
+    },
     'Phar': {
       'th10': {
         'ReimuA': {
