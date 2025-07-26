@@ -4308,7 +4308,7 @@ export function useScoreRecords(){
       },
     },
     'Pearl': {
-      'th6': {
+      'th06': {
         'MarisaB': {
           'score': 516775830,
           'status': 'good',
