@@ -10,6 +10,13 @@ export function UseReleases(){
   const releases=[
     {
       version: "1.1.3",
+      date: "2025-07-26",
+      changes: [
+        "記録追加：th06 Pearl MarisaB",
+      ]
+    },
+    {
+      version: "1.1.3",
       date: "2025-07-25",
       changes: [
         "一部記録の修正",
