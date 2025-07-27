@@ -13,6 +13,7 @@ export function UseReleases(){
       date: "2025-07-28",
       changes: [
         "記録追加：th16 幽谷もこ Reimu",
+        "記録追加：th18 工藤氏。 Sakuya",
       ]
     },
     {
