@@ -3771,7 +3771,7 @@ export function useScoreRecords(){
           'status': 'great',
           'date': '2024-06-15T15:30:00',
           'replay': null,
-          'detail': 'リプレイなし',
+          'detail': 'リプレイ不明',
         },
         'Cirno': {
           'score': 2087825070,
