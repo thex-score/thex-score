@@ -8888,6 +8888,17 @@ export function useScoreRecords(){
         },
       },
     },
+    '工藤氏。': {
+      'th18': {
+        'Sakuya': {
+          'score': 5152948230,
+          'status': 'good',
+          'date': '2025-07-28T15:30:00',
+          'replay': 'th18_ud0025.rpy',
+          'detail': '-',
+        },
+      },
+    },
     '高槻やよい': {
       'th07Ex': {
         'ReimuB': {
