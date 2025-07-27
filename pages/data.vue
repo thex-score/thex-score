@@ -28,19 +28,21 @@
       for (const [gameId, shots] of Object.entries(games)) {
         for (const record of Object.values(shots)) {
           // 初期化
-          if (!tally[gameId]) tally[gameId] = { great: 0, good: 0 }
+          if (!tally[gameId]) tally[gameId] = { great: 0, good: 0, total: 0}
 
           // カウント
-          if (record.status === 'great') tally[gameId].great++
-          if (record.status === 'good')  tally[gameId].good++
+          if (record.status === 'great') tally[gameId].great++;
+          if (record.status === 'good')  tally[gameId].good++;
+          tally[gameId].total = tally[gameId].great + tally[gameId].good;
         }
       }
     }
 
-    return Object.entries(tally).map(([gameId, { great, good }]) => ({
+    return Object.entries(tally).map(([gameId, { great, good,total }]) => ({
       game: gameId,
       great_count: great,
-      good_count: good
+      good_count: good,
+      total_count: total
     })).sort((a,b) => {
       // 作品番号（th\d+ 部分）で降順
       const baseA = a.game.match(/^th\d+/)?.[0] ?? a.game
@@ -75,6 +77,15 @@
             }
           },
           () => gamesMap[row.getValue('game')].name
+        )
+      }
+    },
+    {
+      accessorKey: 'total_count',
+      header: ({ column }) => {
+
+        return h(UBadge, { class: 'capitalize', variant: 'subtle', color: 'neutral' },
+          '合計'
         )
       }
     },
