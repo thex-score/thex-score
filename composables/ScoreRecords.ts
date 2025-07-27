@@ -9298,7 +9298,7 @@ export function useScoreRecords(){
           'score': 2169743310,
           'status': 'good',
           'date': '2025-07-19T15:30:00',
-          'replay': 'th12_ud0064.rpy',
+          'replay': 'th16_ud0049.rpy',
           'detail': '-',
         },
       },
