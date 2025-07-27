@@ -7846,6 +7846,17 @@ export function useScoreRecords(){
         },
       },
     },
+    'もち': {
+      'th10': {
+        'MarisaC': {
+          'score': 963894910,
+          'status': 'good',
+          'date': '2024-10-18T15:30:00',
+          'replay': 'th10_ud0140.rpy',
+          'detail': '-',
+        },
+      },
+    },
     'もなか': {
       'th10': {
         'MarisaA': {
