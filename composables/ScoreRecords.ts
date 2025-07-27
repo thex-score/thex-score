@@ -1486,6 +1486,15 @@ export function useScoreRecords(){
           'detail': '-',
         },
       },
+      'th17': {
+        'MarisaO': {
+          'score': 1824583120,
+          'status': 'good',
+          'date': '2022-05-09T15:30:00',
+          'replay': 'th17_ud0034.rpy',
+          'detail': '-',
+        },
+      },
     },
     'E.G.I.': {
       'th16': {
@@ -2944,6 +2953,15 @@ export function useScoreRecords(){
           'detail': '-',
         },
       },
+      'th16': {
+        'Reimu': {
+          'score': 	3048832530,
+          'status': 'great',
+          'date': '2020-01-21T15:30:00',
+          'replay': 'th16_ud0048.rpy',
+          'detail': '-',
+        },
+      },
       'th17': {
         'MarisaO': {
           'score': 2015744690,
@@ -3749,11 +3767,11 @@ export function useScoreRecords(){
     'MTR': {
       'th16': {
         'Reimu': {
-          'score': 2575209060,
-          'status': 'good',
-          'date': '2020-03-16T15:30:00',
-          'replay': 'th16_ud0022.rpy',
-          'detail': '-',
+          'score': 3089590190,
+          'status': 'great',
+          'date': '2024-06-15T15:30:00',
+          'replay': null,
+          'detail': 'リプレイなし',
         },
         'Cirno': {
           'score': 2087825070,
@@ -5478,6 +5496,13 @@ export function useScoreRecords(){
           'date': '2021-04-09T15:30:00',
           'replay': null,
           'detail': 'リプレイ不明',
+        },
+        'Sanae': {
+          'score': 507448700,
+          'status': 'good',
+          'date': '2017-02-15T15:30:00',
+          'replay': 'th13_ud0035.rpy',
+          'detail': '-',
         },
       },
     },
@@ -7655,6 +7680,13 @@ export function useScoreRecords(){
           'replay': null,
           'detail': 'リプレイ不明',
         },
+        'Cirno': {
+          'score': 3005344670,
+          'status': 'great',
+          'date': '2017-10-23T15:30:00',
+          'replay': null,
+          'detail': 'リプレイ不明',
+        },
         'Aya': {
           'score': 3442485180,
           'status': 'great',
@@ -7668,6 +7700,17 @@ export function useScoreRecords(){
           'date': '2018-10-22T15:30:00',
           'replay': null,
           'detail': 'リプレイ不明',
+        },
+      },
+    },
+    'まみまる': {
+      'th14': {
+        'MarisaB': {
+          'score': 1204019650,
+          'status': 'great',
+          'date': '2004-02-15T15:30:00',
+          'replay': null,
+          'detail': '-',
         },
       },
     },
@@ -8810,17 +8853,6 @@ export function useScoreRecords(){
           'status': 'good',
           'date': '2021-07-31T15:30:00',
           'replay': 'th16_ud0027.rpy',
-          'detail': '-',
-        },
-      },
-    },
-    '九条アリス': {
-      'th13': {
-        'Sanae': {
-          'score': 507448700,
-          'status': 'good',
-          'date': '2017-02-15T15:30:00',
-          'replay': 'th13_ud0035.rpy',
           'detail': '-',
         },
       },

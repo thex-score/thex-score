@@ -9,6 +9,13 @@ export function UseReleases(){
   // 3桁目: 新しい記録を追加したら上げる
   const releases=[
     {
+      version: "1.1.4",
+      date: "2025-07-26",
+      changes: [
+        "過去記録追加：th13/th14/th16/th17",
+      ]
+    },
+    {
       version: "1.1.3",
       date: "2025-07-26",
       changes: [
