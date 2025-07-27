@@ -9,6 +9,13 @@ export function UseReleases(){
   // 3桁目: 新しい記録を追加したら上げる
   const releases=[
     {
+      version: "1.1.6",
+      date: "2025-07-28",
+      changes: [
+        "記録追加：th16 幽谷もこ Reimu",
+      ]
+    },
+    {
       version: "1.1.5",
       date: "2025-07-28",
       changes: [

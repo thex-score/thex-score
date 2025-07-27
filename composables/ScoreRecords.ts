@@ -9292,6 +9292,17 @@ export function useScoreRecords(){
         },
       },
     },
+    '幽谷もこ': {
+      'th16': {
+        'Reimu': {
+          'score': 2169743310,
+          'status': 'good',
+          'date': '2025-07-19T15:30:00',
+          'replay': 'th16_ud0049.rpy',
+          'detail': '-',
+        },
+      },
+    },
     '幽々公': {
       'th12': {
         'MarisaB': {
