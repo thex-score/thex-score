@@ -78,7 +78,7 @@
     },
     {
       accessorKey: 'date',
-      header: '日付',
+      header: '登録日',
       cell: ({ row }) => {
         return new Date(row.getValue('date')).toLocaleString('ja', {
           year: 'numeric',
