@@ -20,6 +20,8 @@
       <ul class="list-disc pl-5 space-y-0.5">
         <li><NuxtLink to="http://www.coldlemonade.net/" target="_blank">つめたいレモネードはいかが？（れもな氏の攻略サイト）</NuxtLink></li>
         <li><NuxtLink to="https://note.com/flower874_/n/n6cde241eab41" target="_blank">東方風神録Extraスコアアタック概論（管理人にゃんこの風EX攻略記事）</NuxtLink></li>
+        <li><NuxtLink to="https://apo-adipic.hatenablog.com/entry/2023/02/08/152158" target="_blank">地霊殿Extraスコアアタック10億解説(霊夢A)（Apo氏の地EX攻略記事）</NuxtLink></li>
+        <li><NuxtLink to="https://apo-adipic.hatenablog.com/entry/2023/06/21/000655" target="_blank">地霊殿Extra霊夢A11億（Apo氏の地EX攻略記事）</NuxtLink></li>
         <li><NuxtLink to="https://note.com/flower874_/n/nd49da8a540f9" target="_blank">東方虹龍洞Extraスコアアタック概論（管理人にゃんこの虹EX攻略記事）</NuxtLink></li>
       </ul>
     </UCard>
