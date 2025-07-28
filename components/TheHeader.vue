@@ -77,7 +77,11 @@
       link: '/about'
     },
     {
-      label: 'データ',
+      label: '最近の記録',
+      link: '/newrecords'
+    },
+    {
+      label: '統計データ',
       link: '/data'
     },
     {
