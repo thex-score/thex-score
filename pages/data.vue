@@ -1,10 +1,10 @@
 <template>
   <UContainer class="py-8">
-    <h1 class="text-xl font-bold mb-6">各種データ</h1>
+    <h1 class="text-xl font-bold mb-6">統計データ</h1>
 
     <UCard class="my-5">
       <template #header>
-        <p>作品・部門別 達成状況</p>
+        <h2>作品・部門別 達成状況</h2>
       </template>
       <UTable :data="scoreSummary" :columns="columns" class="flex-1" />
     </UCard>
