@@ -62,4 +62,4 @@ jobs:
 
       - run: npm install
 
-      - run: npx nuxt 
+      - run: npx nuxt generate
