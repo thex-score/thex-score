@@ -44,4 +44,21 @@ jobs:
 
       - run: npm install
 
-      - run: npx nuxt generate
+      - run: npx nuxt 
+      
+  check-new-records:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - run: git fetch origin ${{ github.base_ref }} --depth=1
+
+      - name: Warn if NewScoreRecords.ts is unchanged
+        run: |
+          # 差分がないと git diff --exit-code は 0 を返す
+          if git diff --exit-code origin/${{ github.base_ref }} -- composables/NewScoreRecords.ts >/dev/null ; then
+            echo "::error file=composables/NewScoreRecords.ts::NewScoreRecords.ts is not changed.\nIs this intended action?"
+            exit 1
+          fi
