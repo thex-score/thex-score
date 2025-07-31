@@ -9,6 +9,13 @@ export function UseReleases(){
   // 3桁目: 新しい記録を追加したら上げる
   const releases=[
     {
+      version: "1.1.10",
+      date: "2025-07-31",
+      changes: [
+        "記録修正：th12 あねみ SanaeB",
+      ]
+    },
+    {
       version: "1.1.9",
       date: "2025-07-28",
       changes: [
