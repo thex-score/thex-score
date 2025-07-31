@@ -289,26 +289,6 @@ export function useScoreRecords(){
         },
       },
     },
-    'Anemia': {
-      'th11': {
-        'ReimuA': {
-          'score': 1022055100,
-          'status': 'good',
-          'date': '2009-09-30T15:30:00',
-          'replay': null,
-          'detail': '2009年9月1週',
-        },
-      },
-      'th12': {
-        'SanaeB': {
-          'score': 700366290,
-          'status': 'great',
-          'date': '2017-05-13T15:30:00',
-          'replay': 'th12_ud0015.rpy',
-          'detail': '-',
-        },
-      },
-    },
     'ANK': {
       'th06': {
         'MarisaB': {
@@ -6320,6 +6300,15 @@ export function useScoreRecords(){
       },
     },
     'あねみ': {
+      'th07Ph': {
+        'ReimuB': {
+          'score': 1415737210,
+          'status': 'good',
+          'date': '2023-01-03T15:30:00',
+          'replay': null,
+          'detail': '-',
+        },
+      },
       'th10': {
         'MarisaC': {
           'score': 1000000780,
@@ -6370,6 +6359,15 @@ export function useScoreRecords(){
           'status': 'good',
           'date': '2022-05-05T15:30:00',
           'replay': 'th11_ud0030.rpy',
+          'detail': '-',
+        },
+      },
+      'th12': {
+        'SanaeB': {
+          'score': 701455630,
+          'status': 'great',
+          'date': '2023-01-09T15:30:00',
+          'replay': null,
           'detail': '-',
         },
       },
