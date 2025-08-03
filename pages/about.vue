@@ -53,7 +53,9 @@
     </UCard>
     <UCard class="my-5">
       <template #header>
-      <p>基準スコア（大台）</p>
+      <p>基準スコア
+        <UBadge class="capitalize" variant="subtle", color="neutral">大台</UBadge>
+      </p>
       </template>
       <ul class="pl-5 space-y-0.5">
         <li v-for="gameThresold in gameThresolds" :key="gameThresold.game">
@@ -70,7 +72,10 @@
 
     <UCard class="my-5">
       <template #header>
-      <p>大台スコア基本方針</p>
+      <p>
+        <UBadge class="capitalize" variant="subtle", color="neutral">大台</UBadge>
+        スコア基本方針
+      </p>
       </template>
       <p>大台スコアはスコアアタック入門プレイヤーが目標スコアとした際に簡単過ぎず難しすぎず、程々に苦労してかつ達成感を得られるくらいの達成難易度を想定して設定された基準スコアです。<br />
         基本的な稼ぎ方を理解していないと出せないスコアなので、この基準値をクリアしたら一人前のスコアラーです。<br />
@@ -87,7 +92,10 @@
 
     <UCard class="my-5">
       <template #header>
-      <p>大台スコアFAQ</p>
+      <p>
+        <UBadge class="capitalize" variant="subtle", color="neutral">大台</UBadge>
+        スコアFAQ
+      </p>
       </template>
       <ul class="pl-5 space-y-0.5">
         <li>Q. 妖々夢10億では駄目なのですか？</li>
@@ -114,7 +122,10 @@
 
     <UCard class="my-5">
       <template #header>
-      <p>基準スコア（超大台）</p>
+      <p>
+        基準スコア
+        <UBadge class="capitalize" variant="subtle", color="success">超大台</UBadge>
+      </p>
       </template>
       <ul class="pl-5 space-y-0.5">
         <li v-for="gameThresold in gameThresolds" :key="gameThresold.game">
@@ -131,7 +142,10 @@
 
     <UCard class="my-5">
       <template #header>
-      <p>超大台スコア基本方針</p>
+      <p>
+        <UBadge class="capitalize" variant="subtle", color="success">超大台</UBadge>
+        スコア基本方針
+      </p>
       </template>
       <p> 超大台スコアはその作品をやり込んだプレイヤーが大目標として掲げるような非常に達成難易度の高い基準スコアです。こちらについてはスコアアタック上級者以外が目標とすることを想定してはいません。そのため大台スコアよりも基準スコアが細かく設定されています。この基準スコアをクリアしたら上級者を名乗っても恥ずかしくないスコアです。
       
@@ -140,7 +154,10 @@
 
     <UCard class="my-5">
       <template #header>
-      <p>超大台スコアFAQ</p>
+      <p>
+        <UBadge class="capitalize" variant="subtle", color="success">超大台</UBadge>
+        スコアFAQ
+      </p>
       </template>
       <ul class="pl-5 space-y-0.5">
         <li>Q. 超大台が達成できない機体があるので基準スコアを下げてくれませんか？</li>
