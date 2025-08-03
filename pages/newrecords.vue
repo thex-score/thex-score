@@ -97,7 +97,7 @@
         return h(
           'a',
           {
-            href: `https://thex-score.github.io/thex-score/replays/${row.getValue('game')}/${row.getValue('replay')}`,
+            href: `https://thex-score.net/replays/${row.getValue('game')}/${row.getValue('replay')}`,
             download: row.getValue('replay'),
             target: '_blank',
             rel: 'noopener',

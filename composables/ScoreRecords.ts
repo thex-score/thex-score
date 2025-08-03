@@ -7067,6 +7067,15 @@ export function useScoreRecords(){
       },
     },
     'にゃんこ': {
+      'th08': {
+        'Netherworld': {
+          'score': 2570645640,
+          'status': 'good',
+          'date': '2025-08-01T15:30:00',
+          'replay': 'th8_ud0077.rpy',
+          'detail': '-',
+        },
+      },
       'th10': {
         'ReimuA': {
           'score': 984762400,
