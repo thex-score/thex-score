@@ -41,19 +41,14 @@
         <p>対応作品</p>
       </template>
       <ul class="pl-5 space-y-0.5">
-        <li>th06 東方紅魔郷 EoSD</li>
-        <li>th07 東方妖々夢 PCB</li>
-        <li>th08 東方永夜抄 IN</li>
-        <li>th10 東方風神録 MoF</li>
-        <li>th11 東方地霊殿 SA</li>
-        <li>th12 東方星蓮船 UFO</li>
-        <li>th12.8 妖精大戦争 GFW</li>
-        <li>th13 東方神霊廟 TD</li>
-        <li>th14 東方輝針城 DDC</li>
-        <li>th15 東方紺珠伝 LoLK</li>
-        <li>th16 東方天空璋 HSiFS</li>
-        <li>th17 東方鬼形獣 WBaWC</li>
-        <li>th18 東方虹龍洞 UM</li>
+        <li v-for="gameThresold in gameThresolds" :key="gameThresold.game">
+          <UBadge
+            class="capitalize inline-block px-2 py-0.5 rounded font-semibold"
+            :style="{
+              color: gamesMap[gameThresold.game].color.txt,
+              backgroundColor: gamesMap[gameThresold.game].color.bg,
+            }">{{ gamesMap[gameThresold.game].name }}</UBadge>
+        </li>
       </ul>
     </UCard>
     <UCard class="my-5">
@@ -61,20 +56,15 @@
       <p>基準スコア（大台）</p>
       </template>
       <ul class="pl-5 space-y-0.5">
-        <li>th06 東方紅魔郷 : 5億</li>
-        <li>th07 東方妖々夢 Extra : 12億</li>
-        <li>th07 東方妖々夢 Phantasm : 13億</li>
-        <li>th08 東方永夜抄 : ペア・人間単騎 24億 / 妖怪単騎 18億</li>
-        <li>th10 東方風神録 : 9.5億</li>
-        <li>th11 東方地霊殿 : 10億</li>
-        <li>th12 東方星蓮船 : 5億</li>
-        <li>th12.8 妖精大戦争 : 9000万</li>
-        <li>th13 東方神霊廟 : 5億</li>
-        <li>th14 東方輝針城 : 魔理沙B 10億 / その他 7.5億</li>
-        <li>th15 東方紺珠伝 : 7億</li>
-        <li>th16 東方天空璋 : 20億</li>
-        <li>th17 東方鬼形獣 : カワウソ機体 15億 / その他 10億</li>
-        <li>th18 東方虹龍洞 : 咲夜 50億 / その他 30億</li>
+        <li v-for="gameThresold in gameThresolds" :key="gameThresold.game">
+          <UBadge
+            class="capitalize inline-block px-2 py-0.5 rounded font-semibold"
+            :style="{
+              color: gamesMap[gameThresold.game].color.txt,
+              backgroundColor: gamesMap[gameThresold.game].color.bg,
+            }">{{ gamesMap[gameThresold.game].name }}</UBadge>
+            ：{{ gameThresold.great }}
+        </li>
       </ul>
     </UCard>
 
@@ -127,20 +117,15 @@
       <p>基準スコア（超大台）</p>
       </template>
       <ul class="pl-5 space-y-0.5">
-        <li>th06 東方紅魔郷 : 6億</li>
-        <li>th07 東方妖々夢 Extra : 14億</li>
-        <li>th07 東方妖々夢 Phantasm : 16億</li>
-        <li>th08 東方永夜抄 : ペア・人間単騎 28億 / 妖怪単騎 20億</li>
-        <li>th10 東方風神録 : 10億</li>
-        <li>th11 東方地霊殿 : 11億</li>
-        <li>th12 東方星蓮船 : 7億</li>
-        <li>th12.8 妖精大戦争 : 1億</li>
-        <li>th13 東方神霊廟 : 6億</li>
-        <li>th14 東方輝針城 : 魔理沙B 12億 / その他 8億</li>
-        <li>th15 東方紺珠伝 : 9億</li>
-        <li>th16 東方天空璋 : 30億</li>
-        <li>th17 東方鬼形獣 : カワウソ機体 25億 / その他 15億</li>
-        <li>th18 東方虹龍洞 : 咲夜 70億 / その他 35億</li>
+        <li v-for="gameThresold in gameThresolds" :key="gameThresold.game">
+          <UBadge
+            class="capitalize inline-block px-2 py-0.5 rounded font-semibold"
+            :style="{
+              color: gamesMap[gameThresold.game].color.txt,
+              backgroundColor: gamesMap[gameThresold.game].color.bg,
+            }">{{ gamesMap[gameThresold.game].name }}</UBadge>
+            ：{{ gameThresold.good }}
+        </li>
       </ul>
     </UCard>
 
@@ -197,3 +182,82 @@
     </UCard>
   </UContainer>
 </template>
+
+<script setup lang="ts">
+  import { useGames } from '#imports';
+  const gamesMap=useGames()
+
+  const gameThresolds: Ref<Array<{"game": string, "great": string, "good": string}>>=ref([
+    {
+      "game": "th06",
+      "great": "6億",
+      "good": "5億"
+    },
+    {
+      "game": "th07Ex",
+      "great": "14億",
+      "good": "12億"
+    },
+    {
+      "game": "th07Ph",
+      "great": "16億",
+      "good": "13億"
+    },
+    {
+      "game": "th08",
+      "great": "ペア・人間単騎 28億 / 妖怪単騎 20億",
+      "good": "ペア・人間単騎 24億 / 妖怪単騎 18億"
+    },
+    {
+      "game": "th10",
+      "great": "10億",
+      "good": "9.5億"
+    },
+    {
+      "game": "th11",
+      "great": "11億",
+      "good": "10億"
+    },
+    {
+      "game": "th12",
+      "great": "7億",
+      "good": "5億"
+    },
+    {
+      "game": "th128",
+      "great": "1億",
+      "good": "9000万"
+    },
+    {
+      "game": "th13",
+      "great": "6億",
+      "good": "5億"
+    },
+    {
+      "game": "th14",
+      "great": "魔理沙B 12億 / その他 8億",
+      "good": "魔理沙B 10億 / その他 7.5億"
+    },
+    {
+      "game": "th15",
+      "great": "9億",
+      "good": "7億"
+    },
+    {
+      "game": "th16",
+      "great": "30億",
+      "good": "20億"
+    },
+    {
+      "game": "th17",
+      "great": "25億",
+      "good": "15億"
+    },
+    {
+      "game": "th18",
+      "great": "咲夜 70億 / その他 35億",
+      "good": "咲夜 50億 / その他 30億"
+    },
+  ])
+
+</script>
