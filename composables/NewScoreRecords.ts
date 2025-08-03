@@ -2,6 +2,16 @@ export function useNewScoreRecords(){
   
   const newScoreRecords = [
     {
+      'player': 'にゃんこ',
+      'game': 'th08',
+      'shot_type':'Netherworld',
+      'score': 2570645640,
+      'status': 'good',
+      'date': '2025-08-03T15:30:00',
+      'replay': 'th8_ud0077.rpy',
+      'detail': '-',
+    },
+    {
       'player': 'もち',
       'game': 'th10',
       'shot_type':'MarisaC',
