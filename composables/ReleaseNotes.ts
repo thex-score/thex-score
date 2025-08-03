@@ -9,6 +9,13 @@ export function UseReleases(){
   // 3桁目: 新しい記録を追加したら上げる
   const releases=[
     {
+      version: "1.1.11",
+      date: "2025-08-03",
+      changes: [
+        "基準スコア変更：th08 人間・ペア 24億→25億、th17 notカワウソ 10億→15億",
+      ]
+    },
+    {
       version: "1.1.10",
       date: "2025-07-31",
       changes: [
