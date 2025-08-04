@@ -4592,10 +4592,10 @@ export function useScoreRecords(){
     'Sakurei': {
       'th08': {
         'Youmu': {
-          'score': 3159508570,
+          'score': 3178460830,
           'status': 'great',
-          'date': '2016-01-28T15:30:00',
-          'replay': 'th8_ud0024.rpy',
+          'date': '2022-06-21T15:30:00',
+          'replay': 'th8_ud0078.rpy',
           'detail': '-',
         },
       },

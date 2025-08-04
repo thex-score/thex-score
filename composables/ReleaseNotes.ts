@@ -9,6 +9,13 @@ export function UseReleases(){
   // 3桁目: 新しい記録を追加したら上げる
   const releases=[
     {
+      version: "1.1.13",
+      date: "2025-08-05",
+      changes: [
+        "記録修正：th08 Youmu Sakurei",
+      ]
+    },
+    {
       version: "1.1.12",
       date: "2025-08-04",
       changes: [
