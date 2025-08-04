@@ -146,6 +146,18 @@ export function useScoreRecords(){
         },
       },
     },
+    'Add4567': {
+      'th15': {
+        'Reisen':{
+          'score': 704642350,
+          'status': 'good',
+          'date': '2025-08-02T15:30:00',
+          'replay': 'th15_ud0025.rpy',
+          'detail': '-',
+        }      
+      }
+    },
+
     'AM': {
       'th08': {
         'Border': {
