@@ -41,13 +41,13 @@
         <p>対応作品</p>
       </template>
       <ul class="pl-5 space-y-0.5">
-        <li v-for="gameThresold in gameThresolds" :key="gameThresold.game">
+        <li v-for="gameThreshold in gameThresholds" :key="gameThreshold.game">
           <UBadge
             class="capitalize inline-block px-2 py-0.5 rounded font-semibold"
             :style="{
-              color: gamesMap[gameThresold.game].color.txt,
-              backgroundColor: gamesMap[gameThresold.game].color.bg,
-            }">{{ gamesMap[gameThresold.game].name }}</UBadge>
+              color: gamesMap[gameThreshold.game].color.txt,
+              backgroundColor: gamesMap[gameThreshold.game].color.bg,
+            }">{{ gamesMap[gameThreshold.game].name }}</UBadge>
         </li>
       </ul>
     </UCard>
@@ -58,14 +58,14 @@
       </p>
       </template>
       <ul class="pl-5 space-y-0.5">
-        <li v-for="gameThresold in gameThresolds" :key="gameThresold.game">
+        <li v-for="gameThreshold in gameThresholds" :key="gameThreshold.game">
           <UBadge
             class="capitalize inline-block px-2 py-0.5 rounded font-semibold"
             :style="{
-              color: gamesMap[gameThresold.game].color.txt,
-              backgroundColor: gamesMap[gameThresold.game].color.bg,
-            }">{{ gamesMap[gameThresold.game].name }}</UBadge>
-            ：{{ gameThresold.great }}
+              color: gamesMap[gameThreshold.game].color.txt,
+              backgroundColor: gamesMap[gameThreshold.game].color.bg,
+            }">{{ gamesMap[gameThreshold.game].name }}</UBadge>
+            ：{{ gameThreshold.great }}
         </li>
       </ul>
     </UCard>
@@ -128,7 +128,7 @@
       </p>
       </template>
       <ul class="pl-5 space-y-0.5">
-        <li v-for="gameThresold in gameThresolds" :key="gameThresold.game">
+        <li v-for="gameThresold in gameThresholds" :key="gameThresold.game">
           <UBadge
             class="capitalize inline-block px-2 py-0.5 rounded font-semibold"
             :style="{
@@ -204,7 +204,7 @@
   import { useGames } from '#imports';
   const gamesMap=useGames()
 
-  const gameThresolds: Ref<Array<{"game": string, "great": string, "good": string}>>=ref([
+  const gameThresholds: Ref<Array<{"game": string, "great": string, "good": string}>>=ref([
     {
       "game": "th06",
       "great": "6億",
