@@ -12,6 +12,13 @@ export function UseReleases(){
       version: "1.1.13",
       date: "2025-08-05",
       changes: [
+        "記録追加：th12 ReimuA w1theR",
+      ]
+    },
+    {
+      version: "1.1.13",
+      date: "2025-08-05",
+      changes: [
         "記録修正：th08 Youmu Sakurei",
       ]
     },
