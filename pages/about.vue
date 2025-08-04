@@ -73,7 +73,7 @@
     <UCard class="my-5">
       <template #header>
       <p>
-        <UBadge class="capitalize" variant="subtle", color="neutral">大台</UBadge>
+        <UBadge class="capitalize" variant="subtle" color="neutral">大台</UBadge>
         スコア基本方針
       </p>
       </template>
