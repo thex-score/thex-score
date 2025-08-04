@@ -54,7 +54,7 @@
     <UCard class="my-5">
       <template #header>
       <p>基準スコア
-        <UBadge class="capitalize" variant="subtle", color="neutral">大台</UBadge>
+        <UBadge class="capitalize" variant="subtle" color="neutral">大台</UBadge>
       </p>
       </template>
       <ul class="pl-5 space-y-0.5">
@@ -93,7 +93,7 @@
     <UCard class="my-5">
       <template #header>
       <p>
-        <UBadge class="capitalize" variant="subtle", color="neutral">大台</UBadge>
+        <UBadge class="capitalize" variant="subtle" color="neutral">大台</UBadge>
         スコアFAQ
       </p>
       </template>
@@ -124,7 +124,7 @@
       <template #header>
       <p>
         基準スコア
-        <UBadge class="capitalize" variant="subtle", color="success">超大台</UBadge>
+        <UBadge class="capitalize" variant="subtle" color="success">超大台</UBadge>
       </p>
       </template>
       <ul class="pl-5 space-y-0.5">
@@ -143,7 +143,7 @@
     <UCard class="my-5">
       <template #header>
       <p>
-        <UBadge class="capitalize" variant="subtle", color="success">超大台</UBadge>
+        <UBadge class="capitalize" variant="subtle" color="success">超大台</UBadge>
         スコア基本方針
       </p>
       </template>
@@ -155,7 +155,7 @@
     <UCard class="my-5">
       <template #header>
       <p>
-        <UBadge class="capitalize" variant="subtle", color="success">超大台</UBadge>
+        <UBadge class="capitalize" variant="subtle" color="success">超大台</UBadge>
         スコアFAQ
       </p>
       </template>
