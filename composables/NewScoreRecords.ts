@@ -2,6 +2,16 @@ export function useNewScoreRecords(){
   
   const newScoreRecords = [
     {
+      'player': 'w1theR',
+      'game': 'th12',
+      'shot_type':'ReimuA',
+      'score': 528457230,
+      'status': 'good',
+      'date': '2025-08-03T15:30:00',
+      'replay': 'th12_ud0124.rpy',
+      'detail': '-',
+    },
+    {
       'player': 'Add4567',
       'game': 'th15',
       'shot_type':'Reisen',
