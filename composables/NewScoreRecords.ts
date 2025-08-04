@@ -2,6 +2,26 @@ export function useNewScoreRecords(){
   
   const newScoreRecords = [
     {
+      'player': 'Add4567',
+      'game': 'th15',
+      'shot_type':'Reisen',
+      'score': 704642350,
+      'status': 'good',
+      'date': '2025-08-04T15:30:00',
+      'replay': 'th15_ud0025.rpy',
+      'detail': '-',
+    },
+    {
+      'player': 'にゃんこ',
+      'game': 'th08',
+      'shot_type':'Netherworld',
+      'score': 2570645640,
+      'status': 'good',
+      'date': '2025-08-03T15:30:00',
+      'replay': 'th8_ud0077.rpy',
+      'detail': '-',
+    },
+    {
       'player': 'もち',
       'game': 'th10',
       'shot_type':'MarisaC',

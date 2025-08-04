@@ -109,25 +109,11 @@ export function useScoreRecords(){
           'replay': 'th8_ud0053.rpy',
           'detail': '-',
         },
-        'Reimu': {
-          'score': 2414594510,
-          'status': 'good',
-          'date': '2008-05-12T15:30:00',
-          'replay': 'th8_ud0064.rpy',
-          'detail': '-',
-        },
         'Yukari': {
           'score': 1935975550,
           'status': 'good',
           'date': '2016-01-31T15:30:00',
           'replay': 'th8_ud0066.rpy',
-          'detail': '-',
-        },
-        'Marisa': {
-          'score': 2476686760,
-          'status': 'good',
-          'date': '2019-08-03T15:30:00',
-          'replay': 'th8_ud0061.rpy',
           'detail': '-',
         },
         'Alice': {
@@ -136,13 +122,6 @@ export function useScoreRecords(){
           'date': '2017-03-11T15:30:00',
           'replay': null,
           'detail': 'リプレイ不明',
-        },
-        'Sakuya': {
-          'score': 2413169400,
-          'status': 'good',
-          'date': '2018-09-23T15:30:00',
-          'replay': 'th8_ud0065.rpy',
-          'detail': '-',
         },
         'Remilia': {
           'score': 1873083230,
@@ -167,6 +146,18 @@ export function useScoreRecords(){
         },
       },
     },
+    'Add4567': {
+      'th15': {
+        'Reisen':{
+          'score': 704642350,
+          'status': 'good',
+          'date': '2025-08-02T15:30:00',
+          'replay': 'th15_ud0025.rpy',
+          'detail': '-',
+        }      
+      }
+    },
+
     'AM': {
       'th08': {
         'Border': {
@@ -197,13 +188,6 @@ export function useScoreRecords(){
           'replay': 'th8_ud0015.rpy',
           'detail': '-',
         },
-        'Reimu': {
-          'score': 2418721020,
-          'status': 'good',
-          'date': '2008-05-12T15:30:00',
-          'replay': 'th8_ud0016.rpy',
-          'detail': '-',
-        },
         'Yukari': {
           'score': 2078417910,
           'status': 'great',
@@ -223,13 +207,6 @@ export function useScoreRecords(){
           'status': 'good',
           'date': '2008-10-15T15:30:00',
           'replay': 'th8_ud0019.rpy',
-          'detail': '-',
-        },
-        'Sakuya': {
-          'score': 2423578490,
-          'status': 'good',
-          'date': '2008-05-13T15:30:00',
-          'replay': 'th8_ud0020.rpy',
           'detail': '-',
         },
         'Remilia': {
@@ -430,13 +407,6 @@ export function useScoreRecords(){
           'status': 'great',
           'date': '2009-06-21T15:30:00',
           'replay': 'th8_ud0004.rpy',
-          'detail': '-',
-        },
-        'Reimu': {
-          'score': 2435204430,
-          'status': 'good',
-          'date': '2009-08-07T15:30:00',
-          'replay': 'th8_ud0005.rpy',
           'detail': '-',
         },
         'Yukari': {
@@ -795,7 +765,7 @@ export function useScoreRecords(){
       'th17': {
         'ReimuW': {
           'score': 1819343220,
-          'status': 'great',
+          'status': 'good',
           'date': '2024-03-07T15:30:00',
           'replay': 'th17_ud0017.rpy',
           'detail': '-',
@@ -809,28 +779,28 @@ export function useScoreRecords(){
         },
         'ReimuE': {
           'score': 1716115870,
-          'status': 'great',
+          'status': 'good',
           'date': '2024-03-08T15:30:00',
           'replay': 'th17_ud0018.rpy',
           'detail': '-',
         },
         'MarisaW': {
           'score': 1674917360,
-          'status': 'great',
+          'status': 'good',
           'date': '2024-02-25T15:30:00',
           'replay': 'th17_ud0019.rpy',
           'detail': '-',
         },
         'MarisaE': {
           'score': 1715772140,
-          'status': 'great',
+          'status': 'good',
           'date': '2024-02-26T15:30:00',
           'replay': 'th17_ud0020.rpy',
           'detail': '-',
         },
         'YoumuW': {
           'score': 1634018620,
-          'status': 'great',
+          'status': 'good',
           'date': '2024-02-27T15:30:00',
           'replay': 'th17_ud0021.rpy',
           'detail': '-',
@@ -844,7 +814,7 @@ export function useScoreRecords(){
         },
         'YoumuE': {
           'score': 1721961600,
-          'status': 'great',
+          'status': 'good',
           'date': '2024-03-01T15:30:00',
           'replay': 'th17_ud0022.rpy',
           'detail': '-',
@@ -936,13 +906,6 @@ export function useScoreRecords(){
         },
       },
       'th08': {
-        'Magic': {
-          'score': 2433195690,
-          'status': 'good',
-          'date': '2008-09-30T15:30:00',
-          'replay': null,
-          'detail': '2008年9月1週',
-        },
         'Scarlet': {
           'score': 2518378830,
           'status': 'good',
@@ -2103,15 +2066,6 @@ export function useScoreRecords(){
           'detail': '-',
         },
       },
-      'th08': {
-        'Border': {
-          'score': 2446256860,
-          'status': 'good',
-          'date': '2008-09-11T15:30:00',
-          'replay': 'th8_ud0063.rpy',
-          'detail': '-',
-        },
-      },
       'th10': {
         'ReimuA': {
           'score': 954051070,
@@ -2390,25 +2344,11 @@ export function useScoreRecords(){
         },
       },
       'th17': {
-        'ReimuW': {
-          'score': 1159096890,
-          'status': 'good',
-          'date': '2021-10-06T15:30:00',
-          'replay': 'th17_ud0029.rpy',
-          'detail': '-',
-        },
         'ReimuO': {
           'score': 2458140000,
           'status': 'good',
           'date': '2024-01-12T15:30:00',
           'replay': 'th17_ud0004.rpy',
-          'detail': '-',
-        },
-        'ReimuE': {
-          'score': 1324598310,
-          'status': 'good',
-          'date': '2021-10-08T15:30:00',
-          'replay': 'th17_ud0030.rpy',
           'detail': '-',
         },
         'MarisaO': {
@@ -2598,17 +2538,6 @@ export function useScoreRecords(){
           'date': '2011-07-09T15:30:00',
           'replay': 'th7_ud1059.rpy',
           'detail': '-',
-        },
-      },
-    },
-    'J2': {
-      'th08': {
-        'Magic': {
-          'score': 2434329520,
-          'status': 'good',
-          'date': '2004-10-27T15:30:00',
-          'replay': null,
-          'detail': 'リプレイ不明',
         },
       },
     },
@@ -2974,17 +2903,6 @@ export function useScoreRecords(){
         },
       },
     },
-    'KOTARO': {
-      'th08': {
-        'Border': {
-          'score': 2428484930,
-          'status': 'good',
-          'date': '2004-10-15T15:30:00',
-          'replay': null,
-          'detail': 'リプレイ不明',
-        },
-      },
-    },
     'krr': {
       'th12': {
         'SanaeB': {
@@ -3102,17 +3020,6 @@ export function useScoreRecords(){
           'status': 'good',
           'date': '2016-05-10T15:30:00',
           'replay': 'th14_ud0024.rpy',
-          'detail': '-',
-        },
-      },
-    },
-    'lame': {
-      'th08': {
-        'Netherworld': {
-          'score': 2478195150,
-          'status': 'good',
-          'date': '2010-10-01T15:30:00',
-          'replay': 'th8_ud0060.rpy',
           'detail': '-',
         },
       },
@@ -5253,17 +5160,6 @@ export function useScoreRecords(){
         },
       },
     },
-    'TurboOven9000': {
-      'th08': {
-        'Reimu': {
-          'score': 2488651730,
-          'status': 'good',
-          'date': '2025-05-18T15:30:00',
-          'replay': 'th8_ud0058.rpy',
-          'detail': '-',
-        },
-      },
-    },
     'TYSI': {
       'th07Ph': {
         'ReimuB': {
@@ -5526,13 +5422,6 @@ export function useScoreRecords(){
           'replay': 'th8_ud0033.rpy',
           'detail': '-',
         },
-        'Scarlet': {
-          'score': 2400873270,
-          'status': 'good',
-          'date': '2010-07-31T15:30:00',
-          'replay': null,
-          'detail': '2010年7月1週',
-        },
         'Netherworld': {
           'score': 2745122790,
           'status': 'good',
@@ -5641,13 +5530,6 @@ export function useScoreRecords(){
           'status': 'good',
           'date': '2010-08-13T15:30:00',
           'replay': 'th8_ud0047.rpy',
-          'detail': '-',
-        },
-        'Sakuya': {
-          'score': 2402347880,
-          'status': 'good',
-          'date': '2006-05-01T15:30:00',
-          'replay': 'th8_ud0076.rpy',
           'detail': '-',
         },
       },
@@ -6174,27 +6056,6 @@ export function useScoreRecords(){
         },
       },
       'th17': {
-        'ReimuW': {
-          'score': 1383653020,
-          'status': 'good',
-          'date': '2023-04-29T15:30:00',
-          'replay': 'th17_ud0023.rpy',
-          'detail': '-',
-        },
-        'ReimuE': {
-          'score': 1379151480,
-          'status': 'good',
-          'date': '2023-04-30T15:30:00',
-          'replay': 'th17_ud0024.rpy',
-          'detail': '-',
-        },
-        'MarisaW': {
-          'score': 1199399640,
-          'status': 'good',
-          'date': '2023-04-27T15:30:00',
-          'replay': 'th17_ud0025.rpy',
-          'detail': '-',
-        },
         'MarisaO': {
           'score': 2044820040,
           'status': 'good',
@@ -6202,32 +6063,11 @@ export function useScoreRecords(){
           'replay': 'th17_ud0009.rpy',
           'detail': '-',
         },
-        'MarisaE': {
-          'score': 1150410950,
-          'status': 'good',
-          'date': '2023-04-23T15:30:00',
-          'replay': 'th17_ud0026.rpy',
-          'detail': '-',
-        },
-        'YoumuW': {
-          'score': 1161941880,
-          'status': 'good',
-          'date': '2023-04-25T15:30:00',
-          'replay': 'th17_ud0027.rpy',
-          'detail': '-',
-        },
         'YoumuO': {
           'score': 2152018890,
           'status': 'good',
           'date': '2023-05-07T15:30:00',
           'replay': 'th17_ud0008.rpy',
-          'detail': '-',
-        },
-        'YoumuE': {
-          'score': 1118202850,
-          'status': 'good',
-          'date': '2023-04-24T15:30:00',
-          'replay': 'th17_ud0028.rpy',
           'detail': '-',
         },
       },
@@ -6864,13 +6704,6 @@ export function useScoreRecords(){
         },
       },
       'th17': {
-        'ReimuW': {
-          'score': 1054209460,
-          'status': 'good',
-          'date': '2020-08-23T15:30:00',
-          'replay': 'th17_ud0031.rpy',
-          'detail': '-',
-        },
         'ReimuO': {
           'score': 2479160420,
           'status': 'good',
@@ -6878,25 +6711,11 @@ export function useScoreRecords(){
           'replay': 'th17_ud0003.rpy',
           'detail': '-',
         },
-        'MarisaW': {
-          'score': 1148007840,
-          'status': 'good',
-          'date': '2020-04-19T15:30:00',
-          'replay': 'th17_ud0032.rpy',
-          'detail': '-',
-        },
         'MarisaO': {
           'score': 2774430020,
           'status': 'great',
           'date': '2020-09-23T15:30:00',
           'replay': 'th17_ud0001.rpy',
-          'detail': '-',
-        },
-        'YoumuW': {
-          'score': 1071337250,
-          'status': 'good',
-          'date': '2020-04-18T15:30:00',
-          'replay': 'th17_ud0033.rpy',
           'detail': '-',
         },
         'YoumuO': {
@@ -6944,15 +6763,6 @@ export function useScoreRecords(){
           'status': 'good',
           'date': '2008-05-10T15:30:00',
           'replay': 'th7_ud1032.rpy',
-          'detail': '-',
-        },
-      },
-      'th08': {
-        'Youmu': {
-          'score': 2466877810,
-          'status': 'good',
-          'date': '2006-12-14T15:30:00',
-          'replay': 'th8_ud0062.rpy',
           'detail': '-',
         },
       },
@@ -7118,15 +6928,6 @@ export function useScoreRecords(){
           'detail': 'リプレイ不明',
         },
       },
-      'th08': {
-        'Youmu': {
-          'score': 2410739420,
-          'status': 'good',
-          'date': '2004-10-13T15:30:00',
-          'replay': null,
-          'detail': 'リプレイ不明',
-        },
-      },
     },
     'とん': {
       'th11': {
@@ -7278,6 +7079,15 @@ export function useScoreRecords(){
       },
     },
     'にゃんこ': {
+      'th08': {
+        'Netherworld': {
+          'score': 2570645640,
+          'status': 'good',
+          'date': '2025-08-01T15:30:00',
+          'replay': 'th8_ud0077.rpy',
+          'detail': '-',
+        },
+      },
       'th10': {
         'ReimuA': {
           'score': 984762400,
@@ -9019,17 +8829,6 @@ export function useScoreRecords(){
           'date': '2009-07-31T15:30:00',
           'replay': null,
           'detail': '2009年7月1週',
-        },
-      },
-    },
-    '松松打虎': {
-      'th08': {
-        'Border': {
-          'score': 2487905940,
-          'status': 'good',
-          'date': '2012-07-05T15:30:00',
-          'replay': 'th8_ud0059.rpy',
-          'detail': '-',
         },
       },
     },
