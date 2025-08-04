@@ -9,6 +9,13 @@ export function UseReleases(){
   // 3桁目: 新しい記録を追加したら上げる
   const releases=[
     {
+      version: "1.1.12",
+      date: "2025-08-04",
+      changes: [
+        "記録追加：th15 Reisen Add4567",
+      ]
+    },
+    {
       version: "1.1.11",
       date: "2025-08-03",
       changes: [
