@@ -65,7 +65,7 @@
               color: gamesMap[gameThreshold.game].color.txt,
               backgroundColor: gamesMap[gameThreshold.game].color.bg,
             }">{{ gamesMap[gameThreshold.game].name }}</UBadge>
-            ：{{ gameThreshold.great }}
+            ：{{ gameThreshold.good }}
         </li>
       </ul>
     </UCard>
@@ -138,7 +138,7 @@
               color: gamesMap[gameThresold.game].color.txt,
               backgroundColor: gamesMap[gameThresold.game].color.bg,
             }">{{ gamesMap[gameThresold.game].name }}</UBadge>
-            ：{{ gameThresold.good }}
+            ：{{ gameThresold.great }}
         </li>
       </ul>
     </UCard>
@@ -226,7 +226,7 @@
     {
       "game": "th08",
       "great": "ペア・人間単騎 28億 / 妖怪単騎 20億",
-      "good": "ペア・人間単騎 24億 / 妖怪単騎 18億"
+      "good": "ペア・人間単騎 25億 / 妖怪単騎 18億"
     },
     {
       "game": "th10",
