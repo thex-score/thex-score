@@ -2,12 +2,22 @@ export function useNewScoreRecords(){
   
   const newScoreRecords = [
     {
+      'player': 'Balisman',
+      'game': 'th14',
+      'shot_type':'MarisaB',
+      'score': 1246103800,
+      'status': 'great',
+      'date': '2025-08-08T15:30:00',
+      'replay': 'th14_ud0063.rpy',
+      'detail': '-',
+    },
+    {
       'player': 'w1theR',
       'game': 'th12',
       'shot_type':'ReimuA',
       'score': 528457230,
       'status': 'good',
-      'date': '2025-08-03T15:30:00',
+      'date': '2025-08-05T15:30:00',
       'replay': 'th12_ud0124.rpy',
       'detail': '-',
     },
