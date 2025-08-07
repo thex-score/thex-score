@@ -617,10 +617,10 @@ export function useScoreRecords(){
     'Balisman': {
       'th14': {
         'MarisaB': {
-          'score': 1241990690,
+          'score': 1246103800,
           'status': 'great',
-          'date': '2025-04-29T15:30:00',
-          'replay': 'th14_ud0002.rpy',
+          'date': '2025-08-07T15:30:00',
+          'replay': 'th14_ud0063.rpy',
           'detail': '-',
         },
       },

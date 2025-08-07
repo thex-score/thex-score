@@ -9,6 +9,13 @@ export function UseReleases(){
   // 3桁目: 新しい記録を追加したら上げる
   const releases=[
     {
+      version: "1.1.14",
+      date: "2025-08-08",
+      changes: [
+        "記録追加：th14 MarisaB Balisman",
+      ]
+    },
+    {
       version: "1.1.13",
       date: "2025-08-05",
       changes: [
