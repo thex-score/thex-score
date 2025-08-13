@@ -2,6 +2,15 @@ export function useScoreRecords(){
   
   const scoreRecords: Record<string, Record<string, Record<string, {score: number, status: 'great' | 'good', date: string, replay: string | null, detail: string}>>>={
     'WEF': {
+      'th11': {
+        'ReimuA': {
+          'score': 1008234570,
+          'status': 'good',
+          'date': '2022-05-25T15:30:00',
+          'replay': null,
+          'detail': 'リプレイ紛失',
+        },
+      },
       'th13': {
         'Marisa': {
           'score': 600404860,
