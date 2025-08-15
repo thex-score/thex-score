@@ -5,10 +5,10 @@ export function useNewScoreRecords(){
       'player': 'Oscar',
       'game': 'th15',
       'shot_type':'Reisen',
-      'score': 1017435330,
+      'score': 1073686620,
       'status': 'great',
-      'date': '2025-08-11T15:30:00',
-      'replay': 'th15_ud0026.rpy',
+      'date': '2025-08-15T15:30:00',
+      'replay': 'th15_ud0027.rpy',
       'detail': '-',
     },
     {
