@@ -14,13 +14,13 @@
       <template #header>
       <p>記録掲載について</p>
       </template>
-      <p><a href="https://www.silentselene.net/" target="_blank">サイレントセレナ</a>などで一般公開された記録を管理人が収集して掲載しています。<br />
+      <p><NuxtLink href="https://www.silentselene.net/" target="_blank">サイレントセレナ</NuxtLink>などで一般公開された記録を管理人が収集して掲載しています。<br />
       原則的にはリプレイやstream配信、動画が公開されている記録を掲載対象とします。<br />
       スクリーンショットやスコア情報のみでも記録として掲載する場合がありますが、管理人の判断で掲載しない場合もあるので、ご了承願います。<br />
       スコアが有効数字4桁しか判明していないなど曖昧な記録については記録の正当性を保証できないため掲載対象とはしません。<br />
       処理落ち率3%以上や不正ツールの使用が疑われる記録については掲載せず参考記録としても扱いません。<br />
       プレイヤー本人から要望があった一部の記録についても掲載しません。<br />
-      記録の修正・新規記録追加・リプレイ削除などを希望される方は全て管理人の<a href="https://x.com/flower874_" target="_blank">にゃんこ</a>に連絡してください。
+      記録の修正・新規記録追加・リプレイ削除などを希望される方は全て管理人の<NuxtLink href="https://x.com/flower874_" target="_blank">にゃんこ</NuxtLink>に連絡してください。
       </p>
     </UCard>
 
@@ -195,8 +195,8 @@
 
       <p>
         このサイトは<NuxtLink href="https://x.com/flower874_" target="_blank">にゃんこ</NuxtLink>が運営しているものです。<br/>
-        <NuxtLink href="https://wefma.net" target="_blank">ゑふまいか</NuxtLink>に作成を依頼し、氏名表示権を除く全ての権利/責任/義務を<a href="https://x.com/flower874_" target="_blank" rel="noopener noreferrer">にゃんこ</a>に譲渡することによって成り立っています。<br/>
-        よってこのサイトで何か不都合があれば<NuxtLink href="https://x.com/flower874_" target="_blank" rel="noopener noreferrer">にゃんこ</NuxtLink>に問い合わせてください。
+        <NuxtLink href="https://wefma.net" target="_blank">ゑふまいか</NuxtLink>に作成を依頼し、氏名表示権を除く全ての権利/責任/義務を<NuxtLink href="https://x.com/flower874_" target="_blank">にゃんこ</NuxtLink>に譲渡することによって成り立っています。<br/>
+        よってこのサイトで何か不都合があれば<NuxtLink href="https://x.com/flower874_" target="_blank">にゃんこ</NuxtLink>に問い合わせてください。
       </p>
 
     </UCard>
