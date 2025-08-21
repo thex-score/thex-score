@@ -194,9 +194,9 @@
       </template>
 
       <p>
-        このサイトは<a href="https://x.com/flower874_" target="_blank">にゃんこ</a>が運営しているものです。<br/>
-        <a href="https://wefma.net" target="_blank">ゑふまいか</a>に作成を依頼し、氏名表示権を除く全ての権利/責任/義務を<a href="https://x.com/flower874_" target="_blank">にゃんこ</a>に譲渡することによって成り立っています。<br/>
-        よってこのサイトで何か不都合があれば<a href="https://x.com/flower874_" target="_blank">にゃんこ</a>に問い合わせてください。
+        このサイトは<NuxtLink href="https://x.com/flower874_" target="_blank">にゃんこ</NuxtLink>が運営しているものです。<br/>
+        <NuxtLink href="https://wefma.net" target="_blank">ゑふまいか</NuxtLink>に作成を依頼し、氏名表示権を除く全ての権利/責任/義務を<a href="https://x.com/flower874_" target="_blank" rel="noopener noreferrer">にゃんこ</a>に譲渡することによって成り立っています。<br/>
+        よってこのサイトで何か不都合があれば<NuxtLink href="https://x.com/flower874_" target="_blank" rel="noopener noreferrer">にゃんこ</NuxtLink>に問い合わせてください。
       </p>
 
     </UCard>
