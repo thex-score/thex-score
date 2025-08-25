@@ -288,7 +288,7 @@
             href: `https://thex-score.net/replays/${row.getValue('game')}/${row.getValue('replay')}`,
             download: row.getValue('replay'),
             target: '_blank',
-            rel: 'noopener',
+            rel: 'noopener noreferrer',
             class: 'text-primary underline hover:text-primary-600'
           },
           row.getValue('replay')
