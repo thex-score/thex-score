@@ -196,7 +196,8 @@
       <p>
         このサイトは<NuxtLink href="https://x.com/flower874_" target="_blank">にゃんこ</NuxtLink>が運営しているものです。<br/>
         <NuxtLink href="https://wefma.net" target="_blank">ゑふまいか</NuxtLink>に作成を依頼し、氏名表示権を除く全ての権利/責任/義務を<NuxtLink href="https://x.com/flower874_" target="_blank">にゃんこ</NuxtLink>に譲渡することによって成り立っています。<br/>
-        よってこのサイトで何か不都合があれば<NuxtLink href="https://x.com/flower874_" target="_blank">にゃんこ</NuxtLink>に問い合わせてください。
+        よってこのサイトで何か不都合があれば<NuxtLink href="https://x.com/flower874_" target="_blank">にゃんこ</NuxtLink>に問い合わせてください。<br/>
+        このサイトのソースコードはMITライセンスにて<NuxtLink href="https://github.com/" target="_blank">github</NuxtLink>で公開されています。ただし弊サイトに著作権がないリプレイファイルやスコアデータに関してはMITライセンスを適用できません。
       </p>
 
     </UCard>
