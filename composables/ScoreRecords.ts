@@ -166,7 +166,17 @@ export function useScoreRecords(){
         }      
       }
     },
-
+    'Altair': {
+      'th11': {
+        'ReimuA':{
+          'score': 1006485770,
+          'status': 'good',
+          'date': '2025-09-02T15:30:00',
+          'replay': 'th11_ud0149.rpy',
+          'detail': '-',
+        }      
+      }
+    },
     'AM': {
       'th08': {
         'Border': {
