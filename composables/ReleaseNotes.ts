@@ -9,6 +9,13 @@ export function UseReleases(){
   // 3桁目: 新しい記録を追加したら上げる
   const releases=[
     {
+      version: "1.1.19",
+      date: "2025-09-02",
+      changes: [
+        "記録追加：th11 ReimuA Altair",
+      ]
+    },
+    {
       version: "1.1.18",
       date: "2025-08-25",
       changes: [
