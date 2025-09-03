@@ -9153,6 +9153,15 @@ export function useScoreRecords(){
       },
     },
     '幽谷もこ': {
+      'th14': {
+        'MarisaB': {
+          'score': 1078509580,
+          'status': 'good',
+          'date': '2024-12-26T15:30:00',
+          'replay': 'th14_ud0064.rpy',
+          'detail': '-',
+        },
+      },
       'th16': {
         'Reimu': {
           'score': 2169743310,
