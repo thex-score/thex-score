@@ -12,6 +12,7 @@ export function UseReleases(){
       version: "1.1.20",
       date: "2025-09-04",
       changes: [
+        "記録追加：th14 MarisaB 幽谷もこ",
         "記録追加：th16 Cirno/Aya/Marisa 幽谷もこ",
       ]
     },

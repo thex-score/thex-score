@@ -3,6 +3,16 @@ export function useNewScoreRecords(){
   const newScoreRecords = [
     {
       'player': '幽谷もこ',
+      'game': 'th14',
+      'shot_type':'MarisaB',
+      'score': 1078509580,
+      'status': 'good',
+      'date': '2024-12-26T15:30:00',
+      'replay': 'th14_ud0064.rpy',
+      'detail': '-',
+    },
+    {
+      'player': '幽谷もこ',
       'game': 'th16',
       'shot_type':'Cirno',
       'score': 2001066940,
