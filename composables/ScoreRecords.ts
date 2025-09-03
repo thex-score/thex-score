@@ -9192,6 +9192,22 @@ export function useScoreRecords(){
           'detail': '-',
         },
       },
+      'th17': {
+        'ReimuO': {
+          'score': 1540429240,
+          'status': 'good',
+          'date': '2025-08-09T15:30:00',
+          'replay': 'th17_ud0036.rpy',
+          'detail': '-',
+        },
+        'MarisaO': {
+          'score': 1527866160,
+          'status': 'good',
+          'date': '2025-07-19T15:30:00',
+          'replay': 'th17_ud0035.rpy',
+          'detail': '-',
+        },
+      },
     },
     '幽々公': {
       'th12': {

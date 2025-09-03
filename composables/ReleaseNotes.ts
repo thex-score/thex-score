@@ -14,6 +14,7 @@ export function UseReleases(){
       changes: [
         "記録追加：th14 MarisaB 幽谷もこ",
         "記録追加：th16 Cirno/Aya/Marisa 幽谷もこ",
+        "記録追加：th17 ReimuO/MarisaO 幽谷もこ",
       ]
     },
     {
