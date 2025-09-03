@@ -9161,6 +9161,27 @@ export function useScoreRecords(){
           'replay': 'th16_ud0049.rpy',
           'detail': '-',
         },
+        'Cirno': {
+          'score': 2001066940,
+          'status': 'good',
+          'date': '2025-08-04T15:30:00',
+          'replay': 'th16_ud0051.rpy',
+          'detail': '-',
+        },
+        'Aya': {
+          'score': 2185255630,
+          'status': 'good',
+          'date': '2025-08-05T15:30:00',
+          'replay': 'th16_ud0052.rpy',
+          'detail': '-',
+        },
+        'Marisa': {
+          'score': 2049672650,
+          'status': 'good',
+          'date': '2025-08-05T15:30:00',
+          'replay': 'th16_ud0053.rpy',
+          'detail': '-',
+        },
       },
     },
     '幽々公': {
