@@ -4181,6 +4181,24 @@ export function useScoreRecords(){
       },
     },
     'Oscar': {
+      'th11': {
+        'ReimuA': {
+          'score': 1100507180,
+          'status': 'great',
+          'date': '2025-09-12T15:30:00',
+          'replay': 'th11_ud0150.rpy',
+          'detail': '-',
+        },
+      },
+      'th14': {
+        'MarisaB': {
+          'score': 1200037030,
+          'status': 'great',
+          'date': '2025-09-16T15:30:00',
+          'replay': 'th14_ud0065.rpy',
+          'detail': '-',
+        },
+      },
       'th15': {
         'Reisen': {
           'score': 1073686620,
