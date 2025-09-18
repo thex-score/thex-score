@@ -2,6 +2,16 @@ export function useNewScoreRecords(){
   
   const newScoreRecords = [
     {
+      'player': 'int',
+      'game': 'th06',
+      'shot_type':'ReimuA',
+      'score': 649850640,
+      'status': 'good',
+      'date': '2025-09-16T15:30:00',
+      'replay': 'th06_ud0098.rpy',
+      'detail': '-',
+    },
+    {
       'player': '幽谷もこ',
       'game': 'th17',
       'shot_type':'ReimuO',

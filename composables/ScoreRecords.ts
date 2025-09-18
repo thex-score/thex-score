@@ -2434,10 +2434,10 @@ export function useScoreRecords(){
     'int': {
       'th06': {
         'ReimuA': {
-          'score': 647304390,
+          'score': 649850640,
           'status': 'great',
-          'date': '2025-07-21T15:30:00',
-          'replay': 'th6_ud0096.rpy',
+          'date': '2025-09-16T15:30:00',
+          'replay': 'th6_ud0098.rpy',
           'detail': '-',
         },
         'ReimuB': {
