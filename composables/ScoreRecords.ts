@@ -3088,17 +3088,6 @@ export function useScoreRecords(){
         },
       },
     },
-    'leo': {
-      'th13': {
-        'Marisa': {
-          'score': 660499000,
-          'status': 'great',
-          'date': '2020-12-31T15:30:00',
-          'replay': null,
-          'detail': '2020年?月?日',
-        },
-      },
-    },
     'LET': {
       'th08': {
         'Border': {

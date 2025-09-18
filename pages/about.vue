@@ -118,6 +118,14 @@
 
         <li>Q. 残念機体に対する配慮はしないのですか？</li>
         <li>A. 全機体現実的に達成可能な大台スコアに設定しています。ただしスコアを稼ぎやすい機体よりは達成難易度が高くなります</li>
+        <li>Q. 錦上京への対応はいつですか？</li>
+        <li>A. PIVバグの関係で集計方法が定まらず見通しが立ちません</li>
+
+        <li>Q. 私の記録が追加されないのですが？</li>
+        <li>A. <NuxtLink href="https://github.com/thex-score/thex-score/issues" target="_blank">github</NuxtLink>もしくは<NuxtLink href="https://x.com/flower874_" target="_blank">にゃんこ</NuxtLink>にご報告お願いします。気付き次第追加します。</li>
+        <li>Q. 更新頻度はどのくらいですか？</li>
+        <li>A. 週に1回は必ずチェックしますが、即日更新は確約できません</li>
+
         <li>Q. ズバリどの作品がおすすめですか？</li>
         <li>A. 達成難易度が良心的と思われるのは達成者が多い作品ですが、自分がプレイしたい作品の方がモチベを保ちやすいです</li>
       </ul>      
@@ -185,7 +193,7 @@
         <p>運営者</p>
       </template>
 
-      <p><a href="https://x.com/flower874_">にゃんこ</a></p>
+      <p><NuxtLink href="https://x.com/flower874_" target="_blank">にゃんこ</NuxtLink></p>
 
     </UCard>
     <UCard class="my-5">
