@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   ssr: true,
-  modules: ['@nuxt/ui', '@nuxtjs/seo', '@nuxt/image-edge'],
+  modules: ['@nuxt/ui', '@nuxtjs/seo', '@nuxt/image-edge', '@nuxtjs/i18n'],
   css: ['~/assets/css/main.css'],
     icon: {
     provider: 'iconify',
@@ -31,6 +31,15 @@ export default defineNuxtConfig({
     presets: {
       og: { modifiers: { fit: 'cover', width: 1395, height: 630 } }
     }
+  },
+  i18n: {
+    strategy: 'prefix_except_default',
+    defaultLocale: 'ja',
+    baseUrl: 'https://thex-score.net',
+    locales: [
+      { code: 'ja', name: '日本語', file: 'ja.json', iso: 'ja-JP', language: 'ja-JP', },
+      { code: 'en', name: 'English', file: 'en.json',iso: 'en-US', language: 'en-US', },
+    ],
   },
   app: {
     // 独自ドメインを取得していない場合はgithub_pagesだったら/thex-score/というプレフィックスを付けなければならない
