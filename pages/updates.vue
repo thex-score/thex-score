@@ -1,7 +1,7 @@
 <template>
   <UContainer class="py-8">
     <!-- 見出しだけ独立させてカード外にする -->
-    <h1 class="text-xl font-bold mb-6">更新履歴</h1>
+    <h1 class="text-xl font-bold mb-6">{{ $t("pages.updates.title") }}</h1>
 
     <!-- カードの一覧 -->
     <div class="space-y-4">

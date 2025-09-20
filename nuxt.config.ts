@@ -37,9 +37,17 @@ export default defineNuxtConfig({
     defaultLocale: 'ja',
     baseUrl: 'https://thex-score.net',
     locales: [
-      { code: 'ja', name: '日本語', file: 'ja.json', iso: 'ja-JP', language: 'ja-JP', },
-      { code: 'en', name: 'English', file: 'en.json',iso: 'en-US', language: 'en-US', },
+      { code: 'ja', name: '日本語', file: 'ja.yml', iso: 'ja-JP', language: 'ja-JP', },
+      { code: 'en', name: 'English', file: 'en.yml',iso: 'en-US', language: 'en-US', },
     ],
+    compilation: {
+      strictMessage: false, // ← HTML/擬似タグを許可
+      escapeHtml: true      // ← 念のためエスケープを有効化（推奨）
+    },
+    bundle:{
+      fullInstall: true,
+      optimizeTranslationDirective: false
+    }
   },
   app: {
     // 独自ドメインを取得していない場合はgithub_pagesだったら/thex-score/というプレフィックスを付けなければならない
