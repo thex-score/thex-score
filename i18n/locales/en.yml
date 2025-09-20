@@ -13,8 +13,8 @@ global:
     publish_date: publish date
     replay: replay
     note: note
-components: 
-  TheHeader: 
+components:
+  TheHeader:
     site_title: Touhou EXTRA Scoreboard
     open_menu: Open Menu
     language: Language
@@ -27,7 +27,7 @@ components:
     updates: Updates
 composables:
   Games:
-    th06: 
+    th06:
       title: th06 EoSD
       shot_types:
         reimu_a: Reimu A

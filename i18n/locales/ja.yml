@@ -27,7 +27,7 @@ components:
     updates: 更新履歴
 composables:
   Games:
-    th06: 
+    th06:
       title: 東方紅魔郷
       shot_types:
         reimu_a: 霊夢A
@@ -343,4 +343,3 @@ pages:
     title: 最近追加された記録
   updates:
     title: 更新履歴
-

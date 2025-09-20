@@ -38,16 +38,16 @@
 
 <script setup lang="ts">
 /* composable からデータ取得 */
-import { UseReleases } from '~/composables/ReleaseNotes'
+import { UseReleases } from "~/composables/ReleaseNotes";
 
-const releases = UseReleases()
+const releases = UseReleases();
 
 /* 日付を日本語表記にフォーマット（例: 2025/07/19）*/
 function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString('ja-JP', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit'
-  })
+  return new Date(dateStr).toLocaleDateString("ja-JP", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
 }
 </script>

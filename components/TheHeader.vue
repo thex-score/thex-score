@@ -1,15 +1,15 @@
 <template>
-  <!-- -------------------------------------------------------------
-        上部固定ヘッダ（言語セレクタとページナビを明確に分離 + i18n対応ラベル）
-  -------------------------------------------------------------- -->
-  <header class="sticky top-0 z-50 border-b border-gray-200 bg-white/80 dark:bg-gray-900/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-900/60">
+  <header
+    class="sticky top-0 z-50 border-b border-gray-200 bg-white/80 dark:bg-gray-900/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-900/60"
+  >
     <UContainer class="flex items-center justify-between py-3">
-      <!-- Brand / Home -->
-      <NuxtLink :to="localePath('/')" class="text-lg font-bold whitespace-nowrap">
-        {{ $t('components.TheHeader.site_title') }}
+      <NuxtLink
+        :to="localePath('/')"
+        class="text-lg font-bold whitespace-nowrap"
+      >
+        {{ $t("components.TheHeader.site_title") }}
       </NuxtLink>
 
-      <!-- Desktop: Page nav (locale-aware) -->
       <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
         <NuxtLink
           v-for="page in pageList"
@@ -20,18 +20,26 @@
             'text-sm font-medium transition-colors underline-offset-4',
             isActive(page.link)
               ? 'text-primary underline'
-              : 'text-gray-600 hover:text-primary'
+              : 'text-gray-600 hover:text-primary',
           ]"
         >
           {{ $t(`components.TheHeader.${page.label}`) }}
         </NuxtLink>
       </nav>
 
-      <!-- Desktop: Language selector -->
-      <div class="hidden md:flex items-center gap-2" aria-label="Language picker">
+      <div
+        class="hidden md:flex items-center gap-2"
+        aria-label="Language picker"
+      >
         <span class="sr-only">{{ $t(`components.TheHeader.language`) }}</span>
-        <div class="flex items-center gap-1 rounded-full border border-gray-200 dark:border-gray-800 px-2 py-1">
-          <UIcon name="i-heroicons-globe-alt" class="h-4 w-4 text-gray-500" aria-hidden="true" />
+        <div
+          class="flex items-center gap-1 rounded-full border border-gray-200 dark:border-gray-800 px-2 py-1"
+        >
+          <UIcon
+            name="i-heroicons-globe-alt"
+            class="h-4 w-4 text-gray-500"
+            aria-hidden="true"
+          />
           <div class="flex items-center">
             <button
               v-for="lc in localeOptions"
@@ -42,7 +50,7 @@
                 'px-2 py-0.5 text-xs rounded-full transition-colors',
                 currentLocale === lc.code
                   ? 'bg-primary text-white'
-                  : 'text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800'
+                  : 'text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800',
               ]"
             >
               {{ lc.name }}
@@ -51,7 +59,6 @@
         </div>
       </div>
 
-      <!-- Mobile: hamburger + slide-over -->
       <USlideover
         :title="$t(`components.TheHeader.site_title`)"
         v-model:open="isOpen"
@@ -60,7 +67,7 @@
         overlay
         :close="{
           variant: 'outline',
-          class: 'rounded-full'
+          class: 'rounded-full',
         }"
       >
         <UButton
@@ -72,7 +79,11 @@
         <template #body>
           <div class="p-4 space-y-6">
             <section>
-              <h3 class="mb-2 text-xs font-semibold tracking-wider text-gray-500 uppercase">{{ $t(`components.TheHeader.language`) }}</h3>
+              <h3
+                class="mb-2 text-xs font-semibold tracking-wider text-gray-500 uppercase"
+              >
+                {{ $t(`components.TheHeader.language`) }}
+              </h3>
               <div class="flex flex-wrap gap-2">
                 <UButton
                   v-for="lc in localeOptions"
@@ -91,14 +102,22 @@
             <UDivider />
 
             <section>
-              <h3 class="mb-2 text-xs font-semibold tracking-wider text-gray-500 uppercase">{{ $t(`components.TheHeader.pages`) }}</h3>
+              <h3
+                class="mb-2 text-xs font-semibold tracking-wider text-gray-500 uppercase"
+              >
+                {{ $t(`components.TheHeader.pages`) }}
+              </h3>
               <nav class="flex flex-col gap-2" aria-label="Mobile primary">
                 <NuxtLink
                   v-for="page in pageList"
                   :key="page.link"
                   :to="localePath(page.link)"
                   class="text-base font-medium"
-                  :class="[isActive(page.link) ? 'text-primary' : 'text-gray-700 dark:text-gray-200']"
+                  :class="[
+                    isActive(page.link)
+                      ? 'text-primary'
+                      : 'text-gray-700 dark:text-gray-200',
+                  ]"
                   @click="isOpen = false"
                 >
                   {{ $t(`components.TheHeader.${page.label}`) }}
@@ -113,46 +132,45 @@
 </template>
 
 <script setup lang="ts">
-  // nuxtjs/i18n (v8+) のルーティング & 翻訳
-  const { locales, locale, t } = useI18n()
-  const localePath = useLocalePath()
-  const switchLocalePath = useSwitchLocalePath()
-  const route = useRoute()
-  const router = useRouter()
+const { locales, locale, t } = useI18n();
+const localePath = useLocalePath();
+const switchLocalePath = useSwitchLocalePath();
+const route = useRoute();
+const router = useRouter();
 
-  // 正規化されたロケールオプション
-  const localeOptions = computed(() =>
-    (locales.value as Array<{ code: string; name?: string }>)
-      .map(lc => ({ code: lc.code, name: lc.name || lc.code.toUpperCase() }))
-  )
+const localeOptions = computed(() =>
+  (locales.value as Array<{ code: string; name?: string }>).map((lc) => ({
+    code: lc.code,
+    name: lc.name || lc.code.toUpperCase(),
+  }))
+);
 
-  const currentLocale = computed(() => locale.value)
+const currentLocale = computed(() => locale.value);
 
-  // 現在ページを保ったままロケール切替
-  function switchToLocale(code: "ja" | "en") {
-    const target = switchLocalePath(code)
-    if (target && target !== route.fullPath) router.push(target)
-  }
+function switchToLocale(code: "ja" | "en") {
+  const target = switchLocalePath(code);
+  if (target && target !== route.fullPath) router.push(target);
+}
 
-  // 名前キーを持つページ定義（翻訳は t でリアルタイム取得）
-  const pageList = [
-    { label: 'home', link: '/' },
-    { label: 'about', link: '/about' },
-    { label: 'new_records', link: '/newrecords' },
-    { label: 'data', link: '/data' },
-    { label: 'links', link: '/links' },
-    { label: 'updates', link: '/updates' }
-  ] as const
+const pageList = [
+  { label: "home", link: "/" },
+  { label: "about", link: "/about" },
+  { label: "new_records", link: "/newrecords" },
+  { label: "data", link: "/data" },
+  { label: "links", link: "/links" },
+  { label: "updates", link: "/updates" },
+] as const;
 
-  // アクティブ判定は localePath で解決したパスと比較
-  function isActive(path: string) {
-    const resolved = localePath(path)
-    return route.path === resolved
-  }
+function isActive(path: string) {
+  const resolved = localePath(path);
+  return route.path === resolved;
+}
 
-  const isOpen = ref(false)
+const isOpen = ref(false);
 </script>
 
 <style scoped>
-nav[aria-label='Primary'] a:hover { text-decoration-thickness: 2px; }
+nav[aria-label="Primary"] a:hover {
+  text-decoration-thickness: 2px;
+}
 </style>
