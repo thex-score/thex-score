@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   ssr: true,
-  modules: ['@nuxt/ui', '@nuxtjs/seo', '@nuxt/image-edge'],
+  modules: ['@nuxt/ui', '@nuxtjs/seo', '@nuxt/image-edge', '@nuxtjs/i18n'],
   css: ['~/assets/css/main.css'],
     icon: {
     provider: 'iconify',
@@ -30,6 +30,23 @@ export default defineNuxtConfig({
     dir: 'public',
     presets: {
       og: { modifiers: { fit: 'cover', width: 1395, height: 630 } }
+    }
+  },
+  i18n: {
+    strategy: 'prefix_except_default',
+    defaultLocale: 'ja',
+    baseUrl: 'https://thex-score.net',
+    locales: [
+      { code: 'ja', name: '日本語', file: 'ja.yml', iso: 'ja-JP', language: 'ja-JP', },
+      { code: 'en', name: 'English', file: 'en.yml',iso: 'en-US', language: 'en-US', },
+    ],
+    compilation: {
+      strictMessage: false, // ← HTML/擬似タグを許可
+      escapeHtml: true      // ← 念のためエスケープを有効化（推奨）
+    },
+    bundle:{
+      fullInstall: true,
+      optimizeTranslationDirective: false
     }
   },
   app: {

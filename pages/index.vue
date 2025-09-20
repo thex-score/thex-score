@@ -2,13 +2,17 @@
   <UContainer>
     <UCard class="my-5">
       <template #header>
-        <h1 class="text-xl font-bold">ようこそ</h1>
+        <h1 class="text-xl font-bold">{{ $t("pages.index.welcome") }}</h1>
       </template>
 
-      <p>このサイトでは東方原作STGのExtra及びPhantasmモードで基準スコア以上を出した記録を掲載しています。<br />ゲーム名、もしくはプレイヤー名を入力すると達成された記録が表示されます。<br />プレイヤー名検索では部分一致ではなく完全一致したものを表示します。</p>
+      <i18n-t keypath="pages.index.description" tag="p">
+        <template #br>
+          <br />
+        </template>
+      </i18n-t>
       <template #footer>
         <p class="text-sm mb-1 font-medium">
-          最新アップデート
+          {{ $t("pages.index.latest_update") }}
           <span class="text-primary-600 dark:text-primary-400 font-semibold">
             v{{ latest.version }}
           </span>
@@ -30,7 +34,7 @@
       <!-- 左側（UInput + UButton） -->
       <div class="col-span-12 md:col-span-6 flex gap-2">
         <UInput
-          placeholder="プレイヤー名を入れる"
+          :placeholder="$t('pages.index.placeholder_player')"
           class="flex-1 max-w-[12rem]"
           v-model="inputtedPlayer"
           @keydown.enter="searchPlayer"
@@ -50,14 +54,14 @@
           class="w-1/2"
           v-model="selectedGameId"
           :items="gameOptions"
-          placeholder="ゲームを選択"
+          :placeholder="$t('pages.index.placeholder_game')"
         />
 
         <USelect
           class="w-1/2"
           v-model="selectedShotTypeId"
           :items="shotTypeOptions"
-          placeholder="機体を選択"
+          :placeholder="$t('pages.index.placeholder_shot_type')"
         />
       </div>
     </div>
@@ -81,11 +85,12 @@
   const gamesMap = useGames()
   const scoreRecordMap = useScoreRecords()
   const latest = UseReleases()[0]
+  const { t, locale } = useI18n()
 
   const gameOptions = computed(() =>
     (Object.entries(gamesMap)).map(
       ([id, game]) => ({
-        label: game.name,
+        label: t(game.name),
         value: id
       })
     )
@@ -98,10 +103,10 @@
     const game = gamesMap[selectedGameId.value]
 
     let returning = Object.entries(game.shot_types).map(([id, st]) => ({
-      label: st.name,
+      label: t(st.name),
       value: id
     }))
-    returning.unshift({label: '全機体', value: 'all'})
+    returning.unshift({label: t("pages.index.all_shot_types"), value: 'all'})
     return returning
   })
 
@@ -177,7 +182,7 @@
   const columns = [
     {
       accessorKey: 'game',
-      header: 'ゲーム名',
+      header: t('global.table_headers.game'),
       cell: ({ row }) => {
         return h(
           UBadge,
@@ -189,13 +194,13 @@
               backgroundColor: gamesMap[row.getValue('game')].color.bg,
             }
           },
-          () => gamesMap[row.getValue('game')].name
+          () => t(gamesMap[row.getValue('game')].name)
         )
       }
     },
     {
       accessorKey: 'rank',
-      header: '順位',
+      header: t('global.table_headers.rank'),
     },
     {
       accessorKey: 'score',
@@ -205,7 +210,7 @@
         return h(UButton, {
           color: 'neutral',
           variant: 'ghost',
-          label: 'スコア',
+          label: t('global.table_headers.score'),
           icon: isSorted
             ? isSorted === 'asc'
               ? 'i-lucide-arrow-up-narrow-wide'
@@ -221,14 +226,14 @@
     },
     {
       accessorKey: 'shot_type',
-      header: '機体',
+      header: t('global.table_headers.shot_type'),
       cell: ({row}) =>{
-        return gamesMap[row.getValue('game')].shot_types[row.getValue('shot_type')].name
+        return t(gamesMap[row.getValue('game')].shot_types[row.getValue('shot_type')].name)
       }
     },
     {
       accessorKey: 'status',
-      header: 'ステータス',
+      header: t('global.table_headers.status'),
       cell: ({ row }) => {
         const color = {
           great: 'success',
@@ -236,8 +241,8 @@
         }[row.getValue('status')]
         
         const txt = {
-          great: '超大台',
-          good: '大台'
+          great: t('global.threshold_score_names.great'),
+          good: t('global.threshold_score_names.good')
         }[row.getValue('status')]
 
         return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () =>
@@ -247,7 +252,7 @@
     },
     {
       accessorKey: 'player',
-      header: 'プレイヤー',
+      header: t('global.table_headers.player'),
     },
     {
       accessorKey: 'date',
@@ -257,7 +262,7 @@
         return h(UButton, {
           color: 'neutral',
           variant: 'ghost',
-          label: '日付',
+          label: t('global.table_headers.date'),
           icon: isSorted
             ? isSorted === 'asc'
               ? 'i-lucide-arrow-up-narrow-wide'
@@ -268,7 +273,7 @@
         })
       },
       cell: ({ row }) => {
-        return new Date(row.getValue('date')).toLocaleString('ja', {
+        return new Date(row.getValue('date')).toLocaleString(locale.value, {
           year: 'numeric',
           day: '2-digit',
           month: '2-digit',
@@ -277,7 +282,7 @@
     },
     {
       accessorKey: 'replay',
-      header: 'リプレイ',
+      header: t('global.table_headers.replay'),
       cell: ({ row }) => {
         if (row.getValue('replay') === null){
           return 'N/A'
@@ -297,7 +302,7 @@
     },
     {
       accessorKey: 'detail',
-      header: '備考',
+      header: t('global.table_headers.note'),
     },
 
   ]

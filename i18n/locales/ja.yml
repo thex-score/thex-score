@@ -1,0 +1,346 @@
+global:
+  threshold_score_names:
+    good: 大台
+    great: 超大台
+  table_headers:
+    game: ゲーム名
+    rank: 順位
+    score: スコア
+    shot_type: 機体
+    status: ステータス
+    player: プレイヤー
+    date: 日付
+    publish_date: 登録日
+    replay: リプレイ
+    note: 備考
+components:
+  TheHeader:
+    site_title: 東方EXTRAスコアボード
+    open_menu: メニューを開く
+    language: 言語
+    pages: ページ
+    home: ホーム
+    about: サイト概要
+    new_records: 最近の記録
+    data: 統計データ
+    links: リンク一覧
+    updates: 更新履歴
+composables:
+  Games:
+    th06: 
+      title: 東方紅魔郷
+      shot_types:
+        reimu_a: 霊夢A
+        reimu_b: 霊夢B
+        marisa_a: 魔理沙A
+        marisa_b: 魔理沙B
+    th07:
+      title:
+        ex: 東方妖々夢EX
+        ph: 東方妖々夢Ph
+      shot_types:
+        reimu_a: 霊夢A
+        reimu_b: 霊夢B
+        marisa_a: 魔理沙A
+        marisa_b: 魔理沙B
+        sakuya_a: 咲夜A
+        sakuya_b: 咲夜B
+    th08:
+      title: 東方永夜抄
+      shot_types:
+        border: 結界組
+        magic: 詠唱組
+        scarlet: 紅魔組
+        netherworld: 幽冥組
+        reimu: 霊夢
+        yukari: 紫
+        marisa: 魔理沙
+        alice: アリス
+        sakuya: 咲夜
+        remilia: レミリア
+        youmu: 妖夢
+        yuyuko: 幽々子
+    th10:
+      title: 東方風神録
+      shot_types:
+        reimu_a: 霊夢A
+        reimu_b: 霊夢B
+        reimu_c: 霊夢C
+        marisa_a: 魔理沙A
+        marisa_b: 魔理沙B
+        marisa_c: 魔理沙C
+    th11:
+      title: 東方地霊殿
+      shot_types:
+        reimu_a: 霊夢A
+        reimu_b: 霊夢B
+        reimu_c: 霊夢C
+        marisa_a: 魔理沙A
+        marisa_b: 魔理沙B
+        marisa_c: 魔理沙C
+    th12:
+      title: 東方星蓮船
+      shot_types:
+        reimu_a: 霊夢A
+        reimu_b: 霊夢B
+        marisa_a: 魔理沙A
+        marisa_b: 魔理沙B
+        sanae_a: 早苗A
+        sanae_b: 早苗B
+    th128:
+      title: 妖精大戦争
+      shot_types:
+        cirno: チルノ
+    th13:
+      title: 東方神霊廟
+      shot_types:
+        reimu: 霊夢
+        marisa: 魔理沙
+        sanae: 早苗
+        youmu: 妖夢
+    th14:
+      title: 東方輝針城
+      shot_types:
+        reimu_a: 霊夢A
+        reimu_b: 霊夢B
+        marisa_a: 魔理沙A
+        marisa_b: 魔理沙B
+        sakuya_a: 咲夜A
+        sakuya_b: 咲夜B
+    th15:
+      title: 東方紺珠伝
+      shot_types:
+        reimu: 霊夢
+        marisa: 魔理沙
+        sanae: 早苗
+        reisen: 鈴仙
+    th16:
+      title: 東方天空璋
+      shot_types:
+        reimu: 霊夢(土用)
+        cirno: チルノ(土用)
+        aya: 文(土用)
+        marisa: 魔理沙(土用)
+    th17:
+      title: 東方鬼形獣
+      shot_types:
+        reimu_w: 霊夢オオカミ
+        reimu_o: 霊夢カワウソ
+        reimu_e: 霊夢オオワシ
+        marisa_w: 魔理沙オオカミ
+        marisa_o: 魔理沙カワウソ
+        marisa_e: 魔理沙オオワシ
+        youmu_w: 妖夢オオカミ
+        youmu_o: 妖夢カワウソ
+        youmu_e: 妖夢オオワシ
+    th18:
+      title: 東方虹龍洞
+      shot_types:
+        reimu: 霊夢
+        marisa: 魔理沙
+        sakuya: 咲夜
+        sanae: 早苗
+pages:
+  about:
+    title: サイト概要
+    intro:
+      title: はじめに
+      content: |-
+        このサイトでは東方原作STGのExtra及びPhantasmモードで基準スコア以上を出した記録を掲載しています。
+    publish_record:
+      title: 記録掲載について
+      content: |-
+        このページは{silentselene}などで一般公開された記録を管理人が収集して掲載しています。{br}
+        原則的にはリプレイやstream配信、動画が公開されている記録を掲載対象とします。{br}
+        スクリーンショットやスコア情報のみでも記録として掲載する場合がありますが、管理人の判断で掲載しない場合もあるので、ご了承願います。{br}
+        スコアが有効数字4桁しか判明していないなど曖昧な記録については記録の正当性を保証できないため掲載対象とはしません。{br}
+        処理落ち率3%以上や不正ツールの使用が疑われる記録については掲載せず参考記録としても扱いません。{br}
+        プレイヤー本人から要望があった一部の記録についても掲載しません。{br}
+        記録の修正・新規記録追加・リプレイ削除などを希望される方は全て管理人の{nyanko}に連絡してください。
+      tags:
+        silentselene: サイレントセレナ
+        nyanko: にゃんこ
+    using_tools:
+      title: 外部ツール使用について
+      content: |-
+        多くのリーダーボードと同様に原則的に外部ツールの使用は禁止です。{br}
+        ただし動作改善を目的としたVpatchの使用は許可します。（バグ修正などを目的とした使用は不可）{br}
+        練習におけるthpracの使用は可能です。ただし本番でのバックエンドモード（いわゆるチート機能）使用は不可です。{br}
+        th18東方虹龍洞ではthpracを利用した市場操作(Shop Manip)を許可します。{br}
+        ただし正規のタイミング以外でカードを購入したプレイは無効とします。
+    compatible_games:
+      title: 対応作品
+    threshold_scores:
+      title: 基準スコア
+    threshold_score_policy:
+      title: スコア基本方針
+      good:
+        content: |-
+          大台スコアはスコアアタック入門プレイヤーが目標スコアとした際に簡単過ぎず難しすぎず、程々に苦労してかつ達成感を得られるくらいの達成難易度を想定して設定された基準スコアです。{br}
+          基本的な稼ぎ方を理解していないと出せないスコアなので、この基準値をクリアしたら一人前のスコアラーです。{br}
+          実力差が結果に反映されやすいSTGの性質上、達成にかかる労力は人それぞれとなりますが、その点につきましてはご了承願います。{br}
+          機体格差が無視できないほど大きい作品では例外的に複数の基準スコアを設定しています。{br}
+          鬼形獣についてはあまりにもプレイヤー・情報が少なく、妥当な基準設定が不可能であるため全機体共通の基準スコアとします。{br}
+          大台スコアは下記の条件を満たす中でなるべくキリの良い数字に設定します。
+        condition_lists:
+          not_nnfs: NNFSして点符上部回収しただけでは絶対に出ないスコア
+          for_beginners: スコアタ未経験者が一通りスコアタの動きを勉強して時間をかけて練習すれば十分狙えるスコア
+          for_experienced: 既に大台達成の実績のある実力者でも他人のリプレイを一度見て軽くプレイしただけでは達成できない難易度のスコア
+      great:
+        content: |-
+          超大台スコアはその作品をやり込んだプレイヤーが大目標として掲げるような非常に達成難易度の高い基準スコアです。
+          こちらについてはスコアアタック上級者以外が目標とすることを想定してはいません。
+          そのため大台スコアよりも基準スコアが細かく設定されています。
+          この基準スコアをクリアしたら上級者を名乗っても恥ずかしくないスコアです。
+    score_FAQ:
+      title: スコアFAQ
+      good:
+        content:
+          lists:
+            th07_100mil:
+              question: Q. 妖々夢10億では駄目なのですか？
+              answer: A. 駄目です。理由はNNFSしただけで容易に達成可能だから
+            th08_200mil:
+              question: Q. 永夜抄20億では駄目なのですか？
+              answer: A. 駄目です。理由はNMFSしただけで容易に達成可能だから
+            th10_950mil:
+              question: Q. 風神録9.5億は簡単過ぎませんか？
+              answer: A. キリが良い数字であることを考慮してこの数値に設定しています
+            th11_100mil:
+              question: Q. 地霊殿10億は簡単過ぎませんか？
+              answer: A. キリが良い数字であることを考慮してこの数値に設定しています
+            th16_200mil:
+              question: Q. 天空璋20億の難易度高くないですか？
+              answer: A. ある程度は達成に労力がかかるスコアに設定しています
+            th17_not_otter_150mil:
+              question: Q. 鬼形獣notカワウソ15億は厳しすぎませんか？
+              answer: A. 情報が乏しく基準設定が困難であるため全機体共通のスコアに設定しています。有識者の意見があれば下方修正される可能性があります
+            th18_300mil:
+              question: Q. 虹龍洞30億の難易度高くないですか？
+              answer: A. クリア難易度自体は他作と比較してかなり低いので大台スコアを高めに設定しています
+            garbage_shot_type:
+              question: Q. 残念機体に対する配慮はしないのですか？
+              answer: A. 全機体現実的に達成可能な大台スコアに設定しています。ただしスコアを稼ぎやすい機体よりは達成難易度が高くなります
+            th20_compatible:
+              question: Q. 錦上京への対応はいつですか？
+              answer: A. PIVバグの関係で集計方法が定まらず見通しが立ちません
+            publish_my_record:
+              question: Q. 私の記録が追加されないのですが？
+              answer: A. {github}もしくは{nyanko}にご報告お願いします。気付き次第追加します。
+              tags:
+                github: github
+                nyanko: にゃんこ
+            update_frequency:
+              question: Q. 更新頻度はどのくらいですか？
+              answer: A. 週に1回は必ずチェックしますが、即日更新は確約できません
+            recommendation:
+              question: Q. ズバリどの作品がおすすめですか？
+              answer: A. 達成難易度が良心的と思われるのは達成者が多い作品ですが、自分がプレイしたい作品の方がモチベを保ちやすいです
+      great:
+        content:
+          lists:
+            score_decrease:
+              question: Q. 超大台が達成できない機体があるので基準スコアを下げてくれませんか？
+              answer: A. 超大台スコアについては上級者が目指す大目標として設定しているので難易度を理由に基準スコアを下げることはありません。ただし現実的に不可能と考えられる基準スコアについては修正する可能性があります
+    additional_info:
+      title: 補足
+      content: |-
+        大台・超大台の達成難易度は作品内での整合性・数字のキリの良さを重視していて、異なる作品間での整合性は重視していません。{br}
+        例えば紅魔郷5億と地霊殿10億と神霊廟5億は同じ達成難易度ではありませんが、そこは問題視していません。{br}
+        機体ごとに基準スコアを設定しているのは難易度格差が極端に広がらないようにするための救済措置であって、全ての機体の達成難易度を揃えるためではありません。<{br}
+        例えば紅魔郷ではスコアを稼ぎやすい霊夢B・魔理沙Bとスコアを稼ぎにくい霊夢A・魔理沙Aでは達成難易度が異なりますが全ての機体の達成難易度を同程度にする必要はないと考えています。
+    operator:
+      title: 運営者
+      content: |-
+        {nyanko}
+      tags:
+        nyanko: にゃんこ
+    operation_policy:
+      title: 運営方針
+      content: |-
+        このサイトは{nyanko}が運営しているものです。{br}
+        {wefmaika}に作成を依頼し、氏名表示権を除く全ての権利/責任/義務を{nyanko}に譲渡することによって成り立っています。{br}
+        よってこのサイトで何か不都合があれば{nyanko}に問い合わせてください。{br}
+        このサイトのソースコードはMITライセンスにて{github}で公開されています。ただし弊サイトに著作権がないリプレイファイルやスコアデータに関してはMITライセンスを適用できません。
+      tags:
+        wefmaika: ゑふまいか
+        nyanko: にゃんこ
+        github: github
+    thresholds:
+      th06:
+        great: 6億
+        good: 5億
+      th07_ex:
+        great: 14億
+        good: 12億
+      th07_ph:
+        great: 16億
+        good: 13億
+      th08:
+        great: ペア・人間単騎 28億 / 妖怪単騎 20億
+        good: ペア・人間単騎 25億 / 妖怪単騎 18億
+      th10:
+        great: 10億
+        good: 9.5億
+      th11:
+        great: 11億
+        good: 10億
+      th12:
+        great: 7億
+        good: 5億
+      th128:
+        great: 1億
+        good: 9000万
+      th13:
+        great: 6億
+        good: 5億
+      th14:
+        great: 魔理沙B 12億 / その他 8億
+        good: 魔理沙B 10億 / その他 7.5億
+      th15:
+        great: 9億
+        good: 7億
+      th16:
+        great: 30億
+        good: 20億
+      th17:
+        great: 25億
+        good: 15億
+      th18:
+        great: 咲夜 70億 / その他 35億
+        good: 咲夜 50億 / その他 30億
+  data:
+    title: 統計データ
+    achievement_status:
+      title: 作品・部門別 達成状況
+      content:
+        table_headers:
+          game: ゲーム名
+          total: 合計
+  index:
+    welcome: ようこそ
+    description: |-
+      このサイトでは東方原作STGのExtra及びPhantasmモードで基準スコア以上を出した記録を掲載しています。{br}
+      ゲーム名、もしくはプレイヤー名を入力すると達成された記録が表示されます。{br}
+      プレイヤー名検索では部分一致ではなく完全一致したものを表示します。
+    latest_update: 最新アップデート
+    placeholder_player: プレイヤー名を入れる
+    placeholder_game: ゲームを選択
+    placeholder_shot_type: 機体を選択
+    all_shot_types: 全機体
+
+  links:
+    title: リンク一覧
+    uploaders:
+      title: リプレイアップローダ一覧
+    strategy_sites:
+      title: 攻略サイト・攻略記事一覧
+    strategy_movies:
+      title: 攻略動画一覧
+    twc_archives:
+      title: TWCアーカイブ
+  newrecords:
+    title: 最近追加された記録
+  updates:
+    title: 更新履歴
+

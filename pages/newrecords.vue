@@ -1,6 +1,6 @@
 <template>
   <UContainer class="py-8">
-    <h1 class="text-xl font-bold mb-6">最近追加された記録</h1>
+    <h1 class="text-xl font-bold mb-6">{{ $t("pages.newrecords.title") }}</h1>
 
     <USeparator class="mb-5"/>
     <UTable :data="ScoreRecords" :columns="columns" class="flex-1" />
@@ -12,6 +12,7 @@
   import { h, resolveComponent } from 'vue'
   import { useGames } from '~/composables/Games';
   import { useNewScoreRecords } from '~/composables/NewScoreRecords';
+  const { t, locale } = useI18n()
 
   const gamesMap = useGames()
   const ScoreRecords = useNewScoreRecords()
@@ -22,7 +23,7 @@
   const columns = [
     {
       accessorKey: 'game',
-      header: 'ゲーム名',
+      header: t("global.table_headers.game"),
       cell: ({ row }) => {
         return h(
           UBadge,
@@ -34,27 +35,27 @@
               backgroundColor: gamesMap[row.getValue('game')].color.bg,
             }
           },
-          () => gamesMap[row.getValue('game')].name
+          () => t(gamesMap[row.getValue('game')].name)
         )
       }
     },
     {
       accessorKey: 'score',
-      header: 'スコア',
+      header: t("global.table_headers.score"),
       cell: ({ row }) => {
         return new Number(row.getValue('score')).toLocaleString('ja')
       }
     },
     {
       accessorKey: 'shot_type',
-      header: '機体',
+      header: t("global.table_headers.shot_type"),
       cell: ({row}) =>{
-        return gamesMap[row.getValue('game')].shot_types[row.getValue('shot_type')].name
+        return t(gamesMap[row.getValue('game')].shot_types[row.getValue('shot_type')].name)
       }
     },
     {
       accessorKey: 'status',
-      header: 'ステータス',
+      header: t("global.table_headers.status"),
       cell: ({ row }) => {
         const color = {
           great: 'success',
@@ -62,8 +63,8 @@
         }[row.getValue('status')]
         
         const txt = {
-          great: '超大台',
-          good: '大台'
+          great: t("global.threshold_score_names.great"),
+          good: t("global.threshold_score_names.good")
         }[row.getValue('status')]
 
         return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () =>
@@ -73,14 +74,14 @@
     },
     {
       accessorKey: 'player',
-      header: 'プレイヤー',
+      header: t("global.table_headers.player"),
       cell: ({ row }) => row.getValue('player')
     },
     {
       accessorKey: 'date',
-      header: '登録日',
+      header: t("global.table_headers.publish_date"),
       cell: ({ row }) => {
-        return new Date(row.getValue('date')).toLocaleString('ja', {
+        return new Date(row.getValue('date')).toLocaleString(locale.value, {
           year: 'numeric',
           day: '2-digit',
           month: '2-digit',
@@ -89,7 +90,7 @@
     },
     {
       accessorKey: 'replay',
-      header: 'リプレイ',
+      header: t("global.table_headers.replay"),
       cell: ({ row }) => {
         if (row.getValue('replay') === null){
           return 'N/A'
@@ -109,7 +110,7 @@
     },
     {
       accessorKey: 'detail',
-      header: '備考',
+      header: t("global.table_headers.note"),
       cell: ({ row }) => row.getValue('detail')
     },
 

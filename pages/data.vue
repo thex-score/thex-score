@@ -1,10 +1,10 @@
 <template>
   <UContainer class="py-8">
-    <h1 class="text-xl font-bold mb-6">統計データ</h1>
+    <h1 class="text-xl font-bold mb-6">{{ $t("pages.data.title") }}</h1>
 
     <UCard class="my-5">
       <template #header>
-        <h2>作品・部門別 達成状況</h2>
+        <h2>{{ $t("pages.data.achievement_status.title") }}</h2>
       </template>
       <UTable :data="scoreSummary" :columns="columns" class="flex-1" />
     </UCard>
@@ -16,6 +16,7 @@
 <script setup>
   import { useGames } from '~/composables/Games'
   import { h, resolveComponent } from 'vue'
+  const { t } = useI18n()
 
   const gamesMap = useGames()
   const scoreRecordMap = useScoreRecords()
@@ -64,7 +65,7 @@
   const columns=[
     {
       accessorKey: 'game',
-      header: 'ゲーム名',
+      header: t("pages.data.achievement_status.content.table_headers.game"),
       cell: ({ row }) => {
         return h(
           UBadge,
@@ -76,7 +77,7 @@
               backgroundColor: gamesMap[row.getValue('game')].color.bg,
             }
           },
-          () => gamesMap[row.getValue('game')].name
+          () => t(gamesMap[row.getValue('game')].name)
         )
       }
     },
@@ -85,7 +86,7 @@
       header: ({ column }) => {
 
         return h(UBadge, { class: 'capitalize', variant: 'subtle', color: 'neutral' },
-          '合計'
+          t("pages.data.achievement_status.content.table_headers.total")
         )
       }
     },
@@ -94,7 +95,7 @@
       header: ({ column }) => {
 
         return h(UBadge, { class: 'capitalize', variant: 'subtle', color: 'success' },
-          '超大台'
+          t("global.threshold_score_names.great")
         )
       }
     },
@@ -103,7 +104,7 @@
       header: ({ column }) => {
 
         return h(UBadge, { class: 'capitalize', variant: 'subtle', color: 'neutral' },
-          '大台'
+          t("global.threshold_score_names.good")
         )
       }
     },
