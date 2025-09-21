@@ -219,7 +219,7 @@ const columns = [
       });
     },
     cell: ({ row }) => {
-      return new Number(row.getValue("score")).toLocaleString("ja");
+      return new Number(row.getValue("score")).toLocaleString(locale.value);
     },
   },
   {
