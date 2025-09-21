@@ -1,7 +1,7 @@
 <template>
   <UContainer class="py-8">
     <!-- 見出しだけ独立させてカード外にする -->
-    <h1 class="text-xl font-bold mb-6">更新履歴</h1>
+    <h1 class="text-xl font-bold mb-6">{{ $t("pages.updates.title") }}</h1>
 
     <!-- カードの一覧 -->
     <div class="space-y-4">
@@ -38,16 +38,16 @@
 
 <script setup lang="ts">
 /* composable からデータ取得 */
-import { UseReleases } from '~/composables/ReleaseNotes'
+import { UseReleases } from "~/composables/ReleaseNotes";
 
-const releases = UseReleases()
+const releases = UseReleases();
 
 /* 日付を日本語表記にフォーマット（例: 2025/07/19）*/
 function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString('ja-JP', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit'
-  })
+  return new Date(dateStr).toLocaleDateString("ja-JP", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
 }
 </script>

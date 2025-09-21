@@ -1,209 +1,216 @@
-export function useGames(){
-  const gamesMap: Record<string, {name: string, color: {bg: string, txt: string}, shot_types: Record<string, {name: string}>}> = {
-    'th06': {
-      'name': '東方紅魔郷',
-      'color': {
-        'bg': '#993333',
-        'txt': '#FFFFFF'
+export function useGames() {
+  const gamesMap: Record<
+    string,
+    {
+      name: string;
+      color: { bg: string; txt: string };
+      shot_types: Record<string, { name: string }>;
+    }
+  > = {
+    th06: {
+      name: "composables.Games.th06.title",
+      color: {
+        bg: "#993333",
+        txt: "#FFFFFF",
       },
-      'shot_types': {
-        'ReimuA': {'name': '霊夢A'},
-        'ReimuB': {'name': '霊夢B'},
-        'MarisaA': {'name': '魔理沙A'},
-        'MarisaB': {'name': '魔理沙B'},
-      }
-    },
-    'th07Ex': {
-      'name': '東方妖々夢Ex',
-      'color': {
-        'bg': '#FF75DD',
-        'txt': '#FFFFFF'
+      shot_types: {
+        ReimuA: { name: "composables.Games.th06.shot_types.reimu_a" },
+        ReimuB: { name: "composables.Games.th06.shot_types.reimu_b" },
+        MarisaA: { name: "composables.Games.th06.shot_types.marisa_a" },
+        MarisaB: { name: "composables.Games.th06.shot_types.marisa_b" },
       },
-      'shot_types': {
-        'ReimuA': {'name': '霊夢A'},
-        'ReimuB': {'name': '霊夢B'},
-        'MarisaA': {'name': '魔理沙A'},
-        'MarisaB': {'name': '魔理沙B'},
-        'SakuyaA': {'name': '咲夜A'},
-        'SakuyaB': {'name': '咲夜B'},
-      }
     },
-    'th07Ph': {
-      'name': '東方妖々夢Ph',
-      'color': {
-        'bg': '#FF75DD',
-        'txt': '#FFFFFF'
+    th07Ex: {
+      name: "composables.Games.th07.title.ex",
+      color: {
+        bg: "#FF75DD",
+        txt: "#FFFFFF",
       },
-      'shot_types': {
-        'ReimuA': {'name': '霊夢A'},
-        'ReimuB': {'name': '霊夢B'},
-        'MarisaA': {'name': '魔理沙A'},
-        'MarisaB': {'name': '魔理沙B'},
-        'SakuyaA': {'name': '咲夜A'},
-        'SakuyaB': {'name': '咲夜B'},
-      }
-    },
-    'th08': {
-      'name': '東方永夜抄',
-      'color': {
-        'bg': '#333399',
-        'txt': '#FFFFFF',
+      shot_types: {
+        ReimuA: { name: "composables.Games.th07.shot_types.reimu_a" },
+        ReimuB: { name: "composables.Games.th07.shot_types.reimu_b" },
+        MarisaA: { name: "composables.Games.th07.shot_types.marisa_a" },
+        MarisaB: { name: "composables.Games.th07.shot_types.marisa_b" },
+        SakuyaA: { name: "composables.Games.th07.shot_types.sakuya_a" },
+        SakuyaB: { name: "composables.Games.th07.shot_types.sakuya_a" },
       },
-      'shot_types': {
-        'Border': {'name': '結界組'},
-        'Magic': {'name': '詠唱組'},
-        'Scarlet': {'name': '紅魔組'},
-        'Netherworld': {'name': '幽冥組'},
-        'Reimu': {'name': '霊夢'},
-        'Yukari': {'name': '紫'},
-        'Marisa': {'name': '魔理沙'},
-        'Alice': {'name': 'アリス'},
-        'Sakuya': {'name': '咲夜'},
-        'Remilia': {'name': 'レミリア'},
-        'Youmu': {'name': '妖夢'},
-        'Yuyuko': {'name': '幽々子'},
-      }
     },
-    'th10': {
-      'name': '東方風神録',
-      'color': {
-        'bg': '#96B300',
-        'txt': '#FFFFFF'
+    th07Ph: {
+      name: "composables.Games.th07.title.ph",
+      color: {
+        bg: "#FF75DD",
+        txt: "#FFFFFF",
       },
-      'shot_types': {
-        'ReimuA': {'name': '霊夢A'},
-        'ReimuB': {'name': '霊夢B'},
-        'ReimuC': {'name': '霊夢C'},
-        'MarisaA': {'name': '魔理沙A'},
-        'MarisaB': {'name': '魔理沙B'},
-        'MarisaC': {'name': '魔理沙C'},
-      }
-    },
-    'th11': {
-      'name': '東方地霊殿',
-      'color': {
-        'bg': '#591400',
-        'txt': '#FFFFFF'
+      shot_types: {
+        ReimuA: { name: "composables.Games.th07.shot_types.reimu_a" },
+        ReimuB: { name: "composables.Games.th07.shot_types.reimu_b" },
+        MarisaA: { name: "composables.Games.th07.shot_types.marias_a" },
+        MarisaB: { name: "composables.Games.th07.shot_types.marias_b" },
+        SakuyaA: { name: "composables.Games.th07.shot_types.sakuya_a" },
+        SakuyaB: { name: "composables.Games.th07.shot_types.sakuya_b" },
       },
-      'shot_types': {
-        'ReimuA': {'name': '霊夢A'},
-        'ReimuB': {'name': '霊夢B'},
-        'ReimuC': {'name': '霊夢C'},
-        'MarisaA': {'name': '魔理沙A'},
-        'MarisaB': {'name': '魔理沙B'},
-        'MarisaC': {'name': '魔理沙C'},
-      }
     },
-    'th12': {
-      'name': '東方星蓮船',
-      'color': {
-        'bg': '#4169E1',
-        'txt': '#FFFFFF'
+    th08: {
+      name: "composables.Games.th08.title",
+      color: {
+        bg: "#333399",
+        txt: "#FFFFFF",
       },
-      'shot_types': {
-        'ReimuA': {'name': '霊夢A'},
-        'ReimuB': {'name': '霊夢B'},
-        'MarisaA': {'name': '魔理沙A'},
-        'MarisaB': {'name': '魔理沙B'},
-        'SanaeA': {'name': '早苗B'},
-        'SanaeB': {'name': '早苗B'},
-      }
-    },
-    'th128': {
-      'name': '妖精大戦争',
-      'color': {
-        'bg': '#009898',
-        'txt': '#FFFFFF',
+      shot_types: {
+        Border: { name: "composables.Games.th08.shot_types.border" },
+        Magic: { name: "composables.Games.th08.shot_types.magic" },
+        Scarlet: { name: "composables.Games.th08.shot_types.scarlet" },
+        Netherworld: { name: "composables.Games.th08.shot_types.netherworld" },
+        Reimu: { name: "composables.Games.th08.shot_types.reimu" },
+        Yukari: { name: "composables.Games.th08.shot_types.yukari" },
+        Marisa: { name: "composables.Games.th08.shot_types.marisa" },
+        Alice: { name: "composables.Games.th08.shot_types.alice" },
+        Sakuya: { name: "composables.Games.th08.shot_types.sakuya" },
+        Remilia: { name: "composables.Games.th08.shot_types.remilia" },
+        Youmu: { name: "composables.Games.th08.shot_types.youmu" },
+        Yuyuko: { name: "composables.Games.th08.shot_types.yuyuko" },
       },
-      'shot_types': {
-        'Cirno': {'name': 'チルノ'},
-      }
     },
-    'th13': {
-      'name': '東方神霊廟',
-      'color': {
-        'bg': '#4A808C',
-        'txt': '#FFFFFF',
+    th10: {
+      name: "composables.Games.th10.title",
+      color: {
+        bg: "#96B300",
+        txt: "#FFFFFF",
       },
-      'shot_types': {
-        'Reimu': {'name': '霊夢'},
-        'Marisa': {'name': '魔理沙'},
-        'Sanae': {'name': '早苗'},
-        'Youmu': {'name': '妖夢'},
-      }
-    },
-    'th14': {
-      'name': '東方輝針城',
-      'color': {
-        'bg': '#AA7777',
-        'txt': '#FFFFFF'
+      shot_types: {
+        ReimuA: { name: "composables.Games.th10.shot_types.reimu_a" },
+        ReimuB: { name: "composables.Games.th10.shot_types.reimu_b" },
+        ReimuC: { name: "composables.Games.th10.shot_types.reimu_c" },
+        MarisaA: { name: "composables.Games.th10.shot_types.marisa_a" },
+        MarisaB: { name: "composables.Games.th10.shot_types.marisa_b" },
+        MarisaC: { name: "composables.Games.th10.shot_types.marisa_c" },
       },
-      'shot_types': {
-        'ReimuA': {'name': '霊夢A'},
-        'ReimuB': {'name': '霊夢B'},
-        'MarisaA': {'name': '魔理沙A'},
-        'MarisaB': {'name': '魔理沙B'},
-        'SakuyaA': {'name': '咲夜A'},
-        'SakuyaB': {'name': '咲夜B'},
-      }
     },
-    'th15': {
-      'name': '東方紺珠伝',
-      'color': {
-        'bg': '#6A47BE',
-        'txt': '#FFFFFF',
+    th11: {
+      name: "composables.Games.th11.title",
+      color: {
+        bg: "#591400",
+        txt: "#FFFFFF",
       },
-      'shot_types': {
-        'Reimu': {'name': '霊夢'},
-        'Marisa': {'name': '魔理沙'},
-        'Sanae': {'name': '早苗'},
-        'Reisen': {'name': '鈴仙'},
-      }
-    },
-    'th16': {
-      'name': '東方天空璋',
-      'color': {
-        'bg': '#176E0E',
-        'txt': '#FFFFFF',
+      shot_types: {
+        ReimuA: { name: "composables.Games.th11.shot_types.reimu_a" },
+        ReimuB: { name: "composables.Games.th11.shot_types.reimu_b" },
+        ReimuC: { name: "composables.Games.th11.shot_types.reimu_c" },
+        MarisaA: { name: "composables.Games.th11.shot_types.marisa_a" },
+        MarisaB: { name: "composables.Games.th11.shot_types.marisa_b" },
+        MarisaC: { name: "composables.Games.th11.shot_types.marisa_c" },
       },
-      'shot_types': {
-        'Reimu': {'name': '霊夢(土用)'},
-        'Cirno': {'name': 'チルノ(土用)'},
-        'Aya': {'name': '文(土用)'},
-        'Marisa': {'name': '魔理沙(土用)'},
-      }
     },
-    'th17': {
-      'name': '東方鬼形獣',
-      'color': {
-        'bg':'#190E0E',
-        'txt': '#FFFFFF',
+    th12: {
+      name: "composables.Games.th12.title",
+      color: {
+        bg: "#4169E1",
+        txt: "#FFFFFF",
       },
-      'shot_types': {
-        'ReimuW': {'name': '霊夢オオカミ'},
-        'ReimuO': {'name': '霊夢カワウソ'},
-        'ReimuE': {'name': '霊夢オオワシ'},
-        'MarisaW': {'name': '魔理沙オオカミ'},
-        'MarisaO': {'name': '魔理沙カワウソ'},
-        'MarisaE': {'name': '魔理沙オオワシ'},
-        'YoumuW': {'name': '妖夢オオカミ'},
-        'YoumuO': {'name': '妖夢カワウソ'},
-        'YoumuE': {'name': '妖夢オオワシ'},
-      }
-    },
-    'th18': {
-      'name': '東方虹龍洞',
-      'color': {
-        'bg': '#1DD294',
-        'txt': '#FFFFFF',
+      shot_types: {
+        ReimuA: { name: "composables.Games.th12.shot_types.reimu_a" },
+        ReimuB: { name: "composables.Games.th12.shot_types.reimu_b" },
+        MarisaA: { name: "composables.Games.th12.shot_types.marisa_a" },
+        MarisaB: { name: "composables.Games.th12.shot_types.marisa_b" },
+        SanaeA: { name: "composables.Games.th12.shot_types.sanae_a" },
+        SanaeB: { name: "composables.Games.th12.shot_types.sanae_b" },
       },
-      'shot_types': {
-        'Reimu': {'name': '霊夢'},
-        'Marisa': {'name': '魔理沙'},
-        'Sakuya': {'name': '咲夜'},
-        'Sanae': {'name': '早苗'},
-      }
     },
-  }
-  return gamesMap
+    th128: {
+      name: "composables.Games.th128.title",
+      color: {
+        bg: "#009898",
+        txt: "#FFFFFF",
+      },
+      shot_types: {
+        Cirno: { name: "composables.Games.th128.shot_types.cirno" },
+      },
+    },
+    th13: {
+      name: "composables.Games.th13.title",
+      color: {
+        bg: "#4A808C",
+        txt: "#FFFFFF",
+      },
+      shot_types: {
+        Reimu: { name: "composables.Games.th13.shot_types.reimu" },
+        Marisa: { name: "composables.Games.th13.shot_types.marisa" },
+        Sanae: { name: "composables.Games.th13.shot_types.sanae" },
+        Youmu: { name: "composables.Games.th13.shot_types.youmu" },
+      },
+    },
+    th14: {
+      name: "composables.Games.th14.title",
+      color: {
+        bg: "#AA7777",
+        txt: "#FFFFFF",
+      },
+      shot_types: {
+        ReimuA: { name: "composables.Games.th14.shot_types.reimu_a" },
+        ReimuB: { name: "composables.Games.th14.shot_types.reimu_b" },
+        MarisaA: { name: "composables.Games.th14.shot_types.marisa_a" },
+        MarisaB: { name: "composables.Games.th14.shot_types.marisa_b" },
+        SakuyaA: { name: "composables.Games.th14.shot_types.sakuya_a" },
+        SakuyaB: { name: "composables.Games.th14.shot_types.sakuya_b" },
+      },
+    },
+    th15: {
+      name: "composables.Games.th15.title",
+      color: {
+        bg: "#6A47BE",
+        txt: "#FFFFFF",
+      },
+      shot_types: {
+        Reimu: { name: "composables.Games.th15.shot_types.reimu" },
+        Marisa: { name: "composables.Games.th15.shot_types.marisa" },
+        Sanae: { name: "composables.Games.th15.shot_types.sanae" },
+        Reisen: { name: "composables.Games.th15.shot_types.reisen" },
+      },
+    },
+    th16: {
+      name: "composables.Games.th16.title",
+      color: {
+        bg: "#176E0E",
+        txt: "#FFFFFF",
+      },
+      shot_types: {
+        Reimu: { name: "composables.Games.th16.shot_types.reimu" },
+        Cirno: { name: "composables.Games.th16.shot_types.cirno" },
+        Aya: { name: "composables.Games.th16.shot_types.aya" },
+        Marisa: { name: "composables.Games.th16.shot_types.marisa" },
+      },
+    },
+    th17: {
+      name: "composables.Games.th17.title",
+      color: {
+        bg: "#190E0E",
+        txt: "#FFFFFF",
+      },
+      shot_types: {
+        ReimuW: { name: "composables.Games.th17.shot_types.reimu_w" },
+        ReimuO: { name: "composables.Games.th17.shot_types.reimu_o" },
+        ReimuE: { name: "composables.Games.th17.shot_types.reimu_e" },
+        MarisaW: { name: "composables.Games.th17.shot_types.marisa_w" },
+        MarisaO: { name: "composables.Games.th17.shot_types.marisa_o" },
+        MarisaE: { name: "composables.Games.th17.shot_types.marisa_e" },
+        YoumuW: { name: "composables.Games.th17.shot_types.youmu_w" },
+        YoumuO: { name: "composables.Games.th17.shot_types.youmu_o" },
+        YoumuE: { name: "composables.Games.th17.shot_types.youmu_e" },
+      },
+    },
+    th18: {
+      name: "composables.Games.th18.title",
+      color: {
+        bg: "#1DD294",
+        txt: "#FFFFFF",
+      },
+      shot_types: {
+        Reimu: { name: "composables.Games.th18.shot_types.reimu" },
+        Marisa: { name: "composables.Games.th18.shot_types.marisa" },
+        Sakuya: { name: "composables.Games.th18.shot_types.sakuya" },
+        Sanae: { name: "composables.Games.th18.shot_types.sanae" },
+      },
+    },
+  };
+  return gamesMap;
 }

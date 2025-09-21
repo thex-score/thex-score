@@ -5,7 +5,7 @@
       <main class="flex-1">
         <slot />
       </main>
-      <TheFooter/>
+      <TheFooter />
     </div>
   </UApp>
 </template>
