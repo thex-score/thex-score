@@ -65,8 +65,8 @@ const links = ref({
       url: "https://www.silentselene.net/replays/th11",
     },
     {
-      label: "けーろだ",
-      url: "https://www.puresign.tokyo/index.html",
+      label: "えるろだ",
+      url: "https://l-uploader.puresign.tokyo/",
     },
     {
       label: "LunarCast",
