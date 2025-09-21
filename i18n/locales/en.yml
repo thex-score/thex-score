@@ -28,7 +28,7 @@ components:
 composables:
   Games:
     th06:
-      title: th06 EoSD
+      title: EoSD
       shot_types:
         reimu_a: Reimu A
         reimu_b: Reimu B
@@ -36,8 +36,8 @@ composables:
         marisa_b: Marisa B
     th07:
       title:
-        ex: th07 PCB EX
-        ph: th07 PCB Ph
+        ex: PCB EX
+        ph: PCB Ph
       shot_types:
         reimu_a: Reimu A
         reimu_b: Reimu B
@@ -46,7 +46,7 @@ composables:
         sakuya_a: Sakuya A
         sakuya_b: Sakuya B
     th08:
-      title: th08 IN
+      title: IN
       shot_types:
         border: Border
         magic: Magic
@@ -61,7 +61,7 @@ composables:
         youmu: Youmu
         yuyuko: Yuyuko
     th10:
-      title: th10 MoF
+      title: MoF
       shot_types:
         reimu_a: Reimu A
         reimu_b: Reimu B
@@ -70,7 +70,7 @@ composables:
         marisa_b: Marisa B
         marisa_c: Marisa C
     th11:
-      title: th11 SA
+      title: SA
       shot_types:
         reimu_a: Reimu A
         reimu_b: Reimu B
@@ -79,7 +79,7 @@ composables:
         marisa_b: Marisa B
         marisa_c: Marisa C
     th12:
-      title: th12 UFO
+      title: UFO
       shot_types:
         reimu_a: Reimu A
         reimu_b: Reimu B
@@ -88,18 +88,18 @@ composables:
         sanae_a: Sanae A
         sanae_b: Sanae B
     th128:
-      title: th128 GFW
+      title: GFW
       shot_types:
         cirno: Cirno
     th13:
-      title: th13 TD
+      title: TD
       shot_types:
         reimu: Reimu
         marisa: Marisa
         sanae: Sanae
         youmu: Youmu
     th14:
-      title: th14 DDC
+      title: DDC
       shot_types:
         reimu_a: Reimu A
         reimu_b: Reimu B
@@ -108,21 +108,21 @@ composables:
         sakuya_a: Sakuya A
         sakuya_b: Sakuya B
     th15:
-      title: th15 LoLK
+      title: LoLK
       shot_types:
         reimu: Reimu
         marisa: Marisa
         sanae: Sanae
         reisen: Reisen
     th16:
-      title: th16 HSiFS
+      title: HSiFS
       shot_types:
         reimu: Reimu Doyo
         cirno: Cirno Doyo
         aya: Aya Doyo
         marisa: Marisa Doyo
     th17:
-      title: th17 WBaWC
+      title: WBaWC
       shot_types:
         reimu_w: Reimu Wolf
         reimu_o: Reimu Otter
@@ -134,7 +134,7 @@ composables:
         youmu_o: Youmu Otter
         youmu_e: Youmu Eagle
     th18:
-      title: th18 UD
+      title: UM
       shot_types:
         reimu: Reimu
         marisa: Marisa
@@ -270,10 +270,10 @@ pages:
       th06:
         great: 600M
         good: 500M
-      th07_ex:
+      th07Ex:
         great: 1.4B
         good: 1.2B
-      th07_ph:
+      th07Ph:
         great: 1.6B
         good: 1.3B
       th08:

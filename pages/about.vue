@@ -78,7 +78,7 @@
           >
             {{ $t(gamesMap[gameThreshold.game].name) }}
           </UBadge>
-          ：{{ $t(gameThreshold.good) }}
+          ：{{ $t(`pages.about.thresholds.${gameThreshold.game}.good`) }}
         </li>
       </ul>
     </UCard>
@@ -311,17 +311,17 @@
         </p>
       </template>
       <ul class="pl-5 space-y-0.5">
-        <li v-for="gameThresold in gameThresholds" :key="gameThresold.game">
+        <li v-for="gameThreshold in gameThresholds" :key="gameThreshold.game">
           <UBadge
             class="capitalize inline-block px-2 py-0.5 rounded font-semibold"
             :style="{
-              color: gamesMap[gameThresold.game].color.txt,
-              backgroundColor: gamesMap[gameThresold.game].color.bg,
+              color: gamesMap[gameThreshold.game].color.txt,
+              backgroundColor: gamesMap[gameThreshold.game].color.bg,
             }"
           >
-            {{ $t(gamesMap[gameThresold.game].name) }}
+            {{ $t(gamesMap[gameThreshold.game].name) }}
           </UBadge>
-          ：{{ $t(gameThresold.great) }}
+          ：{{ $t(`pages.about.thresholds.${gameThreshold.game}.great`) }}
         </li>
       </ul>
     </UCard>
