@@ -219,7 +219,7 @@ const columns = [
       });
     },
     cell: ({ row }) => {
-      return new Number(row.getValue("score")).toLocaleString("ja");
+      return new Number(row.getValue("score")).toLocaleString(locale.value);
     },
   },
   {
@@ -312,7 +312,7 @@ const columns = [
 ];
 
 function formatDate(isoDateStr) {
-  return new Date(isoDateStr).toLocaleDateString("ja-JP", {
+  return new Date(isoDateStr).toLocaleDateString(locale.value, {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
