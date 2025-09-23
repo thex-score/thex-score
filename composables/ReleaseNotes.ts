@@ -129,14 +129,9 @@ export function UseReleases() {
       changes: ["記録追加：th06 Pearl MarisaB"],
     },
     {
-      version: "1.1.3",
-      date: "2025-07-25",
-      changes: ["一部記録の修正"],
-    },
-    {
       version: "1.1.2",
       date: "2025-07-25",
-      changes: ["記録掲載について追記"],
+      changes: ["記録掲載について追記",["一部記録の修正"]],
     },
     {
       version: "1.1.1",
