@@ -135,6 +135,11 @@ export function UseReleases() {
       changes: ["記録掲載について追記","一部記録の修正"],
     },
     {
+      version: "1.1.1",
+      date: "2025-07-25",
+      changes: ["サイト公開"],
+    },
+    {
       version: "0.9.5",
       date: "2025-07-25",
       changes: ["リプレイファイルの一斉登録", "ページ概要更新"],
