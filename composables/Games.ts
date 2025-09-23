@@ -1,4 +1,3 @@
-
 export function useGames() {
   const gamesMap: Record<
     string,
