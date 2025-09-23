@@ -131,12 +131,7 @@ export function UseReleases() {
     {
       version: "1.1.2",
       date: "2025-07-25",
-      changes: ["記録掲載について追記",["一部記録の修正"]],
-    },
-    {
-      version: "1.1.1",
-      date: "2025-07-25",
-      changes: ["サイト公開"],
+      changes: ["記録掲載について追記","一部記録の修正"],
     },
     {
       version: "0.9.5",
