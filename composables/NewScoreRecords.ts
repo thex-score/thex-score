@@ -1,3 +1,4 @@
+
 export function useNewScoreRecords() {
   const newScoreRecords = [
       {
@@ -193,3 +194,4 @@ export function useNewScoreRecords() {
   ];
 
   return newScoreRecords;
+}
