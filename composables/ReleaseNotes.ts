@@ -13,6 +13,7 @@ export function UseReleases() {
       date: "2025-09-23",
       changes: [
         "記録追加：th10 ReimuA おんなのこ",
+        "記録追加：th11 ReimuA Balisman",
       ],
     },
     {
