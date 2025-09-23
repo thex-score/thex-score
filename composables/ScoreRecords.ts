@@ -1,3 +1,4 @@
+
 export function useScoreRecords() {
   const scoreRecords: Record<
     string,
@@ -6478,6 +6479,26 @@ export function useScoreRecords() {
         },
       },
     },
+    おんなのこ: {
+      th10: {
+        ReimuA: {
+          score: 966774430,
+          status: "good",
+          date: "2025-09-19T15:30:00",
+          replay: "th10_ud0141.rpy",
+          detail: "-",
+        },
+      },
+      th11: {
+        ReimuA: {
+          score: 1002465090,
+          status: "good",
+          date: "2020-05-29T15:30:00",
+          replay: "th11_ud0135.rpy",
+          detail: "-",
+        },
+      },
+    },
     がそりん: {
       th07Ph: {
         ReimuB: {
@@ -7854,17 +7875,6 @@ export function useScoreRecords() {
           status: "good",
           date: "2019-01-03T15:30:00",
           replay: "th11_ud0086.rpy",
-          detail: "-",
-        },
-      },
-    },
-    よしだ: {
-      th11: {
-        ReimuA: {
-          score: 1002465090,
-          status: "good",
-          date: "2020-05-29T15:30:00",
-          replay: "th11_ud0135.rpy",
           detail: "-",
         },
       },

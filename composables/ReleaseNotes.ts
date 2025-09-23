@@ -9,6 +9,13 @@ export function UseReleases() {
   // 3桁目: 新しい記録を追加したら上げる
   const releases = [
     {
+      version: "1.1.23",
+      date: "2025-09-23",
+      changes: [
+        "記録追加：th10 ReimuA おんなのこ",
+      ],
+    },
+    {
       version: "1.1.22",
       date: "2025-09-20",
       changes: ["英語に対応"],
@@ -122,14 +129,9 @@ export function UseReleases() {
       changes: ["記録追加：th06 Pearl MarisaB"],
     },
     {
-      version: "1.1.3",
-      date: "2025-07-25",
-      changes: ["一部記録の修正"],
-    },
-    {
       version: "1.1.2",
       date: "2025-07-25",
-      changes: ["記録掲載について追記"],
+      changes: ["記録掲載について追記",["一部記録の修正"]],
     },
     {
       version: "1.1.1",
