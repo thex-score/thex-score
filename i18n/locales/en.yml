@@ -1,7 +1,7 @@
 global:
   threshold_score_names:
-    good: good
-    great: great
+    good: Big
+    great: SuperBig
   table_headers:
     game: game
     rank: rank
@@ -146,28 +146,23 @@ pages:
     intro:
       title: Introduction
       content: |-
-        このサイトでは東方原作STGのExtra及びPhantasmモードで基準スコア以上を出した記録を掲載しています。
+        This site displays records of players who have achieved above a threshold score in the Extra and Phantasm modes of the Touhou STGs.
     publish_record:
       title: About Publishing Records
       content: |-
-        このページは{silentselene}などで一般公開された記録を管理人が収集して掲載しています。{br}
-        原則的にはリプレイやstream配信、動画が公開されている記録を掲載対象とします。{br}
-        スクリーンショットやスコア情報のみでも記録として掲載する場合がありますが、管理人の判断で掲載しない場合もあるので、ご了承願います。{br}
-        スコアが有効数字4桁しか判明していないなど曖昧な記録については記録の正当性を保証できないため掲載対象とはしません。{br}
-        処理落ち率3%以上や不正ツールの使用が疑われる記録については掲載せず参考記録としても扱いません。{br}
-        プレイヤー本人から要望があった一部の記録についても掲載しません。{br}
-        記録の修正・新規記録追加・リプレイ削除などを希望される方は全て管理人の{nyanko}に連絡してください。
+        Replays are collected on publicly available sites such as SilentSelene or other replay uploading sites.  {br}
+        Replays with a slow rate greater than 3% or suspected use of cheat tools will not be registered. {br}
+        Scores without replay evidence are added at the discretion of the administrator. {br}
+        If you would like to add or remove a replay, please contact the administrator, Nyanko {br}
       tags:
         silentselene: silentselene
         nyanko: nyanko
     using_tools:
       title: Using External Tools
       content: |-
-        多くのリーダーボードと同様に原則的に外部ツールの使用は禁止です。{br}
-        ただし動作改善を目的としたVpatchの使用は許可します。（バグ修正などを目的とした使用は不可）{br}
-        練習におけるthpracの使用は可能です。ただし本番でのバックエンドモード（いわゆるチート機能）使用は不可です。{br}
-        th18東方虹龍洞ではthpracを利用した市場操作(Shop Manip)を許可します。{br}
-        ただし正規のタイミング以外でカードを購入したプレイは無効とします。
+          The permitted external tools are: {br}
+          vpatch, for the purpose of improving the performance of the game. Bug fixes such as the fix for the Marisa B laser bug in MoF are prohibited. {br}
+          thprac, for the purpose of practice and desync prevention. Using any of the cheat options in live play is prohibited, except in UM, in which the use of Market Manipulation is allowed. The full play must obtain the cards in the shop. {br}
     compatible_games:
       title: Compatible Games
     threshold_scores:
@@ -176,22 +171,18 @@ pages:
       title: Threshold Score Policy
       good:
         content: |-
-          大台スコアはスコアアタック入門プレイヤーが目標スコアとした際に簡単過ぎず難しすぎず、程々に苦労してかつ達成感を得られるくらいの達成難易度を想定して設定された基準スコアです。{br}
-          基本的な稼ぎ方を理解していないと出せないスコアなので、この基準値をクリアしたら一人前のスコアラーです。{br}
-          実力差が結果に反映されやすいSTGの性質上、達成にかかる労力は人それぞれとなりますが、その点につきましてはご了承願います。{br}
-          機体格差が無視できないほど大きい作品では例外的に複数の基準スコアを設定しています。{br}
-          鬼形獣についてはあまりにもプレイヤー・情報が少なく、妥当な基準設定が不可能であるため全機体共通の基準スコアとします。{br}
-          大台スコアは下記の条件を満たす中でなるべくキリの良い数字に設定します。
+          The "Big" threshold is intended for beginner score attack players. {br}
+          Please note that the score threshold is set based on the best scoring shottypes, and as a result, it can be very difficult to achieve the threshold for the weaker scoring shottypes. {br}
+          The threshold is set to a round number with these conditions in mind:
         condition_lists:
-          not_nnfs: NNFSして点符上部回収しただけでは絶対に出ないスコア
-          for_beginners: スコアタ未経験者が一通りスコアタの動きを勉強して時間をかけて練習すれば十分狙えるスコア
-          for_experienced: 既に大台達成の実績のある実力者でも他人のリプレイを一度見て軽くプレイしただけでは達成できない難易度のスコア
+          not_nnfs: It cannot be achieved just by doing NNFS well
+          for_beginners: Can be achieved when the scoring strategies are studied thoroughly
+          for_experienced: It cannot be easily achieved by strong players that simply watch someone's replay and imitate the strategies
       great:
         content: |-
-          超大台スコアはその作品をやり込んだプレイヤーが大目標として掲げるような非常に達成難易度の高い基準スコアです。
-          こちらについてはスコアアタック上級者以外が目標とすることを想定してはいません。
-          そのため大台スコアよりも基準スコアが細かく設定されています。
-          この基準スコアをクリアしたら上級者を名乗っても恥ずかしくないスコアです。
+          The "Super Big" threshold is extremely difficult to achieve and is intended for players who have thoroughly mastered the game. {br}
+          If you can achieve this threshold score, you are able to proudly call yourself a super player. {br}
+          Note that these thresholds are set for the best scoring shottypes, so it may be impossible to achieve this threshold with the weaker shottypes.
     score_FAQ:
       title: Score FAQ
       good:
@@ -316,13 +307,13 @@ pages:
       content:
         table_headers:
           game: Game
-          total: Name
+          total: total
   index:
     welcome: Welcome
     description: |-
-      このサイトでは東方原作STGのExtra及びPhantasmモードで基準スコア以上を出した記録を掲載しています。{br}
-      ゲーム名、もしくはプレイヤー名を入力すると達成された記録が表示されます。{br}
-      プレイヤー名検索では部分一致ではなく完全一致したものを表示します。
+      This site displays records of players who have achieved above a threshold score in the Extra and Phantasm modes of the Touhou STGs. {br}
+      Enter the game name or player name to display the achieved records. {br}
+      Player name searches will display exact matches, not partial matches.
     latest_update: latest update
     placeholder_player: input player name
     placeholder_game: select game
