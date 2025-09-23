@@ -5379,6 +5379,17 @@ export function useScoreRecords() {
         },
       },
     },
+    wimirei: {
+      th14: {
+        MarisaB: {
+          score: 1022364910,
+          status: "good",
+          date: "2025-09-22T15:30:00",
+          replay: "th14_ud0065.rpy",
+          detail: "-",
+        },
+      },
+    },
     WingZero520: {
       th10: {
         MarisaC: {

@@ -14,6 +14,7 @@ export function UseReleases() {
       changes: [
         "記録追加：th10 ReimuA おんなのこ",
         "記録追加：th11 ReimuA Balisman",
+        "記録追加：th14 MarisaB wimirei",
       ],
     },
     {
