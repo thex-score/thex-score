@@ -121,10 +121,10 @@ composables:
     th16:
       title: HSiFS
       shot_types:
-        reimu: Reimu Doyo
-        cirno: Cirno Doyo
-        aya: Aya Doyo
-        marisa: Marisa Doyo
+        reimu: Reimu
+        cirno: Cirno
+        aya: Aya
+        marisa: Marisa
     th17:
       title: WBaWC
       shot_types:
