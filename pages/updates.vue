@@ -44,7 +44,9 @@ function formatDate(dateStr: string) {
         <!-- 変更点リスト -->
         <ul class="list-disc pl-5 space-y-1">
           <li v-for="(change, idx) in release.changes" :key="idx">
-            {{ t(change.key) }}{{ change.text }}
+            {{ t(change.key) }}
+            <span v-if="change.translate">: {{ t(change.text) }}</span>
+            <span v-else>{{ change.text }}</span>
           </li>
         </ul>
       </UCard>

@@ -147,6 +147,9 @@ composables:
   ReleaseNotes:
     add_record: add record
     modify_record: modify record
+    change_threshold: change threshold score
+    change_threshold_th08_24to25: th08 Teams and Solo Human 2.4B→2.5B
+    change_threshold_th17_10to15: th17 non Otter 1B→1.5B
 pages:
   about:
     title: About
