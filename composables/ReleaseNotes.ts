@@ -20,6 +20,15 @@ export function UseReleases(): Release[] {
   // 3桁目: 新しい記録を追加したら上げる
   const releases: Release[] = [
     {
+      version: "1.1.24",
+      date: "2025-09-25",
+      changes: [
+        { key: "composables.ReleaseNotes.add_record", text: " ： th11 ReimuA Altair" },
+        { key: "", text: "th16の機体表記を修正" },
+        { key: "", text: "英語翻訳の追加" },
+      ],
+    },
+    {
       version: "1.1.23",
       date: "2025-09-23",
       changes: [
