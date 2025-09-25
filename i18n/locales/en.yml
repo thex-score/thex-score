@@ -255,8 +255,8 @@ pages:
     operation_policy:
       title: Operation Policy
       content: |-
-        The site is operated by {nyanko}, but {wefmaika} is responsible for the maintenance of the site. {br}
-        So, if you encounter any issues with this site, please contact {nyanko}.
+        The site is operated by {nyanko1}, but {wefmaika} is responsible for the maintenance of the site. {br}
+        So, if you encounter any issues with this site, please contact {nyanko2}.
         The source code for this site is available on {github} under the MIT license. {br}
         However, the MIT license does not apply to replay files and score data for which we do not hold copyright.
       tags:
