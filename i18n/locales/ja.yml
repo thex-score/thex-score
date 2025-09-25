@@ -121,10 +121,10 @@ composables:
     th16:
       title: 東方天空璋
       shot_types:
-        reimu: 霊夢(土用)
-        cirno: チルノ(土用)
-        aya: 文(土用)
-        marisa: 魔理沙(土用)
+        reimu: 霊夢
+        cirno: チルノ
+        aya: 文
+        marisa: 魔理沙
     th17:
       title: 東方鬼形獣
       shot_types:
