@@ -414,7 +414,17 @@
             {{ $t("pages.about.operation_policy.tags.wefmaika") }}
           </NuxtLink>
         </template>
-        <template #nyanko>
+        <template #nyanko1>
+          <NuxtLink href="https://x.com/flower874_" target="_blank">
+            {{ $t("pages.about.operation_policy.tags.nyanko") }}
+          </NuxtLink>
+        </template>
+        <template #nyanko2>
+          <NuxtLink href="https://x.com/flower874_" target="_blank">
+            {{ $t("pages.about.operation_policy.tags.nyanko") }}
+          </NuxtLink>
+        </template>
+        <template #nyanko3>
           <NuxtLink href="https://x.com/flower874_" target="_blank">
             {{ $t("pages.about.operation_policy.tags.nyanko") }}
           </NuxtLink>
