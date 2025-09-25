@@ -23,7 +23,7 @@
 
         <ul class="list-disc pl-5 space-y-0.5 text-sm">
           <li v-for="(change, idx) in latest.changes" :key="idx">
-            {{ change }}
+            <span v-if="change.key">{{ $t(change.key) }}</span>{{ change.text }}
           </li>
         </ul>
       </template>
