@@ -1,3 +1,19 @@
+<script setup lang="ts">
+import { UseReleases } from "~/composables/ReleaseNotes";
+import { useI18n } from "vue-i18n";
+
+const { t, locale } = useI18n();
+const releases = UseReleases();
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString(locale.value, {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+}
+</script>
+
 <template>
   <UContainer class="py-8">
     <!-- 見出しだけ独立させてカード外にする -->
@@ -28,27 +44,10 @@
         <!-- 変更点リスト -->
         <ul class="list-disc pl-5 space-y-1">
           <li v-for="(change, idx) in release.changes" :key="idx">
-            {{ change }}
+            {{ t(change.key) }}{{ change.text }}
           </li>
         </ul>
       </UCard>
     </div>
   </UContainer>
 </template>
-
-<script setup lang="ts">
-/* composable からデータ取得 */
-import { UseReleases } from "~/composables/ReleaseNotes";
-const { locale } = useI18n();
-
-const releases = UseReleases();
-
-/* 日付を日本語表記にフォーマット（例: 2025/07/19）*/
-function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString(locale.value, {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  });
-}
-</script>

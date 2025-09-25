@@ -25,6 +25,10 @@ components:
     data: 統計データ
     links: リンク一覧
     updates: 更新履歴
+  TheFooter:
+      tags:
+        wefmaika: ゑふまいか
+        nyanko: にゃんこ
 composables:
   Games:
     th06:
@@ -140,6 +144,9 @@ composables:
         marisa: 魔理沙
         sakuya: 咲夜
         sanae: 早苗
+  ReleaseNotes:
+    add_record: 記録追加
+    modify_record: 記録修正
 pages:
   about:
     title: サイト概要
