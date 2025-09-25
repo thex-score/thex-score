@@ -21,9 +21,12 @@
           </span>
         </p>
 
-        <ul class="list-disc pl-5 space-y-0.5 text-sm">
+        <!-- 変更点リスト -->
+        <ul class="list-disc pl-5 space-y-1">
           <li v-for="(change, idx) in latest.changes" :key="idx">
-            <span v-if="change.key">{{ $t(change.key) }}</span>{{ change.text }}
+            {{ t(change.key) }}
+            <span v-if="change.translate">: {{ t(change.text) }}</span>
+            <span v-else>{{ change.text }}</span>
           </li>
         </ul>
       </template>

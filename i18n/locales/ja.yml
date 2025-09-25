@@ -147,6 +147,9 @@ composables:
   ReleaseNotes:
     add_record: 記録追加
     modify_record: 記録修正
+    change_threshold: 基準スコア変更
+    change_threshold_th08_24to25: 永夜抄 ペア・人間単騎 24億→25億
+    change_threshold_th17_10to15: 鬼形獣 nonカワウソ 10億→15億
 pages:
   about:
     title: サイト概要
