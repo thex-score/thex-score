@@ -53,6 +53,8 @@ export default defineNuxtConfig({
         language: "en-US",
       },
     ],
+    lazy: true, // ← lazy を true にすると file が有効
+    langDir: "locales/", // ← これが無いとファイルを読めません
     compilation: {
       strictMessage: false, // ← HTML/擬似タグを許可
       escapeHtml: true, // ← 念のためエスケープを有効化（推奨）

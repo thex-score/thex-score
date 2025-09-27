@@ -144,12 +144,10 @@ composables:
         marisa: Marisa
         sakuya: Sakuya
         sanae: Sanae
-  ReleaseNotes:
-    add_record: add record
-    modify_record: modify record
-    change_threshold: change threshold score
-    change_threshold_th08_24to25: th08 Teams and Solo Human 2.4B→2.5B
-    change_threshold_th17_10to15: th17 non Otter 1B→1.5B
+ReleaseNotes:
+  add_record: add record
+  modify_record: modify record
+  en_support: EN support
 pages:
   about:
     title: About
@@ -161,6 +159,7 @@ pages:
       title: About Publishing Records
       content: |-
         Replays are collected on publicly available sites such as SilentSelene or other replay uploading sites.  {br}
+        Game clear replays will be registered. {br}
         Replays with a slow rate greater than 3% or suspected use of cheat tools will not be registered. {br}
         Scores without replay evidence are added at the discretion of the administrator. {br}
         If you would like to add or remove a replay, please contact the administrator, Nyanko {br}
