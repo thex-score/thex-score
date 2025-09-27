@@ -10,6 +10,7 @@
           <br />
         </template>
       </i18n-t>
+
       <template #footer>
         <p class="text-sm mb-1 font-medium">
           {{ $t("pages.index.latest_update") }}
@@ -17,16 +18,14 @@
             v{{ latest.version }}
           </span>
           <span class="text-xs text-gray-500 ml-1">
-            {{ formatDate(latest.date) }}
+            {{ fmtDate(latest.date) }}
           </span>
         </p>
 
         <!-- 変更点リスト -->
         <ul class="list-disc pl-5 space-y-1">
           <li v-for="(change, idx) in latest.changes" :key="idx">
-            {{ t(change.key) }}
-            <span v-if="change.translate">: {{ t(change.text) }}</span>
-            <span v-else>{{ change.text }}</span>
+            {{ renderChange(change) }}
           </li>
         </ul>
       </template>
@@ -58,7 +57,6 @@
           :items="gameOptions"
           :placeholder="$t('pages.index.placeholder_game')"
         />
-
         <USelect
           class="w-1/2"
           v-model="selectedShotTypeId"
@@ -67,19 +65,20 @@
         />
       </div>
     </div>
+
     <USeparator class="mb-5" />
     <UTable :data="scoreRecords" :columns="columns" class="flex-1" />
   </UContainer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { h, resolveComponent } from "vue";
 import { useGames } from "~/composables/Games";
 import { useScoreRecords } from "~/composables/ScoreRecords";
-import { UseReleases } from "~/composables/ReleaseNotes";
+import { UseReleases, type ReleaseChange } from "~/composables/ReleaseNotes";
+import { useI18n } from "vue-i18n";
 
-// import { GamesMapFunc } from '~/composables/Games'
-const value = ref("Backlog");
+// composables
 const inputtedPlayer = ref("");
 const selectedPlayer = ref("");
 const selectedGameId = ref("");
@@ -89,6 +88,67 @@ const scoreRecordMap = useScoreRecords();
 const latest = UseReleases()[0];
 const { t, locale } = useI18n();
 
+// ✅ SSR安全なロケール取得関数
+function getLocale(): 'ja' | 'en' {
+  if (process.server) return 'ja';
+  const val = typeof locale === 'string' ? locale : locale.value;
+  return val === 'ja' || val === 'en' ? val : 'ja';
+}
+
+// ✅ 日付フォーマット（SSR対応）
+function fmtDate(dateStr: string) {
+  if (process.server) return new Date(dateStr).toISOString().slice(0, 10);
+  return new Intl.DateTimeFormat(getLocale(), { dateStyle: "medium" }).format(new Date(dateStr));
+}
+
+// ✅ 変更点描画関数（updates.vue と共通）
+function renderChange(change: ReleaseChange, currentLocale?: 'ja' | 'en') {
+  // サーバー側では簡易表示（SSR対応）
+  if (process.server) {
+    if (change.type === 'tpl') return change.id;
+    if (change.type === 'text') return change.text['ja'] ?? Object.values(change.text)[0] ?? '';
+    return '';
+  }
+
+  // 実行環境（ブラウザ）でのロケール取得
+  const localeStr = currentLocale ?? getLocale();
+
+  if (change.type === 'tpl') {
+    // ReleaseNotes のテンプレート型の翻訳を取得
+    const key = `ReleaseNotes.${change.id}`;
+    const translated = t(key);
+
+    // 翻訳が存在しない場合はフォールバックで自動生成
+    if (translated === key) {
+      if (change.id === 'add_record' || change.id === 'modify_record') {
+        return `${change.id} : ${change.game} ${change.shot} ${change.player}`;
+      }
+      return change.id;
+    }
+
+    // 翻訳済み文字列とゲーム情報を結合
+    if (change.id === 'add_record' || change.id === 'modify_record') {
+      return `${translated} : ${change.game} ${change.shot} ${change.player}`;
+    }
+
+    return translated;
+  }
+
+  if (change.type === 'text') {
+    // FreeText 型はロケール順に取得（優先: 指定 > ja > en > 先頭）
+    return (
+      change.text[localeStr] ??
+      change.text['ja'] ??
+      change.text['en'] ??
+      Object.values(change.text)[0] ??
+      ''
+    );
+  }
+
+  return '';
+}
+
+// ✅ セレクトボックス項目
 const gameOptions = computed(() =>
   Object.entries(gamesMap).map(([id, game]) => ({
     label: t(game.name),
@@ -97,29 +157,24 @@ const gameOptions = computed(() =>
 );
 
 const shotTypeOptions = computed(() => {
-  if (!selectedGameId.value) {
-    return [];
-  }
+  if (!selectedGameId.value) return [];
   const game = gamesMap[selectedGameId.value];
-
-  let returning = Object.entries(game.shot_types).map(([id, st]) => ({
+  const arr = Object.entries(game.shot_types).map(([id, st]) => ({
     label: t(st.name),
     value: id,
   }));
-  returning.unshift({ label: t("pages.index.all_shot_types"), value: "all" });
-  return returning;
+  arr.unshift({ label: t("pages.index.all_shot_types"), value: "all" });
+  return arr;
 });
 
+// ✅ テーブルデータ
 const scoreRecords = computed(() => {
-  let returning = [];
+  let returning: any[] = [];
 
-  // プレイヤーソートモード
+  // プレイヤー指定モード
   if (selectedPlayer.value !== "") {
-    let playerRecords;
-    playerRecords = scoreRecordMap[selectedPlayer.value];
-    if (!playerRecords) {
-      return [];
-    }
+    const playerRecords = scoreRecordMap[selectedPlayer.value];
+    if (!playerRecords) return [];
 
     Object.entries(playerRecords).forEach(([gameId, shotTypeRecords]) => {
       Object.entries(shotTypeRecords).forEach(([shotTypeId, record]) => {
@@ -139,10 +194,8 @@ const scoreRecords = computed(() => {
     return returning;
   }
 
-  // ゲームソートモード
-  if (!selectedGameId.value) {
-    return [];
-  }
+  // ゲーム指定モード
+  if (!selectedGameId.value) return [];
 
   Object.entries(scoreRecordMap).forEach(([player, games]) => {
     const game = games[selectedGameId.value];
@@ -158,7 +211,7 @@ const scoreRecords = computed(() => {
           game: selectedGameId.value,
           score: record.score,
           shot_type: shotTypeId,
-          player: player,
+          player,
           status: record.status,
           date: record.date,
           replay: record.replay,
@@ -167,37 +220,32 @@ const scoreRecords = computed(() => {
       }
     });
   });
-  // スコアで降順にソート
-  returning.sort((a, b) => b.score - a.score);
 
-  // rankを付与（同スコアの順位は飛ばさずに単純順位）
-  returning.forEach((item, index) => {
-    item.rank = index + 1;
-  });
+  returning.sort((a, b) => b.score - a.score);
+  returning.forEach((item, index) => (item.rank = index + 1));
   return returning;
 });
 
-// テーブル定義
+// ✅ テーブル列定義
 const UBadge = resolveComponent("UBadge");
 const UButton = resolveComponent("UButton");
+
 const columns = [
   {
     accessorKey: "game",
     header: t("global.table_headers.game"),
-    cell: ({ row }) => {
-      return h(
+    cell: ({ row }: { row: any }) =>
+      h(
         UBadge,
         {
-          // 形状は Tailwind、色は動的に style で上書き
           class: "capitalize inline-block px-2 py-0.5 rounded font-semibold",
           style: {
-            color: gamesMap[row.getValue("game")].color.txt,
-            backgroundColor: gamesMap[row.getValue("game")].color.bg,
+            color: gamesMap[row.getValue("game")]?.color?.txt ?? "#000",
+            backgroundColor: gamesMap[row.getValue("game")]?.color?.bg ?? "#fff",
           },
         },
-        () => t(gamesMap[row.getValue("game")].name)
-      );
-    },
+        () => t(gamesMap[row.getValue("game")]?.name ?? "")
+      ),
   },
   {
     accessorKey: "rank",
@@ -205,55 +253,42 @@ const columns = [
   },
   {
     accessorKey: "score",
-    header: ({ column }) => {
-      const isSorted = column.getIsSorted();
-
-      return h(UButton, {
+    header: ({ column }: { column: any }) =>
+      h(UButton, {
         color: "neutral",
         variant: "ghost",
         label: t("global.table_headers.score"),
-        icon: isSorted
-          ? isSorted === "asc"
+        icon: column.getIsSorted()
+          ? column.getIsSorted() === "asc"
             ? "i-lucide-arrow-up-narrow-wide"
             : "i-lucide-arrow-down-wide-narrow"
           : "i-lucide-arrow-up-down",
         class: "-mx-2.5",
         onClick: () => column.toggleSorting(column.getIsSorted() === "asc"),
-      });
-    },
-    cell: ({ row }) => {
-      return new Number(row.getValue("score")).toLocaleString(locale.value);
-    },
+      }),
+    cell: ({ row }: { row: any }) =>
+      new Number(row.getValue("score")).toLocaleString(getLocale()),
   },
   {
     accessorKey: "shot_type",
     header: t("global.table_headers.shot_type"),
-    cell: ({ row }) => {
-      return t(
-        gamesMap[row.getValue("game")].shot_types[row.getValue("shot_type")]
-          .name
-      );
-    },
+    cell: ({ row }: { row: any }) =>
+      t(
+        gamesMap[row.getValue("game")]?.shot_types?.[row.getValue("shot_type")]?.name ?? ""
+      ),
   },
   {
     accessorKey: "status",
     header: t("global.table_headers.status"),
-    cell: ({ row }) => {
-      const color = {
-        great: "success",
-        good: "neutral",
-      }[row.getValue("status")];
-
-      const txt = {
-        great: t("global.threshold_score_names.great"),
-        good: t("global.threshold_score_names.good"),
-      }[row.getValue("status")];
-
-      return h(
-        UBadge,
-        { class: "capitalize", variant: "subtle", color },
-        () => txt
-      );
+    cell: ({ row }: { row: any }) => {
+      const status = row.getValue("status") as "great" | "good"; // 型を明示
+      const colorMap: Record<"great" | "good", string> = { great: "success", good: "neutral" };
+      const color = colorMap[status];
+      const txt =
+        status === "great"
+          ? t("global.threshold_score_names.great")
+          : t("global.threshold_score_names.good");
+      return h(UBadge, { class: "capitalize", variant: "subtle", color }, () => txt);
     },
   },
   {
@@ -262,49 +297,31 @@ const columns = [
   },
   {
     accessorKey: "date",
-    header: ({ column }) => {
-      const isSorted = column.getIsSorted();
-
-      return h(UButton, {
-        color: "neutral",
-        variant: "ghost",
-        label: t("global.table_headers.date"),
-        icon: isSorted
-          ? isSorted === "asc"
-            ? "i-lucide-arrow-up-narrow-wide"
-            : "i-lucide-arrow-down-wide-narrow"
-          : "i-lucide-arrow-up-down",
-        class: "-mx-2.5",
-        onClick: () => column.toggleSorting(column.getIsSorted() === "asc"),
-      });
-    },
-    cell: ({ row }) => {
-      return new Date(row.getValue("date")).toLocaleString(locale.value, {
+    header: t("global.table_headers.date"),
+    cell: ({ row }: { row: any }) =>
+      new Date(row.getValue("date")).toLocaleDateString(getLocale(), {
         year: "numeric",
-        day: "2-digit",
         month: "2-digit",
-      });
-    },
+        day: "2-digit",
+      }),
   },
   {
     accessorKey: "replay",
     header: t("global.table_headers.replay"),
-    cell: ({ row }) => {
-      if (row.getValue("replay") === null) {
-        return "N/A";
-      }
+    cell: ({ row }: { row: any }) => {
+      const replay = row.getValue("replay");
+      if (!replay) return "N/A";
+      const game = row.getValue("game");
       return h(
         "a",
         {
-          href: `https://thex-score.net/replays/${row.getValue(
-            "game"
-          )}/${row.getValue("replay")}`,
-          download: row.getValue("replay"),
+          href: `https://thex-score.net/replays/${game}/${replay}`,
+          download: replay,
           target: "_blank",
           rel: "noopener noreferrer",
           class: "text-primary underline hover:text-primary-600",
         },
-        row.getValue("replay")
+        replay
       );
     },
   },
@@ -314,14 +331,7 @@ const columns = [
   },
 ];
 
-function formatDate(isoDateStr) {
-  return new Date(isoDateStr).toLocaleDateString(locale.value, {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  });
-}
-
+// ✅ プレイヤー切替ロジック
 watch(selectedGameId, () => {
   if (selectedGameId.value !== "") {
     inputtedPlayer.value = "";
@@ -334,10 +344,10 @@ const searchPlayer = () => {
   selectedPlayer.value = inputtedPlayer.value;
 };
 
+// ✅ SEO
 useSeoMeta({
   title: "東方EXTRAスコアボード – 東方スコアタリプレイ掲載",
-  description:
-    "東方Project原作STGのEXTRAモードで基準値以上のスコアのリプレイを記載",
+  description: "東方Project原作STGのEXTRAモードで基準値以上のスコアのリプレイを記載",
   ogImage: "/ogp/twittercard.png",
   twitterCard: "summary_large_image",
 });
