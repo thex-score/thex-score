@@ -5180,7 +5180,7 @@ export function useScoreRecords() {
           score: 974479160,
           status: "good",
           date: "2025-08-05T15:30:00",
-          replay: "th10_ud143.rpy",
+          replay: "th10_ud0143.rpy",
           detail: "-",
         },
       },
