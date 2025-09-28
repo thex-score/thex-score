@@ -32,7 +32,7 @@ export function useGames() {
         MarisaA: { name: "composables.Games.th07.shot_types.marisa_a" },
         MarisaB: { name: "composables.Games.th07.shot_types.marisa_b" },
         SakuyaA: { name: "composables.Games.th07.shot_types.sakuya_a" },
-        SakuyaB: { name: "composables.Games.th07.shot_types.sakuya_a" },
+        SakuyaB: { name: "composables.Games.th07.shot_types.sakuya_b" },
       },
     },
     th07Ph: {
@@ -44,8 +44,8 @@ export function useGames() {
       shot_types: {
         ReimuA: { name: "composables.Games.th07.shot_types.reimu_a" },
         ReimuB: { name: "composables.Games.th07.shot_types.reimu_b" },
-        MarisaA: { name: "composables.Games.th07.shot_types.marias_a" },
-        MarisaB: { name: "composables.Games.th07.shot_types.marias_b" },
+        MarisaA: { name: "composables.Games.th07.shot_types.marisa_a" },
+        MarisaB: { name: "composables.Games.th07.shot_types.marisa_b" },
         SakuyaA: { name: "composables.Games.th07.shot_types.sakuya_a" },
         SakuyaB: { name: "composables.Games.th07.shot_types.sakuya_b" },
       },
