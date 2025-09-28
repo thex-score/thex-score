@@ -2,6 +2,16 @@
 export function useNewScoreRecords() {
   const newScoreRecords = [
     {
+      player: "TRDario",
+      game: "th11",
+      shot_type: "ReimuA",
+      score: 1012411300,
+      status: "good",
+      date: "2025-09-28T15:30:00",
+      replay: "th11_ud0153.rpy",
+      detail: "-",
+    },
+    {
       player: "TSG",
       game: "th10",
       shot_type: "ReimuA",
