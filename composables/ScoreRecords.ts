@@ -6502,10 +6502,10 @@ export function useScoreRecords() {
     おんなのこ: {
       th10: {
         ReimuA: {
-          score: 966774430,
+          score: 972231140,
           status: "good",
-          date: "2025-09-19T15:30:00",
-          replay: "th10_ud0141.rpy",
+          date: "2025-09-23T15:30:00",
+          replay: "th10_ud0142.rpy",
           detail: "-",
         },
       },
