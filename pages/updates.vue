@@ -30,27 +30,31 @@ function renderChange(change: ReleaseChange): string {
   const loc = getLocale()
 
   if (change.type === 'tpl') {
-      const key = `ReleaseNotes.${change.id}`
-      console.log('i18n key:', key)
-      console.log('locale.value:', locale.value)
+    const key = `ReleaseNotes.${change.id}`
+    console.log('i18n key:', key)
+    console.log('locale.value:', locale.value)
     try {
       const translated = t(key) // 翻訳だけ取得
       console.log('translated:', translated)
+
+      // 翻訳がない場合はフォールバックで自動生成
       if (translated === key) {
-        // 翻訳がない場合はフォールバックで自動生成
         if (change.id === 'add_record' || change.id === 'modify_record') {
-          return `${change.id} : ${change.game} ${change.shot} ${change.player}`
+          return `${change.id} : ${change.game} ${change.shot} ${change.player[locale.value]}`
         }
         return change.id
       }
+
       // 翻訳済みの文字列とゲーム情報を結合
       if (change.id === 'add_record' || change.id === 'modify_record') {
-        return `${translated} : ${change.game} ${change.shot} ${change.player}`
+        return `${translated} : ${change.game} ${change.shot} ${change.player[locale.value]}`
       }
+
       return translated
     } catch {
+      // エラー時もフォールバック
       if (change.id === 'add_record' || change.id === 'modify_record') {
-        return `${change.id} : ${change.game} ${change.shot} ${change.player}`
+        return `${change.id} : ${change.game} ${change.shot} ${change.player[locale.value]}`
       }
       return change.id
     }
