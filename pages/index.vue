@@ -326,16 +326,49 @@ const columns = [
   {
     accessorKey: "player",
     header: t("global.table_headers.player"),
+    cell: ({ row }: { row: any }) => {
+      const playerName = row.getValue("player");
+      return h(
+        "span",
+        {
+          class: "cursor-pointer text-primary underline hover:text-primary-600",
+          onClick: () => {
+            // 検索欄に値をセットして検索モードに切替
+            inputtedPlayer.value = playerName;
+            selectedPlayer.value = playerName;
+            selectedGameId.value = ""; // ゲーム選択モードを解除
+          },
+        },
+        playerName
+      );
+    },
   },
   {
     accessorKey: "date",
-    header: t("global.table_headers.date"),
+    header: ({ column }: { column: any }) =>
+      h(UButton, {
+        color: "neutral",
+        variant: "ghost",
+        label: t("global.table_headers.date"),
+        icon: column.getIsSorted()
+          ? column.getIsSorted() === "asc"
+            ? "i-lucide-arrow-up-narrow-wide"
+            : "i-lucide-arrow-down-wide-narrow"
+          : "i-lucide-arrow-up-down",
+        class: "-mx-2.5",
+        onClick: () => column.toggleSorting(column.getIsSorted() === "asc"),
+      }),
     cell: ({ row }: { row: any }) =>
       new Date(row.getValue("date")).toLocaleDateString(getLocale(), {
         year: "numeric",
         month: "2-digit",
         day: "2-digit",
       }),
+    sortingFn: (rowA: any, rowB: any) => {
+      const dateA = new Date(rowA.original.date).getTime();
+      const dateB = new Date(rowB.original.date).getTime();
+      return dateA - dateB;
+    },
   },
   {
     accessorKey: "replay",

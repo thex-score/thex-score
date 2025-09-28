@@ -34,6 +34,7 @@ export function UseReleases(): Release[] {
         { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player: { ja: "TSG", en: "TSG" } },
         { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "TRDario", en: "TRDario" } },
         { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "Altair", en: "Altair" } },
+        { type: "text", text: { ja: "プレイヤー検索機能を改良", en: "Improved the Player Search Function" } },
       ],
     },
     {
