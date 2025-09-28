@@ -184,10 +184,10 @@ export function useScoreRecords() {
     Altair: {
       th11: {
         ReimuA: {
-          score: 1057764310,
+          score: 1081673800,
           status: "good",
-          date: "2025-09-25T15:30:00",
-          replay: "th11_ud0152.rpy",
+          date: "2025-09-28T15:30:00",
+          replay: "th11_ud0154.rpy",
           detail: "-",
         },
       },
