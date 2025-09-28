@@ -5156,6 +5156,17 @@ export function useScoreRecords() {
         },
       },
     },
+    TRDario:{
+      th11: {
+        ReimuA: {
+          score: 1012411300,
+          status: "good",
+          date: "2025-09-28T15:30:00",
+          replay: "th11_ud0153.rpy",
+          detail: "-",
+        },
+      },
+    },
     TrickOfHat: {
       th06: {
         ReimuB: {
