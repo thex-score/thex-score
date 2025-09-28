@@ -103,39 +103,71 @@ function fmtDate(dateStr: string) {
 
 // ✅ 変更点描画関数（updates.vue と共通）
 function renderChange(change: ReleaseChange, currentLocale?: 'ja' | 'en') {
-  // サーバー側では簡易表示（SSR対応）
-  if (process.server) {
-    if (change.type === 'tpl') return change.id;
-    if (change.type === 'text') return change.text['ja'] ?? Object.values(change.text)[0] ?? '';
-    return '';
-  }
-
-  // 実行環境（ブラウザ）でのロケール取得
+  // 実行中のロケール（SSR/CSR共通）
   const localeStr = currentLocale ?? getLocale();
 
-  if (change.type === 'tpl') {
-    // ReleaseNotes のテンプレート型の翻訳を取得
-    const key = `ReleaseNotes.${change.id}`;
-    const translated = t(key);
-
-    // 翻訳が存在しない場合はフォールバックで自動生成
-    if (translated === key) {
+  // SSR（サーバー側）では簡易表示のみ
+  if (process.server) {
+    if (change.type === 'tpl') {
+      // idごとに分岐
       if (change.id === 'add_record' || change.id === 'modify_record') {
-        return `${change.id} : ${change.game} ${change.shot} ${change.player}`;
+        const player =
+          typeof change.player === 'string'
+            ? change.player
+            : change.player?.[localeStr] ??
+              change.player?.ja ??
+              change.player?.en ??
+              '';
+        return `${change.id} : ${change.game} ${change.shot} ${player}`;
       }
+
+      // それ以外（例: en_support）
       return change.id;
     }
 
-    // 翻訳済み文字列とゲーム情報を結合
+    if (change.type === 'text') {
+      return change.text['ja'] ?? Object.values(change.text)[0] ?? '';
+    }
+
+    return '';
+  }
+
+  // ---- ブラウザ側（通常表示） ----
+  if (change.type === 'tpl') {
+    // 翻訳キーを取得
+    const key = `ReleaseNotes.${change.id}`;
+    const translated = t(key);
+
+    // add_record / modify_record の場合のみ player にアクセス
     if (change.id === 'add_record' || change.id === 'modify_record') {
-      return `${translated} : ${change.game} ${change.shot} ${change.player}`;
+      // プレイヤー名（ロケール別）
+      const player =
+        typeof change.player === 'string'
+          ? change.player
+          : change.player?.[localeStr] ??
+            change.player?.ja ??
+            change.player?.en ??
+            '';
+
+      // 翻訳がない場合はフォールバックで自動生成
+      if (translated === key) {
+        return `${change.id} : ${change.game} ${change.shot} ${player}`;
+      }
+
+      // 翻訳済み文字列とゲーム情報を結合
+      return `${translated} : ${change.game} ${change.shot} ${player}`;
+    }
+
+    // 上記以外（例: en_support）は player を使用しない
+    if (translated === key) {
+      return change.id;
     }
 
     return translated;
   }
 
   if (change.type === 'text') {
-    // FreeText 型はロケール順に取得（優先: 指定 > ja > en > 先頭）
+    // FreeText 型はロケール順に取得
     return (
       change.text[localeStr] ??
       change.text['ja'] ??

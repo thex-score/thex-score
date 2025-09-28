@@ -5177,10 +5177,10 @@ export function useScoreRecords() {
     TSG: {
       th10: {
         ReimuA: {
-          score: 963185340,
+          score: 974479160,
           status: "good",
-          date: "2025-07-20T15:30:00",
-          replay: null,
+          date: "2025-08-05T15:30:00",
+          replay: "th10_ud143.rpy",
           detail: "-",
         },
       },
