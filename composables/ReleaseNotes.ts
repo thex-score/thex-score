@@ -30,7 +30,7 @@ export function UseReleases(): Release[] {
       version: "1.1.27",
       date: "2025-09-29",
       changes: [
-        { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player: { ja: "おんなのこ", en: "Girl" } },
+        { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player: { ja: "おんなのこ", en: "Onnanoko" } },
         { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player: { ja: "TSG", en: "TSG" } },
         { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "TRDario", en: "TRDario" } },
         { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "Altair", en: "Altair" } },
@@ -65,7 +65,7 @@ export function UseReleases(): Release[] {
       version: "1.1.23",
       date: "2025-09-23",
       changes: [
-        { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player: { ja: "おんなのこ", en: "Girl" } },
+        { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player: { ja: "おんなのこ", en: "Onnanoko" } },
         { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "Balisman", en: "Balisman" } },
         { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "wimirei", en: "wimirei" } },
       ],
