@@ -660,10 +660,10 @@ export function useScoreRecords() {
       },
       th14: {
         MarisaB: {
-          score: 1246103800,
+          score: 1251937920,
           status: "great",
-          date: "2025-08-07T15:30:00",
-          replay: "th14_ud0063.rpy",
+          date: "2025-10-04T15:30:00",
+          replay: "th14_ud0068.rpy",
           detail: "-",
         },
       },
