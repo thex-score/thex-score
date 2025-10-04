@@ -5165,6 +5165,17 @@ export function useScoreRecords() {
         },
       },
     },
+    Taprus: {
+      th11: {
+        ReimuA: {
+          score: 1002045730,
+          status: "good",
+          date: "2025-09-10T15:30:00",
+          replay: "th11_ud0155.rpy",
+          detail: "-",
+        },
+      },
+    },
     TRDario:{
       th11: {
         ReimuA: {
