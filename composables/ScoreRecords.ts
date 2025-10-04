@@ -4194,6 +4194,15 @@ export function useScoreRecords() {
       },
     },
     Oscar: {
+      th07Ph: {
+        SakuyaB: {
+          score: 1473974730,
+          status: "good",
+          date: "2025-09-28T15:30:00",
+          replay: "th7_ud1067.rpy",
+          detail: "-",
+        },
+      },
       th11: {
         ReimuA: {
           score: 1100507180,
