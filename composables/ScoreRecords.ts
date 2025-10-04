@@ -5393,10 +5393,10 @@ export function useScoreRecords() {
     wimirei: {
       th14: {
         MarisaB: {
-          score: 1022364910,
+          score: 1027214370,
           status: "good",
-          date: "2025-09-22T15:30:00",
-          replay: "th14_ud0066.rpy",
+          date: "2025-09-24T15:30:00",
+          replay: "th14_ud0067.rpy",
           detail: "-",
         },
       },
@@ -7630,7 +7630,7 @@ export function useScoreRecords() {
         MarisaB: {
           score: 1204019650,
           status: "great",
-          date: "2004-02-15T15:30:00",
+          date: "2024-02-15T15:30:00",
           replay: null,
           detail: "-",
         },
