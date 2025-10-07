@@ -11,6 +11,9 @@
   - [NuxtUI](https://ui.nuxt.com/getting-started)を使用している
     - NuxtUI Proの方ではない
   - NuxtUIは[TailwindCSS](https://tailwindcss.com/docs/installation/using-vite)のラッパーなのでTailwindCSSの文法が使用できる
+- 多言語対応
+  - [nuxtjs/i18n](https://i18n.nuxtjs.org/)を使用している
+  - 長い文字列を複数行にするために文字列の改行が可能な `YAML` を使用している
 
 ## チュートリアル集
 
