@@ -3,7 +3,7 @@ export function useNewScoreRecords() {
   const newScoreRecords = [
     {
       player: "Balisman",
-      game: "th11",
+      game: "th14",
       shot_type: "ReimuA",
       score: 1251937920,
       status: "great",
