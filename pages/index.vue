@@ -396,11 +396,29 @@ const columns = [
   },
 ];
 
-// ✅ プレイヤー切替ロジック
-watch(selectedGameId, () => {
-  if (selectedGameId.value !== "") {
+// ✅ ゲーム選択切替時の処理
+watch(selectedGameId, (newGameId) => {
+  if (newGameId !== "") {
+    // プレイヤー検索をリセット
     inputtedPlayer.value = "";
     selectedPlayer.value = "";
+
+    // ショットタイプの初期化
+    const game = gamesMap[newGameId];
+    if (game && game.shot_types) {
+      // "all" をデフォルトにする場合
+      selectedShotTypeId.value = "all";
+
+      // もしくは最初のショットタイプをデフォルトにする場合は下記を使用：
+      // const firstShotType = Object.keys(game.shot_types)[0];
+      // selectedShotTypeId.value = firstShotType ?? "";
+    } else {
+      // ゲームが無効な場合はショットタイプもリセット
+      selectedShotTypeId.value = "";
+    }
+  } else {
+    // ゲーム選択が解除された場合もショットタイプをリセット
+    selectedShotTypeId.value = "";
   }
 });
 
