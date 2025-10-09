@@ -27,6 +27,13 @@ export type Release = {
 export function UseReleases(): Release[] {
   return [
     {
+      version: "1.1.29",
+      date: "2025-10-09",
+      changes: [
+        { type: "text", text: { ja: "作品変更時にデフォルトで全機体を選択するように修正", en: "Fixed to set shottype to all when switching games" } },
+      ],
+    },
+    {
       version: "1.1.28",
       date: "2025-10-05",
       changes: [
