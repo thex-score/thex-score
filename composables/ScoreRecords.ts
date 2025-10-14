@@ -5179,10 +5179,10 @@ export function useScoreRecords() {
     TRDario:{
       th11: {
         ReimuA: {
-          score: 1012411300,
+          score: 1056636930,
           status: "good",
-          date: "2025-09-28T15:30:00",
-          replay: "th11_ud0153.rpy",
+          date: "2025-10-07T15:30:00",
+          replay: "th11_ud0156.rpy",
           detail: "-",
         },
       },
