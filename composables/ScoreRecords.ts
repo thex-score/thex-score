@@ -4218,10 +4218,10 @@ export function useScoreRecords() {
     Oscar: {
       th07Ph: {
         SakuyaB: {
-          score: 1473974730,
+          score: 1595560740,
           status: "good",
-          date: "2025-09-28T15:30:00",
-          replay: "th7_ud1067.rpy",
+          date: "2025-10-13T15:30:00",
+          replay: "th7_ud1068.rpy",
           detail: "-",
         },
       },

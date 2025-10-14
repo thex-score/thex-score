@@ -30,6 +30,7 @@ export function UseReleases(): Release[] {
       version: "1.1.30",
       date: "2025-10-15",
       changes: [
+        { type: "tpl", id: "add_record", game: "th07Ph", shot: "SakuyaB", player: { ja: "Oscar", en: "Oscar" } },
         { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "TRDario", en: "TRDario" } },
         { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "h3po49", en: "h3po49" } },
         { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "dass", en: "dass" } },
@@ -49,7 +50,7 @@ export function UseReleases(): Release[] {
       date: "2025-10-05",
       changes: [
         { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "wimirei", en: "wimirei" } },
-        { type: "tpl", id: "add_record", game: "th07", shot: "SakuyaB", player: { ja: "Oscar", en: "Oscar" } },
+        { type: "tpl", id: "add_record", game: "th07Ph", shot: "SakuyaB", player: { ja: "Oscar", en: "Oscar" } },
         { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "Taprus", en: "Taprus" } },
         { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "Balisman", en: "Balisman" } },
       ],
