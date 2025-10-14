@@ -676,10 +676,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         MarisaO: {
-          score: 1915477960,
+          score: 2076540890,
           status: "good",
-          date: "2024-02-16T15:30:00",
-          replay: "th17_ud0013.rpy",
+          date: "2025-10-14T15:30:00",
+          replay: "th17_ud0037.rpy",
           detail: "-",
         },
         YoumuO: {
