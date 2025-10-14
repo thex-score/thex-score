@@ -1278,6 +1278,17 @@ export function useScoreRecords() {
         },
       },
     },
+    dass: {
+      th14: {
+        MarisaB: {
+          score: 1068765670 ,
+          status: "good",
+          date: "2019-03-24T15:30:00",
+          replay: "th14_ud0069.rpy",
+          detail: "-",
+        },
+      },
+    },
     Data: {
       th128: {
         Cirno: {
