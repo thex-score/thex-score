@@ -3551,6 +3551,17 @@ export function useScoreRecords() {
         },
       },
     },
+    Mistery: {
+      th14: {
+        MarisaB: {
+          score: 1006992490,
+          status: "good",
+          date: "2025-10-15T15:30:00",
+          replay: "th14_ud0070.rpy",
+          detail: "-",
+        },
+      },
+    },
     mk: {
       th10: {
         MarisaA: {
