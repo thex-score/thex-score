@@ -1776,6 +1776,17 @@ export function useScoreRecords() {
         },
       },
     },
+    h3po49: {
+      th11: {
+        ReimuA: {
+          score: 1015498220,
+          status: "good",
+          date: "2018-06-24T15:30:00",
+          replay: "th11_ud0157.rpy",
+          detail: "-",
+        },
+      },
+    },
     haru: {
       th10: {
         ReimuA: {
