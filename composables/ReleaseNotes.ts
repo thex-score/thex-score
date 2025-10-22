@@ -3,8 +3,8 @@
 // 再利用できるパターン（テンプレ型）
 export type TplChange =
   | { type: 'tpl'; id: 'en_support' }
-  | { type: 'tpl'; id: 'add_record'; game: string; shot: string; player: { ja: string; en: string } }
-  | { type: 'tpl'; id: 'modify_record'; game: string; shot: string; player: { ja: string; en: string } };
+  | { type: 'tpl'; id: 'add_record'; game: string; shot: string; player:string }
+  | { type: 'tpl'; id: 'modify_record'; game: string; shot: string; player:string };
 
 // 単発・例外・長文（自由文型）
 export type FreeTextChange = {
@@ -27,6 +27,13 @@ export type Release = {
 export function UseReleases(): Release[] {
   return [
     {
+      version: "1.2.2",
+      date: "2025-10-23",
+      changes: [
+        { type: "text", text: { ja: "更新履歴の多言語対応", en: "Update History Support for English" } },
+      ],
+    },
+    {
       version: "1.2.1",
       date: "2025-10-22",
       changes: [
@@ -37,20 +44,20 @@ export function UseReleases(): Release[] {
       version: "1.1.31",
       date: "2025-10-21",
       changes: [
-        { type: "tpl", id: "add_record", game: "th17", shot: "ReimuO", player: { ja: "Balisman", en: "Balisman" } },
+        { type: "tpl", id: "add_record", game: "th17", shot: "ReimuO", player:"Balisman" },
       ],
     },
     {
       version: "1.1.30",
       date: "2025-10-15",
       changes: [
-        { type: "tpl", id: "add_record", game: "th07Ph", shot: "SakuyaB", player: { ja: "Oscar", en: "Oscar" } },
-        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "TRDario", en: "TRDario" } },
-        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "h3po49", en: "h3po49" } },
-        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "dass", en: "dass" } },
-        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "Mistery", en: "Mistery" } },
-        { type: "tpl", id: "add_record", game: "th17", shot: "ReimuO", player: { ja: "Balisman", en: "Balisman" } },
-        { type: "tpl", id: "add_record", game: "th17", shot: "MarisaO", player: { ja: "Balisman", en: "Balisman" } },
+        { type: "tpl", id: "add_record", game: "th07Ph", shot: "SakuyaB", player:"Oscar"},
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"TRDario"},
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"h3po49"},
+        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"dass"},
+        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"Mistery"},
+        { type: "tpl", id: "add_record", game: "th17", shot: "ReimuO", player:"Balisman"},
+        { type: "tpl", id: "add_record", game: "th17", shot: "MarisaO", player:"Balisman"},
       ],
     },
     {
@@ -64,20 +71,20 @@ export function UseReleases(): Release[] {
       version: "1.1.28",
       date: "2025-10-05",
       changes: [
-        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "wimirei", en: "wimirei" } },
-        { type: "tpl", id: "add_record", game: "th07Ph", shot: "SakuyaB", player: { ja: "Oscar", en: "Oscar" } },
-        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "Taprus", en: "Taprus" } },
-        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "Balisman", en: "Balisman" } },
+        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"wimirei"},
+        { type: "tpl", id: "add_record", game: "th07Ph", shot: "SakuyaB", player:"Oscar"},
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"Taprus"},
+        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"Balisman"},
       ],
     },
     {
       version: "1.1.27",
       date: "2025-09-29",
       changes: [
-        { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player: { ja: "おんなのこ", en: "Onnanoko" } },
-        { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player: { ja: "TSG", en: "TSG" } },
-        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "TRDario", en: "TRDario" } },
-        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "Altair", en: "Altair" } },
+        { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player:"おんなのこ"},
+        { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player:"TSG"},
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"TRDario"},
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"Altair"},
         { type: "text", text: { ja: "プレイヤー検索機能を改良", en: "Improved the Player Search Function" } },
       ],
     },
@@ -100,7 +107,7 @@ export function UseReleases(): Release[] {
       version: "1.1.24",
       date: "2025-09-25",
       changes: [
-        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "Altair", en: "Altair" } },
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"Altair"},
         { type: "text", text: { ja: "th16の機体表記を修正", en: "Modified the shot type notation for th16" } },
         { type: "text", text: { ja: "英語翻訳の追加", en: "Added English translations" } },
       ],
@@ -109,9 +116,9 @@ export function UseReleases(): Release[] {
       version: "1.1.23",
       date: "2025-09-23",
       changes: [
-        { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player: { ja: "おんなのこ", en: "Onnanoko" } },
-        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "Balisman", en: "Balisman" } },
-        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "wimirei", en: "wimirei" } },
+        { type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player:"おんなのこ"},
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"Balisman"},
+        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"wimirei"},
       ],
     },
     {
@@ -125,25 +132,25 @@ export function UseReleases(): Release[] {
       version: "1.1.21",
       date: "2025-09-18",
       changes: [
-        { type: "tpl", id: "add_record", game: "th06", shot: "ReimuA", player: { ja: "int", en: "int" } },
-        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "Oscar", en: "Oscar" } },
-        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "Oscar", en: "Oscar" } },
+        { type: "tpl", id: "add_record", game: "th06", shot: "ReimuA", player:"int"},
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"Oscar"},
+        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"Oscar"},
       ],
     },
     {
       version: "1.1.20",
       date: "2025-09-04",
       changes: [
-        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "幽谷もこ", en: "Moko" } },
-        { type: "tpl", id: "add_record", game: "th16", shot: "Cirno/Aya/Marisa", player: { ja: "幽谷もこ", en: "Moko" } },
-        { type: "tpl", id: "add_record", game: "th17", shot: "ReimuO/MarisaO", player: { ja: "幽谷もこ", en: "Moko" } },
+        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"幽谷もこ"},
+        { type: "tpl", id: "add_record", game: "th16", shot: "Cirno/Aya/Marisa", player:"幽谷もこ"},
+        { type: "tpl", id: "add_record", game: "th17", shot: "ReimuO/MarisaO", player:"幽谷もこ"},
       ],
     },
     {
       version: "1.1.19",
       date: "2025-09-02",
       changes: [
-        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "Altair", en: "Altair" } },
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"Altair"},
       ],
     },
     {
@@ -157,43 +164,43 @@ export function UseReleases(): Release[] {
       version: "1.1.17",
       date: "2025-08-15",
       changes: [
-        { type: "tpl", id: "add_record", game: "th15", shot: "Reisen", player: { ja: "Oscar", en: "Oscar" } },
+        { type: "tpl", id: "add_record", game: "th15", shot: "Reisen", player:"Oscar"},
       ],
     },
     {
       version: "1.1.16",
       date: "2025-08-13",
       changes: [
-        { type: "tpl", id: "add_record", game: "th15", shot: "Reisen", player: { ja: "Oscar", en: "Oscar" } },
+        { type: "tpl", id: "add_record", game: "th15", shot: "Reisen", player:"Oscar"},
       ],
     },
     {
       version: "1.1.15",
       date: "2025-08-13",
       changes: [
-        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player: { ja: "WEF", en: "WEF" } },
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"WEF"},
       ],
     },
     {
       version: "1.1.14",
       date: "2025-08-08",
       changes: [
-        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player: { ja: "Balisman", en: "Balisman" } },
+        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"Balisman"},
       ],
     },
     {
       version: "1.1.13",
       date: "2025-08-05",
       changes: [
-        { type: "tpl", id: "add_record", game: "th12", shot: "ReimuA", player: { ja: "w1theR", en: "w1theR" } },
-        { type: "tpl", id: "modify_record", game: "th08", shot: "Youmu", player: { ja: "Sakurei", en: "Sakurei" } },
+        { type: "tpl", id: "add_record", game: "th12", shot: "ReimuA", player:"w1theR"},
+        { type: "tpl", id: "modify_record", game: "th08", shot: "Youmu", player:"Sakurei"},
       ],
     },
     {
       version: "1.1.12",
       date: "2025-08-04",
       changes: [
-        { type: "tpl", id: "add_record", game: "th15", shot: "Reisen", player: { ja: "Add4567", en: "Add4567" } },
+        { type: "tpl", id: "add_record", game: "th15", shot: "Reisen", player:"Add4567"},
       ],
     },
     {
@@ -208,7 +215,7 @@ export function UseReleases(): Release[] {
       version: "1.1.10",
       date: "2025-07-31",
       changes: [
-        { type: "tpl", id: "modify_record", game: "th12", shot: "SanaeB", player: { ja: "あねみ", en: "Ane" } },
+        { type: "tpl", id: "modify_record", game: "th12", shot: "SanaeB", player:"あねみ"},
       ],
     },
     {
@@ -222,7 +229,7 @@ export function UseReleases(): Release[] {
       version: "1.1.8",
       date: "2025-07-28",
       changes: [
-        { type: "tpl", id: "add_record", game: "th10", shot: "MarisaC", player: { ja: "もち", en: "Mochi" } },
+        { type: "tpl", id: "add_record", game: "th10", shot: "MarisaC", player:"もち"},
       ],
     },
     {
@@ -236,8 +243,8 @@ export function UseReleases(): Release[] {
       version: "1.1.6",
       date: "2025-07-28",
       changes: [
-        { type: "tpl", id: "add_record", game: "th16", shot: "Reimu", player: { ja: "幽谷もこ", en: "Moko" } },
-        { type: "tpl", id: "add_record", game: "th18", shot: "Sakuya", player: { ja: "工藤氏。", en: "KDshi." } },
+        { type: "tpl", id: "add_record", game: "th16", shot: "Reimu", player:"幽谷もこ"},
+        { type: "tpl", id: "add_record", game: "th18", shot: "Sakuya", player:"工藤氏。"},
       ],
     },
     {
@@ -251,14 +258,14 @@ export function UseReleases(): Release[] {
       version: "1.1.4",
       date: "2025-07-27",
       changes: [
-        { type: "tpl", id: "add_record", game: "th13/th14/th16/th17", shot: "", player: { ja: "", en: "" } },
+        { type: "text", text: { ja: "記録追加 : 東方神霊廟/東方輝針城/東方天空璋/東方鬼形獣", en: "add record : th13/th14/th16/th17" } },
       ],
     },
     {
       version: "1.1.3",
       date: "2025-07-26",
       changes: [
-        { type: "tpl", id: "add_record", game: "th06", shot: "MarisaB", player: { ja: "Pearl", en: "Pearl" } },
+        { type: "tpl", id: "add_record", game: "th06", shot: "MarisaB", player:"Pearl"},
       ],
     },
     {
@@ -295,7 +302,7 @@ export function UseReleases(): Release[] {
       version: "0.9.3",
       date: "2025-07-23",
       changes: [
-        { type: "tpl", id: "modify_record", game: "th13", shot: "MarisaB", player: { ja: "WEF", en: "WEF" } },
+        { type: "tpl", id: "modify_record", game: "th13", shot: "Marisa", player:"WEF"},
       ],
     },
     {

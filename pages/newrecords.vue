@@ -14,7 +14,12 @@ import { useNewScoreRecords } from "~/composables/NewScoreRecords";
 const { t, locale } = useI18n();
 
 const gamesMap = useGames();
-const ScoreRecords = useNewScoreRecords();
+
+import { computed } from "vue";
+
+const allRecords = useNewScoreRecords();
+const ScoreRecords = computed(() => allRecords.slice(0, 30));
+
 
 // テーブル定義
 const UBadge = resolveComponent("UBadge");
