@@ -27,6 +27,13 @@ export type Release = {
 export function UseReleases(): Release[] {
   return [
     {
+      version: "1.2.1",
+      date: "2025-10-22",
+      changes: [
+        { type: "text", text: { ja: "東方錦上京に対応", en: "Supported th20" } },
+      ],
+    },
+    {
       version: "1.1.31",
       date: "2025-10-21",
       changes: [

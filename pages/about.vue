@@ -226,14 +226,42 @@
         <li>
           {{
             $t(
-              "pages.about.score_FAQ.good.content.lists.th20_compatible.question"
+              "pages.about.score_FAQ.good.content.lists.th20_fixed_piv.question"
             )
           }}
         </li>
         <li>
           {{
             $t(
-              "pages.about.score_FAQ.good.content.lists.th20_compatible.answer"
+              "pages.about.score_FAQ.good.content.lists.th20_fixed_piv.answer"
+            )
+          }}
+        </li>
+        <li>
+          {{
+            $t(
+              "pages.about.score_FAQ.good.content.lists.win98_support.question"
+            )
+          }}
+        </li>
+        <li>
+          {{
+            $t(
+              "pages.about.score_FAQ.good.content.lists.win98_support.answer"
+            )
+          }}
+        </li>
+        <li>
+          {{
+            $t(
+              "pages.about.score_FAQ.good.content.lists.th09_support.question"
+            )
+          }}
+        </li>
+        <li>
+          {{
+            $t(
+              "pages.about.score_FAQ.good.content.lists.th09_support.answer"
             )
           }}
         </li>
@@ -517,7 +545,12 @@ const gameThresholds: Ref<
   {
     game: "th18",
     great: "pages.about.thresholds.th18.great",
-    good: "pages.about.thresholds.th08.good",
+    good: "pages.about.thresholds.th18.good",
+  },
+  {
+    game: "th20",
+    great: "pages.about.thresholds.th20.great",
+    good: "pages.about.thresholds.th20.good",
   },
 ]);
 </script>

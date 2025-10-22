@@ -144,6 +144,25 @@ composables:
         marisa: Marisa
         sakuya: Sakuya
         sanae: Sanae
+    th20:
+      title: FW
+      shot_types:
+        reimu_r1: Reimu R1
+        reimu_r2: Reimu R2
+        reimu_b1: Reimu B1
+        reimu_b2: Reimu B2
+        reimu_y1: Reimu Y1
+        reimu_y2: Reimu Y2
+        reimu_g1: Reimu G1
+        reimu_g2: Reimu G2
+        marisa_r1: Marisa R1
+        marisa_r2: Marisa R2
+        marisa_b1: Marisa B1
+        marisa_b2: Marisa B2
+        marisa_y1: Marisa Y1
+        marisa_y2: Marisa Y2
+        marisa_g1: Marisa G1
+        marisa_g2: Marisa G2
 ReleaseNotes:
   add_record: add record
   modify_record: modify record
@@ -172,6 +191,7 @@ pages:
           The permitted external tools are: {br}
           vpatch, for the purpose of improving the performance of the game. Bug fixes such as the fix for the Marisa B laser bug in MoF are prohibited. {br}
           thprac, for the purpose of practice and desync prevention. Using any of the cheat options in live play is prohibited, except in UM, in which the use of Market Manipulation is allowed. The full play must obtain the cards in the shop. {br}
+          For plays where PIV was modified using external tools in th20, if the threshold is exceeded when replaying without external tools, they will be subject to publishing.
     compatible_games:
       title: Compatible Games
     threshold_scores:
@@ -224,6 +244,15 @@ pages:
             th20_compatible:
               question: Q. 錦上京への対応はいつですか？
               answer: A. PIVバグの関係で集計方法が定まらず見通しが立ちません
+            th20_fixed_piv:
+              question: Q. 錦上京の素点バグ修正スコアは集計しないのですか？
+              answer: A. 同一作品を異なる集計方法で2つ掲載するのはわかりづらいので別カテゴリーとして扱うことはしませんが、素点未修正でリプレイ再生した際に掲載条件を満たしていれば掲載します
+            win98_support:
+              question: Q. 旧作への対応はしないのですか？
+              answer: A. 旧作に対応する予定はありません
+            th09_support:
+              question: Q. 花映塚への対応はしないのですか？
+              answer: A. 有識者の意見があれば対応可能です
             publish_my_record:
               question: Q. 私の記録が追加されないのですが？
               answer: A. {github}もしくは{nyanko}にご報告お願いします。気付き次第追加します。
@@ -308,6 +337,9 @@ pages:
       th18:
         great: Sakuya 7B / others 3.5B
         good: Sakuya 5B / others 3B
+      th20:
+        great: 800m
+        good: 600m
   data:
     title: Statistic Data
     achievement_status:
