@@ -101,75 +101,89 @@ function fmtDate(dateStr: string) {
   return new Intl.DateTimeFormat(getLocale(), { dateStyle: "medium" }).format(new Date(dateStr));
 }
 
+function shotKey(s: string) {
+  // ReimuO -> reimu_o のように変換
+  return s
+    .replace(/([A-Z]+)(\d*)$/, (_, char, num) => `_${char.toLowerCase()}${num || ''}`)
+    .replace(/^([A-Za-z]+)/, (_, name) => name.toLowerCase());
+}
+
 // ✅ 変更点描画関数（updates.vue と共通）
 function renderChange(change: ReleaseChange, currentLocale?: 'ja' | 'en') {
-  // 実行中のロケール（SSR/CSR共通）
-  const localeStr = currentLocale ?? getLocale();
+  const loc = currentLocale ?? getLocale();
 
-  // SSR（サーバー側）では簡易表示のみ
+  // SSR側では簡易表示
   if (process.server) {
     if (change.type === 'tpl') {
-      // idごとに分岐
       if (change.id === 'add_record' || change.id === 'modify_record') {
-        const player =
-          typeof change.player === 'string'
-            ? change.player
-            : change.player?.[localeStr] ??
-              change.player?.ja ??
-              change.player?.en ??
-              '';
-        return `${change.id} : ${change.game} ${change.shot} ${player}`;
+        let playerName: string;
+        if (typeof change.player === 'string') {
+          playerName = change.player;
+        } else if (change.player && typeof change.player === 'object') {
+          const p = change.player as Record<string, string>;
+          playerName = p[loc] ?? p.ja ?? p.en ?? '';
+        } else {
+          playerName = '';
+        }
+        return `${change.id} : ${change.game} ${change.shot} ${playerName}`;
       }
-
-      // それ以外（例: en_support）
       return change.id;
     }
-
     if (change.type === 'text') {
       return change.text['ja'] ?? Object.values(change.text)[0] ?? '';
     }
-
     return '';
   }
 
-  // ---- ブラウザ側（通常表示） ----
+  // ---- ブラウザ側 ----
   if (change.type === 'tpl') {
-    // 翻訳キーを取得
-    const key = `ReleaseNotes.${change.id}`;
-    const translated = t(key);
+    const actionText = t(`ReleaseNotes.${change.id}`);
 
-    // add_record / modify_record の場合のみ player にアクセス
     if (change.id === 'add_record' || change.id === 'modify_record') {
-      // プレイヤー名（ロケール別）
-      const player =
-        typeof change.player === 'string'
-          ? change.player
-          : change.player?.[localeStr] ??
-            change.player?.ja ??
-            change.player?.en ??
-            '';
-
-      // 翻訳がない場合はフォールバックで自動生成
-      if (translated === key) {
-        return `${change.id} : ${change.game} ${change.shot} ${player}`;
+      // プレイヤー名
+      let playerName: string;
+      if (typeof change.player === 'string') {
+        playerName = change.player;
+      } else if (change.player && typeof change.player === 'object') {
+        const p = change.player as Record<string, string>;
+        playerName = p[loc] ?? p.ja ?? p.en ?? '';
+      } else {
+        playerName = '';
       }
 
-      // 翻訳済み文字列とゲーム情報を結合
-      return `${translated} : ${change.game} ${change.shot} ${player}`;
+      // ゲーム名（th07EX / th07Ph の例外対応）
+      let gameKey = change.game;
+      let gameTitle = '';
+      switch (change.game) {
+        case 'th07EX':
+          gameTitle = t('composables.Games.th07.title.ex');
+          gameKey = 'th07';
+          break;
+        case 'th07Ph':
+          gameTitle = t('composables.Games.th07.title.ph');
+          gameKey = 'th07';
+          break;
+        default:
+          gameTitle = t(`composables.Games.${change.game}.title`);
+          break;
+      }
+
+      // ショット名（複数対応）
+      const shotNames = change.shot
+        .split('/')
+        .map(s => t(`composables.Games.${gameKey}.shot_types.${shotKey(s)}`))
+        .join('/');
+
+      return `${actionText} : ${gameTitle} ${shotNames} ${playerName}`;
     }
 
-    // 上記以外（例: en_support）は player を使用しない
-    if (translated === key) {
-      return change.id;
-    }
-
-    return translated;
+    // add_record / modify_record 以外の tpl
+    return actionText;
   }
 
   if (change.type === 'text') {
-    // FreeText 型はロケール順に取得
     return (
-      change.text[localeStr] ??
+      change.text[loc] ??
       change.text['ja'] ??
       change.text['en'] ??
       Object.values(change.text)[0] ??
