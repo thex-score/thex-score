@@ -342,6 +342,22 @@ export function useScoreRecords() {
           detail: "-",
         },
       },
+      th20: {
+        MarisaR2: {
+          score: 647853200,
+          status: "good",
+          date: "2025-09-07T15:30:00",
+          replay: "th20_ud0007.rpy",
+          detail: "-",
+        },
+        MarisaG1: {
+          score: 614108830,
+          status: "good",
+          date: "2025-09-07T15:30:00",
+          replay: "th20_ud0015.rpy",
+          detail: "-",
+        },
+      },
     },
     ARF: {
       th14: {
@@ -2454,6 +2470,29 @@ export function useScoreRecords() {
           detail: "-",
         },
       },
+      th20: {
+        ReimuG1: {
+          score: 709784480,
+          status: "good",
+          date: "2025-09-08T15:30:00",
+          replay: "th20_ud0002.rpy",
+          detail: "-",
+        },
+        MarisaR2: {
+          score: 767126360,
+          status: "good",
+          date: "2025-08-30T15:30:00",
+          replay: "th20_ud0005.rpy",
+          detail: "-",
+        },
+        MarisaG1: {
+          score: 642855170,
+          status: "good",
+          date: "2025-08-26T15:30:00",
+          replay: "th20_ud0014.rpy",
+          detail: "-",
+        },
+      },
     },
     inatami: {
       th14: {
@@ -2758,6 +2797,15 @@ export function useScoreRecords() {
           status: "good",
           date: "2025-05-23T15:30:00",
           replay: "th18_ud0024.rpy",
+          detail: "-",
+        },
+      },
+      th20: {
+        ReimuR1: {
+          score: 635861400,
+          status: "good",
+          date: "2025-09-02T15:30:00",
+          replay: "th20_ud0001.rpy",
           detail: "-",
         },
       },
@@ -3221,6 +3269,17 @@ export function useScoreRecords() {
           date: "2010-05-15T15:30:00",
           replay: "th11_ud0037.rpy",
           detail: "-",
+        },
+      },
+    },
+    lmky: {
+      th20: {
+        MarisaY2: {
+          score: 659061280,
+          status: "good",
+          date: "2025-09-12T15:30:00",
+          replay: "th20_ud0016.rpy",
+          detail: "PIV fix",
         },
       },
     },
@@ -3870,6 +3929,17 @@ export function useScoreRecords() {
           date: "2010-09-30T15:30:00",
           replay: null,
           detail: "2010年9月2週",
+        },
+      },
+    },
+    norn: {
+      th20: {
+        ReimuG1: {
+          score: 645069070,
+          status: "good",
+          date: "2025-09-18T15:30:00",
+          replay: "th20_ud0003.rpy",
+          detail: "-",
         },
       },
     },
@@ -7444,6 +7514,22 @@ export function useScoreRecords() {
           detail: "-",
         },
       },
+      th20: {
+        MarisaB2: {
+          score: 722328080,
+          status: "good",
+          date: "2025-10-09T15:30:00",
+          replay: "th20_ud0009.rpy",
+          detail: "-",
+        },
+        MarisaG1: {
+          score: 769378540,
+          status: "good",
+          date: "2025-10-16T15:30:00",
+          replay: "th20_ud0012.rpy",
+          detail: "-",
+        },
+      },
     },
     ひろなex: {
       th11: {
@@ -9320,6 +9406,57 @@ export function useScoreRecords() {
           status: "good",
           date: "2025-07-19T15:30:00",
           replay: "th17_ud0035.rpy",
+          detail: "-",
+        },
+      },
+      th20: {
+        MarisaR1: {
+          score: 609782640,
+          status: "good",
+          date: "2025-09-14T15:30:00",
+          replay: "th20_ud0004.rpy",
+          detail: "-",
+        },
+        MarisaR2: {
+          score: 668765860,
+          status: "good",
+          date: "2025-09-14T15:30:00",
+          replay: "th20_ud0006.rpy",
+          detail: "-",
+        },
+        MarisaB1: {
+          score: 612995190,
+          status: "good",
+          date: "2025-09-05T15:30:00",
+          replay: "th20_ud0008.rpy",
+          detail: "-",
+        },
+        MarisaB2: {
+          score: 673746340,
+          status: "good",
+          date: "2025-10-08T15:30:00",
+          replay: "th20_ud0010.rpy",
+          detail: "-",
+        },
+        MarisaY1: {
+          score: 616323900,
+          status: "good",
+          date: "2025-10-15T15:30:00",
+          replay: "th20_ud0011.rpy",
+          detail: "-",
+        },
+        MarisaY2: {
+          score: 628768010,
+          status: "good",
+          date: "2025-10-08T15:30:00",
+          replay: null,
+          detail: "-",
+        },
+        MarisaG1: {
+          score: 706550240,
+          status: "good",
+          date: "2025-10-01T15:30:00",
+          replay: "th20_ud0013.rpy",
           detail: "-",
         },
       },

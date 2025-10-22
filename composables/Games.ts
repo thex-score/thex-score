@@ -211,6 +211,31 @@ export function useGames() {
         Sanae: { name: "composables.Games.th18.shot_types.sanae" },
       },
     },
+    th20: {
+      name: "composables.Games.th20.title",
+      color: {
+        bg: "#00A1E9",
+        txt: "#FFFFFF",
+      },
+      shot_types: {
+        ReimuR1: { name: "composables.Games.th20.shot_types.reimu_r1" },
+        ReimuR2: { name: "composables.Games.th20.shot_types.reimu_r2" },
+        ReimuB1: { name: "composables.Games.th20.shot_types.reimu_b1" },
+        ReimuB2: { name: "composables.Games.th20.shot_types.reimu_b2" },
+        ReimuY1: { name: "composables.Games.th20.shot_types.reimu_y1" },
+        ReimuY2: { name: "composables.Games.th20.shot_types.reimu_y2" },
+        ReimuG1: { name: "composables.Games.th20.shot_types.reimu_g1" },
+        ReimuG2: { name: "composables.Games.th20.shot_types.reimu_g2" },
+        MarisaR1: { name: "composables.Games.th20.shot_types.marisa_r1" },
+        MarisaR2: { name: "composables.Games.th20.shot_types.marisa_r2" },
+        MarisaB1: { name: "composables.Games.th20.shot_types.marisa_b1" },
+        MarisaB2: { name: "composables.Games.th20.shot_types.marisa_b2" },
+        MarisaY1: { name: "composables.Games.th20.shot_types.marisa_y1" },
+        MarisaY2: { name: "composables.Games.th20.shot_types.marisa_y2" },
+        MarisaG1: { name: "composables.Games.th20.shot_types.marisa_g1" },
+        MarisaG2: { name: "composables.Games.th20.shot_types.marisa_g2" },
+      },
+    },
   };
   return gamesMap;
 }

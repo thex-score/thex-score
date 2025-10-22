@@ -144,6 +144,25 @@ composables:
         marisa: 魔理沙
         sakuya: 咲夜
         sanae: 早苗
+    th20:
+      title: 東方錦上京
+      shot_types:
+        reimu_r1: 霊夢 赤1
+        reimu_r2: 霊夢 赤2
+        reimu_b1: 霊夢 青1
+        reimu_b2: 霊夢 青2
+        reimu_y1: 霊夢 黄1
+        reimu_y2: 霊夢 黄2
+        reimu_g1: 霊夢 緑1
+        reimu_g2: 霊夢 緑2
+        marisa_r1: 魔理沙 赤1
+        marisa_r2: 魔理沙 赤2
+        marisa_b1: 魔理沙 青1
+        marisa_b2: 魔理沙 青2
+        marisa_y1: 魔理沙 黄1
+        marisa_y2: 魔理沙 黄2
+        marisa_g1: 魔理沙 緑1
+        marisa_g2: 魔理沙 緑2
 ReleaseNotes:
   add_record: 記録追加
   modify_record: 記録修正
@@ -175,8 +194,9 @@ pages:
         多くのリーダーボードと同様に原則的に外部ツールの使用は禁止です。{br}
         ただし動作改善を目的としたVpatchの使用は許可します。（バグ修正などを目的とした使用は不可）{br}
         練習におけるthpracの使用は可能です。ただし本番でのバックエンドモード（いわゆるチート機能）使用は不可です。{br}
-        th18東方虹龍洞ではthpracを利用した市場操作(Shop Manip)を許可します。{br}
-        ただし正規のタイミング以外でカードを購入したプレイは無効とします。
+        東方虹龍洞ではthpracを利用した市場操作(Shop Manip)を許可します。{br}
+        ただし正規のタイミング以外でカードを購入したプレイは無効とします。{br}
+        東方錦上京で外部ツールを使用して最大得点を修正したプレイについては、外部ツールを使用せずリプレイ再生した場合に掲載条件を満たしていた場合、掲載対象とします。
     compatible_games:
       title: 対応作品
     threshold_scores:
@@ -233,6 +253,15 @@ pages:
             th20_compatible:
               question: Q. 錦上京への対応はいつですか？
               answer: A. PIVバグの関係で集計方法が定まらず見通しが立ちません
+            th20_fixed_piv:
+              question: Q. 錦上京のPIVバグ修正スコアは集計しないのですか？
+              answer: A. 同一作品を異なる集計方法で2つ掲載するのはわかりづらいので別カテゴリーとして扱うことはしませんが、素点未修正でリプレイ再生した際に掲載条件を満たしていれば掲載します
+            win98_support:
+              question: Q. 旧作への対応はしないのですか？
+              answer: A. 旧作に対応する予定はありません
+            th09_support:
+              question: Q. 花映塚への対応はしないのですか？
+              answer: A. 有識者の意見があれば対応可能です
             publish_my_record:
               question: Q. 私の記録が追加されないのですが？
               answer: A. {github}もしくは{nyanko}にご報告お願いします。気付き次第追加します。
@@ -318,6 +347,9 @@ pages:
       th18:
         great: 咲夜 70億 / その他 35億
         good: 咲夜 50億 / その他 30億
+      th20:
+        great: 8億
+        good: 6億
   data:
     title: 統計データ
     achievement_status:
