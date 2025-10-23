@@ -26,7 +26,7 @@
                 </UBadge>
               </th>
               <th class="px-6 py-4 text-left">
-                <UBadge class="capitalize" variant="subtle" color="neutral">
+                <UBadge class="capitalize" variant="subtle" color="info">
                   {{ $t("global.threshold_score_names.good") }}
                 </UBadge>
               </th>
@@ -36,7 +36,7 @@
                 </UBadge>
               </th>
               <th class="px-6 py-4 text-left">
-                <UBadge class="capitalize" variant="subtle" color="primary">
+                <UBadge class="capitalize" variant="subtle" color="success">
                   {{ $t("global.threshold_score_names.excellent") }}
                 </UBadge>
               </th>

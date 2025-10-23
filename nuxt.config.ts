@@ -5,7 +5,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
   modules: ["@nuxt/ui", "@nuxtjs/seo", "@nuxt/image-edge", "@nuxtjs/i18n"],
-  css: ["~/assets/css/main.css"],
+  css: [
+    "~/assets/css/variables.css",
+    "~/assets/css/main.css",
+  ],
   icon: {
     provider: "iconify",
     serverBundle: false,

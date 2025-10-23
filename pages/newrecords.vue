@@ -65,9 +65,9 @@ const columns = [
     header: t("global.table_headers.status"),
     cell: ({ row }) => {
       const color = {
-        excellent: "primary",
+        excellent: "success",
         great: "secondary",
-        good: "neutral",
+        good: "info",
       }[row.getValue("status")];
 
       const txt = {
