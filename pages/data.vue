@@ -17,27 +17,27 @@
             <tr>
               <th class="px-6 py-4 pl-10 text-left">
                 <UBadge class="capitalize" variant="subtle" color="neutral">
-                  ゲーム名
+                  {{ $t("pages.data.achievement_status.content.table_headers.game") }}
                 </UBadge>
               </th>
               <th class="px-6 py-4 text-left">
                 <UBadge class="capitalize" variant="subtle" color="neutral">
-                  合計
+                  {{ $t("pages.data.achievement_status.content.table_headers.total") }}
                 </UBadge>
               </th>
               <th class="px-6 py-4 text-left">
                 <UBadge class="capitalize" variant="subtle" color="neutral">
-                  Normal
+                  {{ $t("global.threshold_score_names.good") }}
                 </UBadge>
               </th>
               <th class="px-6 py-4 text-left">
                 <UBadge class="capitalize" variant="subtle" color="secondary">
-                  Hard
+                  {{ $t("global.threshold_score_names.great") }}
                 </UBadge>
               </th>
               <th class="px-6 py-4 text-left">
                 <UBadge class="capitalize" variant="subtle" color="primary">
-                  Lunatic
+                  {{ $t("global.threshold_score_names.excellent") }}
                 </UBadge>
               </th>
             </tr>
@@ -72,10 +72,6 @@
                   :key="shot.shotType"
                   v-if="expandedRows.includes(index)"
                   class="text-sm"
-                  :style="{
-                    color: '#111',       // 文字色
-                    backgroundColor: '#F1F5F9' // 背景色
-                  }"
                 >
                 <td class="px-6 py-3 pl-10">
                     {{ t(gamesMap[row.game]?.shot_types[shot.shotType]?.name ?? shot.shotType) }}
