@@ -10,7 +10,7 @@ export function useGames() {
     th06: {
       name: "composables.Games.th06.title",
       color: {
-        bg: "#993333",
+        bg: "#AA2222",
         txt: "#FFFFFF",
       },
       shot_types: {
@@ -89,7 +89,7 @@ export function useGames() {
     th11: {
       name: "composables.Games.th11.title",
       color: {
-        bg: "#591400",
+        bg: "#914000",
         txt: "#FFFFFF",
       },
       shot_types: {
@@ -119,7 +119,7 @@ export function useGames() {
     th128: {
       name: "composables.Games.th128.title",
       color: {
-        bg: "#009898",
+        bg: "#00BFFF",
         txt: "#FFFFFF",
       },
       shot_types: {
@@ -129,7 +129,7 @@ export function useGames() {
     th13: {
       name: "composables.Games.th13.title",
       color: {
-        bg: "#4A808C",
+        bg: "#3E8F7F",
         txt: "#FFFFFF",
       },
       shot_types: {
@@ -183,7 +183,7 @@ export function useGames() {
     th17: {
       name: "composables.Games.th17.title",
       color: {
-        bg: "#190E0E",
+        bg: "#3D241A",
         txt: "#FFFFFF",
       },
       shot_types: {
@@ -201,7 +201,7 @@ export function useGames() {
     th18: {
       name: "composables.Games.th18.title",
       color: {
-        bg: "#1DD294",
+        bg: "#00D18C",
         txt: "#FFFFFF",
       },
       shot_types: {
@@ -214,7 +214,7 @@ export function useGames() {
     th20: {
       name: "composables.Games.th20.title",
       color: {
-        bg: "#00A1E9",
+        bg: "#00CCCC",
         txt: "#FFFFFF",
       },
       shot_types: {
