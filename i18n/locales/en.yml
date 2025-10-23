@@ -148,22 +148,22 @@ composables:
     th20:
       title: FW
       shot_types:
-        reimu_r1: Reimu R1
-        reimu_r2: Reimu R2
-        reimu_b1: Reimu B1
-        reimu_b2: Reimu B2
-        reimu_y1: Reimu Y1
-        reimu_y2: Reimu Y2
-        reimu_g1: Reimu G1
-        reimu_g2: Reimu G2
-        marisa_r1: Marisa R1
-        marisa_r2: Marisa R2
-        marisa_b1: Marisa B1
-        marisa_b2: Marisa B2
-        marisa_y1: Marisa Y1
-        marisa_y2: Marisa Y2
-        marisa_g1: Marisa G1
-        marisa_g2: Marisa G2
+        reimu_r1: Reimu Red1
+        reimu_r2: Reimu Red2
+        reimu_b1: Reimu Blue1
+        reimu_b2: Reimu Blue2
+        reimu_y1: Reimu Yellow1
+        reimu_y2: Reimu Yellow2
+        reimu_g1: Reimu Green1
+        reimu_g2: Reimu Green2
+        marisa_r1: Marisa Red1
+        marisa_r2: Marisa Red2
+        marisa_b1: Marisa Blue1
+        marisa_b2: Marisa Blue2
+        marisa_y1: Marisa Yellow1
+        marisa_y2: Marisa Yellow2
+        marisa_g1: Marisa Green1
+        marisa_g2: Marisa Green2
 ReleaseNotes:
   add_record: add record
   modify_record: modify record
