@@ -13,9 +13,13 @@
 
       <div v-if="scoreSummary.length" class="overflow-x-auto">
         <table class="min-w-full border-collapse">
-          <thead class="bg-white text-sm">
-            <tr class="border-b border-gray-300">
-              <th class="px-6 py-4 pl-10 text-left">ゲーム名</th>
+          <thead class="text-sm border-b border-gray-300">
+            <tr>
+              <th class="px-6 py-4 pl-10 text-left">
+                <UBadge class="capitalize" variant="subtle" color="neutral">
+                  ゲーム名
+                </UBadge>
+              </th>
               <th class="px-6 py-4 text-left">
                 <UBadge class="capitalize" variant="subtle" color="neutral">
                   合計
@@ -63,13 +67,19 @@
               </tr>
 
               <!-- 展開行：機体ごとの集計 -->
-              <tr
-                v-for="shot in row.shottypeSorted"
-                :key="shot.shotType"
-                v-if="expandedRows.includes(index)"
-                class="bg-gray-50 text-sm border-t border-gray-100"
-              >
-                <td class="px-6 py-3 pl-10 font-semibold">{{ shot.name }}</td>
+                <tr
+                  v-for="shot in row.shottypeSorted"
+                  :key="shot.shotType"
+                  v-if="expandedRows.includes(index)"
+                  class="text-sm"
+                  :style="{
+                    color: '#111',       // 文字色
+                    backgroundColor: '#F1F5F9' // 背景色
+                  }"
+                >
+                <td class="px-6 py-3 pl-10">
+                    {{ t(gamesMap[row.game]?.shot_types[shot.shotType]?.name ?? shot.shotType) }}
+                </td>
                 <td class="px-6 py-3">{{ shot.total }}</td>
                 <td class="px-6 py-3">{{ shot.good }}</td>
                 <td class="px-6 py-3">{{ shot.great }}</td>
