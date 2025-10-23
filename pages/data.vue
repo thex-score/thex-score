@@ -45,7 +45,7 @@
           <tbody>
             <template v-for="(row, index) in scoreSummary" :key="row.game">
               <!-- ゲーム行 -->
-              <tr class="cursor-pointer" @click="toggleRow(index)">
+              <tr class="cursor-pointer border-t border-gray-200" @click="toggleRow(index)">
                 <td class="px-4 py-2">
                   <span class="ml-2 text-gray-400 text-xs">
                     {{ expandedRows.includes(index) ? "▲" : "▼" }}
@@ -71,7 +71,7 @@
                   v-for="shot in row.shottypeSorted"
                   :key="shot.shotType"
                   v-if="expandedRows.includes(index)"
-                  class="text-sm"
+                  class="text-sm border-t border-gray-200 dark:border-gray-700"
                 >
                 <td class="px-6 py-3 pl-10">
                     {{ t(gamesMap[row.game]?.shot_types[shot.shotType]?.name ?? shot.shotType) }}
