@@ -327,13 +327,16 @@ const columns = [
     accessorKey: "status",
     header: t("global.table_headers.status"),
     cell: ({ row }: { row: any }) => {
-      const status = row.getValue("status") as "great" | "good"; // 型を明示
-      const colorMap: Record<"great" | "good", string> = { great: "success", good: "neutral" };
+      const status = row.getValue("status") as "excellent" | "great" | "good"; // 型を明示
+      const colorMap: Record<"excellent" | "great" | "good", string> = { excellent: "primary" , great: "secondary", good: "neutral" };
       const color = colorMap[status];
-      const txt =
-        status === "great"
-          ? t("global.threshold_score_names.great")
-          : t("global.threshold_score_names.good");
+      // テキストマッピング
+      const txtMap: Record<"excellent" | "great" | "good", string> = {
+        excellent: t("global.threshold_score_names.excellent"),
+        great: t("global.threshold_score_names.great"),
+        good: t("global.threshold_score_names.good"),
+      };
+      const txt = txtMap[status];
       return h(UBadge, { class: "capitalize", variant: "subtle", color }, () => txt);
     },
   },

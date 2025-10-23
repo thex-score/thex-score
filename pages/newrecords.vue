@@ -65,11 +65,13 @@ const columns = [
     header: t("global.table_headers.status"),
     cell: ({ row }) => {
       const color = {
-        great: "success",
+        excellent: "primary",
+        great: "secondary",
         good: "neutral",
       }[row.getValue("status")];
 
       const txt = {
+        excellent: t("global.threshold_score_names.excellent"),
         great: t("global.threshold_score_names.great"),
         good: t("global.threshold_score_names.good"),
       }[row.getValue("status")];
