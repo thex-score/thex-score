@@ -31,6 +31,8 @@ export function UseReleases(): Release[] {
       date: "2025-10-23",
       changes: [
         { type: "text", text: { ja: "更新履歴の多言語対応", en: "Update History Support for English" } },
+        { type: "text", text: { ja: "3種類の基準スコアに対応", en: "Supports three types of thresholds" } },
+        { type: "text", text: { ja: "統計データにユニーク人数を追加", en: "Added unique players to statistical data" } },
       ],
     },
     {

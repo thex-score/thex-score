@@ -378,6 +378,8 @@ pages:
         table_headers:
           game: Game
           total: total
+      note:
+        replay_count_format: "Numbers are displayed as 'Replays(Players)'."
   index:
     welcome: Welcome
     description: |-

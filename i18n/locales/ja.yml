@@ -386,6 +386,8 @@ pages:
         table_headers:
           game: ゲーム名
           total: 合計
+      note:
+        replay_count_format: "数値は「リプレイ数（ユニーク人数）」という形式で表示しています。"
   index:
     welcome: ようこそ
     description: |-
