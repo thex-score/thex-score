@@ -328,7 +328,7 @@ const columns = [
     header: t("global.table_headers.status"),
     cell: ({ row }: { row: any }) => {
       const status = row.getValue("status") as "excellent" | "great" | "good"; // 型を明示
-      const colorMap: Record<"excellent" | "great" | "good", string> = { excellent: "primary" , great: "secondary", good: "neutral" };
+      const colorMap: Record<"excellent" | "great" | "good", string> = { excellent: "success" , great: "secondary", good: "info" };
       const color = colorMap[status];
       // テキストマッピング
       const txtMap: Record<"excellent" | "great" | "good", string> = {
