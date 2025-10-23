@@ -14,12 +14,12 @@
       </template>
       <i18n-t keypath="pages.about.publish_record.content" tag="p">
         <template #silentselene>
-          <NuxtLink href="https://www.silentselene.net/" target="_blank">
+          <NuxtLink href="https://www.silentselene.net/" target="_blank" class="text-primary underline underline-offset-2">
             {{ $t("pages.about.publish_record.tags.silentselene") }}
           </NuxtLink>
         </template>
         <template #nyanko>
-          <NuxtLink href="https://x.com/flower874_" target="_blank">
+          <NuxtLink href="https://x.com/flower874_" target="_blank" class="text-primary underline underline-offset-2">
             {{ $t("pages.about.publish_record.tags.nyanko") }}
           </NuxtLink>
         </template>
@@ -281,6 +281,7 @@
             <NuxtLink
               href="https://github.com/thex-score/thex-score/issues"
               target="_blank"
+              class="text-primary underline underline-offset-2"
             >
               {{
                 $t(
@@ -290,7 +291,7 @@
             </NuxtLink>
           </template>
           <template #nyanko>
-            <NuxtLink href="https://x.com/flower874_" target="_blank">
+            <NuxtLink href="https://x.com/flower874_" target="_blank" class="text-primary underline underline-offset-2">
               {{
                 $t(
                   "pages.about.score_FAQ.good.content.lists.publish_my_record.tags.nyanko"
@@ -508,7 +509,7 @@
           <br />
         </template>
         <template #nyanko>
-          <NuxtLink href="https://x.com/flower874_" target="_blank">
+          <NuxtLink href="https://x.com/flower874_" target="_blank" class="text-primary underline underline-offset-2">
             {{ $t("pages.about.operator.tags.nyanko") }}
           </NuxtLink>
         </template>
@@ -524,22 +525,22 @@
           <br />
         </template>
         <template #wefmaika>
-          <NuxtLink href="https://wefma.net" target="_blank">
+          <NuxtLink href="https://wefma.net" target="_blank" class="text-primary underline underline-offset-2">
             {{ $t("pages.about.operation_policy.tags.wefmaika") }}
           </NuxtLink>
         </template>
         <template #nyanko1>
-          <NuxtLink href="https://x.com/flower874_" target="_blank">
+          <NuxtLink href="https://x.com/flower874_" target="_blank" class="text-primary underline underline-offset-2">
             {{ $t("pages.about.operation_policy.tags.nyanko") }}
           </NuxtLink>
         </template>
         <template #nyanko2>
-          <NuxtLink href="https://x.com/flower874_" target="_blank">
+          <NuxtLink href="https://x.com/flower874_" target="_blank" class="text-primary underline underline-offset-2">
             {{ $t("pages.about.operation_policy.tags.nyanko") }}
           </NuxtLink>
         </template>
         <template #nyanko3>
-          <NuxtLink href="https://x.com/flower874_" target="_blank">
+          <NuxtLink href="https://x.com/flower874_" target="_blank" class="text-primary underline underline-offset-2">
             {{ $t("pages.about.operation_policy.tags.nyanko") }}
           </NuxtLink>
         </template>
@@ -547,6 +548,7 @@
           <NuxtLink
             href="https://github.com/thex-score/thex-score"
             target="_blank"
+            class="text-primary underline underline-offset-2"
           >
             {{ $t("pages.about.operation_policy.tags.github") }}
           </NuxtLink>
@@ -565,76 +567,91 @@ const gameThresholds: Ref<
 > = ref([
   {
     game: "th06",
+    excellent: "pages.about.thresholds.th06.excellent",
     great: "pages.about.thresholds.th06.great",
     good: "pages.about.thresholds.th06.good",
   },
   {
     game: "th07Ex",
+    excellent: "pages.about.thresholds.th07_ex.excellent",
     great: "pages.about.thresholds.th07_ex.great",
     good: "pages.about.thresholds.th07_ex.good",
   },
   {
     game: "th07Ph",
+    excellent: "pages.about.thresholds.th07_ph.excellent",
     great: "pages.about.thresholds.th07_ph.great",
     good: "pages.about.thresholds.th07_ph.good",
   },
   {
     game: "th08",
+    excellent: "pages.about.thresholds.th08.excellent",
     great: "pages.about.thresholds.th08.great",
     good: "pages.about.thresholds.th08.good",
   },
   {
     game: "th10",
+    excellent: "pages.about.thresholds.th10.excellent",
     great: "pages.about.thresholds.th10.great",
     good: "pages.about.thresholds.th10.good",
   },
   {
     game: "th11",
+    excellent: "pages.about.thresholds.th11.excellent",
     great: "pages.about.thresholds.th11.great",
     good: "pages.about.thresholds.th11.good",
   },
   {
     game: "th12",
+    excellent: "pages.about.thresholds.th12.excellent",
     great: "pages.about.thresholds.th12.great",
     good: "pages.about.thresholds.th12.good",
   },
   {
     game: "th128",
+    excellent: "pages.about.thresholds.th128.excellent",
     great: "pages.about.thresholds.th128.great",
     good: "pages.about.thresholds.th128.good",
   },
   {
     game: "th13",
+    excellent: "pages.about.thresholds.th13.excellent",
     great: "pages.about.thresholds.th13.great",
     good: "pages.about.thresholds.th13.good",
   },
   {
     game: "th14",
+    excellent: "pages.about.thresholds.th14.excellent",
     great: "pages.about.thresholds.th14.great",
     good: "pages.about.thresholds.th14.good",
   },
   {
     game: "th15",
+    excellent: "pages.about.thresholds.th15.excellent",
     great: "pages.about.thresholds.th15.great",
     good: "pages.about.thresholds.th15.good",
   },
   {
     game: "th16",
+    excellent: "pages.about.thresholds.th16.excellent",
     great: "pages.about.thresholds.th16.great",
     good: "pages.about.thresholds.th16.great",
   },
   {
     game: "th17",
+    excellent: "pages.about.thresholds.th17.excellent",
     great: "pages.about.thresholds.th17.great",
     good: "pages.about.thresholds.th17.good",
   },
   {
     game: "th18",
+    excellent: "pages.about.thresholds.th18.excellent",
     great: "pages.about.thresholds.th18.great",
     good: "pages.about.thresholds.th18.good",
   },
   {
     game: "th20",
+    excellent: "pages.about.thresholds.th20.excellent",
     great: "pages.about.thresholds.th20.great",
     good: "pages.about.thresholds.th20.good",
   },

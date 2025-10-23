@@ -4,10 +4,12 @@
   --ui-success: #FFC107;   /* 金 */
   --ui-secondary: #808080; /* 銀 */
   --ui-info: #B87333; /* 銅 */
+  --ui-primary: #1976D2; /* 青 */
 }
 
 .dark {
-  --ui-success: #FFD700;   /* ダークモードで少し濃い金 */
+  --ui-success: #FFD700;   /* 金 */
   --ui-secondary: #C0C0C0; /* 銀 */
   --ui-info: #B87333; /* 銅 */
+  --ui-primary: #64B5F6; /* 青 */
 }

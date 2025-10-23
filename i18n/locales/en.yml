@@ -178,14 +178,14 @@ pages:
     publish_record:
       title: About Publishing Records
       content: |-
-        Replays are collected on publicly available sites such as SilentSelene or other replay uploading sites.  {br}
+        Replays are collected on publicly available sites such as {silentselene} or other replay uploading sites.  {br}
         Game clear replays will be registered. {br}
         Replays with a slow rate greater than 3% or suspected use of cheat tools will not be registered. {br}
         Scores without replay evidence are added at the discretion of the administrator. {br}
-        If you would like to add or remove a replay, please contact the administrator, Nyanko {br}
+        If you would like to add or remove a replay, please contact the administrator, {nyanko} {br}
       tags:
-        silentselene: silentselene
-        nyanko: nyanko
+        silentselene: Silentselene
+        nyanko: Nyanko
     using_tools:
       title: Using External Tools
       content: |-
@@ -263,7 +263,7 @@ pages:
               question: Q. 私の記録が追加されないのですが？
               answer: A. {github}もしくは{nyanko}にご報告お願いします。気付き次第追加します。
               tags:
-                github: github
+                github: GitHub
                 nyanko: Nyanko
             update_frequency:
               question: Q. 更新頻度はどのくらいですか？
@@ -308,7 +308,7 @@ pages:
       tags:
         wefmaika: WEF
         nyanko: Nyanko
-        github: github
+        github: GitHub
     thresholds:
       th06:
         excellent: 600M

@@ -8,7 +8,7 @@
       </template>
       <ul class="list-disc pl-5 space-y-0.5">
         <li v-for="(link, idx) in links.uploaders" :key="idx">
-          <NuxtLink :to="link.url" target="_blank">
+          <NuxtLink :to="link.url" target="_blank" class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors">
             {{ link.label }}
           </NuxtLink>
         </li>
@@ -21,7 +21,7 @@
       </template>
       <ul class="list-disc pl-5 space-y-0.5">
         <li v-for="(link, idx) in links.strategySites" :key="idx">
-          <NuxtLink :to="link.url" target="_blank">
+          <NuxtLink :to="link.url" target="_blank" class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors">
             {{ link.label }}
           </NuxtLink>
         </li>
@@ -34,7 +34,7 @@
       </template>
       <ul class="list-disc pl-5 space-y-0.5">
         <li v-for="(link, idx) in links.strategyMovies" :key="idx">
-          <NuxtLink :to="link.url" target="_blank">
+          <NuxtLink :to="link.url" target="_blank" class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors">
             {{ link.label }}
           </NuxtLink>
         </li>
@@ -48,7 +48,7 @@
 
       <ul class="list-disc pl-5 space-y-0.5">
         <li v-for="(link, idx) in links.twcArchives" :key="idx">
-          <NuxtLink :to="link.url" target="_blank">
+          <NuxtLink :to="link.url" target="_blank" class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors">
             {{ link.label }}
           </NuxtLink>
         </li>
@@ -62,7 +62,7 @@ const links = ref({
   uploaders: [
     {
       label: "Silent Selene（現東方スコアボード）",
-      url: "https://www.silentselene.net/replays/th11",
+      url: "https://www.silentselene.net/",
     },
     {
       label: "えるろだ",
