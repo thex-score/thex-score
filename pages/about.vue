@@ -61,10 +61,10 @@
     <UCard class="my-5">
       <template #header>
         <p>
-          {{ $t("pages.about.threshold_scores.title") }}
           <UBadge class="capitalize" variant="subtle" color="neutral">
             {{ $t("global.threshold_score_names.good") }}
           </UBadge>
+          {{ $t("pages.about.threshold_scores.title") }}
         </p>
       </template>
       <ul class="pl-5 space-y-0.5">
@@ -332,10 +332,10 @@
     <UCard class="my-5">
       <template #header>
         <p>
+          <UBadge class="capitalize" variant="subtle" color="secondary">
+            {{ $t("global.threshold_score_names.great") }}
+          </UBadge>
           {{ $t("pages.about.threshold_scores.title") }}
-          <UBadge class="capitalize" variant="subtle" color="success">{{
-            $t("global.threshold_score_names.great")
-          }}</UBadge>
         </p>
       </template>
       <ul class="pl-5 space-y-0.5">
@@ -357,7 +357,7 @@
     <UCard class="my-5">
       <template #header>
         <p>
-          <UBadge class="capitalize" variant="subtle" color="success">
+          <UBadge class="capitalize" variant="subtle" color="secondary">
             {{ $t("global.threshold_score_names.great") }}
           </UBadge>
           {{ $t("pages.about.threshold_score_policy.title") }}
@@ -377,7 +377,7 @@
     <UCard class="my-5">
       <template #header>
         <p>
-          <UBadge class="capitalize" variant="subtle" color="success">
+          <UBadge class="capitalize" variant="subtle" color="secondary">
             {{ $t("global.threshold_score_names.great") }}
           </UBadge>
           {{ $t("pages.about.score_FAQ.title") }}
@@ -395,6 +395,92 @@
           {{
             $t(
               "pages.about.score_FAQ.great.content.lists.score_decrease.answer"
+            )
+          }}
+        </li>
+      </ul>
+    </UCard>
+
+    <UCard class="my-5">
+      <template #header>
+        <p>
+          <UBadge class="capitalize" variant="subtle" color="primary">
+            {{ $t("global.threshold_score_names.excellent") }}
+          </UBadge>
+          {{ $t("pages.about.threshold_scores.title") }}
+        </p>
+      </template>
+      <ul class="pl-5 space-y-0.5">
+        <li v-for="gameThreshold in gameThresholds" :key="gameThreshold.game">
+          <UBadge
+            class="capitalize inline-block px-2 py-0.5 rounded font-semibold"
+            :style="{
+              color: gamesMap[gameThreshold.game].color.txt,
+              backgroundColor: gamesMap[gameThreshold.game].color.bg,
+            }"
+          >
+            {{ $t(gamesMap[gameThreshold.game].name) }}
+          </UBadge>
+          ：{{ $t(`pages.about.thresholds.${gameThreshold.game}.excellent`) }}
+        </li>
+      </ul>
+    </UCard>
+
+    <UCard class="my-5">
+      <template #header>
+        <p>
+          <UBadge class="capitalize" variant="subtle" color="primary">
+            {{ $t("global.threshold_score_names.excellent") }}
+          </UBadge>
+          {{ $t("pages.about.threshold_score_policy.title") }}
+        </p>
+      </template>
+
+      <i18n-t
+        keypath="pages.about.threshold_score_policy.excellent.content"
+        tag="p"
+      >
+        <template #br>
+          <br />
+        </template>
+      </i18n-t>
+    </UCard>
+
+    <UCard class="my-5">
+      <template #header>
+        <p>
+          <UBadge class="capitalize" variant="subtle" color="primary">
+            {{ $t("global.threshold_score_names.excellent") }}
+          </UBadge>
+          {{ $t("pages.about.score_FAQ.title") }}
+        </p>
+      </template>
+      <ul class="pl-5 space-y-0.5">
+        <li>
+          {{
+            $t(
+              "pages.about.score_FAQ.excellent.content.lists.score_decrease.question"
+            )
+          }}
+        </li>
+        <li>
+          {{
+            $t(
+              "pages.about.score_FAQ.excellent.content.lists.score_decrease.answer"
+            )
+          }}
+        </li>
+        <li>
+          {{
+            $t(
+              "pages.about.score_FAQ.excellent.content.lists.difficulty_gap.question"
+            )
+          }}
+        </li>
+        <li>
+          {{
+            $t(
+              "pages.about.score_FAQ.excellent.content.lists.difficulty_gap.answer"
             )
           }}
         </li>

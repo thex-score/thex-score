@@ -20,26 +20,30 @@ const gamesMap = useGames();
 const scoreRecordMap = useScoreRecords();
 
 const scoreSummary = computed(() => {
-  // 中間テーブル: { gameId: { great: number, good: number } }
+  // 中間テーブル: { gameId: { excellent: number, great: number, good: number } }
   const tally = {};
 
   for (const games of Object.values(scoreRecordMap)) {
     for (const [gameId, shots] of Object.entries(games)) {
       for (const record of Object.values(shots)) {
         // 初期化
-        if (!tally[gameId]) tally[gameId] = { great: 0, good: 0, total: 0 };
+        if (!tally[gameId]) tally[gameId] = { excellent: 0, great: 0, good: 0, total: 0 };
 
         // カウント
+        if (record.status === "excellent") tally[gameId].excellent++;
         if (record.status === "great") tally[gameId].great++;
         if (record.status === "good") tally[gameId].good++;
-        tally[gameId].total = tally[gameId].great + tally[gameId].good;
+
+        // total はすべての状態を合計
+        tally[gameId].total = tally[gameId].excellent + tally[gameId].great + tally[gameId].good;
       }
     }
   }
 
   return Object.entries(tally)
-    .map(([gameId, { great, good, total }]) => ({
+    .map(([gameId, { excellent, great, good, total }]) => ({
       game: gameId,
+      excellent_count: excellent,
       great_count: great,
       good_count: good,
       total_count: total,
@@ -91,22 +95,32 @@ const columns = [
     },
   },
   {
-    accessorKey: "great_count",
-    header: ({ column }) => {
-      return h(
-        UBadge,
-        { class: "capitalize", variant: "subtle", color: "success" },
-        t("global.threshold_score_names.great")
-      );
-    },
-  },
-  {
     accessorKey: "good_count",
     header: ({ column }) => {
       return h(
         UBadge,
         { class: "capitalize", variant: "subtle", color: "neutral" },
         t("global.threshold_score_names.good")
+      );
+    },
+  },
+  {
+    accessorKey: "great_count",
+    header: ({ column }) => {
+      return h(
+        UBadge,
+        { class: "capitalize", variant: "subtle", color: "secondary" },
+        t("global.threshold_score_names.great")
+      );
+    },
+  },
+  {
+    accessorKey: "excellent_count",
+    header: ({ column }) => {
+      return h(
+        UBadge,
+        { class: "capitalize", variant: "subtle", color: "primary" },
+        t("global.threshold_score_names.excellent")
       );
     },
   },

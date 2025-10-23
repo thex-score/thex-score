@@ -1,7 +1,8 @@
 global:
   threshold_score_names:
     good: Big
-    great: Super Big
+    great: Bigger
+    excellent: Super Big
   table_headers:
     game: game
     rank: rank
@@ -212,6 +213,11 @@ pages:
           The "Super Big" threshold is extremely difficult to achieve and is intended for players who have thoroughly mastered the game. {br}
           If you can achieve this threshold score, you are able to proudly call yourself a super player. {br}
           Note that these thresholds are set for the best scoring shottypes, so it may be impossible to achieve this threshold with the weaker shottypes.
+      excellent:
+        content: |-
+          その作品をやり込んだプレイヤーが大目標として掲げるような非常に達成難易度の高い基準スコアです。
+          こちらについてはスコアアタック上級者以外が目標とすることを想定してはいません。
+          最もスコアが出しやすい機体を基準に設定しているので機体格差が大きい作品では達成が不可能な機体も存在します。
     score_FAQ:
       title: Score FAQ
       good:
@@ -271,6 +277,15 @@ pages:
             score_decrease:
               question: Q. 超大台が達成できない機体があるので基準スコアを下げてくれませんか？
               answer: A. 超大台スコアについては上級者が目指す大目標として設定しているので難易度を理由に基準スコアを下げることはありません。ただし現実的に不可能と考えられる基準スコアについては修正する可能性があります
+      excellent:
+        content:
+          lists:
+            score_decrease:
+              question: Q. 基準スコアが達成できない機体があるので基準スコアを下げてくれませんか？
+              answer: A. 基準スコア(Lunatic)については上級者が目指す大目標として設定しているので難易度を理由に基準スコアを下げることはありません。ただし現実的に不可能と考えられる基準スコアについては修正する可能性があります。
+            difficulty_gap:
+              question: Q. 作品間の難易度格差が大きくないでしょうか？
+              answer: A. 数字のキリの良さを重視するとどうしても難易度のばらつきが出てしまい、基準スコア(Lunatic)ではその影響がモロに出てしまいますが一定以上の難易度が保証されていれば問題ないと考えています。
     additional_info:
       title: Additional Information
       content: |-
@@ -296,49 +311,64 @@ pages:
         github: github
     thresholds:
       th06:
-        great: 600M
+        excellent: 600M
+        great: 550M
         good: 500M
       th07Ex:
-        great: 1.4B
+        excellent: 1.4B
+        great: 1.3B
         good: 1.2B
       th07Ph:
-        great: 1.6B
+        excellent: 1.6B
+        great: 1.5B
         good: 1.3B
       th08:
-        great: Teams and Solo Human 2.8B / Solo Youkai 2B　
+        excellent: Teams and Solo Human 3B / Solo Youkai 2.2B
+        great: Teams and Solo Human 2.8B / Solo Youkai 2B
         good: Teams and Solo Human 2.5B / Solo Youkai 1.8B
       th10:
-        great: 1B
+        excellent: 1B
+        great: 980M
         good: 950M
       th11:
-        great: 1.1B
+        excellent: 1.1B
+        great: 1.05B
         good: 1B
       th12:
-        great: 700M
-        good: 500M
-      th128:
-        great: 100M
-        good: 90M
-      th13:
+        excellent: 700M
         great: 600M
         good: 500M
+      th128:
+        excellent: 100M
+        great: 95M
+        good: 90M
+      th13:
+        excellent: 600M
+        great: 550M
+        good: 500M
       th14:
-        great: Marisa B 1.2B / others 800M
+        excellent: Marisa B 1.2B / others 850M
+        great: Marisa B 1.1B / others 800M
         good: Marisa B 1B / others 750M
       th15:
+        excellent: 1B
         great: 900M
         good: 700M
       th16:
-        great: 3B
+        excellent: 3B
+        great: 2.5B
         good: 2B
       th17:
-        great: 2.5B
+        excellent: 2.5B
+        great: 2B
         good: 1.5B
       th18:
+        excellent: Sakuya 8B / others 4B
         great: Sakuya 7B / others 3.5B
         good: Sakuya 5B / others 3B
       th20:
-        great: 800m
+        excellent: 800M
+        great: 700m
         good: 600m
   data:
     title: Statistic Data
