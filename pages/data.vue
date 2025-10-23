@@ -14,24 +14,24 @@
       <div v-if="scoreSummary.length" class="overflow-x-auto">
         <table class="min-w-full border-collapse">
           <thead class="bg-white text-sm">
-            <tr>
-              <th class="px-4 py-2 text-left">ゲーム名</th>
-              <th class="px-4 py-2 text-left">
+            <tr class="border-b border-gray-300">
+              <th class="px-6 py-4 pl-10 text-left">ゲーム名</th>
+              <th class="px-6 py-4 text-left">
                 <UBadge class="capitalize" variant="subtle" color="neutral">
                   合計
                 </UBadge>
               </th>
-              <th class="px-4 py-2 text-left">
+              <th class="px-6 py-4 text-left">
                 <UBadge class="capitalize" variant="subtle" color="neutral">
                   Normal
                 </UBadge>
               </th>
-              <th class="px-4 py-2 text-left">
+              <th class="px-6 py-4 text-left">
                 <UBadge class="capitalize" variant="subtle" color="secondary">
                   Hard
                 </UBadge>
               </th>
-              <th class="px-4 py-2 text-left">
+              <th class="px-6 py-4 text-left">
                 <UBadge class="capitalize" variant="subtle" color="primary">
                   Lunatic
                 </UBadge>
@@ -41,8 +41,11 @@
           <tbody>
             <template v-for="(row, index) in scoreSummary" :key="row.game">
               <!-- ゲーム行 -->
-              <tr class="cursor-pointer hover:bg-gray-50" @click="toggleRow(index)">
+              <tr class="cursor-pointer hover:bg-gray-50 border-t border-gray-200" @click="toggleRow(index)">
                 <td class="px-4 py-2">
+                  <span class="ml-2 text-gray-400 text-xs">
+                    {{ expandedRows.includes(index) ? "▲" : "▼" }}
+                  </span>
                   <UBadge
                     class="capitalize inline-block px-2 py-0.5 rounded font-semibold"
                     :style="{
@@ -52,14 +55,11 @@
                   >
                     {{ t(gamesMap[row.game]?.name ?? row.game) }}
                   </UBadge>
-                  <span class="ml-2 text-gray-400 text-xs">
-                    {{ expandedRows.includes(index) ? "▲" : "▼" }}
-                  </span>
                 </td>
-                <td class="px-4 py-2">{{ row.total_count }}</td>
-                <td class="px-4 py-2">{{ row.good_count }}</td>
-                <td class="px-4 py-2">{{ row.great_count }}</td>
-                <td class="px-4 py-2">{{ row.excellent_count }}</td>
+                <td class="px-6 py-4">{{ row.total_count }}</td>
+                <td class="px-6 py-4">{{ row.good_count }}</td>
+                <td class="px-6 py-4">{{ row.great_count }}</td>
+                <td class="px-6 py-4">{{ row.excellent_count }}</td>
               </tr>
 
               <!-- 展開行：機体ごとの集計 -->
@@ -67,13 +67,13 @@
                 v-for="shot in row.shottypeSorted"
                 :key="shot.shotType"
                 v-if="expandedRows.includes(index)"
-                class="bg-gray-50 text-sm"
+                class="bg-gray-50 text-sm border-t border-gray-100"
               >
-                <td class="px-4 py-1 font-semibold">{{ shot.name }}</td>
-                <td class="px-4 py-1">{{ shot.total }}</td>
-                <td class="px-4 py-1">{{ shot.good }}</td>
-                <td class="px-4 py-1">{{ shot.great }}</td>
-                <td class="px-4 py-1">{{ shot.excellent }}</td>
+                <td class="px-6 py-3 pl-10 font-semibold">{{ shot.name }}</td>
+                <td class="px-6 py-3">{{ shot.total }}</td>
+                <td class="px-6 py-3">{{ shot.good }}</td>
+                <td class="px-6 py-3">{{ shot.great }}</td>
+                <td class="px-6 py-3">{{ shot.excellent }}</td>
               </tr>
             </template>
           </tbody>
@@ -157,13 +157,16 @@ const scoreSummary = computed(() => {
         }
       });
 
+      // th128だけユニーク人数を表示しない
+      const showUnique = gameId !== 'th128';
+
       return {
         game: gameId,
-        excellent_count: `${data.excellent.total} (${data.excellent.players.size})`,
-        great_count: `${data.great.total} (${data.great.players.size})`,
-        good_count: `${data.good.total} (${data.good.players.size})`,
-        total_count: `${data.total.total} (${data.total.players.size})`,
-        shottypeSorted,
+        excellent_count: showUnique ? `${data.excellent.total} (${data.excellent.players.size})` : `${data.excellent.total}`,
+        great_count: showUnique ? `${data.great.total} (${data.great.players.size})` : `${data.great.total}`,
+        good_count: showUnique ? `${data.good.total} (${data.good.players.size})` : `${data.good.total}`,
+        total_count: showUnique ? `${data.total.total} (${data.total.players.size})` : `${data.total.total}`,
+        shottypeSorted
       };
     })
     .sort((a, b) => {
