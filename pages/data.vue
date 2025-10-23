@@ -6,123 +6,131 @@
       <template #header>
         <h2>{{ $t("pages.data.achievement_status.title") }}</h2>
       </template>
-      <UTable :data="scoreSummary" :columns="columns" class="flex-1" />
+
+      <p class="text-sm text-gray-500 mb-2">
+        {{ $t("pages.data.achievement_status.note.replay_count_format") }}
+      </p>
+
+      <UTable v-if="scoreSummary.length" :data="scoreSummary" :columns="columns" class="flex-1" />
+      <p v-else class="text-gray-400">データがありません</p>
     </UCard>
   </UContainer>
 </template>
 
 <script setup>
-import { useGames } from "~/composables/Games";
-import { h, resolveComponent } from "vue";
-const { t } = useI18n();
+import { h, resolveComponent, computed } from 'vue'
+import { useGames } from '~/composables/Games'
+import { useScoreRecords } from '~/composables/ScoreRecords'
 
-const gamesMap = useGames();
-const scoreRecordMap = useScoreRecords();
+const { t } = useI18n()
+const UBadge = resolveComponent("UBadge")
+
+const gamesMap = useGames()
+
+// SSR対応: useScoreRecordsがundefinedでも空オブジェクトに
+const scoreRecordMap = useScoreRecords?.() ?? {}
 
 const scoreSummary = computed(() => {
-  // 中間テーブル: { gameId: { excellent: number, great: number, good: number } }
-  const tally = {};
+  const tally = {}
 
-  for (const games of Object.values(scoreRecordMap)) {
+  for (const [playerName, games] of Object.entries(scoreRecordMap)) {
     for (const [gameId, shots] of Object.entries(games)) {
-      for (const record of Object.values(shots)) {
-        // 初期化
-        if (!tally[gameId]) tally[gameId] = { excellent: 0, great: 0, good: 0, total: 0 };
+      for (const [shotType, record] of Object.entries(shots)) {
+        if (!record || !record.status) continue
 
-        // カウント
-        if (record.status === "excellent") tally[gameId].excellent++;
-        if (record.status === "great") tally[gameId].great++;
-        if (record.status === "good") tally[gameId].good++;
+        if (!tally[gameId]) {
+          tally[gameId] = {
+            excellent: { total: 0, players: new Set() },
+            great: { total: 0, players: new Set() },
+            good: { total: 0, players: new Set() },
+            total: { total: 0, players: new Set() },
+          }
+        }
 
-        // total はすべての状態を合計
-        tally[gameId].total = tally[gameId].excellent + tally[gameId].great + tally[gameId].good;
+        const status = record.status
+
+        tally[gameId][status].total++
+        tally[gameId][status].players.add(playerName)
+
+        tally[gameId].total.total++
+        tally[gameId].total.players.add(playerName)
       }
     }
   }
 
   return Object.entries(tally)
-    .map(([gameId, { excellent, great, good, total }]) => ({
+    .map(([gameId, data]) => ({
       game: gameId,
-      excellent_count: excellent,
-      great_count: great,
-      good_count: good,
-      total_count: total,
+      excellent_count: `${data.excellent.total} (${data.excellent.players.size})`,
+      great_count: `${data.great.total} (${data.great.players.size})`,
+      good_count: `${data.good.total} (${data.good.players.size})`,
+      total_count: `${data.total.total} (${data.total.players.size})`,
     }))
     .sort((a, b) => {
-      // 作品番号（th\d+ 部分）で降順
-      const baseA = a.game.match(/^th\d+/)?.[0] ?? a.game;
-      const baseB = b.game.match(/^th\d+/)?.[0] ?? b.game;
-      const diffBase = baseA.localeCompare(baseB, "en"); // 逆順で降順
-      if (diffBase !== 0) return diffBase;
+      const baseA = a.game.match(/^th\d+/)?.[0] ?? a.game
+      const baseB = b.game.match(/^th\d+/)?.[0] ?? b.game
+      const diffBase = baseA.localeCompare(baseB, 'en')
+      if (diffBase !== 0) return diffBase
 
-      // 同じ番号ならバリアント優先度で
-      const variantA = a.game.slice(baseA.length); // '', 'Ex', 'Ph', …
-      const variantB = b.game.slice(baseB.length);
+      const variantA = a.game.slice(baseA.length)
+      const variantB = b.game.slice(baseB.length)
+      const priority = { '': 0, Ex: 1, Ph: 2 }
+      return (priority[variantA] ?? 99) - (priority[variantB] ?? 99)
+    })
+})
 
-      const priority = { "": 0, Ex: 1, Ph: 2 };
-      return (priority[variantA] ?? 99) - (priority[variantB] ?? 99);
-    });
-});
-
-const UBadge = resolveComponent("UBadge");
 const columns = [
   {
     accessorKey: "game",
     header: t("pages.data.achievement_status.content.table_headers.game"),
-    cell: ({ row }) => {
-      return h(
+    cell: ({ row }) =>
+      h(
         UBadge,
         {
-          // 形状は Tailwind、色は動的に style で上書き
           class: "capitalize inline-block px-2 py-0.5 rounded font-semibold",
           style: {
-            color: gamesMap[row.getValue("game")].color.txt,
-            backgroundColor: gamesMap[row.getValue("game")].color.bg,
+            color: gamesMap[row.getValue("game")]?.color?.txt ?? '#000',
+            backgroundColor: gamesMap[row.getValue("game")]?.color?.bg ?? '#eee',
           },
         },
-        () => t(gamesMap[row.getValue("game")].name)
-      );
-    },
+        () => t(gamesMap[row.getValue("game")]?.name ?? row.getValue("game"))
+      ),
   },
   {
     accessorKey: "total_count",
-    header: ({ column }) => {
-      return h(
+    header: ({ column }) =>
+      h(
         UBadge,
         { class: "capitalize", variant: "subtle", color: "neutral" },
         t("pages.data.achievement_status.content.table_headers.total")
-      );
-    },
+      ),
   },
   {
     accessorKey: "good_count",
-    header: ({ column }) => {
-      return h(
+    header: ({ column }) =>
+      h(
         UBadge,
         { class: "capitalize", variant: "subtle", color: "neutral" },
         t("global.threshold_score_names.good")
-      );
-    },
+      ),
   },
   {
     accessorKey: "great_count",
-    header: ({ column }) => {
-      return h(
+    header: ({ column }) =>
+      h(
         UBadge,
         { class: "capitalize", variant: "subtle", color: "secondary" },
         t("global.threshold_score_names.great")
-      );
-    },
+      ),
   },
   {
     accessorKey: "excellent_count",
-    header: ({ column }) => {
-      return h(
+    header: ({ column }) =>
+      h(
         UBadge,
         { class: "capitalize", variant: "subtle", color: "primary" },
         t("global.threshold_score_names.excellent")
-      );
-    },
+      ),
   },
-];
+]
 </script>
