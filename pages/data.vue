@@ -45,7 +45,7 @@
           <tbody>
             <template v-for="(row, index) in scoreSummary" :key="row.game">
               <!-- ゲーム行 -->
-              <tr class="cursor-pointer hover:bg-gray-50 border-t border-gray-200" @click="toggleRow(index)">
+              <tr class="cursor-pointer" @click="toggleRow(index)">
                 <td class="px-4 py-2">
                   <span class="ml-2 text-gray-400 text-xs">
                     {{ expandedRows.includes(index) ? "▲" : "▼" }}
