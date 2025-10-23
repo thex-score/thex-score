@@ -53,10 +53,10 @@ composables:
     th08:
       title: IN
       shot_types:
-        border: Border
-        magic: Magic
-        scarlet: Scarlet
-        netherworld: Netherworld
+        border: Border Team
+        magic: Magic Team
+        scarlet: Scarlet Team
+        netherworld: Netherworld Team
         reimu: Reimu
         yukari: Yukari
         marisa: Marisa
