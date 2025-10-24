@@ -30,8 +30,7 @@ function getLocale(): 'ja' | 'en' {
 // 🗓 日本語固定フォーマット
 function fmtDate(dateStr: string): string {
   try {
-    // const loc = getLocale() // ← 多言語化時に戻す
-    const loc = 'ja'
+    const loc = getLocale()  // 現在のロケールを取得（'ja' または 'en'）
     return new Intl.DateTimeFormat(loc, { dateStyle: 'medium' }).format(new Date(dateStr))
   } catch {
     return new Date(dateStr).toISOString().slice(0, 10)

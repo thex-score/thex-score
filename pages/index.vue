@@ -405,6 +405,7 @@ const columns = reactive([
       // ステータス順（降順：excellent → great → good）
       const statusDiff = order[statusB] - order[statusA];
       if (statusDiff !== 0) return statusDiff;
+      // ステータス逆順時に表示上ゲームIDが反転するが実用上問題ないので対応はしない
 
       // 同ステータス内はゲームID昇順
       if (rowA.original.game < rowB.original.game) return -1;
