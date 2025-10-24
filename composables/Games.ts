@@ -23,7 +23,7 @@ export function useGames() {
     th07Ex: {
       name: "composables.Games.th07.title.ex",
       color: {
-        bg: "#FF75DD",
+        bg: "#FF8CE5",
         txt: "#FFFFFF",
       },
       shot_types: {

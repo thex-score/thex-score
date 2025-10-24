@@ -356,6 +356,17 @@ const columns = reactive([
       new Number(row.getValue("score")).toLocaleString(getLocale()),
   },
   {
+    accessorKey: "shot_type",
+    header: t("global.table_headers.shot_type"),
+    cell: ({ row }: { row: any }) => {
+      const gameId = row.original.game;
+      const shotId = row.original.shot_type;
+      const game = gamesMap[gameId];
+      if (!game || !game.shot_types[shotId]) return shotId;
+      return t(game.shot_types[shotId].name);
+    },
+  },
+  {
     accessorKey: "status",
     header: ({ column }: { column: any }) =>
       h(UButton, {

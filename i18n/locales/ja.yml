@@ -367,9 +367,9 @@ pages:
         great: 25億
         good: 20億
       th17:
-        excellent: 25億
-        great: 20億
-        good: 15億
+        excellent: カワウソ 25億 / 非カワウソ 16億
+        great: カワウソ 20億 / 非カワウソ 13億 
+        good: カワウソ 15億 / 非カワウソ 10億
       th18:
         excellent: 咲夜 80億 / その他 40億
         great: 咲夜 70億 / その他 35億
