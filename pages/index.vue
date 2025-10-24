@@ -371,13 +371,11 @@ const columns = reactive([
         onClick: () => {
           const current = column.getIsSorted();
           if (!current) {
-            // 初回クリック時に降順でセット
-            column.toggleSorting(false); // false = desc に切り替える
+            column.toggleSorting(false); // 初回クリックは降順
           } else {
-            // 既にソート済みなら通常切替
-            column.toggleSorting(current === "asc");
+            column.toggleSorting(current === "asc"); // 昇順/降順切替
           }
-        }
+        },
       }),
     cell: ({ row }: { row: any }) => {
       const status = row.getValue("status") as "excellent" | "great" | "good";
@@ -398,17 +396,20 @@ const columns = reactive([
       );
     },
 
-    // ← ここがステータス順ソートの定義
+    // ステータス順ソート（同ステータス内はゲームID昇順）
     sortingFn: (rowA: any, rowB: any): number => {
       const order: Record<Status, number> = { excellent: 3, great: 2, good: 1 };
       const statusA = rowA.original.status as Status;
       const statusB = rowB.original.status as Status;
 
-      // 降順：excellent → great → good
-      if (order[statusB] !== order[statusA]) return order[statusB] - order[statusA];
+      // ステータス順（降順：excellent → great → good）
+      const statusDiff = order[statusB] - order[statusA];
+      if (statusDiff !== 0) return statusDiff;
 
-      // 同ステータス内はスコア降順
-      return rowB.original.score - rowA.original.score;
+      // 同ステータス内はゲームID昇順
+      if (rowA.original.game < rowB.original.game) return -1;
+      if (rowA.original.game > rowB.original.game) return 1;
+      return 0;
     },
   },
   {
