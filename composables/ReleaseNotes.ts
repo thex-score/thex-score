@@ -32,6 +32,7 @@ export function UseReleases(): Release[] {
       changes: [
         { type: "text", text: { ja: "レイアウト修正", en: "Modified the layout" } },
         { type: "text", text: { ja: "ステータスによる並び替え機能を実装", en: "Added sorting functionality by status" } },
+        { type: "text", text: { ja: "基準スコア変更 : 鬼形獣 nonカワウソ 15億→10億", en: "Changed threshold score : th17 non Otter 1.5B→1B" } },
       ],
     },
     {

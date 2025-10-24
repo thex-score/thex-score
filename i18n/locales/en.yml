@@ -359,9 +359,9 @@ pages:
         great: 2.5B
         good: 2B
       th17:
-        excellent: 2.5B
-        great: 2B
-        good: 1.5B
+        excellent: Otter 2.5B / Non Otter 1.6B
+        great: Otter 2B / Non Otter 1.3B
+        good: Otter 1.5B / Non Otter 1B
       th18:
         excellent: Sakuya 8B / others 4B
         great: Sakuya 7B / others 3.5B

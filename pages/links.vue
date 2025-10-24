@@ -248,7 +248,7 @@ const links = ref({
     },
     {
       label:
-        ">Touhou World Cup 2021 第十一試合 神霊廟EXスコアアタック idtn(日) vs XBH(中) vs MORTH(西)",
+        "Touhou World Cup 2021 第十一試合 神霊廟EXスコアアタック idtn(日) vs XBH(中) vs MORTH(西)",
       url: "https://www.youtube.com/watch?v=FLYDomThZ6w",
     },
     {
