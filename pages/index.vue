@@ -321,43 +321,39 @@ const columns = reactive([
   {
     accessorKey: "rank",
     header: t("global.table_headers.rank"),
+    cell: ({ row }: { row: any }) => row.getValue("rank"),
   },
   {
     accessorKey: "score",
-    header: ({ column }: { column: any }) =>
-      h(UButton, {
+    header: ({ column }: { column: any }) => {
+      const sortState = column.getIsSorted(); // false / 'asc' / 'desc'
+
+      // アイコン決定
+      const icon = sortState === false
+        ? "i-lucide-arrow-up-down"           // デフォルト未ソート
+        : sortState === "asc"
+        ? "i-lucide-arrow-up-narrow-wide"    // 昇順
+        : "i-lucide-arrow-down-wide-narrow"; // 降順
+
+      return h(UButton, {
         color: "neutral",
         variant: "ghost",
         label: t("global.table_headers.score"),
-        icon: column.getIsSorted() !== false
-          ? column.getIsSorted() === "asc"
-            ? "i-lucide-arrow-up-narrow-wide"
-            : "i-lucide-arrow-down-wide-narrow"
-          : selectedPlayer.value
-            ? "i-lucide-arrow-up-down" // プレイヤー検索初期は降順
-            : "i-lucide-arrow-down-wide-narrow", // 作品検索初期も降順
+        icon,
         class: "-mx-2.5",
         onClick: () => {
-          const current = column.getIsSorted();
-          if (!current && selectedPlayer.value) {
-            // プレイヤー検索時かつ未ソート状態なら降順スタート
-            column.toggleSorting(true);
+          if (sortState === false) {
+            // デフォルト状態 → 降順スタート
+            column.toggleSorting(false); // false = 降順
           } else {
-            // 通常の切替
-            column.toggleSorting(current === "asc");
+            // 昇順 / 降順切替
+            column.toggleSorting(sortState === "asc"); // asc → desc, desc → asc
           }
         },
-      }),
+      });
+    },
     cell: ({ row }: { row: any }) =>
       new Number(row.getValue("score")).toLocaleString(getLocale()),
-  },
-  {
-    accessorKey: "shot_type",
-    header: t("global.table_headers.shot_type"),
-    cell: ({ row }: { row: any }) =>
-      t(
-        gamesMap[row.getValue("game")]?.shot_types?.[row.getValue("shot_type")]?.name ?? ""
-      ),
   },
   {
     accessorKey: "status",
