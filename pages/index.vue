@@ -67,7 +67,7 @@
     </div>
 
     <USeparator class="mb-5" />
-    <UTable :data="scoreRecords" :columns="columns" class="flex-1" />
+    <UTable :key="tableKey" ref="table" :data="scoreRecords" :columns="columns" class="flex-1" />
   </UContainer>
 </template>
 
@@ -77,6 +77,9 @@ import { useGames } from "~/composables/Games";
 import { useScoreRecords } from "~/composables/ScoreRecords";
 import { UseReleases, type ReleaseChange } from "~/composables/ReleaseNotes";
 import { useI18n } from "vue-i18n";
+
+//型定義
+type Status = "excellent" | "great" | "good";
 
 // composables
 const inputtedPlayer = ref("");
@@ -267,16 +270,38 @@ const scoreRecords = computed(() => {
     });
   });
 
+  // ステータス優先ソート（excellent → great → good）、同ステータス内はスコア降順
+  const statusOrder: Record<Status, number> = {
+    excellent: 3,
+    great: 2,
+    good: 1,
+  };
+
+  // デフォルト表示はスコア降順
   returning.sort((a, b) => b.score - a.score);
+
+  // ランク付け
   returning.forEach((item, index) => (item.rank = index + 1));
+
   return returning;
 });
+
+const tableKey = ref(0);
+
+watch(scoreRecords, () => {
+  // 既存ソートをリセットするためにテーブルを再描画
+  tableKey.value++;
+});
+
 
 // ✅ テーブル列定義
 const UBadge = resolveComponent("UBadge");
 const UButton = resolveComponent("UButton");
+const table = ref<any>(null); // UTable の ref
 
-const columns = [
+import { reactive, watch, nextTick } from "vue"; // nextTick もここでインポート
+
+const columns = reactive([
   {
     accessorKey: "game",
     header: t("global.table_headers.game"),
@@ -304,13 +329,24 @@ const columns = [
         color: "neutral",
         variant: "ghost",
         label: t("global.table_headers.score"),
-        icon: column.getIsSorted()
+        icon: column.getIsSorted() !== false
           ? column.getIsSorted() === "asc"
             ? "i-lucide-arrow-up-narrow-wide"
             : "i-lucide-arrow-down-wide-narrow"
-          : "i-lucide-arrow-up-down",
+          : selectedPlayer.value
+            ? "i-lucide-arrow-up-down" // プレイヤー検索初期は降順
+            : "i-lucide-arrow-down-wide-narrow", // 作品検索初期も降順
         class: "-mx-2.5",
-        onClick: () => column.toggleSorting(column.getIsSorted() === "asc"),
+        onClick: () => {
+          const current = column.getIsSorted();
+          if (!current && selectedPlayer.value) {
+            // プレイヤー検索時かつ未ソート状態なら降順スタート
+            column.toggleSorting(true);
+          } else {
+            // 通常の切替
+            column.toggleSorting(current === "asc");
+          }
+        },
       }),
     cell: ({ row }: { row: any }) =>
       new Number(row.getValue("score")).toLocaleString(getLocale()),
@@ -325,19 +361,58 @@ const columns = [
   },
   {
     accessorKey: "status",
-    header: t("global.table_headers.status"),
+    header: ({ column }: { column: any }) =>
+      h(UButton, {
+        color: "neutral",
+        variant: "ghost",
+        label: t("global.table_headers.status"),
+        icon: column.getIsSorted()
+          ? column.getIsSorted() === "asc"
+            ? "i-lucide-arrow-up-narrow-wide"
+            : "i-lucide-arrow-down-wide-narrow"
+          : "i-lucide-arrow-up-down",
+        class: "-mx-2.5",
+        onClick: () => {
+          const current = column.getIsSorted();
+          if (!current) {
+            // 初回クリック時に降順でセット
+            column.toggleSorting(true); // false = desc に切り替える
+          } else {
+            // 既にソート済みなら通常切替
+            column.toggleSorting(current === "asc");
+          }
+        }
+      }),
     cell: ({ row }: { row: any }) => {
-      const status = row.getValue("status") as "excellent" | "great" | "good"; // 型を明示
-      const colorMap: Record<"excellent" | "great" | "good", string> = { excellent: "success" , great: "secondary", good: "info" };
-      const color = colorMap[status];
-      // テキストマッピング
-      const txtMap: Record<"excellent" | "great" | "good", string> = {
+      const status = row.getValue("status") as "excellent" | "great" | "good";
+      const colorMap: Record<Status, string> = {
+        excellent: "success",
+        great: "secondary",
+        good: "info",
+      };
+      const txtMap: Record<Status, string> = {
         excellent: t("global.threshold_score_names.excellent"),
         great: t("global.threshold_score_names.great"),
         good: t("global.threshold_score_names.good"),
       };
-      const txt = txtMap[status];
-      return h(UBadge, { class: "capitalize", variant: "subtle", color }, () => txt);
+      return h(
+        UBadge,
+        { class: "capitalize", variant: "subtle", color: colorMap[status] },
+        () => txtMap[status]
+      );
+    },
+
+    // ← ここがステータス順ソートの定義
+    sortingFn: (rowA: any, rowB: any): number => {
+      const order: Record<Status, number> = { excellent: 3, great: 2, good: 1 };
+      const statusA = rowA.original.status as Status;
+      const statusB = rowB.original.status as Status;
+
+      // 降順：excellent → great → good
+      if (order[statusB] !== order[statusA]) return order[statusB] - order[statusA];
+
+      // 同ステータス内はスコア降順
+      return rowB.original.score - rowA.original.score;
     },
   },
   {
@@ -373,7 +448,16 @@ const columns = [
             : "i-lucide-arrow-down-wide-narrow"
           : "i-lucide-arrow-up-down",
         class: "-mx-2.5",
-        onClick: () => column.toggleSorting(column.getIsSorted() === "asc"),
+        onClick: () => {
+          const current = column.getIsSorted();
+          if (!current) {
+            // 未ソート状態なら降順でスタート
+            column.toggleSorting(true);
+          } else {
+            // 既にソート済みなら通常切替
+            column.toggleSorting(current === "asc");
+          }
+        },
       }),
     cell: ({ row }: { row: any }) =>
       new Date(row.getValue("date")).toLocaleDateString(getLocale(), {
@@ -411,7 +495,7 @@ const columns = [
     accessorKey: "detail",
     header: t("global.table_headers.note"),
   },
-];
+]);
 
 // ✅ ゲーム選択切替時の処理
 watch(selectedGameId, (newGameId) => {
