@@ -364,15 +364,15 @@ const columns = reactive([
         label: t("global.table_headers.status"),
         icon: column.getIsSorted()
           ? column.getIsSorted() === "asc"
-            ? "i-lucide-arrow-up-narrow-wide"
-            : "i-lucide-arrow-down-wide-narrow"
+            ? "i-lucide-arrow-down-wide-narrow"
+            : "i-lucide-arrow-up-narrow-wide"
           : "i-lucide-arrow-up-down",
         class: "-mx-2.5",
         onClick: () => {
           const current = column.getIsSorted();
           if (!current) {
             // 初回クリック時に降順でセット
-            column.toggleSorting(true); // false = desc に切り替える
+            column.toggleSorting(false); // false = desc に切り替える
           } else {
             // 既にソート済みなら通常切替
             column.toggleSorting(current === "asc");
