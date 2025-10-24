@@ -27,6 +27,14 @@ export type Release = {
 export function UseReleases(): Release[] {
   return [
     {
+      version: "1.2.3",
+      date: "2025-10-24",
+      changes: [
+        { type: "text", text: { ja: "レイアウト修正", en: "Modified the layout" } },
+        { type: "text", text: { ja: "ステータスによる並び替え機能を実装", en: "Added sorting functionality by status" } },
+      ],
+    },
+    {
       version: "1.2.2",
       date: "2025-10-23",
       changes: [
