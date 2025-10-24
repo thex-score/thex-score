@@ -7020,7 +7020,7 @@ export function useScoreRecords() {
           score: 1148007840,
           status: "good",
           date: "2020-04-19T15:30:00",
-          replay: "th17_ud0031.rpy",
+          replay: "th17_ud0032.rpy",
           detail: "-",
         },
         MarisaO: {
