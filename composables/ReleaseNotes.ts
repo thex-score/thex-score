@@ -31,6 +31,7 @@ export function UseReleases(): Release[] {
       date: "2025-10-27",
       changes: [
         { type: "text", text: { ja: "リプレイファイル登録 : 東方神霊廟 魔理沙 WEF", en: "add replay file : TD Marisa WEF" } },
+        { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"wimirei" },
       ],
     },
     {
