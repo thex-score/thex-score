@@ -9528,10 +9528,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         MarisaY2: {
-          score: 628768010,
+          score: 668686450,
           status: "good",
-          date: "2025-10-08T15:30:00",
-          replay: null,
+          date: "2025-10-26T15:30:00",
+          replay: "th20_ud0017.rpy",
           detail: "-",
         },
         MarisaG1: {
