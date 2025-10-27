@@ -36,8 +36,8 @@ export function useScoreRecords() {
           score: 600404860,
           status: "excellent",
           date: "2022-06-15T15:30:00",
-          replay: null,
-          detail: "リプレイ紛失",
+          replay: "th13_ud0041.rpy",
+          detail: "-",
         },
       },
       th14: {
