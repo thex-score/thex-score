@@ -316,6 +316,17 @@ export function useScoreRecords() {
         },
       },
     },
+    "Anna says hi": {
+      th17: {
+        YoumuO: {
+          score: 1706109240,
+          status: "good",
+          date: "2025-10-27T15:30:00",
+          replay: "th17_ud0042.rpy",
+          detail: "-",
+        },
+      },
+    },
     Apo: {
       th11: {
         ReimuA: {
