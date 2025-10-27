@@ -27,6 +27,13 @@ export type Release = {
 export function UseReleases(): Release[] {
   return [
     {
+      version: "1.2.4",
+      date: "2025-10-27",
+      changes: [
+        { type: "text", text: { ja: "リプレイファイル登録 : 東方神霊廟 魔理沙 WEF", en: "add replay file : TD Marisa WEF" } },
+      ],
+    },
+    {
       version: "1.2.3",
       date: "2025-10-24",
       changes: [
