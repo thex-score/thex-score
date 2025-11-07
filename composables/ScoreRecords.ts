@@ -319,10 +319,10 @@ export function useScoreRecords() {
     "Anna says hi": {
       th17: {
         YoumuO: {
-          score: 1706109240,
+          score: 1974732980,
           status: "good",
-          date: "2025-10-27T15:30:00",
-          replay: "th17_ud0042.rpy",
+          date: "2025-11-01T15:30:00",
+          replay: "th17_ud0043.rpy",
           detail: "-",
         },
       },
