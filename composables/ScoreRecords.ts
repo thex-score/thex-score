@@ -4005,6 +4005,17 @@ export function useScoreRecords() {
         },
       },
     },
+    Novus: {
+      th12: {
+        MarisaA: {
+          score: 603648920,
+          status: "great",
+          date: "2025-11-06T15:30:00",
+          replay: "th12_ud0125.rpy",
+          detail: "-",
+        },
+      },
+    },
     nyamu: {
       th08: {
         Border: {
