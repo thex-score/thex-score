@@ -691,6 +691,13 @@ export function useScoreRecords() {
         },
       },
       th14: {
+        ReimuA: {
+          score: 755636700,
+          status: "good",
+          date: "2025-10-30T15:30:00",
+          replay: "th14_ud0072.rpy",
+          detail: "-",
+        },
         MarisaB: {
           score: 1251937920,
           status: "excellent",
