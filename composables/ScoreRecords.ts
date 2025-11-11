@@ -4942,6 +4942,17 @@ export function useScoreRecords() {
         },
       },
     },
+    sirpion: {
+      th10: {
+        ReimuB: {
+          score: 952763410,
+          status: "good",
+          date: "2025-11-08T15:30:00",
+          replay: "th10_ud0144.rpy",
+          detail: "-",
+        },
+      },
+    },
     SK: {
       th11: {
         ReimuA: {
