@@ -683,10 +683,10 @@ export function useScoreRecords() {
     Balisman: {
       th11: {
         ReimuA: {
-          score: 1002653580,
+          score: 1003571840,
           status: "good",
-          date: "2025-09-23T15:30:00",
-          replay: "th11_ud0151.rpy",
+          date: "2025-11-09T15:30:00",
+          replay: "th11_ud0158.rpy",
           detail: "-",
         },
       },
