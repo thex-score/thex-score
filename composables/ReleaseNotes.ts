@@ -30,11 +30,13 @@ export function UseReleases(): Release[] {
       version: "1.2.7",
       date: "2025-12-01",
       changes: [
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"Altair" },
         { type: "tpl", id: "add_record", game: "th11", shot: "ReimuA", player:"Balisman" },
         { type: "tpl", id: "add_record", game: "th11", shot: "ReimuB", player:"idtn" },
         { type: "tpl", id: "add_record", game: "th12", shot: "SanaeB", player:"Balisman" },
         { type: "tpl", id: "add_record", game: "th17", shot: "YoumuO", player:"Anna says hi" },
         { type: "tpl", id: "add_record", game: "th17", shot: "YoumuO", player:"Balisman" },
+        { type: "tpl", id: "add_record", game: "th20", shot: "ReimuG1", player:"幽谷もこ" },
       ],
     },
     {

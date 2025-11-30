@@ -190,7 +190,7 @@ export function useScoreRecords() {
       th11: {
         ReimuA: {
           score: 1101069120,
-          status: "great",
+          status: "excellent",
           date: "2025-11-14T15:30:00",
           replay: "th11_ud0161.rpy",
           detail: "-",
@@ -9541,6 +9541,13 @@ export function useScoreRecords() {
         },
       },
       th20: {
+        ReimuG1: {
+          score: 719792780,
+          status: "great",
+          date: "2025-11-23T15:30:00",
+          replay: "th20_ud0018.rpy",
+          detail: "-",
+        },
         MarisaR1: {
           score: 609782640,
           status: "good",
