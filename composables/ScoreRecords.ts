@@ -4940,6 +4940,17 @@ export function useScoreRecords() {
         },
       },
     },
+    shobonzdc: {
+      th11: {
+        ReimuA: {
+          score: 1003113320,
+          status: "good",
+          date: "2025-11-21T15:30:00",
+          replay: "th11_ud0162.rpy",
+          detail: "-",
+        },
+      },
+    },
     Sir雁木: {
       th06: {
         MarisaB: {
