@@ -690,6 +690,15 @@ export function useScoreRecords() {
           detail: "-",
         },
       },
+      th12: {
+        SanaeB: {
+          score: 533379000,
+          status: "good",
+          date: "2025-11-27T15:30:00",
+          replay: "th12_ud0126.rpy",
+          detail: "-",
+        },
+      },
       th14: {
         ReimuA: {
           score: 755636700,
