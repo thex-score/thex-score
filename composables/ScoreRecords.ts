@@ -686,7 +686,7 @@ export function useScoreRecords() {
           score: 1050595700,
           status: "great",
           date: "2025-11-18T15:30:00",
-          replay: "th11_ud0158.rpy",
+          replay: "th11_ud0159.rpy",
           detail: "-",
         },
       },
@@ -2313,10 +2313,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         ReimuB: {
-          score: 1094091630,
-          status: "great",
-          date: "2023-06-15T15:30:00",
-          replay: "th11_ud0008.rpy",
+          score: 1123460680,
+          status: "excellent",
+          date: "2025-11-30T15:30:00",
+          replay: "th11_ud0160.rpy",
           detail: "-",
         },
         ReimuC: {
