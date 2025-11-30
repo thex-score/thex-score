@@ -4,6 +4,16 @@ export function useNewScoreRecords() {
     {
       player: "幽谷もこ",
       game: "th20",
+      shot_type: "ReimuR2",
+      score: 684815420,
+      status: "good",
+      date: "2025-12-01T15:30:00",
+      replay: "th20_ud0021.rpy",
+      detail: "-",
+    },
+    {
+      player: "幽谷もこ",
+      game: "th20",
       shot_type: "ReimuB2",
       score: 649957920,
       status: "good",
