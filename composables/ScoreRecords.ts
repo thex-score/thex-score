@@ -9553,10 +9553,10 @@ export function useScoreRecords() {
       },
       th20: {
         ReimuR1: {
-          score: 665090630,
-          status: "good",
-          date: "2025-11-15T15:30:00",
-          replay: "th20_ud0019.rpy",
+          score: 702547600,
+          status: "great",
+          date: "2026-01-01T15:30:00",
+          replay: "th20_ud0022.rpy",
           detail: "-",
         },
         ReimuR2: {
