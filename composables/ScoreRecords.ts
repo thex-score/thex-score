@@ -9560,10 +9560,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         ReimuR2: {
-          score: 684815420,
-          status: "good",
-          date: "2025-11-15T15:30:00",
-          replay: "th20_ud0021.rpy",
+          score: 727113980,
+          status: "great",
+          date: "2025-12-31T15:30:00",
+          replay: "th20_ud0023.rpy",
           detail: "-",
         },
         ReimuB2: {
