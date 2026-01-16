@@ -9580,6 +9580,13 @@ export function useScoreRecords() {
           replay: "th20_ud0025.rpy",
           detail: "-",
         },
+        ReimuY1: {
+          score: 612069880,
+          status: "good",
+          date: "2025-11-12T15:30:00",
+          replay: "th20_ud0026.rpy",
+          detail: "-",
+        },
         ReimuG1: {
           score: 719792780,
           status: "great",
