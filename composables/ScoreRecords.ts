@@ -9572,6 +9572,13 @@ export function useScoreRecords() {
           replay: "th17_ud0035.rpy",
           detail: "-",
         },
+        YoumuO: {
+          score: 1504930770,
+          status: "good",
+          date: "2026-01-01T15:30:00",
+          replay: "th17_ud0049.rpy",
+          detail: "-",
+        },
       },
       th20: {
         ReimuR1: {
