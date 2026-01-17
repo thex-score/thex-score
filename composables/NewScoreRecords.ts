@@ -11,7 +11,7 @@ export function useNewScoreRecords() {
       replay: "th14_ud0073.rpy",
       detail: "-",
     },
-	{
+    {
       player: "Balisman",
       game: "th17,
       shot_type: "ReimuW",
@@ -21,7 +21,7 @@ export function useNewScoreRecords() {
       replay: "th17_ud0047.rpy",
       detail: "-",
     },
-	{
+  	{
       player: "Balisman",
       game: "th17,
       shot_type: "ReimuO",
@@ -31,7 +31,7 @@ export function useNewScoreRecords() {
       replay: "th17_ud0039.rpy",
       detail: "-",
     },
-	{
+  	{
       player: "Balisman",
       game: "th17,
       shot_type: "ReimuE",
@@ -39,6 +39,16 @@ export function useNewScoreRecords() {
       status: "excellent",
       date: "2026-01-18T15:30:00",
       replay: "th17_ud0048.rpy",
+      detail: "-",
+    },
+  	{
+      player: "Oscar",
+      game: "th15",
+      shot_type: "Reimu",
+      score: 1063582130,
+      status: "excellent",
+      date: "2026-01-17T15:30:00",
+      replay: "th15_ud0028.rpy",
       detail: "-",
     },
     {
