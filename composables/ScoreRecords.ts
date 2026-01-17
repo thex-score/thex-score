@@ -714,6 +714,13 @@ export function useScoreRecords() {
           replay: "th14_ud0068.rpy",
           detail: "-",
         },
+        SakuyaA: {
+          score: 750595490,
+          status: "good",
+          date: "2026-01-18T15:30:00",
+          replay: "th14_ud0073.rpy",
+          detail: "-",
+        },
       },
       th17: {
         ReimuO: {
