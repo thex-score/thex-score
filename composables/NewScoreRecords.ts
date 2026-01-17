@@ -13,7 +13,7 @@ export function useNewScoreRecords() {
     },
     {
       player: "Balisman",
-      game: "th17,
+      game: "th17",
       shot_type: "ReimuW",
       score: 1656390380,
       status: "excellent",
@@ -23,7 +23,7 @@ export function useNewScoreRecords() {
     },
   	{
       player: "Balisman",
-      game: "th17,
+      game: "th17",
       shot_type: "ReimuO",
       score: 2541800260,
       status: "excellent",
@@ -33,7 +33,7 @@ export function useNewScoreRecords() {
     },
   	{
       player: "Balisman",
-      game: "th17,
+      game: "th17",
       shot_type: "ReimuE",
       score: 1694774790,
       status: "excellent",
