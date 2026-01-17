@@ -417,4 +417,3 @@ export function UseReleases(): Release[] {
     },
   ];
 }
-}
