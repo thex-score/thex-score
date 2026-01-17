@@ -5,7 +5,7 @@ export function useNewScoreRecords() {
       player: "Balisman",
       game: "th14",
       shot_type: "SakuyaA",
-      score: 771506040,
+      score: 750595490,
       status: "good",
       date: "2026-01-18T15:30:00",
       replay: "th14_ud0073.rpy",
