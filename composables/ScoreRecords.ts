@@ -1,9 +1,3 @@
-
-
-
-
-
-
 export function useScoreRecords() {
   const scoreRecords: Record<
     string,
@@ -717,30 +711,30 @@ export function useScoreRecords() {
         SakuyaA: {
           score: 750595490,
           status: "good",
-          date: "2026-01-18T15:30:00",
+          date: "2025-12-26T15:30:00",
           replay: "th14_ud0073.rpy",
           detail: "-",
         },
       },
       th17: {
-		ReimuW: {
+    		ReimuW: {
           score: 1656390380,
           status: "excellent",
-          date: "2026-01-18T15:30:00",
+          date: "2026-01-07T15:30:00",
           replay: "th17_ud0047.rpy",
           detail: "-",
         },
         ReimuO: {
           score: 2541800260,
           status: "excellent",
-          date: "2026-01-18T15:30:00",
+          date: "2025-11-12T15:30:00",
           replay: "th17_ud0039.rpy",
           detail: "-",
         },
-		ReimuE: {
+    		ReimuE: {
           score: 1694774790,
           status: "excellent",
-          date: "2026-01-18T15:30:00",
+          date: "2026-01-10T15:30:00",
           replay: "th17_ud0048.rpy",
           detail: "-",
         },
