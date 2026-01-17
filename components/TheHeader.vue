@@ -45,7 +45,7 @@
               v-for="lc in localeOptions"
               :key="lc.code"
               type="button"
-              @click="switchToLocale(lc.code)"
+              @click="switchToLocale(lc.code as 'ja' | 'en')"
               :class="[
                 'px-2 py-0.5 text-xs rounded-full transition-colors',
                 currentLocale === lc.code
@@ -91,7 +91,7 @@
                   size="xs"
                   :variant="currentLocale === lc.code ? 'solid' : 'ghost'"
                   :color="currentLocale === lc.code ? 'primary' : undefined"
-                  @click="switchToLocale(lc.code)"
+                  @click="switchToLocale(lc.code as 'ja' | 'en')"
                 >
                   <UIcon name="i-heroicons-globe-alt" class="h-3 w-3 mr-1" />
                   {{ lc.name }}
