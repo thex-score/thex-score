@@ -32,8 +32,8 @@ export function UseReleases(): Release[] {
       changes: [
         { type: "tpl", id: "add_record", game: "th14", shot: "SakuyaA", player:"Balisman" },
 		{ type: "tpl", id: "add_record", game: "th17", shot: "ReimuO", player:"Balisman" },
-		{ type: "tpl", id: "add_record", game: "th14", shot: "ReimuW", player:"Balisman" },
-		{ type: "tpl", id: "add_record", game: "th14", shot: "ReimuE", player:"Balisman" },
+		{ type: "tpl", id: "add_record", game: "th17", shot: "ReimuW", player:"Balisman" },
+		{ type: "tpl", id: "add_record", game: "th17", shot: "ReimuE", player:"Balisman" },
       ],
     },
     {
