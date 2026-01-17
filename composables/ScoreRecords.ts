@@ -4382,6 +4382,13 @@ export function useScoreRecords() {
         },
       },
       th15: {
+        Reimu: {
+          score: 1063582130,
+          status: "excellent",
+          date: "2026-01-16T15:30:00",
+          replay: "th15_ud0028.rpy",
+          detail: "-",
+        },
         Reisen: {
           score: 1073686620,
           status: "excellent",
