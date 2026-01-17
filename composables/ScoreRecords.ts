@@ -714,13 +714,34 @@ export function useScoreRecords() {
           replay: "th14_ud0068.rpy",
           detail: "-",
         },
+        SakuyaA: {
+          score: 750595490,
+          status: "good",
+          date: "2026-01-18T15:30:00",
+          replay: "th14_ud0073.rpy",
+          detail: "-",
+        },
       },
       th17: {
+		ReimuW: {
+          score: 1656390380,
+          status: "excellent",
+          date: "2026-01-18T15:30:00",
+          replay: "th17_ud0047.rpy",
+          detail: "-",
+        },
         ReimuO: {
-          score: 2453518590,
-          status: "great",
-          date: "2025-10-21T15:30:00",
+          score: 2541800260,
+          status: "excellent",
+          date: "2026-01-18T15:30:00",
           replay: "th17_ud0039.rpy",
+          detail: "-",
+        },
+		ReimuE: {
+          score: 1694774790,
+          status: "excellent",
+          date: "2026-01-18T15:30:00",
+          replay: "th17_ud0048.rpy",
           detail: "-",
         },
         MarisaO: {
