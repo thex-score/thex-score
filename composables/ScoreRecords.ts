@@ -2352,7 +2352,7 @@ export function useScoreRecords() {
           score: 1080000270,
           status: "great",
           date: "2025-12-26T15:30:00",
-          replay: "th11_ud0015.rpy",
+          replay: "th11_ud0163.rpy",
           detail: "-",
         },
         MarisaA: {

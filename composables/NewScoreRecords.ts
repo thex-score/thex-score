@@ -18,7 +18,7 @@ export function useNewScoreRecords() {
       score: 1080000270,
       status: "great",
       date: "2026-01-18T15:30:00",
-      replay: "th11_ud0015.rpy",
+      replay: "th11_ud0163.rpy",
       detail: "-",
     },
 	{
