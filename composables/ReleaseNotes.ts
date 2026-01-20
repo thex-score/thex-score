@@ -28,7 +28,7 @@ export function UseReleases(): Release[] {
   return [
 		{
       version: "1.2.10",
-      date: "2025-01-18",
+      date: "2025-01-20",
       changes: [
         { type: "tpl", id: "add_record", game: "th15", shot: "Reimu", player:"Oscar" },
         { type: "tpl", id: "add_record", game: "th15", shot: "Marisa", player:"Oscar" },
