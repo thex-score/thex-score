@@ -4412,13 +4412,20 @@ export function useScoreRecords() {
       },
       th15: {
         Reimu: {
-          score: 1063582130,
+          score: 1119686940,
           status: "excellent",
-          date: "2026-01-16T15:30:00",
-          replay: "th15_ud0028.rpy",
+          date: "2026-01-20T15:30:00",
+          replay: "th15_ud0031.rpy",
           detail: "-",
         },
-    		Sanae: {
+        Marisa: {
+          score: 1024385420,
+          status: "excellent",
+          date: "2026-01-19T15:30:00",
+          replay: "th15_ud0030.rpy",
+          detail: "-",
+        },
+        Sanae: {
           score: 1055663510,
           status: "excellent",
           date: "2026-01-17T15:30:00",
