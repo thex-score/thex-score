@@ -31,7 +31,7 @@
         class="hidden md:flex items-center gap-2"
         aria-label="Language picker"
       >
-        <span class="sr-only">{{ $t(`components.TheHeader.language`) }}</span>
+        <span class="sr-only">{{ $t("components.TheHeader.language") }}</span>
         <div
           class="flex items-center gap-1 rounded-full border border-gray-200 dark:border-gray-800 px-2 py-1"
         >
@@ -60,7 +60,7 @@
       </div>
 
       <USlideover
-        :title="$t(`components.TheHeader.site_title`)"
+        :title="$t('components.TheHeader.site_title')"
         v-model:open="isOpen"
         side="left"
         class="md:hidden"
@@ -74,7 +74,7 @@
           icon="i-heroicons-bars-3"
           variant="ghost"
           class="md:hidden"
-          :aria-label="$t(`components.TheHeader.open_menu`)"
+          :aria-label="$t('components.TheHeader.open_menu')"
         />
         <template #body>
           <div class="p-4 space-y-6">
@@ -82,7 +82,7 @@
               <h3
                 class="mb-2 text-xs font-semibold tracking-wider text-gray-500 uppercase"
               >
-                {{ $t(`components.TheHeader.language`) }}
+                {{ $t("components.TheHeader.language") }}
               </h3>
               <div class="flex flex-wrap gap-2">
                 <UButton
@@ -105,7 +105,7 @@
               <h3
                 class="mb-2 text-xs font-semibold tracking-wider text-gray-500 uppercase"
               >
-                {{ $t(`components.TheHeader.pages`) }}
+                {{ $t("components.TheHeader.pages") }}
               </h3>
               <nav class="flex flex-col gap-2" aria-label="Mobile primary">
                 <NuxtLink
@@ -132,24 +132,32 @@
 </template>
 
 <script setup lang="ts">
-const { locales, locale, t } = useI18n();
+import { useI18n } from "vue-i18n";
+
+type LocaleCode = "ja" | "en";
+
+const { locales, locale } = useI18n();
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
 const route = useRoute();
 const router = useRouter();
 
 const localeOptions = computed(() =>
-  (locales.value as Array<{ code: string; name?: string }>).map((lc) => ({
+  (locales.value as Array<{ code: LocaleCode; name?: string }>).map((lc) => ({
     code: lc.code,
     name: lc.name || lc.code.toUpperCase(),
   }))
 );
 
-const currentLocale = computed(() => locale.value);
+const currentLocale = computed<LocaleCode>(
+  () => locale.value as LocaleCode
+);
 
-function switchToLocale(code: "ja" | "en") {
+function switchToLocale(code: LocaleCode) {
   const target = switchLocalePath(code);
-  if (target && target !== route.fullPath) router.push(target);
+  if (target && target !== route.fullPath) {
+    router.push(target);
+  }
 }
 
 const pageList = [
