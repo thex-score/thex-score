@@ -5581,10 +5581,10 @@ export function useScoreRecords() {
     w1theR: {
       th12: {
         ReimuA: {
-          score: 528457230,
-          status: "good",
-          date: "2025-08-03T15:30:00",
-          replay: "th12_ud0124.rpy",
+          score: 603215720,
+          status: "great",
+          date: "2025-12-06T15:30:00",
+          replay: "th12_ud0127.rpy",
           detail: "-",
         },
       },
