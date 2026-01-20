@@ -26,15 +26,22 @@ export type Release = {
 // データ例
 export function UseReleases(): Release[] {
   return [
-	{
+		{
+      version: "1.2.10",
+      date: "2025-01-18",
+      changes: [
+        { type: "tpl", id: "add_record", game: "th17", shot: "YoumuO", player:"Anna says hi" },
+      ],
+    },
+    {
       version: "1.2.9",
       date: "2025-01-18",
       changes: [
-	    { type: "tpl", id: "add_record", game: "th10", shot: "MarisaC", player:"S.K" },
-		{ type: "tpl", id: "add_record", game: "th11", shot: "ReimuC", player:"idtn" },
-	    { type: "tpl", id: "add_record", game: "th15", shot: "Sanae", player:"Oscar" },
+        { type: "tpl", id: "add_record", game: "th10", shot: "MarisaC", player:"S.K" },
+        { type: "tpl", id: "add_record", game: "th11", shot: "ReimuC", player:"idtn" },
+        { type: "tpl", id: "add_record", game: "th15", shot: "Sanae", player:"Oscar" },
         { type: "tpl", id: "add_record", game: "th17", shot: "YoumuW", player:"Balisman" },
-		{ type: "tpl", id: "add_record", game: "th17", shot: "YoumuE", player:"Balisman" },
+        { type: "tpl", id: "add_record", game: "th17", shot: "YoumuE", player:"Balisman" },
       ],
     },
     {

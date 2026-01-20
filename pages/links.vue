@@ -8,7 +8,11 @@
       </template>
       <ul class="list-disc pl-5 space-y-0.5">
         <li v-for="(link, idx) in links.uploaders" :key="idx">
-          <NuxtLink :to="link.url" target="_blank" class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors">
+          <NuxtLink
+            :to="link.url"
+            target="_blank"
+            class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors"
+          >
             {{ link.label }}
           </NuxtLink>
         </li>
@@ -21,7 +25,11 @@
       </template>
       <ul class="list-disc pl-5 space-y-0.5">
         <li v-for="(link, idx) in links.strategySites" :key="idx">
-          <NuxtLink :to="link.url" target="_blank" class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors">
+          <NuxtLink
+            :to="link.url"
+            target="_blank"
+            class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors"
+          >
             {{ link.label }}
           </NuxtLink>
         </li>
@@ -34,7 +42,11 @@
       </template>
       <ul class="list-disc pl-5 space-y-0.5">
         <li v-for="(link, idx) in links.strategyMovies" :key="idx">
-          <NuxtLink :to="link.url" target="_blank" class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors">
+          <NuxtLink
+            :to="link.url"
+            target="_blank"
+            class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors"
+          >
             {{ link.label }}
           </NuxtLink>
         </li>
@@ -45,10 +57,13 @@
       <template #header>
         <p>{{ $t("pages.links.twc_archives.title") }}</p>
       </template>
-
       <ul class="list-disc pl-5 space-y-0.5">
         <li v-for="(link, idx) in links.twcArchives" :key="idx">
-          <NuxtLink :to="link.url" target="_blank" class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors">
+          <NuxtLink
+            :to="link.url"
+            target="_blank"
+            class="hover:underline hover:underline-offset-2 hover:text-primary transition-colors"
+          >
             {{ link.label }}
           </NuxtLink>
         </li>
@@ -60,18 +75,9 @@
 <script setup lang="ts">
 const links = ref({
   uploaders: [
-    {
-      label: "Silent Selene（現東方スコアボード）",
-      url: "https://www.silentselene.net/",
-    },
-    {
-      label: "えるろだ",
-      url: "https://l-uploader.puresign.tokyo/",
-    },
-    {
-      label: "LunarCast",
-      url: "https://replay.lunarcast.net/",
-    },
+    { label: "Silent Selene（現東方スコアボード）", url: "https://www.silentselene.net/" },
+    { label: "えるろだ", url: "https://l-uploader.puresign.tokyo/" },
+    { label: "LunarCast", url: "https://replay.lunarcast.net/" },
   ],
   strategySites: [
     {
@@ -79,8 +85,7 @@ const links = ref({
       url: "http://www.coldlemonade.net/",
     },
     {
-      label:
-        "東方風神録Extraスコアアタック概論（管理人にゃんこの風EX攻略記事）",
+      label: "東方風神録Extraスコアアタック概論（管理人にゃんこの風EX攻略記事）",
       url: "https://note.com/flower874_/n/n6cde241eab41",
     },
     {
@@ -88,58 +93,18 @@ const links = ref({
       url: "https://apo-adipic.hatenablog.com/entry/2023/02/08/152158",
     },
     {
-      label:
-        "東方虹龍洞Extraスコアアタック概論（管理人にゃんこの虹EX攻略記事）",
+      label: "東方虹龍洞Extraスコアアタック概論（管理人にゃんこの虹EX攻略記事）",
       url: "https://note.com/flower874_/n/nd49da8a540f9",
     },
   ],
   strategyMovies: [
     {
-      label:
-        "ゆっくり椛の紅魔郷Exスコアアタック5億解説（マリオ課長氏の紅EX解説動画）",
+      label: "ゆっくり椛の紅魔郷Exスコアアタック5億解説（マリオ課長氏）",
       url: "https://www.youtube.com/watch?v=3b4mIJk9vy0",
     },
     {
-      label: "東方妖々夢Extra夢符14億解説（lua氏の妖EX解説動画）",
+      label: "東方妖々夢Extra夢符14億解説（lua氏）",
       url: "https://www.youtube.com/watch?v=eGuC1P60lN8",
-    },
-    {
-      label: "ゆっくり椛の妖々夢Extra13億解説（マリオ課長氏の妖EX解説動画）",
-      url: "https://www.youtube.com/watch?v=_JOZApRRHF8",
-    },
-    {
-      label:
-        "【東方原作】東方風神録EXTRAスコアアタック9.5~9.6億解説（はらぴょん氏の風EX解説動画）",
-      url: "https://www.youtube.com/watch?v=TdfoB6N1sFc",
-    },
-    {
-      label:
-        "ゆっくり椛の風神録Exスコアアタック　9.5～6億解説（マリオ課長氏の風EX解説動画）",
-      url: "https://www.youtube.com/watch?v=-SYnKyqusC4",
-    },
-    {
-      label:
-        "東方地霊殿 Extra スコアアタック入門10億完全解説（Apo氏の地EX解説動画）",
-      url: "https://www.youtube.com/watch?v=YDFMb4_f8Pc",
-    },
-    {
-      label:
-        "東方地霊殿Extraスコアアタック大台11億完全解説（Apo氏の地EX解説動画）",
-      url: "https://www.youtube.com/watch?v=ILwCH8_GlXs",
-    },
-    {
-      label:
-        "ゆっくり椛の東方星蓮船Ex5億解説動画！（マリオ課長氏の星EX解説動画）",
-      url: "https://www.youtube.com/watch?v=MltdODCzBjA",
-    },
-    {
-      label: "神霊廟EXスコアアタック解説（WEF氏の神EX解説動画）",
-      url: "https://www.youtube.com/watch?v=7qBydYEyb8o",
-    },
-    {
-      label:
-        "東方輝針城extra魔理沙Bスコアアタック解説（あせび氏の輝EX解説動画）",
-      url: "https://www.youtube.com/watch?v=oAiQA-c2QUk",
     },
   ],
   twcArchives: [

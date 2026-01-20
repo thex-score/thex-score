@@ -313,10 +313,10 @@ export function useScoreRecords() {
     "Anna says hi": {
       th17: {
         YoumuO: {
-          score: 2001072230,
+          score: 2040321210,
           status: "great",
-          date: "2025-11-26T15:30:00",
-          replay: "th17_ud0044.rpy",
+          date: "2025-12-06T15:30:00",
+          replay: "th17_ud0052.rpy",
           detail: "-",
         },
       },
@@ -717,7 +717,7 @@ export function useScoreRecords() {
         },
       },
       th17: {
-    		ReimuW: {
+        ReimuW: {
           score: 1656390380,
           status: "excellent",
           date: "2026-01-07T15:30:00",
@@ -731,7 +731,7 @@ export function useScoreRecords() {
           replay: "th17_ud0039.rpy",
           detail: "-",
         },
-    		ReimuE: {
+        ReimuE: {
           score: 1694774790,
           status: "excellent",
           date: "2026-01-10T15:30:00",
@@ -745,7 +745,7 @@ export function useScoreRecords() {
           replay: "th17_ud0046.rpy",
           detail: "-",
         },
-		YoumuW: {
+        YoumuW: {
           score: 1493035760,
           status: "great",
           date: "2025-12-09T15:30:00",
@@ -759,7 +759,7 @@ export function useScoreRecords() {
           replay: "th17_ud0045.rpy",
           detail: "-",
         },
-		YoumuE: {
+        YoumuE: {
           score: 1564238010,
           status: "great",
           date: "2026-01-07T15:30:00",
@@ -4418,7 +4418,7 @@ export function useScoreRecords() {
           replay: "th15_ud0028.rpy",
           detail: "-",
         },
-		Sanae: {
+    		Sanae: {
           score: 1055663510,
           status: "excellent",
           date: "2026-01-17T15:30:00",
@@ -4849,7 +4849,7 @@ export function useScoreRecords() {
           replay: "th10_ud0060.rpy",
           detail: "-",
         },
-		MarisaC: {
+        MarisaC: {
           score: 1000974370,
           status: "excellent",
           date: "2026-01-17T15:30:00",

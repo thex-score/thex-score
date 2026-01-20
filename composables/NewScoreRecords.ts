@@ -1,27 +1,36 @@
-
 export function useNewScoreRecords() {
   const newScoreRecords = [
-	{
-      player: "S.K",
-      game: "th10",
-      shot_type: "MarisaC",
-      score: 1000974370,
-      status: "excellent",
-      date: "2026-01-18T15:30:00",
-      replay: "th10_ud0145.rpy",
-      detail: "-",
-    },
-	{
-      player: "idtn",
-      game: "th11",
-      shot_type: "ReimuC",
-      score: 1080000270,
+    {
+      player: "Anna says hi",
+      game: "th17",
+      shot_type: "YoumuO",
+      score: 2040321210,
       status: "great",
-      date: "2026-01-18T15:30:00",
-      replay: "th11_ud0163.rpy",
+      date: "2026-01-20T15:30:00",
+      replay: "th17_ud0052.rpy",
       detail: "-",
     },
-	{
+    {
+        player: "S.K",
+        game: "th10",
+        shot_type: "MarisaC",
+        score: 1000974370,
+        status: "excellent",
+        date: "2026-01-18T15:30:00",
+        replay: "th10_ud0145.rpy",
+        detail: "-",
+    },
+    {
+        player: "idtn",
+        game: "th11",
+        shot_type: "ReimuC",
+        score: 1080000270,
+        status: "great",
+        date: "2026-01-18T15:30:00",
+        replay: "th11_ud0163.rpy",
+        detail: "-",
+    },
+    {
       player: "Oscar",
       game: "th15",
       shot_type: "Sanae",
