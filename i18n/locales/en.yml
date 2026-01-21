@@ -314,11 +314,11 @@ pages:
         excellent: 600M
         great: 550M
         good: 500M
-      th07Ex:
+      th07_ex:
         excellent: 1.4B
         great: 1.3B
         good: 1.2B
-      th07Ph:
+      th07_ph:
         excellent: 1.6B
         great: 1.5B
         good: 1.3B
