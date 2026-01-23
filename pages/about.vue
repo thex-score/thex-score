@@ -530,6 +530,21 @@
             {{ $t("pages.about.operation_policy.tags.nyanko") }}
           </NuxtLink>
         </template>
+        <template #nyanko1>
+          <NuxtLink href="https://x.com/flower874_" target="_blank">
+            {{ $t("pages.about.operation_policy.tags.nyanko1") }}
+          </NuxtLink>
+        </template>
+        <template #nyanko2>
+          <NuxtLink href="https://x.com/flower874_" target="_blank">
+            {{ $t("pages.about.operation_policy.tags.nyanko2") }}
+          </NuxtLink>
+        </template>
+        <template #nyanko3>
+          <NuxtLink href="https://x.com/flower874_" target="_blank">
+            {{ $t("pages.about.operation_policy.tags.nyanko3") }}
+          </NuxtLink>
+        </template>
         <template #github>
           <NuxtLink
             href="https://github.com/thex-score/thex-score"

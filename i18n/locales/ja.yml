@@ -319,7 +319,9 @@ pages:
         このサイトのソースコードはMITライセンスにて{github}で公開されています。ただし弊サイトに著作権がないリプレイファイルやスコアデータに関してはMITライセンスを適用できません。
       tags:
         wefmaika: ゑふまいか
-        nyanko: にゃんこ
+        nyanko1: にゃんこ
+        nyanko2: にゃんこ
+        nyanko3: にゃんこ
         github: github
     thresholds:
       th06:
