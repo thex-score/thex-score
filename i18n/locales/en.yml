@@ -310,7 +310,9 @@ pages:
         However, the MIT license does not apply to replay files and score data for which we do not hold copyright.
       tags:
         wefmaika: WEF
-        nyanko: Nyanko
+        nyanko1: Nyanko
+        nyanko2: Nyanko
+        nyanko3: Nyanko
         github: GitHub
     thresholds:
       th06:
