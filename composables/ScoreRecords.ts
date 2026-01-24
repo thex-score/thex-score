@@ -9149,6 +9149,15 @@ export function useScoreRecords() {
       },
     },
     "工藤氏。": {
+      th14: {
+        MarisaB: {
+          score: 1008315460,
+          status: "good",
+          date: "2026-01-22T15:30:00",
+          replay: "th14_ud0073.rpy",
+          detail: "-",
+        },
+      },
       th18: {
         Sakuya: {
           score: 5152948230,
