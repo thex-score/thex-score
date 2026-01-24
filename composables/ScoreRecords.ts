@@ -8873,6 +8873,17 @@ export function useScoreRecords() {
         },
       },
     },
+    ボニスト: {
+      th20: {
+        MarisaR2: {
+          score: 604397620,
+          status: "good",
+          date: "2026-01-24T15:30:00",
+          replay: "th20_ud0035.rpy",
+          detail: "-",
+        },
+      },
+    },
     メアSR: {
       th11: {
         ReimuB: {
