@@ -9154,7 +9154,7 @@ export function useScoreRecords() {
           score: 1008315460,
           status: "good",
           date: "2026-01-22T15:30:00",
-          replay: "th14_ud0073.rpy",
+          replay: "th14_ud0074.rpy",
           detail: "-",
         },
       },
