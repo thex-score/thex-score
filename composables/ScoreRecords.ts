@@ -4433,10 +4433,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         Reisen: {
-          score: 1073686620,
+          score: 1131286210,
           status: "excellent",
-          date: "2025-08-15T15:30:00",
-          replay: "th15_ud0027.rpy",
+          date: "2026-01-24T15:30:00",
+          replay: "th15_ud0032.rpy",
           detail: "-",
         },
       },

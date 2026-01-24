@@ -1,6 +1,16 @@
 export function useNewScoreRecords() {
   const newScoreRecords = [
     {
+      player: "Oscar",
+      game: "th15",
+      shot_type: "Reisen",
+      score: 1131286210,
+      status: "excellent",
+      date: "2026-01-24T15:30:00",
+      replay: "th15_ud0032.rpy",
+      detail: "-",
+    },
+    {
       player: "工藤氏。",
       game: "th14",
       shot_type: "MarisaB",
