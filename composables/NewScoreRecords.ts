@@ -1,6 +1,16 @@
 export function useNewScoreRecords() {
   const newScoreRecords = [
     {
+      player: "ボニスト",
+      game: "th20",
+      shot_type: "MarisaR2",
+      score: 604397620,
+      status: "good",
+      date: "2026-01-24T15:30:00",
+      replay: "th20_ud0035.rpy",
+      detail: "-",
+    },
+    {
       player: "Oscar",
       game: "th15",
       shot_type: "Reisen",
@@ -140,7 +150,7 @@ export function useNewScoreRecords() {
       replay: "th17_ud0047.rpy",
       detail: "-",
     },
-  	{
+    {
       player: "Balisman",
       game: "th17",
       shot_type: "ReimuO",
@@ -150,7 +160,7 @@ export function useNewScoreRecords() {
       replay: "th17_ud0039.rpy",
       detail: "-",
     },
-  	{
+    {
       player: "Balisman",
       game: "th17",
       shot_type: "ReimuE",
@@ -160,7 +170,7 @@ export function useNewScoreRecords() {
       replay: "th17_ud0048.rpy",
       detail: "-",
     },
-  	{
+    {
       player: "Oscar",
       game: "th15",
       shot_type: "Reimu",
