@@ -753,10 +753,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         YoumuO: {
-          score: 2545940720,
+          score: 2593867150,
           status: "excellent",
-          date: "2025-11-20T15:30:00",
-          replay: "th17_ud0045.rpy",
+          date: "2026-01-26T15:30:00",
+          replay: "th17_ud0053.rpy",
           detail: "-",
         },
         YoumuE: {
