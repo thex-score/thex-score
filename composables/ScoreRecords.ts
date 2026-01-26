@@ -5652,10 +5652,10 @@ export function useScoreRecords() {
     wimirei: {
       th14: {
         MarisaB: {
-          score: 1100371000,
+          score: 1117016820,
           status: "great",
-          date: "2025-10-26T15:30:00",
-          replay: "th14_ud0071.rpy",
+          date: "2026-01-25T15:30:00",
+          replay: "th14_ud0075.rpy",
           detail: "-",
         },
       },
