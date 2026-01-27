@@ -738,11 +738,25 @@ export function useScoreRecords() {
           replay: "th17_ud0048.rpy",
           detail: "-",
         },
-        MarisaO: {
-          score: 2167340410,
+        MarisaW: {
+          score: 1335040220,
           status: "great",
-          date: "2025-11-20T15:30:00",
-          replay: "th17_ud0046.rpy",
+          date: "2026-01-27T15:30:00",
+          replay: "th17_ud0054.rpy",
+          detail: "-",
+        },
+		MarisaO: {
+          score: 2359525660,
+          status: "great",
+          date: "2026-01-27T15:30:00",
+          replay: "th17_ud0055.rpy",
+          detail: "-",
+        },
+		MarisaE: {
+          score: 1422035750,
+          status: "great",
+          date: "2026-01-27T15:30:00",
+          replay: "th17_ud0056.rpy",
           detail: "-",
         },
         YoumuW: {
