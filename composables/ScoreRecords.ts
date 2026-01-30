@@ -745,14 +745,14 @@ export function useScoreRecords() {
           replay: "th17_ud0054.rpy",
           detail: "-",
         },
-		MarisaO: {
+        MarisaO: {
           score: 2359525660,
           status: "great",
           date: "2026-01-27T15:30:00",
           replay: "th17_ud0055.rpy",
           detail: "-",
         },
-		MarisaE: {
+        MarisaE: {
           score: 1422035750,
           status: "great",
           date: "2026-01-27T15:30:00",
@@ -4696,6 +4696,17 @@ export function useScoreRecords() {
           status: "great",
           date: "2016-03-13T15:30:00",
           replay: "th14_ud0014.rpy",
+          detail: "-",
+        },
+      },
+    },
+    'Reima.H':{
+      th14: {
+        MarisaB: {
+          score: 1027416860,
+          status: "good",
+          date: "2026-01-29T15:30:00",
+          replay: "th14_ud0076.rpy",
           detail: "-",
         },
       },
