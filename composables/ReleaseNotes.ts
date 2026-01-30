@@ -31,6 +31,9 @@ export function UseReleases(): Release[] {
       date: "2025-01-31",
       changes: [
         { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"Reima.H" },
+        { type: "tpl", id: "add_record", game: "th17", shot: "ReimuO", player:"Balisman" },
+        { type: "tpl", id: "add_record", game: "th17", shot: "MarisaW", player:"Balisman" },
+        { type: "tpl", id: "add_record", game: "th17", shot: "MarisaO", player:"Balisman" },
       ],
     },
 		{

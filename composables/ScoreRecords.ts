@@ -725,10 +725,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         ReimuO: {
-          score: 2541800260,
+          score: 2654870550,
           status: "excellent",
-          date: "2025-11-12T15:30:00",
-          replay: "th17_ud0039.rpy",
+          date: "2026-01-28T15:30:00",
+          replay: "th17_ud0059.rpy",
           detail: "-",
         },
         ReimuE: {
@@ -739,17 +739,17 @@ export function useScoreRecords() {
           detail: "-",
         },
         MarisaW: {
-          score: 1335040220,
+          score: 1362262650,
           status: "great",
-          date: "2026-01-27T15:30:00",
-          replay: "th17_ud0054.rpy",
+          date: "2026-01-28T15:30:00",
+          replay: "th17_ud0057.rpy",
           detail: "-",
         },
         MarisaO: {
-          score: 2359525660,
-          status: "great",
-          date: "2026-01-27T15:30:00",
-          replay: "th17_ud0055.rpy",
+          score: 2584355410,
+          status: "excellent",
+          date: "2026-01-28T15:30:00",
+          replay: "th17_ud0058.rpy",
           detail: "-",
         },
         MarisaE: {
