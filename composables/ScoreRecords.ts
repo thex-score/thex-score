@@ -8422,6 +8422,17 @@ export function useScoreRecords() {
         },
       },
     },
+    われもこ: {
+      th11: {
+        MarisaB: {
+          score: 1014956760,
+          status: "good",
+          date: "2026-02-02T15:30:00",
+          replay: "th11_ud0164.rpy",
+          detail: "-",
+        },
+      },
+    },
     わんわの: {
       th12: {
         MarisaA: {
