@@ -4454,6 +4454,15 @@ export function useScoreRecords() {
           detail: "-",
         },
       },
+      th17: {
+        MarisaO: {
+          score: 2791861080,
+          status: "excellent",
+          date: "2026-02-04T15:30:00",
+          replay: "th17_ud0060.rpy",
+          detail: "-",
+        },
+      },
     },
     OYM: {
       th11: {
