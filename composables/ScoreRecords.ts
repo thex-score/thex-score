@@ -9724,10 +9724,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         ReimuG1: {
-          score: 719792780,
+          score: 735742960,
           status: "great",
-          date: "2025-11-23T15:30:00",
-          replay: "th20_ud0018.rpy",
+          date: "2026-02-05T15:30:00",
+          replay: "th20_ud0036.rpy",
           detail: "-",
         },
         MarisaR1: {
