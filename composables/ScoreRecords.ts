@@ -9724,10 +9724,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         ReimuG1: {
-          score: 735742960,
+          score: 765149970,
           status: "great",
-          date: "2026-02-05T15:30:00",
-          replay: "th20_ud0036.rpy",
+          date: "2026-02-07T15:30:00",
+          replay: "th20_ud0037.rpy",
           detail: "-",
         },
         MarisaR1: {
@@ -9752,10 +9752,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         MarisaB2: {
-          score: 718372970,
+          score: 755748860,
           status: "great",
-          date: "2025-12-30T15:30:00",
-          replay: "th20_ud0031.rpy",
+          date: "2026-02-10T15:30:00",
+          replay: "th20_ud0038.rpy",
           detail: "-",
         },
         MarisaY1: {
