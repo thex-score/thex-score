@@ -9755,7 +9755,7 @@ export function useScoreRecords() {
           score: 755748860,
           status: "great",
           date: "2026-02-10T15:30:00",
-          replay: "th20_ud0039.rpy",
+          replay: "th20_ud0038.rpy",
           detail: "-",
         },
         MarisaY1: {
