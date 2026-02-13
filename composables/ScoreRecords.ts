@@ -725,10 +725,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         ReimuO: {
-          score: 2654870550,
+          score: 2718189340,
           status: "excellent",
-          date: "2026-01-28T15:30:00",
-          replay: "th17_ud0059.rpy",
+          date: "2026-02-08T15:30:00",
+          replay: "th17_ud0063.rpy",
           detail: "-",
         },
         ReimuE: {
@@ -753,10 +753,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         MarisaE: {
-          score: 1422035750,
-          status: "great",
-          date: "2026-01-27T15:30:00",
-          replay: "th17_ud0056.rpy",
+          score: 1600421720,
+          status: "excellent",
+          date: "2026-02-12T15:30:00",
+          replay: "th17_ud0061.rpy",
           detail: "-",
         },
         YoumuW: {
@@ -774,10 +774,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         YoumuE: {
-          score: 1564238010,
+          score: 1591544970,
           status: "great",
-          date: "2026-01-07T15:30:00",
-          replay: "th17_ud0051.rpy",
+          date: "2026-02-09T15:30:00",
+          replay: "th17_ud0062.rpy",
           detail: "-",
         },
       },
@@ -1120,6 +1120,17 @@ export function useScoreRecords() {
           status: "great",
           date: "2015-06-15T15:30:00",
           replay: "th128_ud0004.rpy",
+          detail: "-",
+        },
+      },
+    },
+    clanc: {
+      th13: {
+        Youmu: {
+          score: 549152610,
+          status: "good",
+          date: "2026-02-07T15:30:00",
+          replay: "th13_ud0042.rpy",
           detail: "-",
         },
       },
@@ -4415,6 +4426,15 @@ export function useScoreRecords() {
           detail: "-",
         },
       },
+      th13: {
+        Marisa: {
+          score: 513265450,
+          status: "good",
+          date: "2025-10-30T15:30:00",
+          replay: "th13_ud0043.rpy",
+          detail: "-",
+        },
+      },
       th14: {
         MarisaB: {
           score: 1200037030,
@@ -4451,6 +4471,15 @@ export function useScoreRecords() {
           status: "excellent",
           date: "2026-01-24T15:30:00",
           replay: "th15_ud0032.rpy",
+          detail: "-",
+        },
+      },
+      th16: {
+        Aya: {
+          score: 2703790440,
+          status: "great",
+          date: "2026-02-07T15:30:00",
+          replay: "th16_ud0054.rpy",
           detail: "-",
         },
       },
