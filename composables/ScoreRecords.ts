@@ -1128,7 +1128,7 @@ export function useScoreRecords() {
       th13: {
         Youmu: {
           score: 549152610,
-          status: "great",
+          status: "good",
           date: "2026-02-07T15:30:00",
           replay: "th13_ud0042.rpy",
           detail: "-",
