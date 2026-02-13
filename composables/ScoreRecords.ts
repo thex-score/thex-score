@@ -4479,10 +4479,10 @@ export function useScoreRecords() {
           score: 2703790440,
           status: "great",
           date: "2026-02-07T15:30:00",
-          replay: "th16_ud0054.rpy"
+          replay: "th16_ud0054.rpy",
           detail: "-",
         },
-      },      
+      },
 	  th17: {
         MarisaO: {
           score: 2791861080,
