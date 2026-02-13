@@ -20,7 +20,7 @@ export function useNewScoreRecords() {
       replay: "th13_ud0043.rpy",
       detail: "-",
     },
-	{
+    {
       player: "Oscar",
       game: "th16",
       shot_type: "Aya",
@@ -40,14 +40,14 @@ export function useNewScoreRecords() {
       replay: "th17_ud0063.rpy",
       detail: "-",
     },
-	{
+    {
       player: "Balisman",
       game: "th17",
       shot_type: "MarisaE",
       score: 1600421720,
       status: "excellent",
       date: "2026-02-12T15:30:00",
-      replay: "th20_ud0061.rpy",
+      replay: "th17_ud0061.rpy",
       detail: "-",
     },
     {
@@ -57,7 +57,7 @@ export function useNewScoreRecords() {
       score: 1591544970,
       status: "great",
       date: "2026-02-12T15:30:00",
-      replay: "th20_ud0062.rpy",
+      replay: "th17_ud0062.rpy",
       detail: "-",
     },
     {

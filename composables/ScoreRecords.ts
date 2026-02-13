@@ -4483,7 +4483,7 @@ export function useScoreRecords() {
           detail: "-",
         },
       },
-	  th17: {
+      th17: {
         MarisaO: {
           score: 2791861080,
           status: "excellent",
