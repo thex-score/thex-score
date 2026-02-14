@@ -3511,6 +3511,17 @@ export function useScoreRecords() {
         },
       },
     },
+    Marbles: {
+      th14: {
+        MarisaB: {
+          score: 1036386220,
+          status: "good",
+          date: "2026-02-14T15:30:00",
+          replay: "th14_ud0077.rpy",
+          detail: "-",
+        },
+      },
+    },
     "Maribel Hearn": {
       th06: {
         MarisaB: {
@@ -5644,10 +5655,10 @@ export function useScoreRecords() {
     w1theR: {
       th12: {
         ReimuA: {
-          score: 603215720,
+          score: 611420830,
           status: "great",
-          date: "2025-12-06T15:30:00",
-          replay: "th12_ud0127.rpy",
+          date: "2026-02-13T15:30:00",
+          replay: "th12_ud0128.rpy",
           detail: "-",
         },
       },
