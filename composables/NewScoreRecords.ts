@@ -24,10 +24,10 @@ export function useNewScoreRecords() {
       player: "Marbles",
       game: "th14",
       shot_type: "MarisaB",
-      score: 1036386220,
+      score: 1082257490,
       status: "good",
-      date: "2026-02-14T15:30:00",
-      replay: "th14_ud0077.rpy",
+      date: "2026-02-15T15:30:00",
+      replay: "th14_ud0078.rpy",
       detail: "-",
     },
     {
