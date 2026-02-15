@@ -4487,10 +4487,10 @@ export function useScoreRecords() {
       },
       th16: {
         Aya: {
-          score: 2703790440,
-          status: "great",
-          date: "2026-02-07T15:30:00",
-          replay: "th16_ud0054.rpy",
+          score: 3047130690,
+          status: "excellent",
+          date: "2026-02-15T15:30:00",
+          replay: "th16_ud0055.rpy",
           detail: "-",
         },
       },
