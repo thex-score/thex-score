@@ -5655,10 +5655,10 @@ export function useScoreRecords() {
     w1theR: {
       th12: {
         ReimuA: {
-          score: 611420830,
+          score: 631468760,
           status: "great",
-          date: "2026-02-13T15:30:00",
-          replay: "th12_ud0128.rpy",
+          date: "2026-02-16T15:30:00",
+          replay: "th12_ud0129.rpy",
           detail: "-",
         },
       },
@@ -8961,10 +8961,10 @@ export function useScoreRecords() {
     ボニスト: {
       th20: {
         MarisaR2: {
-          score: 604397620,
+          score: 626847860,
           status: "good",
-          date: "2026-01-24T15:30:00",
-          replay: "th20_ud0035.rpy",
+          date: "2026-02-15T15:30:00",
+          replay: "th20_ud0039.rpy",
           detail: "-",
         },
       },
@@ -9722,10 +9722,10 @@ export function useScoreRecords() {
       },
       th20: {
         ReimuR1: {
-          score: 702547600,
-          status: "great",
-          date: "2026-01-01T15:30:00",
-          replay: "th20_ud0022.rpy",
+          score: 800475850,
+          status: "excellent",
+          date: "2026-02-16T15:30:00",
+          replay: "th20_ud0040.rpy",
           detail: "-",
         },
         ReimuR2: {
