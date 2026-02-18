@@ -8981,10 +8981,17 @@ export function useScoreRecords() {
     ボニスト: {
       th20: {
         MarisaR2: {
-          score: 627378110,
+          score: 648239030,
           status: "good",
-          date: "2026-02-17T15:30:00",
-          replay: "th20_ud0041.rpy",
+          date: "2026-02-18T15:30:00",
+          replay: "th20_ud0043.rpy",
+          detail: "-",
+        },
+        MarisaG1: {
+          score: 609344340,
+          status: "good",
+          date: "2026-02-18T15:30:00",
+          replay: "th20_ud0044.rpy",
           detail: "-",
         },
       },
@@ -9798,10 +9805,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         MarisaR2: {
-          score: 744387700,
+          score: 781636580,
           status: "great",
-          date: "2025-12-31T15:30:00",
-          replay: "th20_ud0029.rpy",
+          date: "2026-02-18T15:30:00",
+          replay: "th20_ud0042.rpy",
           detail: "-",
         },
         MarisaB1: {
