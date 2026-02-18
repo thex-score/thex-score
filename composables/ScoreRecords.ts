@@ -4505,10 +4505,10 @@ export function useScoreRecords() {
       },
       th18: {
         Sanae: {
-          score: 3884272720,
+          score: 3910496610,
           status: "great",
           date: "2026-02-18T15:30:00",
-          replay: "th18_ud0026.rpy",
+          replay: "th18_ud0027.rpy",
           detail: "-",
         },
       },
@@ -7077,6 +7077,17 @@ export function useScoreRecords() {
           status: "great",
           date: "2019-05-04T15:30:00",
           replay: "th11_ud0035.rpy",
+          detail: "-",
+        },
+      },
+    },
+    こむそう: {
+      th07Ex: {
+        ReimuB: {
+          score: 1226346200,
+          status: "good",
+          date: "2026-02-18T15:30:00",
+          replay: "th7_ud0050.rpy",
           detail: "-",
         },
       },

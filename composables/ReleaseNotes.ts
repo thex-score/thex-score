@@ -27,6 +27,14 @@ export type Release = {
 export function UseReleases(): Release[] {
   return [
     {
+      version: "1.2.24",
+      date: "2025-02-19",
+      changes: [
+        { type: "tpl", id: "add_record", game: "th07Ex", shot: "ReimuB", player:"こむそう" },
+        { type: "tpl", id: "add_record", game: "th18", shot: "Sanae", player:"Oscar" },
+      ],
+    },
+    {
       version: "1.2.23",
       date: "2025-02-18",
       changes: [
