@@ -28,7 +28,7 @@ export function UseReleases(): Release[] {
   return [
     {
       version: "1.2.24",
-      date: "2025-02-19",
+      date: "2026-02-19",
       changes: [
         { type: "tpl", id: "add_record", game: "th07EX", shot: "ReimuB", player:"こむそう" },
         { type: "tpl", id: "add_record", game: "th18", shot: "Sanae", player:"Oscar" },
@@ -39,7 +39,7 @@ export function UseReleases(): Release[] {
     },
     {
       version: "1.2.23",
-      date: "2025-02-18",
+      date: "2026-02-18",
       changes: [
         { type: "tpl", id: "add_record", game: "th06", shot: "ReimuA", player:"int" },
         { type: "tpl", id: "add_record", game: "th17", shot: "YoumuW", player:"Balisman" },
@@ -49,7 +49,7 @@ export function UseReleases(): Release[] {
     },
     {
       version: "1.2.22",
-      date: "2025-02-17",
+      date: "2026-02-17",
       changes: [
         { type: "tpl", id: "add_record", game: "th12", shot: "ReimuA", player:"w1theR" },
         { type: "tpl", id: "add_record", game: "th20", shot: "ReimuR1", player:"幽谷もこ" },
@@ -58,7 +58,7 @@ export function UseReleases(): Release[] {
     },
     {
       version: "1.2.21",
-      date: "2025-02-15",
+      date: "2026-02-15",
       changes: [
         { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"Marbles" },
         { type: "tpl", id: "add_record", game: "th16", shot: "Aya", player:"Oscar" },
@@ -67,7 +67,7 @@ export function UseReleases(): Release[] {
     },
     {
       version: "1.2.20",
-      date: "2025-02-14",
+      date: "2026-02-14",
       changes: [
         { type: "tpl", id: "add_record", game: "th12", shot: "ReimuA", player:"w1theR" },
         { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"Marbles" },
@@ -75,7 +75,7 @@ export function UseReleases(): Release[] {
     },
     {
       version: "1.2.19",
-      date: "2025-02-11",
+      date: "2026-02-11",
       changes: [
         { type: "tpl", id: "add_record", game: "th13", shot: "Youmu", player:"clanc" },
         { type: "tpl", id: "add_record", game: "th13", shot: "Marisa", player:"Oscar" },
@@ -87,7 +87,7 @@ export function UseReleases(): Release[] {
     },
 		{
       version: "1.2.18",
-      date: "2025-02-11",
+      date: "2026-02-11",
       changes: [
         { type: "tpl", id: "add_record", game: "th20", shot: "ReimuG1", player:"幽谷もこ" },
         { type: "tpl", id: "add_record", game: "th20", shot: "MarisaB2", player:"幽谷もこ" },
@@ -95,28 +95,28 @@ export function UseReleases(): Release[] {
     },
 		{
       version: "1.2.17",
-      date: "2025-02-06",
+      date: "2026-02-06",
       changes: [
         { type: "tpl", id: "add_record", game: "th20", shot: "ReimuG1", player:"幽谷もこ" },
       ],
     },
 		{
       version: "1.2.16",
-      date: "2025-02-04",
+      date: "2026-02-04",
       changes: [
         { type: "tpl", id: "add_record", game: "th17", shot: "MarisaO", player:"Oscar" },
       ],
     },
 		{
       version: "1.2.15",
-      date: "2025-02-03",
+      date: "2026-02-03",
       changes: [
         { type: "tpl", id: "add_record", game: "th11", shot: "MarisaB", player:"われもこ" },
       ],
     },
 		{
       version: "1.2.14",
-      date: "2025-01-31",
+      date: "2026-01-31",
       changes: [
         { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"Reima.H" },
         { type: "tpl", id: "add_record", game: "th17", shot: "ReimuO", player:"Balisman" },
@@ -126,7 +126,7 @@ export function UseReleases(): Release[] {
     },
 		{
       version: "1.2.13",
-      date: "2025-01-27",
+      date: "2026-01-27",
       changes: [
         { type: "tpl", id: "add_record", game: "th17", shot: "MarisaW", player:"Balisman" },
         { type: "tpl", id: "add_record", game: "th17", shot: "MarisaO", player:"Balisman" },
@@ -135,7 +135,7 @@ export function UseReleases(): Release[] {
     },
 		{
       version: "1.2.12",
-      date: "2025-01-26",
+      date: "2026-01-26",
       changes: [
         { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"wimirei" },
         { type: "tpl", id: "add_record", game: "th17", shot: "YoumuO", player:"Balisman" },
@@ -143,7 +143,7 @@ export function UseReleases(): Release[] {
     },
 		{
       version: "1.2.11",
-      date: "2025-01-24",
+      date: "2026-01-24",
       changes: [
         { type: "tpl", id: "add_record", game: "th14", shot: "MarisaB", player:"工藤氏。" },
         { type: "tpl", id: "add_record", game: "th15", shot: "Reisen", player:"Oscar" },
@@ -152,7 +152,7 @@ export function UseReleases(): Release[] {
     },
 		{
       version: "1.2.10",
-      date: "2025-01-20",
+      date: "2026-01-20",
       changes: [
         { type: "tpl", id: "add_record", game: "th12", shot: "ReimuA", player:"w1theR" },
         { type: "tpl", id: "add_record", game: "th15", shot: "Reimu", player:"Oscar" },
@@ -162,7 +162,7 @@ export function UseReleases(): Release[] {
     },
     {
       version: "1.2.9",
-      date: "2025-01-18",
+      date: "2026-01-18",
       changes: [
         { type: "tpl", id: "add_record", game: "th10", shot: "MarisaC", player:"S.K" },
         { type: "tpl", id: "add_record", game: "th11", shot: "ReimuC", player:"idtn" },
@@ -173,7 +173,7 @@ export function UseReleases(): Release[] {
     },
     {
       version: "1.2.8",
-      date: "2025-01-17",
+      date: "2026-01-17",
       changes: [
         { type: "tpl", id: "add_record", game: "th14", shot: "SakuyaA", player:"Balisman" },
         { type: "tpl", id: "add_record", game: "th15", shot: "Reimu", player:"Oscar" },
