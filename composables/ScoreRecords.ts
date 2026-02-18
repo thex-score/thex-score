@@ -760,10 +760,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         YoumuW: {
-          score: 1493035760,
+          score: 1563457020,
           status: "great",
-          date: "2025-12-09T15:30:00",
-          replay: "th17_ud0050.rpy",
+          date: "2026-02-17T15:30:00",
+          replay: "th17_ud0065.rpy",
           detail: "-",
         },
         YoumuO: {
@@ -2619,10 +2619,10 @@ export function useScoreRecords() {
     int: {
       th06: {
         ReimuA: {
-          score: 649850640,
+          score: 650554360,
           status: "excellent",
-          date: "2025-09-16T15:30:00",
-          replay: "th6_ud0098.rpy",
+          date: "2026-02-18T15:30:00",
+          replay: "th6_ud0099.rpy",
           detail: "-",
         },
         ReimuB: {
@@ -4500,6 +4500,15 @@ export function useScoreRecords() {
           status: "excellent",
           date: "2026-02-04T15:30:00",
           replay: "th17_ud0060.rpy",
+          detail: "-",
+        },
+      },
+      th18: {
+        Sanae: {
+          score: 3884272720,
+          status: "great",
+          date: "2026-02-18T15:30:00",
+          replay: "th18_ud0026.rpy",
           detail: "-",
         },
       },
@@ -8961,10 +8970,10 @@ export function useScoreRecords() {
     ボニスト: {
       th20: {
         MarisaR2: {
-          score: 626847860,
+          score: 627378110,
           status: "good",
-          date: "2026-02-15T15:30:00",
-          replay: "th20_ud0039.rpy",
+          date: "2026-02-17T15:30:00",
+          replay: "th20_ud0041.rpy",
           detail: "-",
         },
       },
