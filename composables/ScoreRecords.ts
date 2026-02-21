@@ -3514,10 +3514,10 @@ export function useScoreRecords() {
     Marbles: {
       th14: {
         MarisaB: {
-          score: 1082257490,
-          status: "good",
-          date: "2026-02-15T15:30:00",
-          replay: "th14_ud0078.rpy",
+          score: 1124117820,
+          status: "great",
+          date: "2026-02-21T15:30:00",
+          replay: "th14_ud0079.rpy",
           detail: "-",
         },
       },
@@ -4505,10 +4505,10 @@ export function useScoreRecords() {
       },
       th18: {
         Sanae: {
-          score: 3910496610,
-          status: "great",
-          date: "2026-02-18T15:30:00",
-          replay: "th18_ud0027.rpy",
+          score: 4001389960,
+          status: "excellent",
+          date: "2026-02-21T15:30:00",
+          replay: "th18_ud0028.rpy",
           detail: "-",
         },
       },
@@ -8491,7 +8491,7 @@ export function useScoreRecords() {
         },
       },
     },
-    われもこ: {
+    われもこう: {
       th11: {
         MarisaB: {
           score: 1014956760,
@@ -8981,10 +8981,10 @@ export function useScoreRecords() {
     ボニスト: {
       th20: {
         MarisaR2: {
-          score: 648239030,
+          score: 687747090,
           status: "good",
-          date: "2026-02-18T15:30:00",
-          replay: "th20_ud0043.rpy",
+          date: "2026-02-21T15:30:00",
+          replay: "th20_ud0046.rpy",
           detail: "-",
         },
         MarisaG1: {
@@ -9756,10 +9756,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         ReimuR2: {
-          score: 727113980,
+          score: 745246180,
           status: "great",
-          date: "2025-12-31T15:30:00",
-          replay: "th20_ud0023.rpy",
+          date: "2026-02-21T15:30:00",
+          replay: "th20_ud0047.rpy",
           detail: "-",
         },
         ReimuB1: {
@@ -9770,10 +9770,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         ReimuB2: {
-          score: 	705279510,
+          score: 	774327030,
           status: "great",
-          date: "2025-12-30T15:30:00",
-          replay: "th20_ud0025.rpy",
+          date: "2026-02-19T15:30:00",
+          replay: "th20_ud0045.rpy",
           detail: "-",
         },
         ReimuY1: {
