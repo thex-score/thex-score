@@ -1595,6 +1595,17 @@ export function useScoreRecords() {
         },
       },
     },
+    Ecoさわ: {
+      th20: {
+        MarisaY2: {
+          score: 606605740,
+          status: "good",
+          date: "2026-02-23T15:30:00",
+          replay: "th20_ud0050.rpy",
+          detail: "-",
+        },
+      },
+    },
     EEg: {
       th14: {
         MarisaB: {
@@ -9026,10 +9037,10 @@ export function useScoreRecords() {
     ボニスト: {
       th20: {
         MarisaR2: {
-          score: 687747090,
-          status: "good",
-          date: "2026-02-21T15:30:00",
-          replay: "th20_ud0046.rpy",
+          score: 724336570,
+          status: "great",
+          date: "2026-02-22T15:30:00",
+          replay: "th20_ud0048.rpy",
           detail: "-",
         },
         MarisaG1: {
@@ -9601,6 +9612,17 @@ export function useScoreRecords() {
           status: "good",
           date: "2008-10-29T15:30:00",
           replay: "th11_ud0082.rpy",
+          detail: "-",
+        },
+      },
+    },
+    節水源一朗 : {
+      th20: {
+        MarisaG1: {
+          score: 624548900,
+          status: "good",
+          date: "2026-02-22T15:30:00",
+          replay: "th20_ud0049.rpy",
           detail: "-",
         },
       },
