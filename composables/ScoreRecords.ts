@@ -190,6 +190,15 @@ export function useScoreRecords() {
           detail: "-",
         },
       },
+      th18: {
+        Reimu: {
+          score: 3003501600,
+          status: "good",
+          date: "2026-02-24T15:30:00",
+          replay: "th18_ud0030.rpy",
+          detail: "-",
+        },
+      },
     },
     AM: {
       th08: {
@@ -602,6 +611,17 @@ export function useScoreRecords() {
           status: "good",
           date: "2008-05-24T15:30:00",
           replay: "th7_ud0038.rpy",
+          detail: "-",
+        },
+      },
+    },
+    Azazaz: {
+      th18: {
+        Sakuya: {
+          score: 5381628470,
+          status: "good",
+          date: "2026-02-24T15:30:00",
+          replay: "th18_ud0029.rpy",
           detail: "-",
         },
       },
@@ -4977,6 +4997,17 @@ export function useScoreRecords() {
           status: "great",
           date: "2011-09-13T15:30:00",
           replay: "th13_ud0040.rpy",
+          detail: "-",
+        },
+      },
+    },
+    serenity: {
+      th18: {
+        Reimu: {
+          score: 3007426210,
+          status: "good",
+          date: "2026-02-23T15:30:00",
+          replay: "th18_ud0031.rpy",
           detail: "-",
         },
       },
