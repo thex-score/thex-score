@@ -4115,6 +4115,13 @@ export function useScoreRecords() {
           replay: "th12_ud0125.rpy",
           detail: "-",
         },
+        SanaeB: {
+          score: 622852010,
+          status: "great",
+          date: "2026-02-24T15:30:00",
+          replay: "th12_ud0130.rpy",
+          detail: "-",
+        },
       },
     },
     nyamu: {
@@ -4959,6 +4966,13 @@ export function useScoreRecords() {
           replay: "th10_ud0060.rpy",
           detail: "-",
         },
+        ReimuC: {
+          score: 982323290,
+          status: "great",
+          date: "2026-02-23T15:30:00",
+          replay: "th10_ud0146.rpy",
+          detail: "-",
+        },
         MarisaC: {
           score: 1000974370,
           status: "excellent",
@@ -5695,10 +5709,10 @@ export function useScoreRecords() {
     w1theR: {
       th12: {
         ReimuA: {
-          score: 631468760,
+          score: 634642830,
           status: "great",
-          date: "2026-02-16T15:30:00",
-          replay: "th12_ud0129.rpy",
+          date: "2026-02-24T15:30:00",
+          replay: "th12_ud0131.rpy",
           detail: "-",
         },
       },
