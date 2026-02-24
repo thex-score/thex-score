@@ -30,6 +30,7 @@ export function UseReleases(): Release[] {
       version: "1.2.27",
       date: "2026-02-25",
       changes: [
+        { type: "tpl", id: "add_record", game: "th17", shot: "MarisaE", player:"Balisman" },
         { type: "tpl", id: "add_record", game: "th20", shot: "ReimuB1", player:"幽谷もこ" },
         { type: "tpl", id: "add_record", game: "th20", shot: "ReimuY1", player:"幽谷もこ" },
         { type: "tpl", id: "add_record", game: "th20", shot: "ReimuY2", player:"幽谷もこ" },
