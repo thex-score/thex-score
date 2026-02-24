@@ -30,6 +30,8 @@ export function UseReleases(): Release[] {
       version: "1.2.26",
       date: "2026-02-24",
       changes: [
+        { type: "tpl", id: "add_record", game: "th12", shot: "ReimuA", player:"w1theR" },
+        { type: "tpl", id: "add_record", game: "th12", shot: "SanaeB", player:"Novus" },
         { type: "tpl", id: "add_record", game: "th18", shot: "Reimu", player:"Altair" },
         { type: "tpl", id: "add_record", game: "th18", shot: "Reimu", player:"serenity" },
         { type: "tpl", id: "add_record", game: "th18", shot: "Sakuya", player:"Azazaz" },
