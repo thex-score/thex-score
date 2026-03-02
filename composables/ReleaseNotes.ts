@@ -34,6 +34,7 @@ export function UseReleases(): Release[] {
         { type: "tpl", id: "add_record", game: "th13", shot: "Youmu", player:"idtn" },
         { type: "tpl", id: "add_record", game: "th17", shot: "ReimuW", player:"Balisman" },
         { type: "tpl", id: "add_record", game: "th17", shot: "ReimuE", player:"Balisman" },
+		{ type: "tpl", id: "add_record", game: "th17", shot: "MarisaW", player:"Balisman" },
         { type: "tpl", id: "add_record", game: "th17", shot: "MarisaE", player:"Balisman" },
       ],
     },
