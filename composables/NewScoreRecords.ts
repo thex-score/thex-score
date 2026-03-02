@@ -31,16 +31,6 @@ export function useNewScoreRecords() {
       detail: "-",
     },
     {
-      player: "Balisman",
-      game: "th17",
-      shot_type: "Marisaw",
-      score: 1559469310,
-      status: "great",
-      date: "2026-03-02T15:30:00",
-      replay: "th17_ud0071.rpy",
-      detail: "-",
-    },
-    {
       player: "burata",
       game: "th12",
       shot_type: "SanaeB",
