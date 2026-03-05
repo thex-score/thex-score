@@ -2484,13 +2484,6 @@ export function useScoreRecords() {
           replay: "th13_ud0002.rpy",
           detail: "-",
         },
-        Youmu: {
-          score: 630869880,
-          status: "excellent",
-          date: "2026-03-01T15:30:00",
-          replay: "th13_ud0044.rpy",
-          detail: "-",
-        },
         Sanae: {
           score: 570844450,
           status: "great",
