@@ -4993,6 +4993,13 @@ export function useScoreRecords() {
           replay: "th10_ud0060.rpy",
           detail: "-",
         },
+        ReimuB: {
+          score: 988576860,
+          status: "great",
+          date: "2026-03-03T15:30:00",
+          replay: "th10_ud0148.rpy",
+          detail: "-",
+        },
         ReimuC: {
           score: 982323290,
           status: "great",
