@@ -747,10 +747,10 @@ export function useScoreRecords() {
       },
       th17: {
         ReimuW: {
-          score: 1656390380,
+          score: 1722345940,
           status: "excellent",
-          date: "2026-01-07T15:30:00",
-          replay: "th17_ud0047.rpy",
+          date: "2026-03-01T15:30:00",
+          replay: "th17_ud0068.rpy",
           detail: "-",
         },
         ReimuO: {
@@ -761,17 +761,17 @@ export function useScoreRecords() {
           detail: "-",
         },
         ReimuE: {
-          score: 1694774790,
+          score: 1770998690,
           status: "excellent",
-          date: "2026-01-10T15:30:00",
-          replay: "th17_ud0048.rpy",
+          date: "2026-03-01T15:30:00",
+          replay: "th17_ud0069.rpy",
           detail: "-",
         },
         MarisaW: {
-          score: 1362262650,
+          score: 1559469310,
           status: "great",
-          date: "2026-01-28T15:30:00",
-          replay: "th17_ud0057.rpy",
+          date: "2026-03-02T15:30:00",
+          replay: "th17_ud0071.rpy",
           detail: "-",
         },
         MarisaO: {
@@ -782,10 +782,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         MarisaE: {
-          score: 1660723830,
+          score: 1674751330,
           status: "excellent",
-          date: "2026-02-27T15:30:00",
-          replay: "th17_ud0067.rpy",
+          date: "2026-03-02T15:30:00",
+          replay: "th17_ud0070.rpy",
           detail: "-",
         },
         YoumuW: {
@@ -1014,7 +1014,18 @@ export function useScoreRecords() {
         },
       },
     },
-    Cactu: {
+    burata: {
+      th12: {
+        SanaeB: {
+          score: 523153740,
+          status: "good",
+          date: "2026-03-01T15:30:00",
+          replay: "th12_ud0132.rpy",
+          detail: "-",
+        },
+      },
+    },
+	Cactu: {
       th06: {
         ReimuB: {
           score: 615234480,
@@ -2471,6 +2482,13 @@ export function useScoreRecords() {
           status: "excellent",
           date: "2022-06-01T15:30:00",
           replay: "th13_ud0002.rpy",
+          detail: "-",
+        },
+        Youmu: {
+          score: 630869880,
+          status: "excellent",
+          date: "2026-03-01T15:30:00",
+          replay: "th13_ud0044.rpy",
           detail: "-",
         },
         Sanae: {
