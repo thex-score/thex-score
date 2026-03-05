@@ -28,14 +28,18 @@ export function UseReleases(): Release[] {
   return [
     {
       version: "1.2.29",
-      date: "2026-03-02",
+      date: "2026-03-04",
       changes: [
+        { type: "tpl", id: "add_record", game: "th06", shot: "MarisaB", player:"kana_th6" },
+		{ type: "tpl", id: "add_record", game: "th10", shot: "ReimuA", player:"Altair" },
+		{ type: "tpl", id: "add_record", game: "th10", shot: "ReimuB", player:"S.K" },
         { type: "tpl", id: "add_record", game: "th12", shot: "SanaeB", player:"burata" },
         { type: "tpl", id: "add_record", game: "th13", shot: "Youmu", player:"idtn" },
         { type: "tpl", id: "add_record", game: "th17", shot: "ReimuW", player:"Balisman" },
         { type: "tpl", id: "add_record", game: "th17", shot: "ReimuE", player:"Balisman" },
 		{ type: "tpl", id: "add_record", game: "th17", shot: "MarisaW", player:"Balisman" },
         { type: "tpl", id: "add_record", game: "th17", shot: "MarisaE", player:"Balisman" },
+		{ type: "tpl", id: "add_record", game: "th20", shot: "MarisaG1", player:"節水源一朗" },
       ],
     },
     {
