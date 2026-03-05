@@ -181,6 +181,15 @@ export function useScoreRecords() {
       },
     },
     Altair: {
+      th10: {
+        ReimuA: {
+          score: 951845620,
+          status: "good",
+          date: "2026-03-05T15:30:00",
+          replay: "th10_ud0147.rpy",
+          detail: "-",
+        },
+      },
       th11: {
         ReimuA: {
           score: 1101069120,
@@ -2471,6 +2480,13 @@ export function useScoreRecords() {
           replay: "th13_ud0018.rpy",
           detail: "-",
         },
+        Youmu: {
+          score: 630869880,
+          status: "excellent",
+          date: "2026-03-01T15:30:00",
+          replay: "th13_ud0044.rpy",
+          detail: "-",
+        },
       },
       th14: {
         ReimuA: {
@@ -2908,10 +2924,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         MarisaB: {
-          score: 638829970,
+          score: 671582740,
           status: "excellent",
-          date: "2026-02-28T15:30:00",
-          replay: "th6_ud0100.rpy",
+          date: "2026-03-03T15:30:00",
+          replay: "th6_ud0101.rpy",
           detail: "-",
         },
       },
@@ -9619,10 +9635,10 @@ export function useScoreRecords() {
     節水源一朗 : {
       th20: {
         MarisaG1: {
-          score: 624548900,
+          score: 640634740,
           status: "good",
-          date: "2026-02-22T15:30:00",
-          replay: "th20_ud0049.rpy",
+          date: "2026-03-03T15:30:00",
+          replay: "th20_ud0059.rpy",
           detail: "-",
         },
       },
