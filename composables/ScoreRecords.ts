@@ -181,6 +181,15 @@ export function useScoreRecords() {
       },
     },
     Altair: {
+      th06: {
+        MarisaB: {
+          score: 501861210,
+          status: "good",
+          date: "2026-03-08T15:30:00",
+          replay: "th6_ud0102.rpy",
+          detail: "-",
+        },
+      },
       th10: {
         ReimuA: {
           score: 951845620,
@@ -201,10 +210,10 @@ export function useScoreRecords() {
       },
       th18: {
         Reimu: {
-          score: 3003501600,
-          status: "good",
-          date: "2026-02-24T15:30:00",
-          replay: "th18_ud0030.rpy",
+          score: 3517788730,
+          status: "great",
+          date: "2026-03-11T15:30:00",
+          replay: "th18_ud0032.rpy",
           detail: "-",
         },
       },
@@ -782,17 +791,17 @@ export function useScoreRecords() {
           detail: "-",
         },
         MarisaE: {
-          score: 1674751330,
+          score: 1763419570,
           status: "excellent",
-          date: "2026-03-02T15:30:00",
-          replay: "th17_ud0070.rpy",
+          date: "2026-03-07T15:30:00",
+          replay: "th17_ud0072.rpy",
           detail: "-",
         },
         YoumuW: {
-          score: 1563457020,
-          status: "great",
-          date: "2026-02-17T15:30:00",
-          replay: "th17_ud0065.rpy",
+          score: 1613959920,
+          status: "excellent",
+          date: "2026-03-09T15:30:00",
+          replay: "th17_ud0073.rpy",
           detail: "-",
         },
         YoumuO: {
@@ -3458,6 +3467,15 @@ export function useScoreRecords() {
           detail: "-",
         },
       },
+      th128: {
+        Cirno: {
+          score: 94708820,
+          status: "good",
+          date: "2026-03-11T15:30:00",
+          replay: "th128_ud0016.rpy",
+          detail: "-",
+        },
+      },
     },
     lot: {
       th12: {
@@ -3702,6 +3720,17 @@ export function useScoreRecords() {
         },
       },
     },
+    "Mechanical Lizard": {
+      th06: {
+        MarisaB: {
+          score: 558869130,
+          status: "great",
+          date: "2026-03-11T15:30:00",
+          replay: "th6_ud0103.rpy",
+          detail: "-",
+        },
+      },
+    },	
     mekemeke: {
       th10: {
         ReimuB: {
@@ -9948,10 +9977,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         MarisaG1: {
-          score: 774263900,
+          score: 774514560,
           status: "great",
-          date: "2026-02-22T15:30:00",
-          replay: "th20_ud0057.rpy",
+          date: "2026-03-12T15:30:00",
+          replay: "th20_ud0060.rpy",
           detail: "-",
         },
         MarisaG2: {

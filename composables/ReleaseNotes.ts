@@ -27,13 +27,26 @@ export type Release = {
 export function UseReleases(): Release[] {
   return [
     {
+      version: "1.2.31",
+      date: "2026-03-13",
+      changes: [
+        { type: "tpl", id: "add_record", game: "th06", shot: "MarisaB", player:"Altair" },
+        { type: "tpl", id: "add_record", game: "th06", shot: "MarisaB", player:"Mechanical Lizard" },
+        { type: "tpl", id: "add_record", game: "th128", shot: "Cirno", player:"Lorenzo" },
+        { type: "tpl", id: "add_record", game: "th17", shot: "MarisaE", player:"Balisman" },
+        { type: "tpl", id: "add_record", game: "th17", shot: "YoumuW", player:"Balisman" },
+        { type: "tpl", id: "add_record", game: "th18", shot: "Sanae", player:"Altair" },
+        { type: "tpl", id: "add_record", game: "th20", shot: "ReimuG2", player:"幽谷もこ" },
+      ],
+    },
+    {
       version: "1.2.30",
       date: "2026-03-05",
       changes: [
         { type: "tpl", id: "add_record", game: "th12", shot: "SanaeB", player:"burata" },
         { type: "tpl", id: "add_record", game: "th17", shot: "ReimuW", player:"Balisman" },
         { type: "tpl", id: "add_record", game: "th17", shot: "ReimuE", player:"Balisman" },
-    		{ type: "tpl", id: "add_record", game: "th17", shot: "MarisaW", player:"Balisman" },
+    	{ type: "tpl", id: "add_record", game: "th17", shot: "MarisaW", player:"Balisman" },
         { type: "tpl", id: "add_record", game: "th17", shot: "MarisaE", player:"Balisman" },
       ],
     },
