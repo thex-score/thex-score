@@ -4558,9 +4558,9 @@ export function useScoreRecords() {
           detail: "-",
         },
         Marisa: {
-          score: 1050595720,
+          score: 1089965340,
           status: "excellent",
-          date: "2026-03-12T15:30:00",
+          date: "2026-03-13T15:30:00",
           replay: "th15_ud0033.rpy",
           detail: "-",
         },
