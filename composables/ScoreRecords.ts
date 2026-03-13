@@ -351,10 +351,10 @@ export function useScoreRecords() {
     Apo: {
       th11: {
         ReimuA: {
-          score: 1131597980,
+          score: 1137597510,
           status: "excellent",
-          date: "2025-05-16T15:30:00",
-          replay: "th11_ud0002.rpy",
+          date: "2026-03-13T15:30:00",
+          replay: "th11_ud0165.rpy",
           detail: "-",
         },
         ReimuB: {
@@ -4558,10 +4558,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         Marisa: {
-          score: 1024385420,
+          score: 1050595720,
           status: "excellent",
-          date: "2026-01-19T15:30:00",
-          replay: "th15_ud0030.rpy",
+          date: "2026-03-12T15:30:00",
+          replay: "th15_ud0033.rpy",
           detail: "-",
         },
         Sanae: {
