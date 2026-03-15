@@ -777,10 +777,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         MarisaW: {
-          score: 1559469310,
-          status: "great",
-          date: "2026-03-02T15:30:00",
-          replay: "th17_ud0071.rpy",
+          score: 1666161640,
+          status: "excellent",
+          date: "2026-03-15T15:30:00",
+          replay: "th17_ud0074.rpy",
           detail: "-",
         },
         MarisaO: {
