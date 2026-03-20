@@ -3723,11 +3723,11 @@ export function useScoreRecords() {
     "Mechanical Lizard": {
       th06: {
         MarisaB: {
-          score: 558869130,
-          status: "great",
-          date: "2026-03-11T15:30:00",
-          replay: "th6_ud0103.rpy",
-          detail: "-",
+          score: 618316400,
+          status: "excellent",
+          date: "2026-03-17T15:30:00",
+          replay: "th6_ud0104.rpy",
+          detail: "Contains a desync",
         },
       },
     },	
