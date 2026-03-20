@@ -756,10 +756,10 @@ export function useScoreRecords() {
       },
       th17: {
         ReimuW: {
-          score: 1722345940,
+          score: 1852842260,
           status: "excellent",
-          date: "2026-03-01T15:30:00",
-          replay: "th17_ud0068.rpy",
+          date: "2026-03-19T15:30:00",
+          replay: "th17_ud0076.rpy",
           detail: "-",
         },
         ReimuO: {
@@ -798,10 +798,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         YoumuW: {
-          score: 1613959920,
+          score: 1635810900,
           status: "excellent",
-          date: "2026-03-09T15:30:00",
-          replay: "th17_ud0073.rpy",
+          date: "2026-03-16T15:30:00",
+          replay: "th17_ud0075.rpy",
           detail: "-",
         },
         YoumuO: {
@@ -4565,10 +4565,10 @@ export function useScoreRecords() {
           detail: "-",
         },
         Sanae: {
-          score: 1055663510,
+          score: 1123059680,
           status: "excellent",
-          date: "2026-01-17T15:30:00",
-          replay: "th15_ud0029.rpy",
+          date: "2026-03-18T15:30:00",
+          replay: "th15_ud0034.rpy",
           detail: "-",
         },
         Reisen: {
@@ -5047,6 +5047,13 @@ export function useScoreRecords() {
           replay: "th10_ud0146.rpy",
           detail: "-",
         },
+        MarisaB: {
+          score: 980756170,
+          status: "great",
+          date: "2026-03-18T15:30:00",
+          replay: "th10_ud0149.rpy",
+          detail: "-",
+        },
         MarisaC: {
           score: 1000974370,
           status: "excellent",
@@ -5090,6 +5097,15 @@ export function useScoreRecords() {
       },
     },
     serenity: {
+      th14: {
+        MarisaB: {
+          score: 1028974710,
+          status: "good",
+          date: "2026-03-20T15:30:00",
+          replay: "th14_ud0081.rpy",
+          detail: "-",
+        },
+      },
       th18: {
         Reimu: {
           score: 3007426210,
@@ -5613,6 +5629,16 @@ export function useScoreRecords() {
           status: "good",
           date: "2025-09-10T15:30:00",
           replay: "th11_ud0155.rpy",
+          detail: "-",
+        },
+      },
+    },
+      th14: {
+        MarisaB: {
+          score: 1017272480,
+          status: "good",
+          date: "2026-03-19T15:30:00",
+          replay: "th14_ud0080.rpy",
           detail: "-",
         },
       },
