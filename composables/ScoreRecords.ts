@@ -5632,7 +5632,6 @@ export function useScoreRecords() {
           detail: "-",
         },
       },
-    },
       th14: {
         MarisaB: {
           score: 1017272480,
