@@ -156,7 +156,7 @@ export function useNewScoreRecords() {
       shot_type: "YoumuW",
       score: 1613959920,
       status: "excellent",
-      date: "2026-03-02T15:30:00",
+      date: "2026-03-13T15:30:00",
       replay: "th17_ud0073.rpy",
       detail: "-",
     },
